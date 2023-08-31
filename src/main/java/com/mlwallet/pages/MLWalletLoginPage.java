@@ -46,5 +46,7 @@ public class MLWalletLoginPage {
 	public static By objNoConnectionAppVersion = By.xpath("(//*[@text='Connection Error']/following-sibling::android.widget.TextView)[2]");
 	public static By objOTP = By.xpath("((//*[@text='One Time Pin']/following-sibling::android.view.ViewGroup)[1]/child::android.widget.TextView)[1]");
 	public static By objSeconds = By.xpath("(//*[@class='com.horcrux.svg.SvgView'])[2]/following-sibling::android.view.ViewGroup/child::android.widget.TextView");
-
+	public static By objNotif = By.xpath("//*[contains(@text, 'notifications')]");
+	public static By objAllowNotif = By.xpath("//*[@text='Allow']");
+	public static By objdontAllowNotif = By.xpath("//*[@text='Don’t allow']");
 }
