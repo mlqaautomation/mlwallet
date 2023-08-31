@@ -13718,24 +13718,24 @@ public class MLWalletBusinessLogic {
 	public void selectProductServiceOffered(String service)throws Exception{
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objProductServiceOffered, getTextVal(MLWalletTierUpgrade.objSourceOfIncome , "DropDown"));
 		verifyElementPresent(MLWalletTierUpgrade.objProductServicePage, getTextVal(MLWalletTierUpgrade.objProductServicePage, "Header"));
-		type(MLWalletTierUpgrade.objSearchField, tierProp.getproperty(service), "Search Field");
-		verifyElementPresentAndClick(MLWalletTierUpgrade.getObjSourceOfIncome(tierProp.getproperty(service)),
-				getTextVal(MLWalletTierUpgrade.getObjSourceOfIncome(tierProp.getproperty(service)), "Value"));
+		type(MLWalletTierUpgrade.objSearchField, service, "Search Field");
+		verifyElementPresentAndClick(MLWalletTierUpgrade.getObjSourceOfIncome(service),
+				getTextVal(MLWalletTierUpgrade.getObjSourceOfIncome(service), "Value"));
 	}
 
 	public void selectPositionAtWork(String position)throws Exception{
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objProductServiceOffered, getTextVal(MLWalletTierUpgrade.objSourceOfIncome , "DropDown"));
 		verifyElementPresent(MLWalletTierUpgrade.objProductServicePage, getTextVal(MLWalletTierUpgrade.objProductServicePage, "Header"));
-		type(MLWalletTierUpgrade.objSearchField, tierProp.getproperty(position), "Search Field");
-		verifyElementPresentAndClick(MLWalletTierUpgrade.getObjSourceOfIncome(tierProp.getproperty(position)),
-				getTextVal(MLWalletTierUpgrade.getObjSourceOfIncome(tierProp.getproperty(position)), "Value"));
+		type(MLWalletTierUpgrade.objSearchField, position, "Search Field");
+		verifyElementPresentAndClick(MLWalletTierUpgrade.getObjSourceOfIncome(position),
+				getTextVal(MLWalletTierUpgrade.getObjSourceOfIncome(position), "Value"));
 	}
 	public void selectNatureOfWork(String nature)throws Exception{
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objProductServiceOffered, getTextVal(MLWalletTierUpgrade.objSourceOfIncome , "DropDown"));
 		verifyElementPresent(MLWalletTierUpgrade.objProductServicePage, getTextVal(MLWalletTierUpgrade.objProductServicePage, "Header"));
-		type(MLWalletTierUpgrade.objSearchField, tierProp.getproperty(nature), "Search Field");
-		verifyElementPresentAndClick(MLWalletTierUpgrade.getObjSourceOfIncome(tierProp.getproperty(nature)),
-				getTextVal(MLWalletTierUpgrade.getObjSourceOfIncome(tierProp.getproperty(nature)), "Value"));
+		type(MLWalletTierUpgrade.objSearchField, nature, "Search Field");
+		verifyElementPresentAndClick(MLWalletTierUpgrade.getObjSourceOfIncome(nature),
+				getTextVal(MLWalletTierUpgrade.getObjSourceOfIncome(nature), "Value"));
 	}
 
 }
