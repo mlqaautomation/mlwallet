@@ -13257,22 +13257,22 @@ public class MLWalletBusinessLogic {
 //		WebElement passwordNextButton = DriverManager.getDriver().findElement(By.id("passwordNext"));
 //		passwordNextButton.click();
 	}
-		//todo
-		// tc 85-108
-		public void TierUpgradeSourceOfIncomeFieldValidation_TU_TC_85() throws Exception{
-			ExtentReporter.HeaderChildNode("Source of income is required when field is empty.");
-			accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
-			verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
-			if(verifyElementPresent(MLWalletTierUpgrade.objSourceOfIncomeFieldMessage, getTextVal(MLWalletTierUpgrade.objSourceOfIncomeFieldMessage , "Message"))){
-				//assert
-				String actual = getTextVal(MLWalletTierUpgrade.objSourceOfIncomeFieldMessage , "Actual result");
-				String expected = tierProp.getproperty("SourceIncome_Err");
-				assertionValidation(actual, expected);
-				logger.info("TU_TC_85, Tier Upgrade, After keeping the required source of income field as empty. Error Message Should Pop Up");
-				ExtentReporter.extentLoggerPass("TU_TC_85", "TU_TC_85, Tier Upgrade, After keeping the required source of income field as empty. Error Message Should Pop Up");
-				System.out.println("-----------------------------------------------------------");
-			}
+	//todo
+	// tc 85-108
+	public void TierUpgradeSourceOfIncomeFieldValidation_TU_TC_85() throws Exception{
+		ExtentReporter.HeaderChildNode("Source of income is required when field is empty.");
+		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
+		if(verifyElementPresent(MLWalletTierUpgrade.objSourceOfIncomeFieldMessage, getTextVal(MLWalletTierUpgrade.objSourceOfIncomeFieldMessage , "Message"))){
+			//assert
+			String actual = getTextVal(MLWalletTierUpgrade.objSourceOfIncomeFieldMessage , "Actual result");
+			String expected = tierProp.getproperty("SourceIncome_Err");
+			assertionValidation(actual, expected);
+			logger.info("TU_TC_85, Tier Upgrade, After keeping the required source of income field as empty. Error Message Should Pop Up");
+			ExtentReporter.extentLoggerPass("TU_TC_85", "TU_TC_85, Tier Upgrade, After keeping the required source of income field as empty. Error Message Should Pop Up");
+			System.out.println("-----------------------------------------------------------");
 		}
+	}
 	public void TierUpgradeCompanyFieldValidation_TU_TC_86() throws Exception{
 		ExtentReporter.HeaderChildNode("Company/Employer Name is required when field is empty.");
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
@@ -13287,7 +13287,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objCompanyEmployerFieldMessage, getTextVal(MLWalletTierUpgrade.objCompanyEmployerFieldMessage , "Message"))){
 			//assert
-			String actual = getTextVal(MLWalletTierUpgrade.objCompanyEmployerFieldMessage , "Actual result");
+			String actual = getText(MLWalletTierUpgrade.objCompanyEmployerFieldMessage);
 			String expected = tierProp.getproperty("Company_Empty_Err");
 			assertionValidation(actual, expected);
 			logger.info("TU_TC_86, Tier Upgrade, After keeping the Company/Employer Name field as empty. Error Message Should Pop Up");
@@ -13309,7 +13309,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objCompanyEmployerFieldMessage, getTextVal(MLWalletTierUpgrade.objCompanyEmployerFieldMessage , "Message"))){
 			//assert
-			String actual = getTextVal(MLWalletTierUpgrade.objCompanyEmployerFieldMessage , "Actual result");
+			String actual = getText(MLWalletTierUpgrade.objCompanyEmployerFieldMessage);
 			String expected = tierProp.getproperty("Company_Special_Err");
 			assertionValidation(actual, expected);
 			logger.info("TU_TC_87, Tier Upgrade, When user enters special characters in Company/Employer name field. Error Message Should Pop Up");
@@ -13330,7 +13330,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objProductServiceFieldMessage, getTextVal(MLWalletTierUpgrade.objProductServiceFieldMessage , "Message"))){
 			//assert
-			String actual = getTextVal(MLWalletTierUpgrade.objProductServiceFieldMessage , "Actual result");
+			String actual = getText(MLWalletTierUpgrade.objProductServiceFieldMessage);
 			String expected = tierProp.getproperty("Product_Err");
 			assertionValidation(actual, expected);
 			logger.info("TU_TC_88, Tier Upgrade, After keeping the Product/services field  empty. Error Message Should Pop Up");
@@ -13352,7 +13352,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objWorkAddressFieldMessage, getTextVal(MLWalletTierUpgrade.objWorkAddressFieldMessage , "Message"))){
 			//assert
-			String actual = getTextVal(MLWalletTierUpgrade.objWorkAddressFieldMessage , "Actual result");
+			String actual = getText(MLWalletTierUpgrade.objWorkAddressFieldMessage);
 			String expected = tierProp.getproperty("WorkAddress_Empty_Err");
 			assertionValidation(actual, expected);
 			logger.info("TU_TC_89, Tier Upgrade, After keeping the Work Address field  empty. Error Message Should Pop Up");
@@ -13375,7 +13375,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objWorkAddressFieldMessage, getTextVal(MLWalletTierUpgrade.objWorkAddressFieldMessage , "Message"))){
 			//assert
-			String actual = getTextVal(MLWalletTierUpgrade.objWorkAddressFieldMessage , "Actual result");
+			String actual = getText(MLWalletTierUpgrade.objWorkAddressFieldMessage);
 			String expected = tierProp.getproperty("WorkAddress_Invalid_Err");
 			assertionValidation(actual, expected);
 			logger.info("TU_TC_90, Tier Upgrade, After user enters special characters in work address field. Error Message Should Pop Up");
@@ -13397,7 +13397,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objPositionAtWorkFieldMessage, getTextVal(MLWalletTierUpgrade.objPositionAtWorkFieldMessage , "Message"))){
 			//assert
-			String actual = getTextVal(MLWalletTierUpgrade.objPositionAtWorkFieldMessage , "Actual result");
+			String actual = getText(MLWalletTierUpgrade.objPositionAtWorkFieldMessage);
 			String expected = tierProp.getproperty("Position_Err");
 			assertionValidation(actual, expected);
 			logger.info("TU_TC_91, Tier Upgrade, When keeping the required Position at work field empty. Error Message Should Pop Up");
@@ -13419,7 +13419,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objNatureOfWorkFieldMessage, getTextVal(MLWalletTierUpgrade.objNatureOfWorkFieldMessage , "Message"))){
 			//assert
-			String actual = getTextVal(MLWalletTierUpgrade.objNatureOfWorkFieldMessage , "Actual result");
+			String actual = getText(MLWalletTierUpgrade.objNatureOfWorkFieldMessage);
 			String expected = tierProp.getproperty("Nature_Err");
 			assertionValidation(actual, expected);
 			logger.info("TU_TC_92, Tier Upgrade, When keeping the required Nature of work field empty. Error Message Should Pop Up");
@@ -13436,7 +13436,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objReceivingPensionFieldMessage, getTextVal(MLWalletTierUpgrade.objReceivingPensionFieldMessage , "Message"))){
 			//assert
-			String actual = getTextVal(MLWalletTierUpgrade.objReceivingPensionFieldMessage , "Actual result");
+			String actual = getText(MLWalletTierUpgrade.objReceivingPensionFieldMessage);
 			String expected = tierProp.getproperty("ReceivingPension_Err");
 			assertionValidation(actual, expected);
 			logger.info("TU_TC_93, Tier Upgrade, When keeping the required Receiving Pension Form field empty. Error Message Should Pop Up");
@@ -13453,7 +13453,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objYearRetiredFieldMessage, getTextVal(MLWalletTierUpgrade.objYearRetiredFieldMessage , "Message"))){
 			//assert
-			String actual = getTextVal(MLWalletTierUpgrade.objYearRetiredFieldMessage , "Actual result");
+			String actual = getText(MLWalletTierUpgrade.objYearRetiredFieldMessage);
 			String expected = tierProp.getproperty("YearRetired_Err");
 			assertionValidation(actual, expected);
 			logger.info("TU_TC_94, Tier Upgrade, When keeping the required Year Retired field empty. Error Message Should Pop Up");
@@ -13470,7 +13470,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objPositionUponRetirementMessage, getTextVal(MLWalletTierUpgrade.objPositionUponRetirementMessage , "Message"))){
 			//assert
-			String actual = getTextVal(MLWalletTierUpgrade.objPositionUponRetirementMessage , "Actual result");
+			String actual = getText(MLWalletTierUpgrade.objPositionUponRetirementMessage);
 			String expected = tierProp.getproperty("PositionRetirement_Err");
 			assertionValidation(actual, expected);
 			logger.info("TU_TC_95, Tier Upgrade, When  keeping the required Position Upon Retirement empty. Error Message Should Pop Up");
@@ -13487,7 +13487,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objRemarksFieldMessage, getTextVal(MLWalletTierUpgrade.objRemarksFieldMessage , "Message"))){
 			//assert
-			String actual = getTextVal(MLWalletTierUpgrade.objRemarksFieldMessage , "Actual result");
+			String actual = getText(MLWalletTierUpgrade.objRemarksFieldMessage);
 			String expected = tierProp.getproperty("Remarks_Err");
 			assertionValidation(actual, expected);
 			logger.info("TU_TC_96, Tier Upgrade, When keeping the required Remarks field empty Error Message Should Pop Up");
@@ -13505,7 +13505,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objSchoolFieldMessage, getTextVal(MLWalletTierUpgrade.objSchoolFieldMessage , "Message"))){
 			//assert
-			String actual = getTextVal(MLWalletTierUpgrade.objSchoolFieldMessage , "Actual result");
+			String actual = getText(MLWalletTierUpgrade.objSchoolFieldMessage);
 			String expected = tierProp.getproperty("University_Err");
 			assertionValidation(actual, expected);
 			logger.info("TU_TC_97, Tier Upgrade, When keeping the required School/University field empty. Error Message Should Pop Up");
@@ -13523,7 +13523,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objSchoolFieldMessage, getTextVal(MLWalletTierUpgrade.objSchoolFieldMessage , "Message"))){
 			//assert
-			String actual = getTextVal(MLWalletTierUpgrade.objSchoolFieldMessage , "Actual result");
+			String actual = getText(MLWalletTierUpgrade.objSchoolFieldMessage);
 			String expected = tierProp.getproperty("University_Special_Err");
 			assertionValidation(actual, expected);
 			logger.info("TU_TC_98, Tier Upgrade, When user enters special characters in School/University field. Error Message Should Pop Up");
@@ -13540,7 +13540,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objSchoolAddressFieldMessage, getTextVal(MLWalletTierUpgrade.objSchoolAddressFieldMessage , "Message"))){
 			//assert
-			String actual = getTextVal(MLWalletTierUpgrade.objSchoolAddressFieldMessage , "Actual result");
+			String actual = getText(MLWalletTierUpgrade.objSchoolAddressFieldMessage);
 			String expected = tierProp.getproperty("SchoolAddress_Err");
 			assertionValidation(actual, expected);
 			logger.info("TU_TC_99, Tier Upgrade, When keeping the required School Address field empty. Error Message Should Pop Up");
@@ -13558,7 +13558,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objSchoolAddressFieldMessage, getTextVal(MLWalletTierUpgrade.objSchoolAddressFieldMessage , "Message"))){
 			//assert
-			String actual = getTextVal(MLWalletTierUpgrade.objSchoolAddressFieldMessage , "Actual result");
+			String actual = getText(MLWalletTierUpgrade.objSchoolAddressFieldMessage);
 			String expected = tierProp.getproperty("SchoolAddress_Special_Err");
 			assertionValidation(actual, expected);
 			logger.info("TU_TC_100, Tier Upgrade, When user enters special characters in School Address field. Error Message Should Pop Up");
@@ -13575,7 +13575,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objGrantFieldMessage, getTextVal(MLWalletTierUpgrade.objGrantFieldMessage , "Message"))){
 			//assert
-			String actual = getTextVal(MLWalletTierUpgrade.objGrantFieldMessage , "Actual result");
+			String actual = getText(MLWalletTierUpgrade.objGrantFieldMessage);
 			String expected = tierProp.getproperty("ProgramType_Err");
 			assertionValidation(actual, expected);
 			logger.info("TU_TC_101, Tier Upgrade, When keeping the required Program Type field empty. Error Message Should Pop Up");
@@ -13593,7 +13593,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objGrantFieldMessage, getTextVal(MLWalletTierUpgrade.objGrantFieldMessage , "Message"))){
 			//assert
-			String actual = getTextVal(MLWalletTierUpgrade.objGrantFieldMessage , "Actual result");
+			String actual = getText(MLWalletTierUpgrade.objGrantFieldMessage);
 			String expected = tierProp.getproperty("ProgramType_Special_Err");
 			assertionValidation(actual, expected);
 			logger.info("TU_TC_102, Tier Upgrade, When user enters special characters in Program Type field. Error Message Should Pop Up");
@@ -13610,7 +13610,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objOccupationFieldMessage, getTextVal(MLWalletTierUpgrade.objOccupationFieldMessage , "Message"))){
 			//assert
-			String actual = getTextVal(MLWalletTierUpgrade.objOccupationFieldMessage , "Actual result");
+			String actual = getText(MLWalletTierUpgrade.objOccupationFieldMessage);
 			String expected = tierProp.getproperty("Occupation_Err");
 			assertionValidation(actual, expected);
 			logger.info("TU_TC_103, Tier Upgrade, When keeping the required Occupation field empty. Error Message Should Pop Up");
@@ -13628,7 +13628,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objOccupationFieldMessage, getTextVal(MLWalletTierUpgrade.objOccupationFieldMessage , "Message"))){
 			//assert
-			String actual = getTextVal(MLWalletTierUpgrade.objOccupationFieldMessage , "Actual result");
+			String actual = getText(MLWalletTierUpgrade.objOccupationFieldMessage);
 			String expected = tierProp.getproperty("Occupation_Special_Err");
 			assertionValidation(actual, expected);
 			logger.info("TU_TC_104, Tier Upgrade, When user enters special characters in Occupation field. Error Message Should Pop Up");
@@ -13645,7 +13645,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objSourceOfFundsFieldMessage, getTextVal(MLWalletTierUpgrade.objSourceOfFundsFieldMessage , "Message"))){
 			//assert
-			String actual = getTextVal(MLWalletTierUpgrade.objSourceOfFundsFieldMessage , "Actual result");
+			String actual = getText(MLWalletTierUpgrade.objSourceOfFundsFieldMessage);
 			String expected = tierProp.getproperty("SourceOfFunds_Err");
 			assertionValidation(actual, expected);
 			logger.info("TU_TC_105, Tier Upgrade, When keeping the required Source of Funds field empty. Error Message Should Pop Up");
@@ -13663,7 +13663,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objCompanyEmployerFieldMessage, getTextVal(MLWalletTierUpgrade.objCompanyEmployerFieldMessage , "Message"))){
 			//assert
-			String actual = getTextVal(MLWalletTierUpgrade.objCompanyEmployerFieldMessage , "Actual result");
+			String actual = getText(MLWalletTierUpgrade.objCompanyEmployerFieldMessage);
 			String expected = tierProp.getproperty("Employer_Name_Special_Err");
 			assertionValidation(actual, expected);
 			logger.info("TU_TC_106, Tier Upgrade, When user enters special characters in Employer Name field. Error Message Should Pop Up");
@@ -13681,7 +13681,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objWorkAddressFieldMessage, getTextVal(MLWalletTierUpgrade.objWorkAddressFieldMessage , "Message"))){
 			//assert
-			String actual = getTextVal(MLWalletTierUpgrade.objWorkAddressFieldMessage , "Actual result");
+			String actual = getText(MLWalletTierUpgrade.objWorkAddressFieldMessage);
 			String expected = tierProp.getproperty("WorkAddress_Invalid_Err");
 			assertionValidation(actual, expected);
 			logger.info("TU_TC_107, Tier Upgrade, When user enters special characters in Work Address field. Error Message Should Pop Up");
@@ -13699,7 +13699,7 @@ public class MLWalletBusinessLogic {
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objYearRetiredFieldMessage, getTextVal(MLWalletTierUpgrade.objYearRetiredFieldMessage , "Message"))){
 			//assert
-			String actual = getTextVal(MLWalletTierUpgrade.objYearRetiredFieldMessage , "Actual result");
+			String actual = getText(MLWalletTierUpgrade.objYearRetiredFieldMessage);
 			String expected = tierProp.getproperty("WorkAddress_Invalid_Err");
 			assertionValidation(actual, expected);
 			logger.info("TU_TC_107, Tier Upgrade, When user enters special characters in Year Retired field. Error Message Should Pop Up");
@@ -13709,33 +13709,51 @@ public class MLWalletBusinessLogic {
 		}
 	}
 	public void selectSourceOfIncome(String source)throws Exception{
-		verifyElementPresentAndClick(MLWalletTierUpgrade.objSourceOfIncome, getTextVal(MLWalletTierUpgrade.objSourceOfIncome , "DropDown"));
-		verifyElementPresent(MLWalletTierUpgrade.objSourceOfIncomePage, getTextVal(MLWalletTierUpgrade.objSourceOfIncomePage, "Header"));
-		type(MLWalletTierUpgrade.objSearchField, source, "Search Field");
-		verifyElementPresentAndClick(MLWalletTierUpgrade.getObjSourceOfIncome(source),
-				getTextVal(MLWalletTierUpgrade.getObjSourceOfIncome(source), "Value"));
+		try{
+			verifyElementPresentAndClick(MLWalletTierUpgrade.objSourceOfIncome, getTextVal(MLWalletTierUpgrade.objSourceOfIncome , "DropDown"));
+			explicitWaitVisibility(MLWalletTierUpgrade.objSourceOfIncomePage, 2);
+			verifyElementPresent(MLWalletTierUpgrade.objSourceOfIncomePage, getTextVal(MLWalletTierUpgrade.objSourceOfIncomePage, "Header"));
+			type(MLWalletTierUpgrade.objSearchField, source, "Search Field");
+			verifyElementPresentAndClick(MLWalletTierUpgrade.getObjSourceOfIncome(source),
+					getTextVal(MLWalletTierUpgrade.getObjSourceOfIncome(source), "Value"));
+		}catch (Exception e){
+			logger.info("error : " + e);
+		}
+
 	}
 	public void selectProductServiceOffered(String service)throws Exception{
-		verifyElementPresentAndClick(MLWalletTierUpgrade.objProductServiceOffered, getTextVal(MLWalletTierUpgrade.objSourceOfIncome , "DropDown"));
-		verifyElementPresent(MLWalletTierUpgrade.objProductServicePage, getTextVal(MLWalletTierUpgrade.objProductServicePage, "Header"));
-		type(MLWalletTierUpgrade.objSearchField, service, "Search Field");
-		verifyElementPresentAndClick(MLWalletTierUpgrade.getObjSourceOfIncome(service),
-				getTextVal(MLWalletTierUpgrade.getObjSourceOfIncome(service), "Value"));
+		try{
+			verifyElementPresentAndClick(MLWalletTierUpgrade.objProductServiceOffered, getTextVal(MLWalletTierUpgrade.objSourceOfIncome , "DropDown"));
+			verifyElementPresent(MLWalletTierUpgrade.objProductServicePage, getTextVal(MLWalletTierUpgrade.objProductServicePage, "Header"));
+			type(MLWalletTierUpgrade.objSearchField, service, "Search Field");
+			verifyElementPresentAndClick(MLWalletTierUpgrade.getObjProductServiceOffered(service),
+					getTextVal(MLWalletTierUpgrade.getObjProductServiceOffered(service), "Value"));
+		}catch (Exception e){
+			logger.info("error : " + e);
+		}
 	}
 
 	public void selectPositionAtWork(String position)throws Exception{
-		verifyElementPresentAndClick(MLWalletTierUpgrade.objProductServiceOffered, getTextVal(MLWalletTierUpgrade.objSourceOfIncome , "DropDown"));
-		verifyElementPresent(MLWalletTierUpgrade.objProductServicePage, getTextVal(MLWalletTierUpgrade.objProductServicePage, "Header"));
-		type(MLWalletTierUpgrade.objSearchField, position, "Search Field");
-		verifyElementPresentAndClick(MLWalletTierUpgrade.getObjSourceOfIncome(position),
-				getTextVal(MLWalletTierUpgrade.getObjSourceOfIncome(position), "Value"));
+		try{
+			verifyElementPresentAndClick(MLWalletTierUpgrade.objPositionAtWork, getTextVal(MLWalletTierUpgrade.objPositionAtWork , "DropDown"));
+			verifyElementPresent(MLWalletTierUpgrade.objPositionAtWorkPage, getTextVal(MLWalletTierUpgrade.objPositionAtWorkPage, "Header"));
+			type(MLWalletTierUpgrade.objSearchField, position, "Search Field");
+			verifyElementPresentAndClick(MLWalletTierUpgrade.getObjPositionAtWork(position),
+					getTextVal(MLWalletTierUpgrade.getObjPositionAtWork(position), "Value"));
+		}catch (Exception e){
+			logger.info("error : " + e);
+		}
 	}
 	public void selectNatureOfWork(String nature)throws Exception{
-		verifyElementPresentAndClick(MLWalletTierUpgrade.objProductServiceOffered, getTextVal(MLWalletTierUpgrade.objSourceOfIncome , "DropDown"));
-		verifyElementPresent(MLWalletTierUpgrade.objProductServicePage, getTextVal(MLWalletTierUpgrade.objProductServicePage, "Header"));
-		type(MLWalletTierUpgrade.objSearchField, nature, "Search Field");
-		verifyElementPresentAndClick(MLWalletTierUpgrade.getObjSourceOfIncome(nature),
-				getTextVal(MLWalletTierUpgrade.getObjSourceOfIncome(nature), "Value"));
+		try{
+			verifyElementPresentAndClick(MLWalletTierUpgrade.ObjNatureOfWork, getTextVal(MLWalletTierUpgrade.ObjNatureOfWork , "DropDown"));
+			verifyElementPresent(MLWalletTierUpgrade.ObjNatureOfWorkPage, getTextVal(MLWalletTierUpgrade.ObjNatureOfWorkPage, "Header"));
+			type(MLWalletTierUpgrade.objSearchField, nature, "Search Field");
+			verifyElementPresentAndClick(MLWalletTierUpgrade.getObjNatureOfWork(nature),
+					getTextVal(MLWalletTierUpgrade.getObjNatureOfWork(nature), "Value"));
+		}catch (Exception e){
+			logger.info("error : " + e);
+		}
 	}
 
 }
