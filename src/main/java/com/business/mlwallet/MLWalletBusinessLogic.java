@@ -13275,8 +13275,7 @@ public class MLWalletBusinessLogic {
 	}
 	public void TierUpgradeCompanyFieldValidation_TU_TC_86() throws Exception{
 		ExtentReporter.HeaderChildNode("Company/Employer Name is required when field is empty.");
-		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
-		Swipe("UP", 2);
+
 		String source= tierProp.getproperty("SALARY");
 		selectSourceOfIncome(source);
 		selectProductServiceOffered(tierProp.getproperty("IT"));
@@ -13298,7 +13297,7 @@ public class MLWalletBusinessLogic {
 	public void TierUpgradeOrganizationNameFieldValidation_TU_TC_87() throws Exception{
 		ExtentReporter.HeaderChildNode(" When user enters special characters in Company/Employer name field.");
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
-		Swipe("UP", 2);
+
 		selectSourceOfIncome(tierProp.getproperty("SALARY"));
 		type(MLWalletTierUpgrade.objCompanyOrEmployerName, tierProp.getproperty("Invalid_Company_Name"), "Company Name");
 		selectProductServiceOffered(tierProp.getproperty("IT"));
@@ -13320,7 +13319,7 @@ public class MLWalletBusinessLogic {
 	public void TierUpgradeProductServicesFieldValidation_TU_TC_88() throws Exception{
 		ExtentReporter.HeaderChildNode(" Product/services offered is required when field is empty.");
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
-		Swipe("UP", 2);
+
 		selectSourceOfIncome(tierProp.getproperty("SALARY"));
 		type(MLWalletTierUpgrade.objCompanyOrEmployerName, tierProp.getproperty("Company_Name"), "Company Name");
 		type(MLWalletTierUpgrade.objWorkAddress, tierProp.getproperty("Address"), "Work Address");
@@ -13342,7 +13341,7 @@ public class MLWalletBusinessLogic {
 	public void TierUpgradeEmptyAddressFieldValidation_TU_TC_89() throws Exception{
 		ExtentReporter.HeaderChildNode(" Work Address is required when field is empty.");
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
-		Swipe("UP", 2);
+
 		selectSourceOfIncome(tierProp.getproperty("SALARY"));
 		type(MLWalletTierUpgrade.objCompanyOrEmployerName, tierProp.getproperty("Company_Name"), "Company Name");
 		selectProductServiceOffered(tierProp.getproperty("IT"));
@@ -13364,7 +13363,7 @@ public class MLWalletBusinessLogic {
 	public void TierUpgradeSpecialAddressFieldValidation_TU_TC_90() throws Exception{
 		ExtentReporter.HeaderChildNode(" When user enters special characters in work address field.");
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
-		Swipe("UP", 2);
+
 		selectSourceOfIncome(tierProp.getproperty("SALARY"));
 		type(MLWalletTierUpgrade.objCompanyOrEmployerName, tierProp.getproperty("Company_Name"), "Company Name");
 		selectProductServiceOffered(tierProp.getproperty("IT"));
@@ -13387,7 +13386,7 @@ public class MLWalletBusinessLogic {
 	public void TierUpgradePositionFieldValidation_TU_TC_91() throws Exception{
 		ExtentReporter.HeaderChildNode(" When keeping the required Position at work field empty.");
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
-		Swipe("UP", 2);
+
 		selectSourceOfIncome(tierProp.getproperty("SALARY"));
 		type(MLWalletTierUpgrade.objCompanyOrEmployerName, tierProp.getproperty("Company_Name"), "Company Name");
 		selectProductServiceOffered(tierProp.getproperty("IT"));
@@ -13409,7 +13408,7 @@ public class MLWalletBusinessLogic {
 	public void TierUpgradeNatureOfWorkFieldValidation_TU_TC_92() throws Exception{
 		ExtentReporter.HeaderChildNode(" When keeping the required Nature of work field empty.");
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
-		Swipe("UP", 2);
+
 		selectSourceOfIncome(tierProp.getproperty("SALARY"));
 		type(MLWalletTierUpgrade.objCompanyOrEmployerName, tierProp.getproperty("Company_Name"), "Company Name");
 		selectProductServiceOffered(tierProp.getproperty("IT"));
@@ -13431,7 +13430,7 @@ public class MLWalletBusinessLogic {
 	public void TierUpgradePensionFieldValidation_TU_TC_93() throws Exception{
 		ExtentReporter.HeaderChildNode(" When keeping the required Receiving Pension Form field empty.");
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
-		Swipe("UP", 2);
+
 		selectSourceOfIncome(tierProp.getproperty("PENSION"));
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objReceivingPensionFieldMessage, getTextVal(MLWalletTierUpgrade.objReceivingPensionFieldMessage , "Message"))){
@@ -13448,7 +13447,7 @@ public class MLWalletBusinessLogic {
 	public void TierUpgradeYearRetiredFieldValidation_TU_TC_94() throws Exception{
 		ExtentReporter.HeaderChildNode(" When keeping the required Year Retired field empty.");
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
-		Swipe("UP", 2);
+
 		selectSourceOfIncome(tierProp.getproperty("PENSION"));
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objYearRetiredFieldMessage, getTextVal(MLWalletTierUpgrade.objYearRetiredFieldMessage , "Message"))){
@@ -13465,7 +13464,7 @@ public class MLWalletBusinessLogic {
 	public void TierUpgradePositionRetirementFieldValidation_TU_TC_95() throws Exception{
 		ExtentReporter.HeaderChildNode(" When  keeping the required Position Upon Retirement empty");
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
-		Swipe("UP", 2);
+
 		selectSourceOfIncome(tierProp.getproperty("PENSION"));
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objPositionUponRetirementMessage, getTextVal(MLWalletTierUpgrade.objPositionUponRetirementMessage , "Message"))){
@@ -13482,7 +13481,7 @@ public class MLWalletBusinessLogic {
 	public void TierUpgradeRemarksFieldValidation_TU_TC_96() throws Exception{
 		ExtentReporter.HeaderChildNode(" When keeping the required Remarks field empty.");
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
-		Swipe("UP", 2);
+
 		selectSourceOfIncome(tierProp.getproperty("FINANCIAL_ASSISTANCE"));
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objRemarksFieldMessage, getTextVal(MLWalletTierUpgrade.objRemarksFieldMessage , "Message"))){
@@ -13500,7 +13499,7 @@ public class MLWalletBusinessLogic {
 	public void TierUpgradeErrorMessageUniversityIsRequiredEmptyFieldValidation_TU_TC_97() throws Exception{
 		ExtentReporter.HeaderChildNode(" When keeping the required School/University field empty.");
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
-		Swipe("UP", 2);
+
 		selectSourceOfIncome(tierProp.getproperty("STUDENT_SCHOLARSHIP"));
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objSchoolFieldMessage, getTextVal(MLWalletTierUpgrade.objSchoolFieldMessage , "Message"))){
@@ -13517,7 +13516,7 @@ public class MLWalletBusinessLogic {
 	public void TierUpgradeErrorMessageUniversityNameSpecialCharactersValidation_TU_TC_98() throws Exception{
 		ExtentReporter.HeaderChildNode(" When user enters special characters in School/University field.");
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
-		Swipe("UP", 2);
+
 		selectSourceOfIncome(tierProp.getproperty("STUDENT_SCHOLARSHIP"));
 		type(MLWalletTierUpgrade.objUniversityField, tierProp.getproperty("Invalid_University_Name"), "Universty_Name");
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
@@ -13535,7 +13534,7 @@ public class MLWalletBusinessLogic {
 	public void TierUpgradeErrorMessageSchoolAddressIsRequiredEmptyValidation_TU_TC_99() throws Exception{
 		ExtentReporter.HeaderChildNode(" When keeping the required School Address field empty.");
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
-		Swipe("UP", 2);
+
 		selectSourceOfIncome(tierProp.getproperty("STUDENT_SCHOLARSHIP"));
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objSchoolAddressFieldMessage, getTextVal(MLWalletTierUpgrade.objSchoolAddressFieldMessage , "Message"))){
@@ -13552,7 +13551,7 @@ public class MLWalletBusinessLogic {
 	public void TierUpgradeErrorMessageSchoolAddressSpecialCharactersValidation_TU_TC_100() throws Exception{
 		ExtentReporter.HeaderChildNode(" When user enters special characters in School Address field.");
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
-		Swipe("UP", 2);
+
 		selectSourceOfIncome(tierProp.getproperty("STUDENT_SCHOLARSHIP"));
 		type(MLWalletTierUpgrade.objUniversityField, tierProp.getproperty("Invalid_School_Address"), "School_Address");
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
@@ -13570,7 +13569,7 @@ public class MLWalletBusinessLogic {
 	public void TierUpgradeErrorMessageProgramTypeIsRequiredEmptyFieldValidation_TU_TC_101() throws Exception{
 		ExtentReporter.HeaderChildNode(" When keeping the required Program Type field empty.");
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
-		Swipe("UP", 2);
+
 		selectSourceOfIncome(tierProp.getproperty("GOVERNMENT_AID"));
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objGrantFieldMessage, getTextVal(MLWalletTierUpgrade.objGrantFieldMessage , "Message"))){
@@ -13587,7 +13586,7 @@ public class MLWalletBusinessLogic {
 	public void TierUpgradeErrorMessageProgramTypeSpecialCharactersValidation_TU_TC_102() throws Exception{
 		ExtentReporter.HeaderChildNode(" When user enters special characters in Program Type field.");
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
-		Swipe("UP", 2);
+
 		selectSourceOfIncome(tierProp.getproperty("GOVERNMENT_AID"));
 		type(MLWalletTierUpgrade.objUniversityField, tierProp.getproperty("Invalid_Program_Type"), "Program_Type");
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
@@ -13605,7 +13604,7 @@ public class MLWalletBusinessLogic {
 	public void TierUpgradeErrorMessageOccupationNameIsRequiredEmptyFieldValidation_TU_TC_103() throws Exception{
 		ExtentReporter.HeaderChildNode(" When keeping the required Occupation field empty.");
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
-		Swipe("UP", 2);
+
 		selectSourceOfIncome(tierProp.getproperty("OTHER"));
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objOccupationFieldMessage, getTextVal(MLWalletTierUpgrade.objOccupationFieldMessage , "Message"))){
@@ -13622,7 +13621,7 @@ public class MLWalletBusinessLogic {
 	public void TierUpgradeErrorMessageOccupationNameSpecialCharactersValidation_TU_TC_104() throws Exception{
 		ExtentReporter.HeaderChildNode(" When user enters special characters in Occupation field.");
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
-		Swipe("UP", 2);
+
 		selectSourceOfIncome(tierProp.getproperty("OTHER"));
 		type(MLWalletTierUpgrade.objUniversityField, tierProp.getproperty("Invalid_Occupation"), "Occupation");
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
@@ -13640,7 +13639,7 @@ public class MLWalletBusinessLogic {
 	public void TierUpgradeErrorMessageSourceOfFundsIsRequiredEmptyFieldValidation_TU_TC_105() throws Exception{
 		ExtentReporter.HeaderChildNode(" When keeping the required Source of Funds field empty.");
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
-		Swipe("UP", 2);
+
 		selectSourceOfIncome(tierProp.getproperty("OTHER"));
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objSourceOfFundsFieldMessage, getTextVal(MLWalletTierUpgrade.objSourceOfFundsFieldMessage , "Message"))){
@@ -13657,7 +13656,7 @@ public class MLWalletBusinessLogic {
 	public void TierUpgradeErrorMessageEmployerNameSpecialCharactersValidation_TU_TC_106() throws Exception{
 		ExtentReporter.HeaderChildNode(" When user enters special characters in Employer Name field.");
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
-		Swipe("UP", 2);
+
 		selectSourceOfIncome(tierProp.getproperty("SALARY"));
 		type(MLWalletTierUpgrade.objUniversityField, tierProp.getproperty("Invalid_Employer_Name"), "Employer_Name");
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
@@ -13675,7 +13674,6 @@ public class MLWalletBusinessLogic {
 	public void TierUpgradeErrorMessageWorkAddressSpecialCharactersValidation_TU_TC_107() throws Exception{
 		ExtentReporter.HeaderChildNode(" When user enters special characters in Work Address field.");
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
-		Swipe("UP", 2);
 		selectSourceOfIncome(tierProp.getproperty("SALARY"));
 		type(MLWalletTierUpgrade.objUniversityField, tierProp.getproperty("Invalid_Adress"), "Address");
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
@@ -13693,7 +13691,6 @@ public class MLWalletBusinessLogic {
 	public void TierUpgradeErrorMessageRetiredFieldSpecialCharactersValidation_TU_TC_108() throws Exception{
 		ExtentReporter.HeaderChildNode(" When user enters special characters in Year Retired field.");
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
-		Swipe("UP", 2);
 		selectSourceOfIncome(tierProp.getproperty("PENSION"));
 		type(MLWalletTierUpgrade.objUniversityField, tierProp.getproperty("Invalid_Retired_Year"), "Retired_Year");
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
@@ -13711,7 +13708,7 @@ public class MLWalletBusinessLogic {
 	public void selectSourceOfIncome(String source)throws Exception{
 		try{
 			verifyElementPresentAndClick(MLWalletTierUpgrade.objSourceOfIncome, getTextVal(MLWalletTierUpgrade.objSourceOfIncome , "DropDown"));
-			explicitWaitVisibility(MLWalletTierUpgrade.objSourceOfIncomePage, 2);
+			waitTime(3000);
 			verifyElementPresent(MLWalletTierUpgrade.objSourceOfIncomePage, getTextVal(MLWalletTierUpgrade.objSourceOfIncomePage, "Header"));
 			type(MLWalletTierUpgrade.objSearchField, source, "Search Field");
 			verifyElementPresentAndClick(MLWalletTierUpgrade.getObjSourceOfIncome(source),
@@ -13724,6 +13721,7 @@ public class MLWalletBusinessLogic {
 	public void selectProductServiceOffered(String service)throws Exception{
 		try{
 			verifyElementPresentAndClick(MLWalletTierUpgrade.objProductServiceOffered, getTextVal(MLWalletTierUpgrade.objSourceOfIncome , "DropDown"));
+			waitTime(3000);
 			verifyElementPresent(MLWalletTierUpgrade.objProductServicePage, getTextVal(MLWalletTierUpgrade.objProductServicePage, "Header"));
 			type(MLWalletTierUpgrade.objSearchField, service, "Search Field");
 			verifyElementPresentAndClick(MLWalletTierUpgrade.getObjProductServiceOffered(service),
@@ -13736,6 +13734,7 @@ public class MLWalletBusinessLogic {
 	public void selectPositionAtWork(String position)throws Exception{
 		try{
 			verifyElementPresentAndClick(MLWalletTierUpgrade.objPositionAtWork, getTextVal(MLWalletTierUpgrade.objPositionAtWork , "DropDown"));
+			waitTime(3000);
 			verifyElementPresent(MLWalletTierUpgrade.objPositionAtWorkPage, getTextVal(MLWalletTierUpgrade.objPositionAtWorkPage, "Header"));
 			type(MLWalletTierUpgrade.objSearchField, position, "Search Field");
 			verifyElementPresentAndClick(MLWalletTierUpgrade.getObjPositionAtWork(position),
@@ -13747,6 +13746,7 @@ public class MLWalletBusinessLogic {
 	public void selectNatureOfWork(String nature)throws Exception{
 		try{
 			verifyElementPresentAndClick(MLWalletTierUpgrade.ObjNatureOfWork, getTextVal(MLWalletTierUpgrade.ObjNatureOfWork , "DropDown"));
+			waitTime(3000);
 			verifyElementPresent(MLWalletTierUpgrade.ObjNatureOfWorkPage, getTextVal(MLWalletTierUpgrade.ObjNatureOfWorkPage, "Header"));
 			type(MLWalletTierUpgrade.objSearchField, nature, "Search Field");
 			verifyElementPresentAndClick(MLWalletTierUpgrade.getObjNatureOfWork(nature),
@@ -13755,5 +13755,4 @@ public class MLWalletBusinessLogic {
 			logger.info("error : " + e);
 		}
 	}
-
 }
