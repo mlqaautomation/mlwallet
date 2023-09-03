@@ -187,92 +187,92 @@ public class MLWalletTierUpgrade {
 //    public void tierUpgradeToBranchVerifiedFromBuyerTier_TU_TC_244() throws Exception {
 //        MLWalletBusinessLogic.tierUpgradeToBranchVerifiedFromBuyerTier_TU_TC_244();
 //    }
-//    @Test(priority = 1)
-//    public void TierUpgradeSourceOfIncomeFieldValidation_TU_TC_85() throws Exception {
-//    MLWalletBusinessLogic.TierUpgradeSourceOfIncomeFieldValidation_TU_TC_85();
-//    }
-    @Test(priority = 0)
+    @Test(priority = 1)
+    public void TierUpgradeSourceOfIncomeFieldValidation_TU_TC_85() throws Exception {
+    MLWalletBusinessLogic.TierUpgradeSourceOfIncomeFieldValidation_TU_TC_85();
+    }
+    @Test(priority = 2)
     public void TierUpgradeCompanyFieldValidation_TU_TC_86() throws Exception {
         MLWalletBusinessLogic.TierUpgradeCompanyFieldValidation_TU_TC_86();
     }
-//    @Test(priority = 3)
-//    public void TierUpgradeOrganizationNameFieldValidation_TU_TC_87() throws Exception {
-//        MLWalletBusinessLogic.TierUpgradeOrganizationNameFieldValidation_TU_TC_87();
-//    }@Test(priority = 4)
-//    public void TierUpgradeProductServicesFieldValidation_TU_TC_88() throws Exception {
-//        MLWalletBusinessLogic.TierUpgradeProductServicesFieldValidation_TU_TC_88();
-//    }@Test(priority = 5)
-//    public void TierUpgradeEmptyAddressFieldValidation_TU_TC_89() throws Exception {
-//        MLWalletBusinessLogic.TierUpgradeEmptyAddressFieldValidation_TU_TC_89();
-//    }@Test(priority = 6)
-//    public void TierUpgradeSpecialAddressFieldValidation_TU_TC_90() throws Exception {
-//        MLWalletBusinessLogic.TierUpgradeSpecialAddressFieldValidation_TU_TC_90();
-//    }@Test(priority = 7)
-//    public void TierUpgradePositionFieldValidation_TU_TC_91() throws Exception {
-//        MLWalletBusinessLogic.TierUpgradePositionFieldValidation_TU_TC_91();
-//    }@Test(priority = 8)
-//    public void TierUpgradeNatureOfWorkFieldValidation_TU_TC_92() throws Exception {
-//        MLWalletBusinessLogic.TierUpgradeNatureOfWorkFieldValidation_TU_TC_92();
-//    }@Test(priority = 9)
-//    public void TierUpgradePensionFieldValidation_TU_TC_93() throws Exception {
-//        MLWalletBusinessLogic.TierUpgradePensionFieldValidation_TU_TC_93();
-//    }@Test(priority = 10)
-//    public void TierUpgradeYearRetiredFieldValidation_TU_TC_94() throws Exception {
-//        MLWalletBusinessLogic.TierUpgradeYearRetiredFieldValidation_TU_TC_94();
-//    }@Test(priority = 11)
-//    public void TierUpgradePositionRetirementFieldValidation_TU_TC_95() throws Exception {
-//        MLWalletBusinessLogic.TierUpgradePositionRetirementFieldValidation_TU_TC_95();
-//    }@Test(priority = 12)
-//    public void TierUpgradeRemarksFieldValidation_TU_TC_96() throws Exception {
-//        MLWalletBusinessLogic.TierUpgradeRemarksFieldValidation_TU_TC_96();
-//    }@Test(priority = 13)
-//    public void TierUpgradeErrorMessageUniversityIsRequiredEmptyFieldValidation_TU_TC_97() throws Exception {
-//        MLWalletBusinessLogic.TierUpgradeErrorMessageUniversityIsRequiredEmptyFieldValidation_TU_TC_97();
-//    }
-//    @Test(priority = 14)
-//    public void TierUpgradeErrorMessageUniversityNameSpecialCharactersValidation_TU_TC_98() throws Exception {
-//        MLWalletBusinessLogic.TierUpgradeErrorMessageUniversityNameSpecialCharactersValidation_TU_TC_98();
-//    }
-//    @Test(priority = 15)
-//    public void TierUpgradeErrorMessageSchoolAddressIsRequiredEmptyValidation_TU_TC_99() throws Exception {
-//        MLWalletBusinessLogic.TierUpgradeErrorMessageSchoolAddressIsRequiredEmptyValidation_TU_TC_99();
-//    }
-//    @Test(priority = 16)
-//    public void TierUpgradeErrorMessageSchoolAddressSpecialCharactersValidation_TU_TC_100() throws Exception {
-//        MLWalletBusinessLogic.TierUpgradeErrorMessageSchoolAddressSpecialCharactersValidation_TU_TC_100();
-//    }
-//    @Test(priority = 17)
-//    public void TierUpgradeErrorMessageProgramTypeIsRequiredEmptyFieldValidation_TU_TC_101() throws Exception {
-//        MLWalletBusinessLogic.TierUpgradeErrorMessageProgramTypeIsRequiredEmptyFieldValidation_TU_TC_101();
-//    }
-//    @Test(priority = 18)
-//    public void TierUpgradeErrorMessageProgramTypeSpecialCharactersValidation_TU_TC_102() throws Exception {
-//        MLWalletBusinessLogic.TierUpgradeErrorMessageProgramTypeSpecialCharactersValidation_TU_TC_102();
-//    }
-//    @Test(priority = 19)
-//    public void TierUpgradeErrorMessageOccupationNameIsRequiredEmptyFieldValidation_TU_TC_103() throws Exception {
-//        MLWalletBusinessLogic.TierUpgradeErrorMessageOccupationNameIsRequiredEmptyFieldValidation_TU_TC_103();
-//    }
-//    @Test(priority = 20)
-//    public void TierUpgradeErrorMessageOccupationNameSpecialCharactersValidation_TU_TC_104() throws Exception {
-//        MLWalletBusinessLogic.TierUpgradeErrorMessageOccupationNameSpecialCharactersValidation_TU_TC_104();
-//    }
-//    @Test(priority = 21)
-//    public void TierUpgradeErrorMessageSourceOfFundsIsRequiredEmptyFieldValidation_TU_TC_105() throws Exception {
-//        MLWalletBusinessLogic.TierUpgradeErrorMessageSourceOfFundsIsRequiredEmptyFieldValidation_TU_TC_105();
-//    }
-//    @Test(priority = 22)
-//    public void TierUpgradeErrorMessageEmployerNameSpecialCharactersValidation_TU_TC_106() throws Exception {
-//        MLWalletBusinessLogic.TierUpgradeErrorMessageEmployerNameSpecialCharactersValidation_TU_TC_106();
-//    }
-//    @Test(priority = 23)
-//    public void TierUpgradeErrorMessageWorkAddressSpecialCharactersValidation_TU_TC_107() throws Exception {
-//        MLWalletBusinessLogic.TierUpgradeErrorMessageWorkAddressSpecialCharactersValidation_TU_TC_107();
-//    }
-//    @Test(priority = 24)
-//    public void TierUpgradeErrorMessageRetiredFieldSpecialCharactersValidation_TU_TC_108() throws Exception {
-//        MLWalletBusinessLogic.TierUpgradeErrorMessageRetiredFieldSpecialCharactersValidation_TU_TC_108();
-//    }
+    @Test(priority = 3)
+    public void TierUpgradeOrganizationNameFieldValidation_TU_TC_87() throws Exception {
+        MLWalletBusinessLogic.TierUpgradeOrganizationNameFieldValidation_TU_TC_87();
+    }@Test(priority = 4)
+    public void TierUpgradeProductServicesFieldValidation_TU_TC_88() throws Exception {
+        MLWalletBusinessLogic.TierUpgradeProductServicesFieldValidation_TU_TC_88();
+    }@Test(priority = 5)
+    public void TierUpgradeEmptyAddressFieldValidation_TU_TC_89() throws Exception {
+        MLWalletBusinessLogic.TierUpgradeEmptyAddressFieldValidation_TU_TC_89();
+    }@Test(priority = 6)
+    public void TierUpgradeSpecialAddressFieldValidation_TU_TC_90() throws Exception {
+        MLWalletBusinessLogic.TierUpgradeSpecialAddressFieldValidation_TU_TC_90();
+    }@Test(priority = 7)
+    public void TierUpgradePositionFieldValidation_TU_TC_91() throws Exception {
+        MLWalletBusinessLogic.TierUpgradePositionFieldValidation_TU_TC_91();
+    }@Test(priority = 8)
+    public void TierUpgradeNatureOfWorkFieldValidation_TU_TC_92() throws Exception {
+        MLWalletBusinessLogic.TierUpgradeNatureOfWorkFieldValidation_TU_TC_92();
+    }@Test(priority = 9)
+    public void TierUpgradePensionFieldValidation_TU_TC_93() throws Exception {
+        MLWalletBusinessLogic.TierUpgradePensionFieldValidation_TU_TC_93();
+    }@Test(priority = 10)
+    public void TierUpgradeYearRetiredFieldValidation_TU_TC_94() throws Exception {
+        MLWalletBusinessLogic.TierUpgradeYearRetiredFieldValidation_TU_TC_94();
+    }@Test(priority = 11)
+    public void TierUpgradePositionRetirementFieldValidation_TU_TC_95() throws Exception {
+        MLWalletBusinessLogic.TierUpgradePositionRetirementFieldValidation_TU_TC_95();
+    }@Test(priority = 12)
+    public void TierUpgradeRemarksFieldValidation_TU_TC_96() throws Exception {
+        MLWalletBusinessLogic.TierUpgradeRemarksFieldValidation_TU_TC_96();
+    }@Test(priority = 13)
+    public void TierUpgradeErrorMessageUniversityIsRequiredEmptyFieldValidation_TU_TC_97() throws Exception {
+        MLWalletBusinessLogic.TierUpgradeErrorMessageUniversityIsRequiredEmptyFieldValidation_TU_TC_97();
+    }
+    @Test(priority = 14)
+    public void TierUpgradeErrorMessageUniversityNameSpecialCharactersValidation_TU_TC_98() throws Exception {
+        MLWalletBusinessLogic.TierUpgradeErrorMessageUniversityNameSpecialCharactersValidation_TU_TC_98();
+    }
+    @Test(priority = 15)
+    public void TierUpgradeErrorMessageSchoolAddressIsRequiredEmptyValidation_TU_TC_99() throws Exception {
+        MLWalletBusinessLogic.TierUpgradeErrorMessageSchoolAddressIsRequiredEmptyValidation_TU_TC_99();
+    }
+    @Test(priority = 16)
+    public void TierUpgradeErrorMessageSchoolAddressSpecialCharactersValidation_TU_TC_100() throws Exception {
+        MLWalletBusinessLogic.TierUpgradeErrorMessageSchoolAddressSpecialCharactersValidation_TU_TC_100();
+    }
+    @Test(priority = 17)
+    public void TierUpgradeErrorMessageProgramTypeIsRequiredEmptyFieldValidation_TU_TC_101() throws Exception {
+        MLWalletBusinessLogic.TierUpgradeErrorMessageProgramTypeIsRequiredEmptyFieldValidation_TU_TC_101();
+    }
+    @Test(priority = 18)
+    public void TierUpgradeErrorMessageProgramTypeSpecialCharactersValidation_TU_TC_102() throws Exception {
+        MLWalletBusinessLogic.TierUpgradeErrorMessageProgramTypeSpecialCharactersValidation_TU_TC_102();
+    }
+    @Test(priority = 19)
+    public void TierUpgradeErrorMessageOccupationNameIsRequiredEmptyFieldValidation_TU_TC_103() throws Exception {
+        MLWalletBusinessLogic.TierUpgradeErrorMessageOccupationNameIsRequiredEmptyFieldValidation_TU_TC_103();
+    }
+    @Test(priority = 20)
+    public void TierUpgradeErrorMessageOccupationNameSpecialCharactersValidation_TU_TC_104() throws Exception {
+        MLWalletBusinessLogic.TierUpgradeErrorMessageOccupationNameSpecialCharactersValidation_TU_TC_104();
+    }
+    @Test(priority = 21)
+    public void TierUpgradeErrorMessageSourceOfFundsIsRequiredEmptyFieldValidation_TU_TC_105() throws Exception {
+        MLWalletBusinessLogic.TierUpgradeErrorMessageSourceOfFundsIsRequiredEmptyFieldValidation_TU_TC_105();
+    }
+    @Test(priority = 22)
+    public void TierUpgradeErrorMessageEmployerNameSpecialCharactersValidation_TU_TC_106() throws Exception {
+        MLWalletBusinessLogic.TierUpgradeErrorMessageEmployerNameSpecialCharactersValidation_TU_TC_106();
+    }
+    @Test(priority = 23)
+    public void TierUpgradeErrorMessageWorkAddressSpecialCharactersValidation_TU_TC_107() throws Exception {
+        MLWalletBusinessLogic.TierUpgradeErrorMessageWorkAddressSpecialCharactersValidation_TU_TC_107();
+    }
+    @Test(priority = 24)
+    public void TierUpgradeErrorMessageRetiredFieldSpecialCharactersValidation_TU_TC_108() throws Exception {
+        MLWalletBusinessLogic.TierUpgradeErrorMessageRetiredFieldSpecialCharactersValidation_TU_TC_108();
+    }
     @AfterMethod
     public void afterMethod(){
         AppiumServer.stopServer();
