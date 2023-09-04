@@ -5,12 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81ccbcc4-de21-4eb6-8daf-c0c396cfc098" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlwallet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mlwallet.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/MLWalletBusinessLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/MLWalletBusinessLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletTierUpgrade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletTierUpgrade.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -32,6 +39,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
   <component name="ProjectId" id="2PsGqyquYi3ht7XMn1DqIO7SplF" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -47,11 +57,11 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Automation-Projects/MLWalletRegression_V4.1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projects/wallet-android/android-ML-Wallet&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.D:/ML Wallet Project/MLWalletV1.1/MLWalletRegressionV1.0/mlwallet.xml">
+  <component name="RunManager" selected="TestNG.D:/Projects/wallet-android/android-ML-Wallet/mlwallet.xml">
     <configuration name="D:/ML Wallet Project/MLWalletV1.1/MLWalletRegressionV1.0/mlWalletBrowserStack.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MLWallet" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/mlWalletBrowserStack.xml" />
@@ -64,6 +74,16 @@
     </configuration>
     <configuration name="D:/ML Wallet Project/MLWalletV1.1/MLWalletRegressionV1.0/mlwallet.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MLWallet" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/mlwallet.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="D:/Projects/wallet-android/android-ML-Wallet/mlwallet.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="android-ML-Wallet" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/mlwallet.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
@@ -93,6 +113,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.D:/Projects/wallet-android/android-ML-Wallet/mlwallet.xml" />
         <item itemvalue="TestNG.D:/ML Wallet Project/MLWalletV1.1/MLWalletRegressionV1.0/mlwallet.xml" />
         <item itemvalue="TestNG.MLWalletTierUpgrade.TierUpgradeCompanyFieldValidation_TU_TC_86" />
         <item itemvalue="TestNG.D:/ML Wallet Project/MLWalletV1.1/MLWalletRegressionV1.0/mlWalletBrowserStack.xml" />

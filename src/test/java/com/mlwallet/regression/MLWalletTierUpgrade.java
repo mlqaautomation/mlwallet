@@ -191,7 +191,7 @@ public class MLWalletTierUpgrade {
     public void TierUpgradeSourceOfIncomeFieldValidation_TU_TC_85() throws Exception {
     MLWalletBusinessLogic.TierUpgradeSourceOfIncomeFieldValidation_TU_TC_85();
     }
-    @Test(priority = 2)
+    @Test(priority = 0)
     public void TierUpgradeCompanyFieldValidation_TU_TC_86() throws Exception {
         MLWalletBusinessLogic.TierUpgradeCompanyFieldValidation_TU_TC_86();
     }
