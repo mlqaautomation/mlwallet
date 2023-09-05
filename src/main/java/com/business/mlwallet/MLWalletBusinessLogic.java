@@ -13774,6 +13774,22 @@ public class MLWalletBusinessLogic {
 				" When user enters alphabets, space, and numbers in Occupation Type field. User should be able to input");
 		System.out.println("-----------------------------------------------------------");
 	}
+	public void TierUpgradeOccupationFieldValidation_TU_TC_114() throws Exception{
+		ExtentReporter.HeaderChildNode(" When user enters alphabets, space, and numbers in Source of Fund field.");
+		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
+		selectSourceOfIncome(tierProp.getproperty("OTHER"));
+		Swipe("UP", 2);
+		type(MLWalletTierUpgrade.objOccupationField, tierProp.getproperty("Occupation_v1"), "Occupation Field");
+		type(MLWalletTierUpgrade.objSourceOfFundsField, tierProp.getproperty("SourceFund_v1"), "Source of Fund Field");
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
+		if(verifyElementPresent(MLWalletTierUpgrade.objSelectAnyValidID, getTextVal(MLWalletTierUpgrade.objSelectAnyValidID, "Page"))){
+			logger.info("TU_TC_114, Tier Upgrade, When user enters alphabets, space, and numbers in Source of Fund field. User should be able to input");
+			ExtentReporter.extentLoggerPass("TU_TC_114", "TU_TC_114, Tier Upgrade, " +
+					" When user enters alphabets, space, and numbers in Source of Fund field. User should be able to input");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+
 	public void selectSourceOfIncome(String source)throws Exception{
 		try{
 			verifyElementPresentAndClick(MLWalletTierUpgrade.objSourceOfIncome, getTextVal(MLWalletTierUpgrade.objSourceOfIncome , "DropDown"));

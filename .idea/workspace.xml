@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81ccbcc4-de21-4eb6-8daf-c0c396cfc098" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Reports/05_09_2023/Android/MLWallet/Screenshots/MLWallet_2023_09_05_09_30_02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/05_09_2023/Android/MLWallet/Screenshots/MLWallet_2023_09_05_09_32_35.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/05_09_2023/Android/MLWallet/Screenshots/MLWallet_2023_09_05_09_40_09.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/05_09_2023/Android/MLWallet/Screenshots/MLWallet_2023_09_05_09_42_53.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/05_09_2023/Android_MLWallet_Build 11.0.76_2023_09_05_09_38_22.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/05_09_2023/Android_MLWallet_Build 11.0.77_2023_09_05_09_27_41.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/properties/tierUpgrade.properties" beforeDir="false" afterPath="$PROJECT_DIR$/properties/tierUpgrade.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/MLWalletBusinessLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/MLWalletBusinessLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletTierUpgrade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletTierUpgrade.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletTierUpgrade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletTierUpgrade.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -168,6 +161,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/driverInstance/DriverInstance.java</url>
           <line>65</line>
           <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletTierUpgrade.java</url>
+          <line>297</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

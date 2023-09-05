@@ -296,6 +296,10 @@ public class MLWalletTierUpgrade {
         MLWalletBusinessLogic.TierUpgradeOccupationFieldValidation_TU_TC_113();
     }
 
+    @Test(priority = 30)
+    public void TierUpgradeOccupationFieldValidation_TU_TC_114() throws Exception {
+        MLWalletBusinessLogic.TierUpgradeOccupationFieldValidation_TU_TC_114();
+    }
 
     @AfterMethod
     public void afterMethod(){
