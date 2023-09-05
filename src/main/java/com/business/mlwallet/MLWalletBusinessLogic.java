@@ -13547,7 +13547,7 @@ public class MLWalletBusinessLogic {
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
 		selectSourceOfIncome(tierProp.getproperty("STUDENT_SCHOLARSHIP"));
 		Swipe("UP", 2);
-		type(MLWalletTierUpgrade.objUniversityField, tierProp.getproperty("Invalid_School_Address"), "School_Address");
+		type(MLWalletTierUpgrade.objSchoolAddressField, tierProp.getproperty("Invalid_School_Address"), "School_Address");
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objSchoolAddressFieldMessage, getTextVal(MLWalletTierUpgrade.objSchoolAddressFieldMessage , "Message"))){
 			//assert
@@ -13582,7 +13582,7 @@ public class MLWalletBusinessLogic {
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
 		selectSourceOfIncome(tierProp.getproperty("GOVERNMENT_AID"));
 		Swipe("UP", 2);
-		type(MLWalletTierUpgrade.objUniversityField, tierProp.getproperty("Invalid_Program_Type"), "Program_Type");
+		type(MLWalletTierUpgrade.objProgramTypeField, tierProp.getproperty("Invalid_Program_Type"), "Program_Type");
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objGrantFieldMessage, getTextVal(MLWalletTierUpgrade.objGrantFieldMessage , "Message"))){
 			//assert
@@ -13617,7 +13617,7 @@ public class MLWalletBusinessLogic {
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
 		selectSourceOfIncome(tierProp.getproperty("OTHER"));
 		Swipe("UP", 2);
-		type(MLWalletTierUpgrade.objUniversityField, tierProp.getproperty("Invalid_Occupation"), "Occupation");
+		type(MLWalletTierUpgrade.objOccupationField, tierProp.getproperty("Invalid_Occupation"), "Occupation");
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objOccupationFieldMessage, getTextVal(MLWalletTierUpgrade.objOccupationFieldMessage , "Message"))){
 			//assert
@@ -13652,7 +13652,7 @@ public class MLWalletBusinessLogic {
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
 		selectSourceOfIncome(tierProp.getproperty("SALARY"));
 		Swipe("UP", 2);
-		type(MLWalletTierUpgrade.objUniversityField, tierProp.getproperty("Invalid_Employer_Name"), "Employer_Name");
+		type(MLWalletTierUpgrade.objCompanyOrEmployerName, tierProp.getproperty("Invalid_Employer_Name"), "Employer_Name");
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objCompanyEmployerFieldMessage, getTextVal(MLWalletTierUpgrade.objCompanyEmployerFieldMessage , "Message"))){
 			//assert
@@ -13670,7 +13670,7 @@ public class MLWalletBusinessLogic {
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
 		selectSourceOfIncome(tierProp.getproperty("SALARY"));
 		Swipe("UP", 2);
-		type(MLWalletTierUpgrade.objUniversityField, tierProp.getproperty("Invalid_Adress"), "Address");
+		type(MLWalletTierUpgrade.objWorkAddress, tierProp.getproperty("Invalid_Address"), "Address");
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objWorkAddressFieldMessage, getTextVal(MLWalletTierUpgrade.objWorkAddressFieldMessage , "Message"))){
 			//assert
@@ -13688,12 +13688,12 @@ public class MLWalletBusinessLogic {
 		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
 		selectSourceOfIncome(tierProp.getproperty("PENSION"));
 		Swipe("UP", 2);
-		type(MLWalletTierUpgrade.objUniversityField, tierProp.getproperty("Invalid_Retired_Year"), "Retired_Year");
+		type(MLWalletTierUpgrade.objYearRetiredField, tierProp.getproperty("Invalid_Retired_Year"), "Retired_Year");
 		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
 		if(verifyElementPresent(MLWalletTierUpgrade.objYearRetiredFieldMessage, getTextVal(MLWalletTierUpgrade.objYearRetiredFieldMessage , "Message"))){
 			//assert
 			String actual = getText(MLWalletTierUpgrade.objYearRetiredFieldMessage);
-			String expected = tierProp.getproperty("WorkAddress_Invalid_Err");
+			String expected = tierProp.getproperty("YearRetired_Err");
 			assertionValidation(actual, expected);
 			logger.info("TU_TC_108, Tier Upgrade, When user enters special characters in Year Retired field. Error Message Should Pop Up");
 			ExtentReporter.extentLoggerPass("TU_TC_108", "TU_TC_108, Tier Upgrade, " +
