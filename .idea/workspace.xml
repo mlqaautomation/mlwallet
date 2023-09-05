@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="81ccbcc4-de21-4eb6-8daf-c0c396cfc098" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties/tierUpgrade.properties" beforeDir="false" afterPath="$PROJECT_DIR$/properties/tierUpgrade.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/MLWalletBusinessLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/MLWalletBusinessLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletTierUpgrade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletTierUpgrade.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
