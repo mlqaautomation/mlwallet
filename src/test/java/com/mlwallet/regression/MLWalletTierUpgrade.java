@@ -191,7 +191,7 @@ public class MLWalletTierUpgrade {
     public void TierUpgradeSourceOfIncomeFieldValidation_TU_TC_85() throws Exception {
     MLWalletBusinessLogic.TierUpgradeSourceOfIncomeFieldValidation_TU_TC_85();
     }
-    @Test(priority = 0)
+    @Test(priority = 2)
     public void TierUpgradeCompanyFieldValidation_TU_TC_86() throws Exception {
         MLWalletBusinessLogic.TierUpgradeCompanyFieldValidation_TU_TC_86();
     }
@@ -273,6 +273,30 @@ public class MLWalletTierUpgrade {
     public void TierUpgradeErrorMessageRetiredFieldSpecialCharactersValidation_TU_TC_108() throws Exception {
         MLWalletBusinessLogic.TierUpgradeErrorMessageRetiredFieldSpecialCharactersValidation_TU_TC_108();
     }
+    @Test(priority = 25)
+    public void TierUpgradeBranchTierVerificationTierNavigation_TU_TC_109() throws Exception {
+        MLWalletBusinessLogic.TierUpgradeBranchTierVerificationTierNavigation_TU_TC_109();
+    }
+    @Test(priority = 26)
+    public void TierUpgradeSchoolUniveristyFieldValidation_TU_TC_110() throws Exception {
+        MLWalletBusinessLogic.TierUpgradeSchoolUniveristyFieldValidation_TU_TC_110();
+    }
+
+    @Test(priority = 27)
+    public void TierUpgradeSchoolAddressFieldValidation_TU_TC_111() throws Exception {
+        MLWalletBusinessLogic.TierUpgradeSchoolAddressFieldValidation_TU_TC_111();
+    }
+    @Test(priority = 28)
+    public void TierUpgradeGrantProgramFIeldValidation_TU_TC_112() throws Exception {
+        MLWalletBusinessLogic.TierUpgradeGrantProgramFIeldValidation_TU_TC_112();
+    }
+
+    @Test(priority = 29)
+    public void TierUpgradeOccupationFieldValidation_TU_TC_113() throws Exception {
+        MLWalletBusinessLogic.TierUpgradeOccupationFieldValidation_TU_TC_113();
+    }
+
+
     @AfterMethod
     public void afterMethod(){
         AppiumServer.stopServer();

@@ -143,13 +143,13 @@ public class MLWalletTierUpgrade {
 // Financial Fields
     public static By objRemarksField = By.xpath("//*[@text='Remarks'][1]/following-sibling::android.widget.EditText");
 // Student Fields
-    public static By objUniversityField = By.xpath("//*[@text='School/University'][2]");
-    public static By objSchoolAddressField = By.xpath("//*[@text='School Address'][2]");
-
+    public static By objUniversityField = By.xpath("//*[@text='School/University']/following-sibling::android.widget.EditText");
+    public static By objSchoolAddressField = By.xpath("//*[@text='School Address']/following-sibling::android.widget.EditText");
+//
 // Govt Fields
-    public static By objProgramTypeField = By.xpath("//*[@text='Grant/Program Type'][2]");
+    public static By objProgramTypeField = By.xpath("//*[@text='Grant/Program Type']/following-sibling::android.widget.EditText");
 
 // Other Source Income Fields
-    public static By objOccupationField = By.xpath("//*[@text='Occupation'][2]");
-    public static By objSourceOfFundsField = By.xpath("//*[@text='Source of Funds'][2]");
+    public static By objOccupationField = By.xpath("//*[@text='Occupation']/following-sibling::android.widget.EditText");
+    public static By objSourceOfFundsField = By.xpath("//*[@text='Source of Funds']/following-sibling::android.widget.EditText");
 }

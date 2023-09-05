@@ -13695,11 +13695,84 @@ public class MLWalletBusinessLogic {
 			String actual = getText(MLWalletTierUpgrade.objYearRetiredFieldMessage);
 			String expected = tierProp.getproperty("WorkAddress_Invalid_Err");
 			assertionValidation(actual, expected);
-			logger.info("TU_TC_107, Tier Upgrade, When user enters special characters in Year Retired field. Error Message Should Pop Up");
+			logger.info("TU_TC_108, Tier Upgrade, When user enters special characters in Year Retired field. Error Message Should Pop Up");
 			ExtentReporter.extentLoggerPass("TU_TC_108", "TU_TC_108, Tier Upgrade, " +
 					"When user enters special characters in Year Retired field. Error Message Should Pop Up");
 			System.out.println("-----------------------------------------------------------");
 		}
+	}
+	public void TierUpgradeBranchTierVerificationTierNavigation_TU_TC_109() throws Exception{
+		ExtentReporter.HeaderChildNode(" When branch tier user navigates to verification tier perk page.");
+		mlWalletLogin(prop.getproperty("Branch_Verified"));
+		verifyElementPresentAndClick(MLWalletHomePage.objHamburgerMenu , "Hamburger Menu");
+		verifyElementPresentAndClick(MLWalletHomePage.objViewTier, getTextVal(MLWalletHomePage.objViewTier, "Button"));
+		if(verifyElementPresent(MLWalletHomePage.objVerificationTierPerks, getTextVal(MLWalletHomePage.objVerificationTierPerks , "Page"))){
+			verifyElementPresent(MLWalletHomePage.objBranchVerified, getTextVal(MLWalletHomePage.objVerificationTierPerks , "Current Tier"));
+			logger.info("TU_TC_109, Tier Upgrade, When branch tier user navigates to verification tier perk page. User should be navigated");
+			ExtentReporter.extentLoggerPass("TU_TC_109", "TU_TC_109, Tier Upgrade, " +
+					" When branch tier user navigates to verification tier perk page. User should be navigated");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+	public void TierUpgradeSchoolUniveristyFieldValidation_TU_TC_110() throws Exception{
+		ExtentReporter.HeaderChildNode(" When user enters alphabets, space, and numbers in School/University Name field.");
+		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
+		selectSourceOfIncome(tierProp.getproperty("STUDENT_SCHOLARSHIP"));
+		Swipe("UP", 2);
+		type(MLWalletTierUpgrade.objUniversityField, tierProp.getproperty("University_Name_v1"), "School/University Name");
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
+		String actual = getText(MLWalletTierUpgrade.objUniversityField);
+		String exptected = tierProp.getproperty("University_Name_v1");
+		assertionValidation(actual, exptected);
+		logger.info("TU_TC_110, Tier Upgrade, When user enters alphabets, space, and numbers in School/University field. User should be able to input");
+		ExtentReporter.extentLoggerPass("TU_TC_110", "TU_TC_110, Tier Upgrade, " +
+				" When user enters alphabets, space, and numbers in School/University field. User should be able to input");
+		System.out.println("-----------------------------------------------------------");
+	}
+	public void TierUpgradeSchoolAddressFieldValidation_TU_TC_111() throws Exception{
+		ExtentReporter.HeaderChildNode(" When user enters alphabets, space, and numbers in School/University Address field.");
+		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
+		selectSourceOfIncome(tierProp.getproperty("STUDENT_SCHOLARSHIP"));
+		Swipe("UP", 2);
+		type(MLWalletTierUpgrade.objUniversityField, tierProp.getproperty("University_Name_v1"), "School/University Name");
+		type(MLWalletTierUpgrade.objSchoolAddressField, tierProp.getproperty("School_Address_v1"), "School/University Address");
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
+		String actual = getText(MLWalletTierUpgrade.objSchoolAddressField);
+		String exptected = tierProp.getproperty("School_Address_v1");
+		assertionValidation(actual, exptected);
+		logger.info("TU_TC_111, Tier Upgrade, When user enters alphabets, space, and numbers in School/University Address field. User should be able to input");
+		ExtentReporter.extentLoggerPass("TU_TC_111", "TU_TC_111, Tier Upgrade, " +
+				" When user enters alphabets, space, and numbers in School/University Address field. User should be able to input");
+		System.out.println("-----------------------------------------------------------");
+	}
+	public void TierUpgradeGrantProgramFIeldValidation_TU_TC_112() throws Exception{
+		ExtentReporter.HeaderChildNode(" When user enters alphabets, space, and numbers in Grant/Program Type field.");
+		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
+		selectSourceOfIncome(tierProp.getproperty("GOVERNMENT_AID"));
+		Swipe("UP", 2);
+		type(MLWalletTierUpgrade.objProgramTypeField, tierProp.getproperty("Program_Type_v1"), "Grant/Program Type Field");
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
+		if(verifyElementPresent(MLWalletTierUpgrade.objSelectAnyValidID, getTextVal(MLWalletTierUpgrade.objSelectAnyValidID, "Page"))){
+			logger.info("TU_TC_112, Tier Upgrade, When user enters alphabets, space, and numbers in Grant/Program Type field. User should be able to input");
+			ExtentReporter.extentLoggerPass("TU_TC_112", "TU_TC_112, Tier Upgrade, " +
+					" When user enters alphabets, space, and numbers in Grant/Program Type field. User should be able to input");
+			System.out.println("-----------------------------------------------------------");
+		}
+	}
+	public void TierUpgradeOccupationFieldValidation_TU_TC_113() throws Exception{
+		ExtentReporter.HeaderChildNode(" When user enters alphabets, space, and numbers in Occupation Type field.");
+		accountDetailsPageNavigation(prop.getproperty("New_Buyer_Tier"));
+		selectSourceOfIncome(tierProp.getproperty("OTHER"));
+		Swipe("UP", 2);
+		type(MLWalletTierUpgrade.objOccupationField, tierProp.getproperty("Occupation_v1"), "Occupation Field");
+		verifyElementPresentAndClick(MLWalletTierUpgrade.objConfirmDetails, getTextVal(MLWalletTierUpgrade.objConfirmDetails , "Button"));
+		String actual = getText(MLWalletTierUpgrade.objOccupationField);
+		String exptected = tierProp.getproperty("Occupation_v1");
+		assertionValidation(actual, exptected);
+		logger.info("TU_TC_113, Tier Upgrade, When user enters alphabets, space, and numbers in Occupation Type field. User should be able to input");
+		ExtentReporter.extentLoggerPass("TU_TC_113", "TU_TC_113, Tier Upgrade, " +
+				" When user enters alphabets, space, and numbers in Occupation Type field. User should be able to input");
+		System.out.println("-----------------------------------------------------------");
 	}
 	public void selectSourceOfIncome(String source)throws Exception{
 		try{
