@@ -22,7 +22,6 @@ import java.util.Date;
 import java.util.List;
 
 import static com.utility.Utilities.*;
-import static com.utility.Utilities.getTextVal;
 
 // Sprint demo 9
 // Sprint Demo 12
@@ -78,6 +77,7 @@ public class MLWalletBusinessLogic {
 	}
 
 	public void enableNotif() throws Exception{
+		waitTime(2000);
 		if(verifyElementDisplayed(MLWalletLoginPage.objAllowNotif)){
 			click(MLWalletLoginPage.objAllowNotif, getTextVal(MLWalletLoginPage.objAllowNotif, "Button"));
 			logger.info("Notification is allowed");
