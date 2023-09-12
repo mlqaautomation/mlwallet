@@ -23,9 +23,8 @@ import java.util.List;
 
 import static com.utility.Utilities.*;
 
-// Sprint demo 9
-// Sprint Demo 12
-// Sprint Demo 13
+//Regression
+
 public class MLWalletBusinessLogic {
 
 	static LoggingUtils logger = new LoggingUtils();
