@@ -40,6 +40,7 @@ public class MLWalletBranchLocator {
     public static By objInsurance = By.xpath("//*[@text='Insurance']/following-sibling::android.view.View/child::android.view.View/child::android.widget.TextView");
     public static By objInsurancePage = By.xpath("//*[@resource-id='com.vivo.browser:id/url_text']");
     public static By objToUseMLWalletOnYourComputer = By.xpath("//*[@text='To use ML Wallet on your computer:']");
+
     public static By objToUseMLWalletOnYourComputerSteps(int i){
         return By.xpath("(//*[@text='To use ML Wallet on your computer:']/following-sibling::android.view.View)["+i+"]");
     }
