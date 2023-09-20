@@ -273,38 +273,6 @@ public abstract class BaseClass {
             type(MLWalletCashInBank.objPasswordTxtField, sPassword, "Password Text Field");
         }
     }
-
-    public void branchLocatorNavigation() throws Exception {
-        if (verifyElementPresentAndClick(MLWalletLoginPage.objBranchLocator, getTextVal(MLWalletLoginPage.objBranchLocator, "Button"))) {
-            enableLocation_PopUp();
-            verifyElementPresent(MLWalletLoginPage.objBranchLocator, getTextVal(MLWalletLoginPage.objBranchLocator, "Page"));
-            logger.info("Navigated to Branch Locator page");
-        } else {
-            logger.info("Not Navigated to Branch Locator Page");
-        }
-    }
-
-
-    public void branchLocatorPageValidation() throws Exception {
-        if (verifyElementPresent(MLWalletBranchLocator.objSearchBranch, getTextVal(MLWalletBranchLocator.objSearchBranch, "Header"))) {
-            verifyElementPresent(MLWalletBranchLocator.obj24HoursOnly, getTextVal(MLWalletBranchLocator.obj24HoursOnly, "Option"));
-            verifyElementPresent(MLWalletBranchLocator.objSearchBranchField, "Search Branch Input Field");
-            verifyElementPresent(MLWalletBranchLocator.objLuzon, getTextVal(MLWalletBranchLocator.objLuzon, "Button"));
-            click(MLWalletBranchLocator.objLuzon, getTextVal(MLWalletBranchLocator.objLuzon, "Button"));
-            verifyElementPresent(MLWalletBranchLocator.objVisayas, getTextVal(MLWalletBranchLocator.objVisayas, "Button"));
-            verifyElementPresent(MLWalletBranchLocator.objMindanao, getTextVal(MLWalletBranchLocator.objMindanao, "Button"));
-            verifyElementPresent(MLWalletBranchLocator.objMLUS, getTextVal(MLWalletBranchLocator.objMLUS, "Button"));
-            Swipe("UP", 1);
-            verifyElementPresent(MLWalletBranchLocator.objBranchesNearYou, getTextVal(MLWalletBranchLocator.objBranchesNearYou, "Map Header"));
-        }
-    }
-
-    public void homePageNavigation() throws Exception {
-        verifyElementPresentAndClick(MLWalletBranchLocator.objBranchLocatorHamburgerMenu, "Hamburger Menu Button");
-        verifyElementPresentAndClick(MLWalletBranchLocator.objHome, getTextVal(MLWalletBranchLocator.objHome, "Option"));
-        waitTime(8000);
-    }
-
     public void cashOutSelectBank(String sBank) throws Exception {
         if (verifyElementPresent(MLWalletCashOutPage.objCashOut, "CashOut / Withdraw Button")) {
             click(MLWalletCashOutPage.objCashOut, "CashOut / Withdraw Button");
@@ -441,7 +409,6 @@ public abstract class BaseClass {
         }
     }
 
-
     public void verificationTierPerksPageValidation() throws Exception {
         verifyElementPresent(MLWalletHomePage.objMaxBalanceText, getTextVal(MLWalletHomePage.objMaxBalanceText, "Header"));
         verifyElementPresent(MLWalletHomePage.objMaxBalanceAmount, getTextVal(MLWalletHomePage.objMaxBalanceAmount, "Max Balance"));
@@ -491,6 +458,78 @@ public abstract class BaseClass {
         }
     }
 
+    public void sendMoneyMLWallet(String sTier) throws Exception {
+        mlWalletLogin(sTier);
+        click(SendTransferPage.objSendTransferBtn, getTextVal(SendTransferPage.objSendTransferBtn, "Button"));
+        verifyElementPresent(SendTransferPage.objSendMoney, getTextVal(SendTransferPage.objSendMoney, "Page"));
+        verifyElementPresentAndClick(SendTransferPage.objToAMLWalletUser, getTextVal(SendTransferPage.objToAMLWalletUser, "Button"));
+    }
+
+
+    public void enterMobileNumberMLWallet(String nMobileNumber) throws Exception {
+        waitTime(10000);
+        verifyElementPresent(SendTransferPage.objSendMoney, getTextVal(SendTransferPage.objSendMoney, "Page"));
+        type(SendTransferPage.objMobileNumberField, nMobileNumber, "Mobile Number Text Field");
+        click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
+
+    }
+
+    public void enterAmountAndSendToMLWallet(String nAmount) throws Exception {
+        waitTime(5000);
+        if (verifyElementPresent(SendTransferPage.objToMLWalletUser, getTextVal(SendTransferPage.objToMLWalletUser, "Page"))) {
+            type(SendTransferPage.objAmountTxtField, nAmount, "Amount Text Field");
+            click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
+            waitTime(5000);
+            click(SendTransferPage.objMLWalletBalance, getTextVal(SendTransferPage.objMLWalletBalance, "Button"));
+            verifyElementPresent(SendTransferPage.objConfirmDetails, getTextVal(SendTransferPage.objConfirmDetails, "Page"));
+            Swipe("UP", 2);
+            click(SendTransferPage.objSendPHPBtn, getTextVal(SendTransferPage.objSendPHPBtn, "Button"));
+        }
+    }
+
+    public void branchLocatorNavigation() throws Exception {
+        if (verifyElementPresentAndClick(MLWalletLoginPage.objBranchLocator, getTextVal(MLWalletLoginPage.objBranchLocator, "Button"))) {
+            enableLocation_PopUp();
+            verifyElementPresent(MLWalletLoginPage.objBranchLocator, getTextVal(MLWalletLoginPage.objBranchLocator, "Page"));
+            logger.info("Navigated to Branch Locator page");
+        } else {
+            logger.info("Not Navigated to Branch Locator Page");
+        }
+    }
+
+
+    public void branchLocatorPageValidation() throws Exception {
+        if (verifyElementPresent(MLWalletBranchLocator.objSearchBranch, getTextVal(MLWalletBranchLocator.objSearchBranch, "Header"))) {
+            verifyElementPresent(MLWalletBranchLocator.obj24HoursOnly, getTextVal(MLWalletBranchLocator.obj24HoursOnly, "Option"));
+            verifyElementPresent(MLWalletBranchLocator.objSearchBranchField, "Search Branch Input Field");
+            verifyElementPresent(MLWalletBranchLocator.objLuzon, getTextVal(MLWalletBranchLocator.objLuzon, "Button"));
+            click(MLWalletBranchLocator.objLuzon, getTextVal(MLWalletBranchLocator.objLuzon, "Button"));
+            verifyElementPresent(MLWalletBranchLocator.objVisayas, getTextVal(MLWalletBranchLocator.objVisayas, "Button"));
+            verifyElementPresent(MLWalletBranchLocator.objMindanao, getTextVal(MLWalletBranchLocator.objMindanao, "Button"));
+            verifyElementPresent(MLWalletBranchLocator.objMLUS, getTextVal(MLWalletBranchLocator.objMLUS, "Button"));
+            Swipe("UP", 1);
+            verifyElementPresent(MLWalletBranchLocator.objBranchesNearYou, getTextVal(MLWalletBranchLocator.objBranchesNearYou, "Map Header"));
+        }
+    }
+
+    public void homePageNavigation() throws Exception {
+        verifyElementPresentAndClick(MLWalletBranchLocator.objBranchLocatorHamburgerMenu, "Hamburger Menu Button");
+        verifyElementPresentAndClick(MLWalletBranchLocator.objHome, getTextVal(MLWalletBranchLocator.objHome, "Option"));
+        waitTime(8000);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public void sendMoneyToMLBranchRatesValidation(String sAmount) throws Exception {
         sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
@@ -509,35 +548,13 @@ public abstract class BaseClass {
 //========================== Generalized methods for Send/Transfer To a ML Wallet User========================//
 
 
-    public void sendMoneyMLWallet(String sTier) throws Exception {
-        mlWalletLogin(sTier);
-        click(SendTransferPage.objSendTransferBtn, getTextVal(SendTransferPage.objSendTransferBtn, "Button"));
-        verifyElementPresent(SendTransferPage.objSendMoney, getTextVal(SendTransferPage.objSendMoney, "Page"));
-        verifyElementPresentAndClick(SendTransferPage.objToAMLWalletUser, getTextVal(SendTransferPage.objToAMLWalletUser, "Button"));
-    }
 
 
-    public void enterMobileNumberMLWallet(String nMobileNumber) throws Exception {
-        waitTime(10000);
-        verifyElementPresent(SendTransferPage.objSendMoney, getTextVal(SendTransferPage.objSendMoney, "Page"));
-        type(SendTransferPage.objMobileNumberField, nMobileNumber, "Mobile Number Text Field");
-        click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
-
-    }
 
 
-    public void enterAmountAndSendToMLWallet(String nAmount) throws Exception {
-        waitTime(5000);
-        if (verifyElementPresent(SendTransferPage.objToMLWalletUser, getTextVal(SendTransferPage.objToMLWalletUser, "Page"))) {
-            type(SendTransferPage.objAmountTxtField, nAmount, "Amount Text Field");
-            click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
-            waitTime(5000);
-            click(SendTransferPage.objMLWalletBalance, getTextVal(SendTransferPage.objMLWalletBalance, "Button"));
-            verifyElementPresent(SendTransferPage.objConfirmDetails, getTextVal(SendTransferPage.objConfirmDetails, "Page"));
-            Swipe("UP", 2);
-            click(SendTransferPage.objSendPHPBtn, getTextVal(SendTransferPage.objSendPHPBtn, "Button"));
-        }
-    }
+
+
+
 
 
     public void useQRCodeNavigation(String sTier) throws Exception {

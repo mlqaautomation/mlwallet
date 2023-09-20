@@ -23,7 +23,6 @@
 			<!--			emulator-5554-->
 <!--			127.0.0.1:5555-->
 
-
 						<class name="com.mlwallet.regression.MLWalletLoginScripts" />
 						<class name="com.mlwallet.regression.MLWalletCashInViaBankScripts" />
 						<class name="com.mlwallet.regression.MLWalletCashInViaBranch" />
