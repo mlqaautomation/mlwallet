@@ -409,6 +409,58 @@ public abstract class BaseClass {
         }
     }
 
+<<<<<<< HEAD
+    public void verificationTierPerksPageValidation() throws Exception {
+        verifyElementPresent(MLWalletHomePage.objMaxBalanceText, getTextVal(MLWalletHomePage.objMaxBalanceText, "Header"));
+        verifyElementPresent(MLWalletHomePage.objMaxBalanceAmount, getTextVal(MLWalletHomePage.objMaxBalanceAmount, "Max Balance"));
+        verifyElementPresent(MLWalletHomePage.objSendingLimitsCashOut, getTextVal(MLWalletHomePage.objSendingLimitsCashOut, "Header"));
+        List<WebElement> values = findElements(MLWalletHomePage.objSendingLimitTransactionTypeAndAmount);
+        for (int i = 0; i < values.size(); i++) {
+            if (i % 2 == 0) {
+                String sTransactionType = values.get(i).getText();
+                logger.info("Transaction Type : " + sTransactionType + " is displayed");
+                ExtentReporter.extentLogger(" ", "Transaction Type : " + sTransactionType + " is displayed");
+            }
+            if (i % 2 != 0) {
+                String sAmountRange = values.get(i).getText();
+                logger.info("Amount Range : " + sAmountRange + " is displayed");
+                ExtentReporter.extentLogger(" ", "Amount Range : " + sAmountRange + " is displayed");
+            }
+        }
+        Swipe("UP", 1);
+        verifyElementPresent(MLWalletHomePage.objReceivingLimitsCashIn, getTextVal(MLWalletHomePage.objReceivingLimitsCashIn, "Header"));
+        List<WebElement> values1 = findElements(MLWalletHomePage.objReceivingLimitsTransactionTypeAndAmount);
+        for (int i = 0; i < values1.size(); i++) {
+            if (i % 2 == 0) {
+                String sTransactionType = values1.get(i).getText();
+                logger.info("Transaction Type : " + sTransactionType + " is displayed");
+                ExtentReporter.extentLogger(" ", "Transaction Type : " + sTransactionType + " is displayed");
+            }
+            if (i % 2 != 0) {
+                String sAmountRange = values1.get(i).getText();
+                logger.info("Amount Range : " + sAmountRange + " is displayed");
+                ExtentReporter.extentLogger(" ", "Amount Range : " + sAmountRange + " is displayed");
+            }
+        }
+        Swipe("UP", 1);
+        verifyElementPresent(MLWalletHomePage.objPurchaseLimits, getTextVal(MLWalletHomePage.objPurchaseLimits, "Header"));
+        List<WebElement> values2 = findElements(MLWalletHomePage.objPurchaseLimitsTransactionTypeAndAmount);
+        for (int i = 0; i < values2.size(); i++) {
+            if (i % 2 == 0) {
+                String sTransactionType = values2.get(i).getText();
+                logger.info("Transaction Type : " + sTransactionType + " is displayed");
+                ExtentReporter.extentLogger(" ", "Transaction Type : " + sTransactionType + " is displayed");
+            }
+            if (i % 2 != 0) {
+                String sAmountRange = values2.get(i).getText();
+                logger.info("Amount Range : " + sAmountRange + " is displayed");
+                ExtentReporter.extentLogger(" ", "Amount Range : " + sAmountRange + " is displayed");
+            }
+        }
+    }
+
+
+=======
     public void sendMoneyToMLBranchRatesValidation(String sAmount) throws Exception {
         sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
         enterMLBranchDetails();
@@ -424,6 +476,7 @@ public abstract class BaseClass {
     }
 //===============================================Send/Transfer To a ML Wallet User=============================//
 //========================== Generalized methods for Send/Transfer To a ML Wallet User========================//
+>>>>>>> main
 
     public void sendMoneyMLWallet(String sTier) throws Exception {
         mlWalletLogin(sTier);

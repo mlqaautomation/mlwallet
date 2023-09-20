@@ -4,8 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="81ccbcc4-de21-4eb6-8daf-c0c396cfc098" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/BillsPayClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/RegistrationClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/TierUpgradeClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/TopUpGameClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/TransactionHistoryClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlwallet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mlwallet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/BaseClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/BaseClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletRegistration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletTierUpgrade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletTierUpgrade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletTopUpGames.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletTopUpGames.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletTransactionHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletTransactionHistory.java" afterDir="false" />
+=======
     <list default="true" id="94e6181e-0765-401a-a8d0-8a6a1a196022" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> main
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,12 +29,144 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="temp1" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2PsGqyquYi3ht7XMn1DqIO7SplF" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "temp2",
+    "last_opened_file_path": "D:/Projects/wallet-android/android-ML-Wallet",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="RunManager" selected="TestNG.D:/Projects/wallet-android/android-ML-Wallet/mlwallet.xml">
+    <configuration name="D:/ML Wallet Project/MLWalletV1.1/MLWalletRegressionV1.0/mlWalletBrowserStack.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MLWallet" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/mlWalletBrowserStack.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="D:/ML Wallet Project/MLWalletV1.1/MLWalletRegressionV1.0/mlwallet.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MLWallet" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/mlwallet.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="D:/Projects/wallet-android/android-ML-Wallet/mlwallet.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="android-ML-Wallet" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/mlwallet.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MLWalletTierUpgrade.TierUpgradeCompanyFieldValidation_TU_TC_86" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MLWallet" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mlwallet.regression.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/mlwallet.xml" />
+      <option name="PACKAGE_NAME" value="com.mlwallet.regression" />
+      <option name="MAIN_CLASS_NAME" value="com.mlwallet.regression.MLWalletTierUpgrade" />
+      <option name="METHOD_NAME" value="TierUpgradeCompanyFieldValidation_TU_TC_86" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.D:/Projects/wallet-android/android-ML-Wallet/mlwallet.xml" />
+        <item itemvalue="TestNG.MLWalletTierUpgrade.TierUpgradeCompanyFieldValidation_TU_TC_86" />
+        <item itemvalue="TestNG.D:/ML Wallet Project/MLWalletV1.1/MLWalletRegressionV1.0/mlWalletBrowserStack.xml" />
+        <item itemvalue="TestNG.D:/ML Wallet Project/MLWalletV1.1/MLWalletRegressionV1.0/mlwallet.xml" />
+        <item itemvalue="TestNG.D:/Projects/wallet-android/android-ML-Wallet/mlwallet.xml" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+=======
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+>>>>>>> main
   <component name="TaskManager">
     <servers />
   </component>
+<<<<<<< HEAD
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/driverInstance/DriverInstance.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/utility/Utilities.java</url>
+          <line>2888</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/driverInstance/DriverInstance.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+=======
+>>>>>>> main
 </project>
