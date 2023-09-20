@@ -6,8 +6,11 @@ import com.mlwallet.pages.*;
 import com.propertyfilereader.PropertyFileReader;
 import com.utility.ExtentReporter;
 import com.utility.LoggingUtils;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.asserts.SoftAssert;
+
+import java.util.List;
 
 import static com.utility.Utilities.*;
 
@@ -280,6 +283,7 @@ public abstract class BaseClass {
         }
     }
 
+
     public void branchLocatorPageValidation() throws Exception {
         if (verifyElementPresent(MLWalletBranchLocator.objSearchBranch, getTextVal(MLWalletBranchLocator.objSearchBranch, "Header"))) {
             verifyElementPresent(MLWalletBranchLocator.obj24HoursOnly, getTextVal(MLWalletBranchLocator.obj24HoursOnly, "Option"));
@@ -324,6 +328,63 @@ public abstract class BaseClass {
         waitTime(5000);
         closeWebBrowser();
         switchPlatformToAndroid();
+    }
+
+
+    public void navigateToProfile() throws Exception {
+        click(MLWalletSettingsPage.objProfileIcon, "Profile Icon");
+        waitTime(5000);
+        if (verifyElementPresent(MLWalletSettingsPage.objAccountDetails, "Account Details Page")) {
+            logger.info("Navigated to settings");
+        }
+    }
+    public void verificationTierPerksPageValidation() throws Exception {
+        verifyElementPresent(MLWalletHomePage.objMaxBalanceText, getTextVal(MLWalletHomePage.objMaxBalanceText, "Header"));
+        verifyElementPresent(MLWalletHomePage.objMaxBalanceAmount, getTextVal(MLWalletHomePage.objMaxBalanceAmount, "Max Balance"));
+        verifyElementPresent(MLWalletHomePage.objSendingLimitsCashOut, getTextVal(MLWalletHomePage.objSendingLimitsCashOut, "Header"));
+        List<WebElement> values = findElements(MLWalletHomePage.objSendingLimitTransactionTypeAndAmount);
+        for (int i = 0; i < values.size(); i++) {
+            if (i % 2 == 0) {
+                String sTransactionType = values.get(i).getText();
+                logger.info("Transaction Type : " + sTransactionType + " is displayed");
+                ExtentReporter.extentLogger(" ", "Transaction Type : " + sTransactionType + " is displayed");
+            }
+            if (i % 2 != 0) {
+                String sAmountRange = values.get(i).getText();
+                logger.info("Amount Range : " + sAmountRange + " is displayed");
+                ExtentReporter.extentLogger(" ", "Amount Range : " + sAmountRange + " is displayed");
+            }
+        }
+        Swipe("UP", 1);
+        verifyElementPresent(MLWalletHomePage.objReceivingLimitsCashIn, getTextVal(MLWalletHomePage.objReceivingLimitsCashIn, "Header"));
+        List<WebElement> values1 = findElements(MLWalletHomePage.objReceivingLimitsTransactionTypeAndAmount);
+        for (int i = 0; i < values1.size(); i++) {
+            if (i % 2 == 0) {
+                String sTransactionType = values1.get(i).getText();
+                logger.info("Transaction Type : " + sTransactionType + " is displayed");
+                ExtentReporter.extentLogger(" ", "Transaction Type : " + sTransactionType + " is displayed");
+            }
+            if (i % 2 != 0) {
+                String sAmountRange = values1.get(i).getText();
+                logger.info("Amount Range : " + sAmountRange + " is displayed");
+                ExtentReporter.extentLogger(" ", "Amount Range : " + sAmountRange + " is displayed");
+            }
+        }
+        Swipe("UP", 1);
+        verifyElementPresent(MLWalletHomePage.objPurchaseLimits, getTextVal(MLWalletHomePage.objPurchaseLimits, "Header"));
+        List<WebElement> values2 = findElements(MLWalletHomePage.objPurchaseLimitsTransactionTypeAndAmount);
+        for (int i = 0; i < values2.size(); i++) {
+            if (i % 2 == 0) {
+                String sTransactionType = values2.get(i).getText();
+                logger.info("Transaction Type : " + sTransactionType + " is displayed");
+                ExtentReporter.extentLogger(" ", "Transaction Type : " + sTransactionType + " is displayed");
+            }
+            if (i % 2 != 0) {
+                String sAmountRange = values2.get(i).getText();
+                logger.info("Amount Range : " + sAmountRange + " is displayed");
+                ExtentReporter.extentLogger(" ", "Amount Range : " + sAmountRange + " is displayed");
+            }
+        }
     }
 
 }
