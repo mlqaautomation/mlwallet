@@ -9,7 +9,7 @@
 
 	<test name="MLWallet">
 		<parameter name="portno" value="4723"></parameter>
-		<parameter name="deviceName" value="192.168.12.61:5555"></parameter>
+		<parameter name="deviceName" value="192.168.12.61:5557"></parameter>
 		<parameter name="browserType" value="Chrome"></parameter>
 		<parameter name="url" value="https://prnt.sc/4vyopNIICFNa"></parameter>
 		<parameter name="url1" value="https://prnt.sc/WlO6H7WpxvNY"></parameter>
@@ -23,10 +23,11 @@
 			<!--			emulator-5554-->
 <!--			127.0.0.1:5555-->
 
-						<class name="com.mlwallet.regression.MLWalletLoginScripts" />
+<!--						<class name="com.mlwallet.regression.MLWalletLoginScripts" />-->
 <!--						<class name="com.mlwallet.regression.MLWalletCashInViaBankScripts" />-->
 <!--						<class name="com.mlwallet.regression.MLWalletCashInViaBranch" />-->
 <!--						<class name="com.mlwallet.regression.MLWalletCashOutWithdrawScripts" />-->
+							<class name="com.mlwallet.regression.MLWalletCashOutViaBranch" />
 <!--						<class name="com.mlwallet.regression.MLWalletSendTransferToAnyMLBranchScripts" />-->
 <!--						<class name="com.mlwallet.regression.MLWalletSendTransferToMLWalletUserScripts" />-->
 <!--						<class name="com.mlwallet.regression.MLWalletRegressionPayBillsScripts" />-->
