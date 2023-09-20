@@ -270,6 +270,60 @@ public abstract class BaseClass {
             type(MLWalletCashInBank.objPasswordTxtField, sPassword, "Password Text Field");
         }
     }
+    public void branchLocatorNavigation() throws Exception {
+        if (verifyElementPresentAndClick(MLWalletLoginPage.objBranchLocator, getTextVal(MLWalletLoginPage.objBranchLocator, "Button"))) {
+            enableLocation_PopUp();
+            verifyElementPresent(MLWalletLoginPage.objBranchLocator, getTextVal(MLWalletLoginPage.objBranchLocator, "Page"));
+            logger.info("Navigated to Branch Locator page");
+        } else {
+            logger.info("Not Navigated to Branch Locator Page");
+        }
+    }
 
+    public void branchLocatorPageValidation() throws Exception {
+        if (verifyElementPresent(MLWalletBranchLocator.objSearchBranch, getTextVal(MLWalletBranchLocator.objSearchBranch, "Header"))) {
+            verifyElementPresent(MLWalletBranchLocator.obj24HoursOnly, getTextVal(MLWalletBranchLocator.obj24HoursOnly, "Option"));
+            verifyElementPresent(MLWalletBranchLocator.objSearchBranchField, "Search Branch Input Field");
+            verifyElementPresent(MLWalletBranchLocator.objLuzon, getTextVal(MLWalletBranchLocator.objLuzon, "Button"));
+            click(MLWalletBranchLocator.objLuzon, getTextVal(MLWalletBranchLocator.objLuzon, "Button"));
+            verifyElementPresent(MLWalletBranchLocator.objVisayas, getTextVal(MLWalletBranchLocator.objVisayas, "Button"));
+            verifyElementPresent(MLWalletBranchLocator.objMindanao, getTextVal(MLWalletBranchLocator.objMindanao, "Button"));
+            verifyElementPresent(MLWalletBranchLocator.objMLUS, getTextVal(MLWalletBranchLocator.objMLUS, "Button"));
+            Swipe("UP", 1);
+            verifyElementPresent(MLWalletBranchLocator.objBranchesNearYou, getTextVal(MLWalletBranchLocator.objBranchesNearYou, "Map Header"));
+        }
+    }
+
+    public void homePageNavigation() throws Exception {
+        verifyElementPresentAndClick(MLWalletBranchLocator.objBranchLocatorHamburgerMenu, "Hamburger Menu Button");
+        verifyElementPresentAndClick(MLWalletBranchLocator.objHome, getTextVal(MLWalletBranchLocator.objHome, "Option"));
+        waitTime(8000);
+    }
+    public void enterAmountAndSendToMLWallet(String nAmount) throws Exception {
+        waitTime(5000);
+        if (verifyElementPresent(SendTransferPage.objToMLWalletUser, getTextVal(SendTransferPage.objToMLWalletUser, "Page"))) {
+            type(SendTransferPage.objAmountTxtField, nAmount, "Amount Text Field");
+            click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
+            waitTime(5000);
+            click(SendTransferPage.objMLWalletBalance, getTextVal(SendTransferPage.objMLWalletBalance, "Button"));
+            verifyElementPresent(SendTransferPage.objConfirmDetails, getTextVal(SendTransferPage.objConfirmDetails, "Page"));
+            Swipe("UP", 2);
+            click(SendTransferPage.objSendPHPBtn, getTextVal(SendTransferPage.objSendPHPBtn, "Button"));
+        }
+    }
+
+    public void useQRCodeNavigation(String sTier) throws Exception {
+        mlWalletLogin(sTier);
+        verifyElementPresentAndClick(MLWalletUseQR.objUseQR, getTextVal(MLWalletUseQR.objUseQR, "Icon"));
+        waitTime(3000);
+        verifyElementPresent(MLWalletUseQR.objUseQR, getTextVal(MLWalletUseQR.objUseQR, "Page"));
+    }
+
+    public void scanQR(String url) {
+        switchPlatformToWeb(url);
+        waitTime(5000);
+        closeWebBrowser();
+        switchPlatformToAndroid();
+    }
 
 }
