@@ -35,16 +35,16 @@ public class MLWalletLoginScripts {
 //    @Test(priority = 1)
 //    public void LogInScenarioWithValidMobNumber() throws Exception
 //    {
-//        MLWalletBusinessLogic.logInScenarioWithValidMobNumber_Lgn_TC_01();
+//        LoginClass.logInScenarioWithValidMobNumber_Lgn_TC_01();
 //    }
-//    @Test(priority = 2)
-//    public void LogInScenarioWithInvalidMobNumber() throws Exception {
-//        MLWalletBusinessLogic.logInScenarioWithInvalidMobNumber_Lgn_TC_02();
-//    }
-//    @Test(priority = 3)
-//    public void LogInScenarioWithValidOTP() throws Exception {
-//        MLWalletBusinessLogic.logInScenarioWithValidOTP_Lgn_TC_03();
-//    }
+    @Test(priority = 2)
+    public void LogInScenarioWithInvalidMobNumber() throws Exception {
+        LoginClass.logInScenarioWithInvalidMobNumber_Lgn_TC_02();
+    }
+    @Test(priority = 3)
+    public void LogInScenarioWithValidOTP() throws Exception {
+        LoginClass.logInScenarioWithValidOTP_Lgn_TC_03();
+    }
 ////==============================================================================================================//
 ////
 //
