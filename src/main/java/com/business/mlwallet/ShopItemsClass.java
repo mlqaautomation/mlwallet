@@ -18,8 +18,8 @@ public class ShopItemsClass extends BaseClass{
         Thread.sleep(10000);
         verifyElementPresentAndClick(MLWalletShopItemsPage.objMLShopPage, "ML Shop Page");
         Thread.sleep(10000);
-        //todo
-        //  need to add step to click okay in success login modal
+        click(MLWalletShopItemsPage.objloginOkayButton, "Button");
+        //cado
     }
 
     public void selectItemAndAddToCart() throws Exception {
