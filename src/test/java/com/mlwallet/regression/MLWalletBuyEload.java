@@ -328,10 +328,6 @@ public class MLWalletBuyEload {
 
 
 
-
-
-
-
     @AfterMethod
     public void afterMethod(){
         AppiumServer.stopServer();

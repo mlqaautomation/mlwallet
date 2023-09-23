@@ -6,10 +6,15 @@ import com.mlwallet.pages.*;
 import com.propertyfilereader.PropertyFileReader;
 import com.utility.ExtentReporter;
 import com.utility.LoggingUtils;
+import org.jsoup.Connection;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.asserts.SoftAssert;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import static com.utility.Utilities.*;
@@ -22,7 +27,9 @@ public abstract class BaseClass {
     public static SoftAssert softAssert = new SoftAssert();
     public static PropertyFileReader prop = new PropertyFileReader(".\\properties\\testdata.properties");
     public static PropertyFileReader tierProp = new PropertyFileReader(".\\properties\\tierUpgrade.properties");
+    public BaseClass(){
 
+    }
     public BaseClass(String Application, String deviceName, String portno) throws InterruptedException{
         new CommandBase(Application, deviceName, portno);
         init();
@@ -167,6 +174,7 @@ public abstract class BaseClass {
         setWifiConnectionToONOFF("ON");
     }
 
+// <<------------------------------------CASH IN VIA BRANCH GENERAL METHOD------------------------------------>>
     public void cashInViaBranchNavigation(String sTier) throws Exception {
         mlWalletLogin(sTier);
         click(MLWalletCashInViaBranch.objCashInMenu, "Cash In");
@@ -323,10 +331,10 @@ public abstract class BaseClass {
             Thread.sleep(5000);
         }
     }
+
+
     //=================================== Buy e - load ======================================================//
-//==================================== Generalized methods ============================================//
-
-
+    //==================================== Generalized methods ============================================//
     public void eLoad_generic(String sTier, String mobileNo, String status, int telcoOption) throws Exception {
         mlWalletLogin(sTier);
         click(MLWalletEloadPage.objEloadTab, "Buy eLoad");
@@ -343,9 +351,8 @@ public abstract class BaseClass {
 //		click(MLWalletEloadPage.objNextBtn, "Next Button");
 //		enableLocation_PopUp();
     }
-    //================================ Send/Transfer To any ML Branch ============================================//
-//=============================== General methods For send transfer ============================================//
 
+    // <<------------------------------------SEND MONEY GENERAL METHOD------------------------------------>>
     public void sendMoneyToAnyMLBranch(String sTier) throws Exception {
         mlWalletLogin(sTier);
         click(SendTransferPage.objSendTransferBtn, getTextVal(SendTransferPage.objSendTransferBtn, "Button"));
@@ -518,19 +525,6 @@ public abstract class BaseClass {
         waitTime(8000);
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     public void sendMoneyToMLBranchRatesValidation(String sAmount) throws Exception {
         sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
         enterMLBranchDetails();
@@ -544,18 +538,6 @@ public abstract class BaseClass {
         waitTime(5000);
         verifyElementPresent(SendTransferPage.objConfirmDetails, getTextVal(SendTransferPage.objConfirmDetails, "Page"));
     }
-//===============================================Send/Transfer To a ML Wallet User=============================//
-//========================== Generalized methods for Send/Transfer To a ML Wallet User========================//
-
-
-
-
-
-
-
-
-
-
 
     public void useQRCodeNavigation(String sTier) throws Exception {
         mlWalletLogin(sTier);
@@ -578,5 +560,260 @@ public abstract class BaseClass {
             logger.info("Navigated to settings");
         }
     }
+
+    public void getBillers(By sWebElement) {
+        List<WebElement> list = findElements(sWebElement);
+
+        for (int i = 0; i < list.size(); i++) {
+            String billers = list.get(i).getText();
+            logger.info(billers + " Biller is displayed");
+        }
+    }
+
+    public void payBillsNavigation() throws Exception {
+        verifyElementPresent(MLWalletPayBillsPage.objPayBills, getTextVal(MLWalletPayBillsPage.objPayBills, "Icon"));
+        click(MLWalletPayBillsPage.objPayBills, getTextVal(MLWalletPayBillsPage.objPayBills, "Icon"));
+    }
+
+
+    public void searchBiller() throws Exception {
+        type(MLWalletPayBillsPage.objSearchBiller, prop.getproperty("Biller_Name"), "Search Biller");
+        verifyElementPresent(MLWalletPayBillsPage.objMisBillsPayBiller, getTextVal(MLWalletPayBillsPage.objMisBillsPayBiller, "Biller"));
+        click(MLWalletPayBillsPage.objMisBillsPayBiller, getTextVal(MLWalletPayBillsPage.objMisBillsPayBiller, "Biller"));
+    }
+
+    public void billerDetails(String sFirstName, String sLastName, String sMiddleName, String sAmount) throws Exception {
+        if (verifyElementPresent(MLWalletPayBillsPage.objBillsPayInformation, getTextVal(MLWalletPayBillsPage.objBillsPayInformation, "Page"))) {
+            type(MLWalletPayBillsPage.objAccountNumberField, prop.getproperty("AccountNumber"), "Account Number Text Field");
+            type(MLWalletPayBillsPage.objFirstNameField, sFirstName, "First Name Text Field");
+            type(MLWalletPayBillsPage.objMiddleNameField, sMiddleName, "Middle Name Text Field");
+            type(MLWalletPayBillsPage.objLastnameField, sLastName, "Last Name Text Field");
+            Swipe("UP", 1);
+            type(MLWalletPayBillsPage.objAmountField, sAmount, "Amount to Send Text Field");
+            click(MLWalletPayBillsPage.objConfirmBtn, getTextVal(MLWalletPayBillsPage.objConfirmBtn, "Button"));
+        }
+    }
+
+    public void confirmDetailsAndPay() throws Exception {
+        if (verifyElementPresent(MLWalletPayBillsPage.objConfirmDetails, getTextVal(MLWalletPayBillsPage.objConfirmDetails, "Page"))) {
+            Swipe("UP", 1);
+            click(MLWalletPayBillsPage.objPayBtn, getTextVal(MLWalletPayBillsPage.objPayBtn, "Button"));
+        }
+    }
+
+    public void addBiller() throws Exception {
+        if (verifyElementPresent(MLWalletPayBillsPage.objSavedBiller, getTextVal(MLWalletPayBillsPage.objSavedBiller, "Button"))) {
+            click(MLWalletPayBillsPage.objSavedBiller, getTextVal(MLWalletPayBillsPage.objSavedBiller, "Button"));
+            waitTime(5000);
+            click(MLWalletPayBillsPage.objAddBiller, getTextVal(MLWalletPayBillsPage.objAddBiller, "Button"));
+            addSelectedBiller();
+            if (verifyElementPresent(MLWalletPayBillsPage.objAddBillers, getTextVal(MLWalletPayBillsPage.objAddBillers, "Page"))) {
+                type(MLWalletPayBillsPage.objAddAccountNumber, prop.getproperty("AccountNumber"), "Account Number in Add Biller");
+                type(MLWalletPayBillsPage.objAddFirstName, prop.getproperty("First_Name"), "First Name in Add Biller");
+                type(MLWalletPayBillsPage.objAddMiddleName, prop.getproperty("Middle_Name"), "Middle Name in Add Biller");
+                type(MLWalletPayBillsPage.objAddLastName, prop.getproperty("Last_Name"), "Last Name in Add Biller");
+                type(MLWalletPayBillsPage.objAddNickName, prop.getproperty("Nick_Name"), "Nick Name in Add Biller");
+                click(MLWalletPayBillsPage.objProceedBtn, getTextVal(MLWalletPayBillsPage.objProceedBtn, "button"));
+            }
+        }
+    }
+
+    public void addSelectedBiller() throws Exception {
+        waitTime(3000);
+        if (verifyElementPresent(MLWalletPayBillsPage.objAddSeectedBiller, "Edit Biller")) {
+            click(MLWalletPayBillsPage.objAddSeectedBiller, "Edit Biller");
+            waitTime(5000);
+            click(MLWalletPayBillsPage.objBillerListSearchBiller, "Biller List Search Biller");
+            type(MLWalletPayBillsPage.objBillerListSearchBiller, prop.getproperty("Biller_Name"), "Biller List Search Biller");
+            waitTime(4000);
+            click(MLWalletPayBillsPage.objMisBillsPayBiller, getTextVal(MLWalletPayBillsPage.objMisBillsPayBiller, "Biller"));
+            click(MLWalletPayBillsPage.objMisBillsPayBiller, getTextVal(MLWalletPayBillsPage.objMisBillsPayBiller, "Biller"));
+        }
+    }
+
+    public void selectAddedBiler() throws Exception {
+        verifyElementPresentAndClick(MLWalletPayBillsPage.objSavedBiller, getTextVal(MLWalletPayBillsPage.objSavedBiller, "Button"));
+        waitTime(5000);
+        if (verifyElementPresent(MLWalletPayBillsPage.objSavedBillers, getTextVal(MLWalletPayBillsPage.objSavedBillers, "Page"))) {
+            type(MLWalletPayBillsPage.objSearchBillerInSavedBillers, prop.getproperty("Last_Name"), "Search Recipient Text Field");
+            verifyElementPresent(MLWalletPayBillsPage.objSelectLastName(prop.getproperty("Last_Name"), prop.getproperty("First_Name")), getTextVal(SendTransferPage.objSelectLastName(prop.getproperty("Last_Name"), prop.getproperty("First_Name")), "Recipient"));
+            click(MLWalletPayBillsPage.objSelectLastName(prop.getproperty("Last_Name"), prop.getproperty("First_Name")), getTextVal(SendTransferPage.objSelectLastName(prop.getproperty("Last_Name"), prop.getproperty("First_Name")), "Recipient"));
+        }
+    }
+
+    public void registrationPageNavigation() throws Exception {
+        verifyElementPresentAndClick(MLWalletRegistration.objCreateOne, getTextVal(MLWalletRegistration.objCreateOne, "Button"));
+        waitTime(6000);
+        type(MLWalletRegistration.objMobileNumberField, prop.getproperty("Registration_MobileNumber"), "Mobile Number Text Field");
+        click(MLWalletRegistration.objConfirm, getTextVal(MLWalletRegistration.objConfirm, "Button"));
+        enterOTP(prop.getproperty("Valid_OTP"));
+    }
+
+    public void registrationInputName() throws Exception {
+        verifyElementPresent(MLWalletRegistration.objRegistrationPersonalInfo, getTextVal(MLWalletRegistration.objRegistrationPersonalInfo, "Page"));
+        verifyElementPresent(MLWalletRegistration.objPersonalInfo, getTextVal(MLWalletRegistration.objPersonalInfo, "Header"));
+        type(MLWalletRegistration.objFirstName, prop.getproperty("First_Name"), "First Name Input Field");
+        type(MLWalletRegistration.objMiddleName, prop.getproperty("Middle_Name"), "Middle Name Input Field");
+        type(MLWalletRegistration.objLastName, prop.getproperty("Last_Name"), "Last Name Input Field");
+    }
+
+    public void selectDate() throws Exception {
+        verifyElementPresentAndClick(MLWalletRegistration.objBirthDate, "Birth Date Input Field");
+        verifyElementPresentAndClick(MLWalletRegistration.objDatePickerYear, getTextVal(MLWalletRegistration.objDatePickerYear, "Year Section"));
+        DateFormat dateFormat = new SimpleDateFormat("yyyy");
+        Date date = new Date();
+        String year = dateFormat.format(date);
+        int selectYear = Integer.parseInt(year) - 18;
+        verticalSwipeByPercentages(0.4, 0.8, 0.5);
+        verticalSwipeByPercentages(0.4, 0.8, 0.5);
+        verifyElementPresentAndClick(MLWalletRegistration.objYearSelector(Integer.toString(selectYear)), "Selected Year");
+        verifyElementPresentAndClick(MLWalletRegistration.objOkBtn, getTextVal(MLWalletRegistration.objOkBtn, "Button"));
+    }
+
+    public void emailAndPlaceOfBirth() throws Exception {
+        type(MLWalletRegistration.objEmailAddress, prop.getproperty("Email"), "Email Address Field");
+        type(MLWalletRegistration.objReEnterEmailAddress, prop.getproperty("Email"), "Re-Enter Email Address Field");
+        type(MLWalletRegistration.objPlaceOfBirth, prop.getproperty("Valid_PlaceOfBirth"), "Place of Birth Field");
+    }
+
+    public void swipeAndConfirm() throws Exception {
+        swipeDownUntilElementVisible("Confirm");
+        verifyElementPresentAndClick(MLWalletRegistration.objConfirm, getTextVal(MLWalletRegistration.objConfirm, "Button"));
+    }
+
+    public void selectNationality() throws Exception {
+        verifyElementPresentAndClick(MLWalletRegistration.objNationality, "Nationality Field");
+        waitTime(5000);
+        type(MLWalletRegistration.objNationalitySearchField, "filipino", "Nationality search field");
+        verifyElementPresentAndClick(MLWalletRegistration.objFilipino, getTextVal(MLWalletRegistration.objFilipino, "Nationality"));
+    }
+
+    public void civilAndGenderSelection() throws Exception {
+        verifyElementPresentAndClick(MLWalletRegistration.objCivilStatus, "Civil Status");
+        verifyElementPresentAndClick(MLWalletRegistration.objSingleCivilStatus, getTextVal(MLWalletRegistration.objSingleCivilStatus, "Civil Status"));
+        verifyElementPresentAndClick(MLWalletRegistration.objGender, "Gender Field");
+        verifyElementPresentAndClick(MLWalletRegistration.objMaleGender, getTextVal(MLWalletRegistration.objMaleGender, "Gender"));
+    }
+
+    public void registrationAddressPageNavigation() throws Exception {
+        registrationPageNavigation();
+        waitTime(5000);
+        registrationInputName();
+        selectDate();
+        emailAndPlaceOfBirth();
+        selectNationality();
+        swipeDownUntilElementVisible("Confirm");
+        civilAndGenderSelection();
+        click(MLWalletRegistration.objConfirm, getTextVal(MLWalletRegistration.objConfirm, "Button"));
+    }
+
+    public void accountDetailsPageNavigation(String sTier) throws Exception {
+        mlWalletLogin(sTier);
+        verifyElementPresentAndClick(MLWalletHomePage.objIIcon, "i Icon");
+        waitTime(5000);
+        verifyElementPresent(MLWalletHomePage.objVerificationTierPerks, getTextVal(MLWalletHomePage.objVerificationTierPerks, "Page"));
+        waitTime(5000);
+        verifyElementPresentAndClick(MLWalletTierUpgrade.objFullyVerifiedTab,getTextVal(MLWalletTierUpgrade.objFullyVerifiedTab,"Tab"));
+        waitTime(3000);
+        Swipe("UP",2);
+        verifyElementPresentAndClick(MLWalletTierUpgrade.objUpgradeTierLevel,getTextVal(MLWalletTierUpgrade.objUpgradeTierLevel, "Button"));
+        waitTime(5000);
+        verifyElementPresent(MLWalletTierUpgrade.objAccountDetails,getTextVal(MLWalletTierUpgrade.objAccountDetails, "Page"));
+    }
+
+    public void openKPXInChrome(String url) {
+        switchPlatformToWeb(url);
+        waitTime(5000);
+    }
+
+    public void selectProductServiceOffered(String service)throws Exception{
+        try{
+            verifyElementPresentAndClick(MLWalletTierUpgrade.objProductServiceOffered, getTextVal(MLWalletTierUpgrade.objSourceOfIncome , "DropDown"));
+            waitTime(3000);
+            verifyElementPresent(MLWalletTierUpgrade.objProductServicePage, getTextVal(MLWalletTierUpgrade.objProductServicePage, "Header"));
+            type(MLWalletTierUpgrade.objSearchField, service, "Search Field");
+            verifyElementPresentAndClick(MLWalletTierUpgrade.getObjProductServiceOffered(service),
+                    getTextVal(MLWalletTierUpgrade.getObjProductServiceOffered(service), "Value"));
+        }catch (Exception e){
+            logger.info("error : " + e);
+        }
+    }
+
+    public void selectSourceOfIncome(String source)throws Exception{
+        try{
+            verifyElementPresentAndClick(MLWalletTierUpgrade.objSourceOfIncome, getTextVal(MLWalletTierUpgrade.objSourceOfIncome , "DropDown"));
+            waitTime(3000);
+            verifyElementPresent(MLWalletTierUpgrade.objSourceOfIncomePage, getTextVal(MLWalletTierUpgrade.objSourceOfIncomePage, "Header"));
+            type(MLWalletTierUpgrade.objSearchField, source, "Search Field");
+            verifyElementPresentAndClick(MLWalletTierUpgrade.getObjSourceOfIncome(source),
+                    getTextVal(MLWalletTierUpgrade.getObjSourceOfIncome(source), "Value"));
+        }catch (Exception e){
+            logger.info("error : " + e);
+        }
+    }
+
+    public void selectPositionAtWork(String position)throws Exception{
+        try{
+            verifyElementPresentAndClick(MLWalletTierUpgrade.objPositionAtWork, getTextVal(MLWalletTierUpgrade.objPositionAtWork , "DropDown"));
+            waitTime(3000);
+            verifyElementPresent(MLWalletTierUpgrade.objPositionAtWorkPage, getTextVal(MLWalletTierUpgrade.objPositionAtWorkPage, "Header"));
+            type(MLWalletTierUpgrade.objSearchField, position, "Search Field");
+            verifyElementPresentAndClick(MLWalletTierUpgrade.getObjPositionAtWork(position),
+                    getTextVal(MLWalletTierUpgrade.getObjPositionAtWork(position), "Value"));
+        }catch (Exception e){
+            logger.info("error : " + e);
+        }
+    }
+
+    public void selectNatureOfWork(String nature)throws Exception{
+        try{
+            verifyElementPresentAndClick(MLWalletTierUpgrade.ObjNatureOfWork, getTextVal(MLWalletTierUpgrade.ObjNatureOfWork , "DropDown"));
+            waitTime(3000);
+            verifyElementPresent(MLWalletTierUpgrade.ObjNatureOfWorkPage, getTextVal(MLWalletTierUpgrade.ObjNatureOfWorkPage, "Header"));
+            type(MLWalletTierUpgrade.objSearchField, nature, "Search Field");
+            verifyElementPresentAndClick(MLWalletTierUpgrade.getObjNatureOfWork(nature),
+                    getTextVal(MLWalletTierUpgrade.getObjNatureOfWork(nature), "Value"));
+        }catch (Exception e){
+            logger.info("error : " + e);
+        }
+    }
+
+    public void topUpGamesHomePageNavigation(String sTier) throws Exception {
+        mlWalletLogin(sTier);
+        verifyElementPresentAndClick(MLWalletTopUpGames.objTopUpGames, getTextVal(MLWalletTopUpGames.objTopUpGames, "Icon"));
+        verifyElementPresent(MLWalletTopUpGames.objTopGamesPage, "TopUp Games Page");
+    }
+
+    public void selectGameAndLoadType() throws Exception {
+        verifyElementPresentAndClick(MLWalletTopUpGames.objValorant, getTextVal(MLWalletTopUpGames.objValorant, "Game"));
+        waitTime(4000);
+        verifyElementPresentAndClick(MLWalletTopUpGames.objBuyPHP149, getTextVal(MLWalletTopUpGames.objBuyPHP149, "Load Type"));
+    }
+
+    public void inputRequiredDataAndContinue() throws Exception {
+        type(MLWalletTopUpGames.objGameUserID, prop.getproperty("GameUserID"), "Game User ID Input Field");
+        type(MLWalletTopUpGames.objEmailAddress, prop.getproperty("Email"), "Email ID Input Field");
+        type(MLWalletTopUpGames.objMobileNumber, prop.getproperty("GameMobileNumber"), "Mobile Number");
+        Swipe("UP", 1);
+        verifyElementPresentAndClick(MLWalletTopUpGames.objContinue, getTextVal(MLWalletTopUpGames.objContinue, "Button"));
+    }
+
+    public void mlWallet_TransactionHistory_Generic_Steps(String billModule, String transaction) throws Exception {
+        String PayBillsHistory = getText(MLWalletTransactionHistoryPage.objBillHistory(billModule, transaction));
+        if (PayBillsHistory.equals(billModule))// "Pay Bills"
+        {
+            List<WebElement> values = findElements(MLWalletTransactionHistoryPage.objPayBillsTransctionList1(billModule));
+            for (int i = 0; i < values.size(); i++) {
+                String billPayTransaction = values.get(i).getText();
+                logger.info(billModule + " Transaction : " + billPayTransaction);
+                ExtentReporter.extentLogger(" ", billModule + " All Transactions : " + billPayTransaction);
+            }
+        } else if (PayBillsHistory.equals(transaction))// "No Recent Transaction"
+        {
+            logger.info("No Recent Transactions Are Available for " + billModule + " Module");
+            ExtentReporter.extentLogger("", "No Recent Transactions Are Available for " + billModule + " Module");
+        }
+    }
+    //------------SHOP ITEMS--------------------
 
 }

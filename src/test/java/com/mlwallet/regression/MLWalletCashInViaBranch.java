@@ -1,14 +1,15 @@
 package com.mlwallet.regression;
 
+import com.business.mlwallet.CashInVia_BankClass;
 import com.business.mlwallet.MLWalletBusinessLogic;
 import com.driverInstance.AppiumServer;
 import org.testng.annotations.*;
-
+import com.business.mlwallet.CashInVia_BranchClass;
 public class MLWalletCashInViaBranch {
     public static String deviceName;
     public static String portno;
     public  static com.business.mlwallet.MLWalletBusinessLogic MLWalletBusinessLogic;
-
+    public static CashInVia_BranchClass cashInViaBranchClass;
 
 
     @Parameters({"deviceName","portno"})
@@ -18,6 +19,7 @@ public class MLWalletCashInViaBranch {
         MLWalletCashInViaBranch.deviceName=deviceName;
         MLWalletCashInViaBranch.portno= portno;
         MLWalletBusinessLogic = new MLWalletBusinessLogic("MLWallet",deviceName,portno);
+        cashInViaBranchClass = new CashInVia_BranchClass("MLWallet",deviceName,portno);
     }
 
 //======================================================================================================//

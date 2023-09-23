@@ -10,25 +10,7 @@ public class TopUpGameClass extends BaseClass {
         super(Application, deviceName, portno);
     }
 
-    public void topUpGamesHomePageNavigation(String sTier) throws Exception {
-        mlWalletLogin(sTier);
-        verifyElementPresentAndClick(MLWalletTopUpGames.objTopUpGames, getTextVal(MLWalletTopUpGames.objTopUpGames, "Icon"));
-        verifyElementPresent(MLWalletTopUpGames.objTopGamesPage, "TopUp Games Page");
-    }
 
-    public void selectGameAndLoadType() throws Exception {
-        verifyElementPresentAndClick(MLWalletTopUpGames.objValorant, getTextVal(MLWalletTopUpGames.objValorant, "Game"));
-        waitTime(4000);
-        verifyElementPresentAndClick(MLWalletTopUpGames.objBuyPHP149, getTextVal(MLWalletTopUpGames.objBuyPHP149, "Load Type"));
-    }
-
-    public void inputRequiredDataAndContinue() throws Exception {
-        type(MLWalletTopUpGames.objGameUserID, prop.getproperty("GameUserID"), "Game User ID Input Field");
-        type(MLWalletTopUpGames.objEmailAddress, prop.getproperty("Email"), "Email ID Input Field");
-        type(MLWalletTopUpGames.objMobileNumber, prop.getproperty("GameMobileNumber"), "Mobile Number");
-        Swipe("UP", 1);
-        verifyElementPresentAndClick(MLWalletTopUpGames.objContinue, getTextVal(MLWalletTopUpGames.objContinue, "Button"));
-    }
 
     public void topUpGamesHomePageValidation_TUG_TC_01() throws Exception {
         ExtentReporter.HeaderChildNode("TopUp Games Home Page Validation");

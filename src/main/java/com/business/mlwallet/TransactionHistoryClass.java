@@ -13,22 +13,7 @@ public class TransactionHistoryClass extends  BaseClass{
     public TransactionHistoryClass(String Application, String deviceName, String portno) throws InterruptedException {
         super(Application, deviceName, portno);
     }
-    public void mlWallet_TransactionHistory_Generic_Steps(String billModule, String transaction) throws Exception {
-        String PayBillsHistory = getText(MLWalletTransactionHistoryPage.objBillHistory(billModule, transaction));
-        if (PayBillsHistory.equals(billModule))// "Pay Bills"
-        {
-            List<WebElement> values = findElements(MLWalletTransactionHistoryPage.objPayBillsTransctionList1(billModule));
-            for (int i = 0; i < values.size(); i++) {
-                String billPayTransaction = values.get(i).getText();
-                logger.info(billModule + " Transaction : " + billPayTransaction);
-                ExtentReporter.extentLogger(" ", billModule + " All Transactions : " + billPayTransaction);
-            }
-        } else if (PayBillsHistory.equals(transaction))// "No Recent Transaction"
-        {
-            logger.info("No Recent Transactions Are Available for " + billModule + " Module");
-            ExtentReporter.extentLogger("", "No Recent Transactions Are Available for " + billModule + " Module");
-        }
-    }
+
 
     public void mlWallet_TransactionHistory_TH_TC_01() throws Exception {
         ExtentReporter.HeaderChildNode("MLWallet_TransactionHistory_Scenario");

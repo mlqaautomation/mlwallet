@@ -45,7 +45,6 @@ public class BuyEloadClass extends BaseClass{
 
     }
 
-
     public void buyELoadInvalidMobileNumber_BE_TC_02() throws Exception {
         ExtentReporter.HeaderChildNode("Buying eLoad using invalid mobile number");
         eLoad_generic(prop.getproperty("Fully_Verified"), prop.getproperty("inValidMobNumber"), "true", 3);

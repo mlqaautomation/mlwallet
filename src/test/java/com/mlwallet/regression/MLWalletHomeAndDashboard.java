@@ -10,8 +10,6 @@ import com.business.mlwallet.HomeAndDashboardClass;
 public class MLWalletHomeAndDashboard {
     public static String deviceName;
     public static String portno;
-    public  static com.business.mlwallet.MLWalletBusinessLogic MLWalletBusinessLogic;
-
     public static HomeAndDashboardClass HomeAndDashboard;
 
 
@@ -37,22 +35,22 @@ public class MLWalletHomeAndDashboard {
 
 //    @Test(priority = 2)
 //    public void mlWalletLogOutFromHomePage_HD_TC_02() throws Exception {
-//        MLWalletBusinessLogic.mlWalletLogOutFromHomePage_HD_TC_02();
+//        HomeAndDashboard.mlWalletLogOutFromHomePage_HD_TC_02();
 //    }
 //
 //    @Test(priority = 3)
 //    public void mlWalletSettingsNavigationFromHomePage_HD_TC_03() throws Exception {
-//        MLWalletBusinessLogic.mlWalletSettingsNavigationFromHomePage_HD_TC_03();
+//        HomeAndDashboard.mlWalletSettingsNavigationFromHomePage_HD_TC_03();
 //    }
 //
 //    @Test(priority = 4)
 //    public void mlWalletHomePageEyeIconValidation_HD_TC_04() throws Exception {
-//        MLWalletBusinessLogic.mlWalletHomePageEyeIconValidation_HD_TC_04();
+//        HomeAndDashboard.mlWalletHomePageEyeIconValidation_HD_TC_04();
 //    }
 //
 //    @Test(priority = 5)
 //    public void mlWalletAccountTierLevelVerification_HD_TC_05() throws Exception {
-//        MLWalletBusinessLogic.mlWalletAccountTierLevelVerification_HD_TC_05();
+//        HomeAndDashboard.mlWalletAccountTierLevelVerification_HD_TC_05();
 //    }
 //
 //    @Test(priority = 6)

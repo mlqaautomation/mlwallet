@@ -4,25 +4,112 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1caf2074-516b-45a0-ba7d-480e019de780" name="Changes" comment="">
+    <list default="true" id="f8443fc2-c0ba-48a7-be76-d4e5b3b82664" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/ShopItemsClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" afterPath="$PROJECT_DIR$/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlWalletBrowserStack.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mlWalletBrowserStack.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mlwallet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mlwallet.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/BaseClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/BaseClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/BillsPayClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/BillsPayClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/BuyEloadClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/BuyEloadClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/RegistrationClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/RegistrationClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/TierUpgradeClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/TierUpgradeClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/TopUpGameClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/TopUpGameClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/TransactionHistoryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/business/mlwallet/TransactionHistoryClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletShopItemsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mlwallet/pages/MLWalletShopItemsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletBuyEload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletBuyEload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletCashInViaBankScripts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletCashInViaBankScripts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletCashInViaBranch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletCashInViaBranch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletHomeAndDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletHomeAndDashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletShopItemScripts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mlwallet/regression/MLWalletShopItemScripts.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2Ve1T25la5oWl6QdcVmRMTujVq8" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "git-widget-placeholder": "Merging main"
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projects/Web/mlshop&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="D:/Projects/wallet-android/android-ML-Wallet/mlwallet.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MLWallet" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/mlwallet.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.D:/Projects/wallet-android/android-ML-Wallet/mlwallet.xml" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f8443fc2-c0ba-48a7-be76-d4e5b3b82664" name="Changes" comment="" />
+      <created>1695181741651</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695181741651</updated>
+    </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/business/mlwallet/MLWalletBusinessLogic.java</url>
+          <line>5616</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
