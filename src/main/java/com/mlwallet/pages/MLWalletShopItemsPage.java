@@ -182,10 +182,7 @@ public class MLWalletShopItemsPage {
 	public static By objMLShopPageBanner = By.xpath("//*[@resource-id='banner-text']");
 
 	public static By objSuccessfulLoginTxt = By.xpath("//*[@text='Successfully Login']");
-
-
-
-
+	public static By objloginOkayButton = By.xpath("//*[@text='Okay']");
 
 
 }
