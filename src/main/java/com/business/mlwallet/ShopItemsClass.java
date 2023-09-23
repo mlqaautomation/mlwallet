@@ -19,7 +19,6 @@ public class ShopItemsClass extends BaseClass{
         verifyElementPresentAndClick(MLWalletShopItemsPage.objMLShopPage, "ML Shop Page");
         Thread.sleep(10000);
         click(MLWalletShopItemsPage.objloginOkayButton, "Button");
-        //cado
     }
 
     public void selectItemAndAddToCart() throws Exception {
