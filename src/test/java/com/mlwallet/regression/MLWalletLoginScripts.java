@@ -37,7 +37,7 @@ public class MLWalletLoginScripts {
 //    {
 //        LoginClass.logInScenarioWithValidMobNumber_Lgn_TC_01();
 //    }
-    @Test(priority = 2)
+    @Test(priority = 0)
     public void LogInScenarioWithInvalidMobNumber() throws Exception {
         LoginClass.logInScenarioWithInvalidMobNumber_Lgn_TC_02();
     }
