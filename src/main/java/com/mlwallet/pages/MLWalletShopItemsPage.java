@@ -7,7 +7,7 @@ public class MLWalletShopItemsPage {
 	public static By objShopItemsTab=By.xpath("//*[@text='Shop']");
 	public static By objMLShopPage=By.xpath("//*[@text='ML Shop']");
 	public static By objItemMenu=By.xpath("//*[@text='Rings']");
-	public static By objSelectItem=By.xpath("(//*[@text='High to Low' or @text='Low to High']/following-sibling::android.view.View[1]");
+	public static By objSelectItem = By.xpath("(//*[@text='High to Low' or @text='Low to High']/following-sibling::android.view.View[1]/child::android.widget.TextView[1])");
 	public static By objAddToCartBtn=By.xpath("//*[@resource-id='btnAddToCart']");
 	public static By objHambergerMenu=By.xpath("//*[@class='android.widget.TextView']/parent::android.webkit.WebView/child::android.view.View/child::android.widget.Image']");
 	public static By objCart=By.xpath("//*[@text=' Cart']");

@@ -24,11 +24,13 @@ public class ShopItemsClass extends BaseClass{
         Swipe("UP", 2);
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
         waitTime(5000);
-        verifyElementPresentAndClick(MLWalletShopItemsPage.objSelectItem, "Item" );
+        click(MLWalletShopItemsPage.objSelectItem, getTextVal(MLWalletShopItemsPage.objSelectItem, "Item" ));
         //click(MLWalletShopItemsPage.objSelectItem, getTextVal(MLWalletShopItemsPage.objSelectItem, "Item"));
         waitTime(5000);
         Swipe("up", 2);
         click(MLWalletShopItemsPage.objAddToCartBtn, "Add to cart Button");
+        waitTime(5000);
+        click(MLWalletShopItemsPage.objConfirmAddCarButton,"Confirm Button");
     }
 
     public void navigationToCart() throws Exception {
