@@ -17,16 +17,15 @@ public class ShopItemsClass extends BaseClass{
         click(MLWalletShopItemsPage.objShopItemsTab, "Shop Items Icon");
         Thread.sleep(10000);
         verifyElementPresentAndClick(MLWalletShopItemsPage.objMLShopPage, "ML Shop Page");
-        Thread.sleep(10000);
-        //todo
-        //  need to add step to click okay in success login modal
+        verifyElementPresentAndClick(MLWalletShopItemsPage.objloginOkayButton, "Login Success Button");
     }
 
     public void selectItemAndAddToCart() throws Exception {
         Swipe("UP", 2);
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
-        waitTime(10000);
-        click(MLWalletShopItemsPage.objSelectItem, getTextVal(MLWalletShopItemsPage.objSelectItem, "Item"));
+        waitTime(5000);
+        verifyElementPresentAndClick(MLWalletShopItemsPage.objSelectItem, "Item" );
+        //click(MLWalletShopItemsPage.objSelectItem, getTextVal(MLWalletShopItemsPage.objSelectItem, "Item"));
         waitTime(5000);
         Swipe("up", 2);
         click(MLWalletShopItemsPage.objAddToCartBtn, "Add to cart Button");
@@ -1090,8 +1089,5 @@ public class ShopItemsClass extends BaseClass{
         Swipe("DOWN", 4);
         navigationToCart();
         click(MLWalletShopItemsPage.objCheckBox, "Check Box");
-
-
     }
-
 }

@@ -26,6 +26,7 @@ public class LoginClass extends BaseClass{
 
     public void logInScenarioWithInvalidMobNumber_Lgn_TC_02() throws Exception {
         ExtentReporter.HeaderChildNode("Login Scenarios With Invalid Mobile Number");
+        enableNotif();
         explicitWaitVisibility(MLWalletLoginPage.objMobileNumberTextField, 10);
 //		click(MLWalletLoginPage.objMobileNumberTextField, "Mobile Number Text Field");
         type(MLWalletLoginPage.objMobileNumberTextField, prop.getproperty("Invalid_MobileNumber"), "Mobile Number Text Field");
