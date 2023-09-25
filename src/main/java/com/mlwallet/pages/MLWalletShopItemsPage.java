@@ -9,7 +9,7 @@ public class MLWalletShopItemsPage {
 	public static By objItemMenu=By.xpath("//*[@text='Rings']");
 	public static By objSelectItem=By.xpath("(//*[android.view.View]/child::android.view.View/descendant::android.view.View/child::android.view.View)[8]");
 	public static By objAddToCartBtn=By.xpath("//*[@resource-id='btnAddToCart']");
-	public static By objHambergerMenu=By.xpath("//*[@resource-id='nav-links-hamberger']");
+	public static By objHambergerMenu=By.xpath("//*[@class='android.widget.TextView']/parent::android.webkit.WebView/child::android.view.View/child::android.widget.Image']");
 	public static By objCart=By.xpath("//*[@text=' Cart']");
 	public static By objCheckBox=By.xpath("(//*[@class='android.widget.CheckBox'])[1]");
 	public static By objEditAddress=By.xpath("//*[@text='   ']");
@@ -183,6 +183,9 @@ public class MLWalletShopItemsPage {
 
 	public static By objSuccessfulLoginTxt = By.xpath("//*[@text='Successfully Login']");
 	public static By objloginOkayButton = By.xpath("//*[@text='Okay']");
-
+	public static By objDeleteYesButton =By.xpath("//*[@text='Yes']");
+	public static By objDeleteCancelButton =By.xpath("//*[@text='Cancel']");
+	public static By objDeleteConfirmation =By.xpath("//*[@text='Are you sure to remove this item?']");
+	public static By objDeleteExitButton =By.xpath("//*[@text='Are you sure to remove this item?']/parent::android.view.View/preceding-sibling::android.view.View/child::android.widget.Button");
 
 }
