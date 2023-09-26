@@ -22,14 +22,18 @@ public class MLWalletShopItemScripts {
     }
 //=========================================================================================================//
 
-
-
     @Test(priority = 1)
-    public void mlWalletShopItems_Scenario() throws Exception
+    public void shopItemsAddedItemInCartDeletedPopupValidationCancelButton_MLS_TC_129() throws Exception
     {
-        shopItemsClass.shopItemsWithoutInputOtp_MLS_TC_04();
+        shopItemsClass.shopItemsAddedItemInCartDeletedPopupValidationCancelButton_MLS_TC_129();
     }
 
+//    @Test(priority = 1)
+//    public void mlWalletShopItems_Scenario() throws Exception
+//    {
+//        shopItemsClass.shopItemsWithoutInputOtp_MLS_TC_04();
+//    }
+//
 //    @Test(priority = 2)
 //    public void shopItemsHamburgerMenuNavigation_MLS_TC_12() throws Exception {
 //        shopItemsClass.shopItemsHamburgerMenuNavigation_MLS_TC_12();
