@@ -4570,7 +4570,7 @@ public class MLWalletBusinessLogic {
 	}
 
 	public void navigationToCart() throws Exception {
-		click(MLWalletShopItemsPage.objHambergerMenu, "Hamburger Menu");
+		click(MLWalletShopItemsPage.objHamburgerMenu, "Hamburger Menu");
 		click(MLWalletShopItemsPage.objCart, "Cart");
 	}
 
@@ -4666,7 +4666,7 @@ public class MLWalletBusinessLogic {
 		ExtentReporter.HeaderChildNode("Shop Items Hamburger Menu Navigation");
 		mlWalletLogin(prop.getproperty("Branch_Verified"));
 		shopItemsNavigation();
-		verifyElementPresentAndClick(MLWalletShopItemsPage.objHambergerMenu, "Hamburger Menu");
+		verifyElementPresentAndClick(MLWalletShopItemsPage.objHamburgerMenu, "Hamburger Menu");
 		if (verifyElementPresent(MLWalletShopItemsPage.objSearch, getTextVal(MLWalletShopItemsPage.objSearch, "Button"))) {
 			verifyElementPresent(MLWalletShopItemsPage.objProfile, getTextVal(MLWalletShopItemsPage.objProfile, "Button"));
 			verifyElementPresent(MLWalletShopItemsPage.objCart, getTextVal(MLWalletShopItemsPage.objCart, "Button"));
@@ -4978,7 +4978,7 @@ public class MLWalletBusinessLogic {
 		ExtentReporter.HeaderChildNode("Shop Items Navigation To Profile Option");
 		mlWalletLogin(prop.getproperty("Branch_Verified"));
 		shopItemsNavigation();
-		click(MLWalletShopItemsPage.objHambergerMenu, "Hamburger Menu");
+		click(MLWalletShopItemsPage.objHamburgerMenu, "Hamburger Menu");
 		click(MLWalletShopItemsPage.objProfile, getTextVal(MLWalletShopItemsPage.objProfile, "Option"));
 		if (verifyElementPresent(MLWalletShopItemsPage.objMyAccount, getTextVal(MLWalletShopItemsPage.objMyAccount, "Page"))) {
 			logger.info("MLS_TC_46, Shop Items Navigation To Profile Option validated");
@@ -5066,7 +5066,7 @@ public class MLWalletBusinessLogic {
 		ExtentReporter.HeaderChildNode("Shop Items About Link Functionality");
 		mlWalletLogin(prop.getproperty("Branch_Verified"));
 		shopItemsNavigation();
-		verifyElementPresentAndClick(MLWalletShopItemsPage.objHambergerMenu, "Hamburger Menu");
+		verifyElementPresentAndClick(MLWalletShopItemsPage.objHamburgerMenu, "Hamburger Menu");
 		verifyElementPresentAndClick(MLWalletShopItemsPage.objAbout, getTextVal(MLWalletShopItemsPage.objAbout, "Button"));
 		if (verifyElementPresent(MLWalletShopItemsPage.objJewelry, getTextVal(MLWalletShopItemsPage.objJewelry, "Page"))) {
 			logger.info("MLS_TC_83, After Clicking on About link from Hamburger menu, Application navigates to Jewelry Page is validated");
@@ -5079,7 +5079,7 @@ public class MLWalletBusinessLogic {
 		ExtentReporter.HeaderChildNode("Shop Items Contact Link Functionality");
 		mlWalletLogin(prop.getproperty("Branch_Verified"));
 		shopItemsNavigation();
-		verifyElementPresentAndClick(MLWalletShopItemsPage.objHambergerMenu, "Hamburger Menu");
+		verifyElementPresentAndClick(MLWalletShopItemsPage.objHamburgerMenu, "Hamburger Menu");
 		verifyElementPresentAndClick(MLWalletShopItemsPage.objContact, getTextVal(MLWalletShopItemsPage.objContact, "Button"));
 		if (verifyElementPresent(MLWalletShopItemsPage.objContactUs, getTextVal(MLWalletShopItemsPage.objContactUs, "Page"))) {
 			logger.info("MLS_TC_84, After Clicking on contact link from Hamburger menu, Application navigates to Contact Us Page is validated");
@@ -5533,7 +5533,7 @@ public class MLWalletBusinessLogic {
 			verifyElementPresent(MLWalletShopItemsPage.objMLShopLOgo, "ML Shop Logo");
 			verifyElementPresent(MLWalletShopItemsPage.objMLShopProductsHeader, getTextVal(MLWalletShopItemsPage.objMLShopProductsHeader, "Header"));
 			verifyElementPresent(MLWalletShopItemsPage.objProductImageInMLShopPage, "Product Image in ML Shop Page");
-			verifyElementPresent(MLWalletShopItemsPage.objHambergerMenu, "Hamburger Menu");
+			verifyElementPresent(MLWalletShopItemsPage.objHamburgerMenu, "Hamburger Menu");
 			logger.info("MLS_TC_11, Shop Items page UI validated");
 			ExtentReporter.extentLoggerPass("MLS_TC_11", "MLS_TC_11, Shop Items page UI validated");
 			System.out.println("-----------------------------------------------------------");

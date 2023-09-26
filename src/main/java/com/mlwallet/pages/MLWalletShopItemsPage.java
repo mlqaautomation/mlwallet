@@ -8,12 +8,13 @@ public class MLWalletShopItemsPage {
 	public static By objMLShopPage=By.xpath("//*[@text='ML Shop']");
 	public static By objItemMenu=By.xpath("//*[@text='Rings']");
 	public static By objSelectItem = By.xpath("(//*[@text='High to Low' or @text='Low to High']/following-sibling::android.view.View[1]/child::android.widget.TextView[1])");
-	public static By objAddToCartBtn=By.xpath("//*[@resource-id='btnAddToCart']");
-	public static By objHambergerMenu=By.xpath("//*[@class='android.widget.TextView']/parent::android.webkit.WebView/child::android.view.View/child::android.widget.Image']");
-	public static By objCart=By.xpath("//*[@text=' Cart']");
-	public static By objCheckBox=By.xpath("(//*[@class='android.widget.CheckBox'])[1]");
+	public static By objAddToCartBtn=By.xpath("//*[@text='Add To Cart']");
+	public static By objHamburgerMenu=By.xpath("//*[@class='android.widget.TextView']/parent::android.webkit.WebView/child::android.view.View/child::android.widget.Image");
+	public static By objCart=By.xpath("//*[@content-desc='Cart']");
+	public static By objCartIcon = By.xpath("//*[@class='android.widget.TextView']/parent::android.webkit.WebView/child::android.view.View[1]/following-sibling::android.view.View[1]/child::android.view.View");
+	public static By objCheckBox=By.xpath("(//*[@class='android.widget.CheckBox'][1]");
 	public static By objEditAddress=By.xpath("//*[@text='   ']");
-	public static By objCheckOutBtn=By.xpath("//*[@resource-id='checkoutbutton']");
+	public static By objCheckOutBtn=By.xpath("//android.widget.Button[@text='Checkout']");
 	public static By objSelectBranchPage=By.xpath("//*[@resource-id='exampleModalLabel']");
 	public static By objInputFieldOne=By.xpath("//*[@resource-id='dropEditProvince']"); 
 	public static By objBranchName=By.xpath("//*[@text='AURORA']");
@@ -45,10 +46,10 @@ public class MLWalletShopItemsPage {
 
 
 	public static By objSearch=By.xpath("//*[@text=' Search']");
-	public static By objProfile=By.xpath("//*[@text=' Profile']");
-	public static By objShop = By.xpath("//*[@text='Shop']");
-	public static By objAbout = By.xpath("//*[@text='About']");
-	public static By objContact = By.xpath("//*[@text='Contact']");
+	public static By objProfile=By.xpath("//*[@content-desc='Profile']");
+	public static By objShop = By.xpath("//*[@content-desc='Shop']");
+	public static By objAbout = By.xpath("//*[@content-desc='About']");
+	public static By objContact = By.xpath("//*[@content-desc='Contact']");
 	public static By objItems = By.xpath("//*[@id='imahehome']/child::android.view.View/child::android.view.View/child::android.view.View/following-sibling::android.view.View");
 	public static By objGenderDropdown = By.xpath("//*[@resource-id='drpGender']");
 	public static By objColorDropdown = By.xpath("//*[@resource-id='drpColor']");
@@ -62,7 +63,7 @@ public class MLWalletShopItemsPage {
 	public static By objViewShop = By.xpath("//*[contains(@text,'View Shop')]");
 
 	public static By objCartPageHeader = By.xpath("(//*[@class='android.widget.Image'])[1]/following-sibling::android.view.View");
-	public static By objDeleteIcon = By.xpath("(//*[@class='android.widget.CheckBox']/following-sibling::android.view.View)[2]");
+	public static By objDeleteIcon = By.xpath("//*[@class='android.widget.CheckBox'][1]/parent::android.view.View/following-sibling::android.widget.Button");
 	public static By objProductNameInCartPage = By.xpath("(//*[@class='android.widget.CheckBox']/following-sibling::android.widget.TextView)[1]");
 	public static By objPriceInCartPage = By.xpath("(//*[@class='android.widget.CheckBox']/following-sibling::android.widget.TextView)[2]");
 	
@@ -187,7 +188,8 @@ public class MLWalletShopItemsPage {
 	public static By objDeleteCancelButton =By.xpath("//*[@text='Cancel']");
 	public static By objDeleteConfirmation =By.xpath("//*[@text='Are you sure to remove this item?']");
 	public static By objDeleteExitButton =By.xpath("//*[@text='Are you sure to remove this item?']/parent::android.view.View/preceding-sibling::android.view.View/child::android.widget.Button");
-	public static By objConfirmAddCarButton = By.xpath("//*[@text='Confirm'");
-
+	public static By objConfirmAddCarButton = By.xpath("//*[@text='Confirm']");
+	public static By objSuccessAddtoCartMsg = By.xpath("//*[@resource-id='swal2-html-container']");
+	public static By objExitHamburgerMenu = By.xpath("");
 
 }
