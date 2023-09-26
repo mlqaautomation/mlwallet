@@ -1098,12 +1098,14 @@ public class ShopItemsClass extends BaseClass{
         mlWalletLogin(prop.getproperty("Buyer_Tier"));
         shopItemsNavigation();
         selectItemAndAddToCart();
+        Swipe("DOWN", 4);
+        waitTime(5000);
         navigationToCart();
         click(MLWalletShopItemsPage.objCheckBox, "Check Box");
         click(MLWalletShopItemsPage.objDeleteIcon, "objDeleteIcon");
         click(MLWalletShopItemsPage.objDeleteCancelButton, "objDeleteCancelButton");
-        if (verifyElementNotPresent(MLWalletShopItemsPage.objProductNameInCartPage, "Product", 5)) {
-            logger.info("");
+        if (verifyElementNotPresent(MLWalletShopItemsPage.objProductNameInCartPage, getTextVal(MLWalletShopItemsPage.objProductNameInCartPage, "Item"), 5)) {
+            logger.info("MLS_TC_129, Cancel button in Confirmation modal validated");
             ExtentReporter.extentLoggerPass("MLS_TC_129", "MLS_TC_129, Cancel button in Confirmation modal validated");
         }else {
             ExtentReporter.extentLoggerPass("MLS_TC_129", "Delete Confirmation  modal should be displayed failed to validate");

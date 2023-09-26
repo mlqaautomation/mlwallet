@@ -12,7 +12,7 @@ public class MLWalletShopItemsPage {
 	public static By objHamburgerMenu=By.xpath("//*[@class='android.widget.TextView']/parent::android.webkit.WebView/child::android.view.View/child::android.widget.Image");
 	public static By objCart=By.xpath("//*[@content-desc='Cart']");
 	public static By objCartIcon = By.xpath("//*[@class='android.widget.TextView']/parent::android.webkit.WebView/child::android.view.View[1]/following-sibling::android.view.View[1]/child::android.view.View");
-	public static By objCheckBox=By.xpath("(//*[@class='android.widget.CheckBox'][1]");
+	public static By objCheckBox=By.xpath("//*[@class='android.widget.CheckBox'][1]");
 	public static By objEditAddress=By.xpath("//*[@text='   ']");
 	public static By objCheckOutBtn=By.xpath("//android.widget.Button[@text='Checkout']");
 	public static By objSelectBranchPage=By.xpath("//*[@resource-id='exampleModalLabel']");
@@ -64,7 +64,7 @@ public class MLWalletShopItemsPage {
 
 	public static By objCartPageHeader = By.xpath("(//*[@class='android.widget.Image'])[1]/following-sibling::android.view.View");
 	public static By objDeleteIcon = By.xpath("//*[@class='android.widget.CheckBox'][1]/parent::android.view.View/following-sibling::android.widget.Button");
-	public static By objProductNameInCartPage = By.xpath("(//*[@class='android.widget.CheckBox']/following-sibling::android.widget.TextView)[1]");
+	public static By objProductNameInCartPage = By.xpath("//*[@class='android.widget.CheckBox'][1]/parent::android.view.View/parent::android.view.View[1]");
 	public static By objPriceInCartPage = By.xpath("(//*[@class='android.widget.CheckBox']/following-sibling::android.widget.TextView)[2]");
 	
 	public static By objShippingDetails = By.xpath("//*[@resource-id='font-sd']");
