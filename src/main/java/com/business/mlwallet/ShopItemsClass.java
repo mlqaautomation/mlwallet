@@ -1093,4 +1093,22 @@ public class ShopItemsClass extends BaseClass{
 
     }
 
+    public void shopItemsClickYesButtonToRemoveItemsFromTheCart_MLS_TC_108() throws Exception {
+        ExtentReporter.HeaderChildNode("Shop Items Click the 'Yes' button to remove Items from The Cart");
+        mlWalletLogin(prop.getproperty("Branch_Verified"));
+        shopItemsNavigation();
+        selectItemAndAddToCart();
+        Swipe("DOWN", 2);
+        verifyElementPresentAndClick(MLWalletShopItemsPage.objShoppingCartIcon,"Shopping Cart Icon");
+        verifyElementPresentAndClick(MLWalletShopItemsPage.objDeleteIcon,"Button");
+        if(verifyElementPresent(MLWalletShopItemsPage.objDeleteConfirmation,"Popup Confirmation")){
+            verifyElementPresentAndClick(MLWalletShopItemsPage.objDeleteYesButton,"Button");
+            if (verifyElementNotPresent(MLWalletShopItemsPage.objProductNameInCartPage, "Cart Page", 5)) {
+                logger.info("MLS_TC_108, Shop Items Click the 'Yes' button to remove Items from The Cart Validated");
+                ExtentReporter.extentLoggerPass("MLS_TC_108", "MLS_TC_108, Shop Items Click the 'Yes' button to remove Items from The Cart Validated");
+                System.out.println("-----------------------------------------------------------");
+            }
+
+        }
+    }
 }
