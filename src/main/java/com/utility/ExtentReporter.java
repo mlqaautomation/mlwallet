@@ -30,7 +30,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-//import com.business.mlwallet.MLWalletBusinessLogic;
+import com.business.mlwallet.MLWalletBusinessLogic;
 import com.deviceDetails.DeviceDetails;
 import com.driverInstance.DriverInstance;
 import com.driverInstance.DriverManager;
