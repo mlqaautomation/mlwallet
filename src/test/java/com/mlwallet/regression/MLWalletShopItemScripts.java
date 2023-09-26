@@ -27,6 +27,11 @@ public class MLWalletShopItemScripts {
     {
         shopItemsClass.shopItemsAddedItemInCartDeletedPopupValidationCancelButton_MLS_TC_129();
     }
+    @Test(priority = 0)
+    public void shopItemsAddedItemInCartDeletedPopupValidationExitButton_MLS_TC_131() throws Exception
+    {
+        shopItemsClass.shopItemsAddedItemInCartDeletedPopupValidationExitButton_MLS_TC_131();
+    }
 
 //    @Test(priority = 1)
 //    public void mlWalletShopItems_Scenario() throws Exception

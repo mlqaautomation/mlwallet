@@ -1112,4 +1112,24 @@ public class ShopItemsClass extends BaseClass{
         }
 
     }
+
+    public void shopItemsAddedItemInCartDeletedPopupValidationExitButton_MLS_TC_131() throws Exception {
+        ExtentReporter.HeaderChildNode("Shop Items Added Item In Cart Deleted Popup Validation Cancel Button");
+        mlWalletLogin(prop.getproperty("Buyer_Tier"));
+        shopItemsNavigation();
+        selectItemAndAddToCart();
+        Swipe("DOWN", 2);
+        waitTime(5000);
+        navigationToCart();
+        click(MLWalletShopItemsPage.objCheckBox, "Check Box");
+        click(MLWalletShopItemsPage.objDeleteIcon, "objDeleteIcon");
+        click(MLWalletShopItemsPage.objDeleteExitButton, "objDeleteExitButton");
+        if (verifyElementPresent(MLWalletShopItemsPage.objProductNameInCartPage, getTextVal(MLWalletShopItemsPage.objProductNameInCartPage, "Item"))) {
+            logger.info("MLS_TC_131, Exit button in Confirmation modal validated");
+            ExtentReporter.extentLoggerPass("MLS_TC_131", "MLS_TC_131, Exit button in Confirmation modal validated");
+        }else {
+            ExtentReporter.extentLoggerFail("MLS_TC_131", "Exit Confirmation  modal should be displayed failed to validate");
+        }
+
+    }
 }
