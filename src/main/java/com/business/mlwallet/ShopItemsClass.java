@@ -1108,9 +1108,8 @@ public class ShopItemsClass extends BaseClass{
             logger.info("MLS_TC_129, Cancel button in Confirmation modal validated");
             ExtentReporter.extentLoggerPass("MLS_TC_129", "MLS_TC_129, Cancel button in Confirmation modal validated");
         }else {
-            ExtentReporter.extentLoggerPass("MLS_TC_129", "Delete Confirmation  modal should be displayed failed to validate");
+            ExtentReporter.extentLoggerFail("MLS_TC_129", "Delete Confirmation  modal should be displayed failed to validate");
         }
-
     }
 
     public void shopItemsAddedItemInCartDeletedPopupValidationExitButton_MLS_TC_131() throws Exception {
@@ -1130,6 +1129,7 @@ public class ShopItemsClass extends BaseClass{
         }else {
             ExtentReporter.extentLoggerFail("MLS_TC_131", "Exit Confirmation  modal should be displayed failed to validate");
         }
-
     }
+
+
 }

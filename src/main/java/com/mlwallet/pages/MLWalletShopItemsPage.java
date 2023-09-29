@@ -17,7 +17,8 @@ public class MLWalletShopItemsPage {
 	public static By objCheckOutBtn=By.xpath("//android.widget.Button[@text='Checkout']");
 	public static By objSelectBranchPage=By.xpath("//*[@resource-id='exampleModalLabel']");
 	public static By objInputFieldOne=By.xpath("//*[@resource-id='dropEditProvince']"); 
-	public static By objBranchName=By.xpath("//*[@text='AURORA']");
+	public static By objBranchName=By.xpath("//*[@text='Branch Name *']/following-sibling::android.view.View");
+	// //*[@text='ML NRA']
 	public static By objInputFieldTwo=By.xpath("//*[@resource-id='btnChangeAddress']");
 	public static By objSubBranchName=By.xpath("//*[@text='BALER']");
 	public static By objInputFieldThree=By.xpath("//*[@resource-id='dropEditBranchname']");
@@ -39,7 +40,7 @@ public class MLWalletShopItemsPage {
 	public static By objBackArrowBtn=By.xpath("//*[@text='']");
 	public static By objAvailableBalance=By.xpath("//*[@text='Available Balance']");
 	public static By objSelectPaymentMethod = By.xpath("//*[@text='Select Payment Method']");
-	public static By objMLWallet = By.xpath("//*[@text='ML Wallet']");
+	public static By objMLWallet = By.xpath("//android.widget.Button[@text='ML WALLET']");
 	public static By objPayUsingMlWallet = By.xpath("((//*[@class='android.webkit.WebView'])[2]/child::android.view.View/child::android.view.View)[2]");
 	//*[@text='ML Wallet']/parent::android.view.View/parent::android.view.View
 	public static By objPayUsingOnlineBanking = By.xpath("//*[@text='Online Banking']/parent::android.view.View/parent::android.view.View");
