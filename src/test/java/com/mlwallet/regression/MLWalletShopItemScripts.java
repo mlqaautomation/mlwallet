@@ -301,7 +301,10 @@ public class MLWalletShopItemScripts {
 //       shopItemsClass.mlWallet_ShopItems_with_Insufficient_Balance();
 //   }
 
-
+    @Test(priority = 54)
+    public void shopItemsClickYesButtonToRemoveItemsFromTheCart_MLS_TC_108() throws Exception {
+        shopItemsClass.shopItemsClickYesButtonToRemoveItemsFromTheCart_MLS_TC_108();
+    }
 
 
 
