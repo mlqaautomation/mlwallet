@@ -66,7 +66,7 @@ public abstract class BaseClass {
         DriverManager.getAppiumDriver().quit();
     }
     public void enableNotif() throws Exception{
-        waitTime(2000);
+        waitTime(5000);
         if(verifyElementDisplayed(MLWalletLoginPage.objAllowNotif)){
             click(MLWalletLoginPage.objAllowNotif, getTextVal(MLWalletLoginPage.objAllowNotif, "Button"));
             logger.info("Notification is allowed");
@@ -117,7 +117,7 @@ public abstract class BaseClass {
 
     public void mlWalletLogin(String sTier) throws Exception {
         enableNotif();
-        waitTime(10000);
+        waitTime(5000);
 //		click(MLWalletLoginPage.objMobileNumberTextField, "Mobile Number Text Field");
         type(MLWalletLoginPage.objMobileNumberTextField, sTier, "Mobile Number Text Field");
         click(MLWalletLoginPage.objLoginBtn, "Login Button");

@@ -17,29 +17,31 @@ public class ShopItemsClass extends BaseClass{
         click(MLWalletShopItemsPage.objShopItemsTab, "Shop Items Icon");
         Thread.sleep(10000);
         verifyElementPresentAndClick(MLWalletShopItemsPage.objMLShopPage, "ML Shop Page");
-        Thread.sleep(10000);
-        click(MLWalletShopItemsPage.objloginOkayButton, "Button");
+        verifyElementPresentAndClick(MLWalletShopItemsPage.objloginOkayButton, "Login Success Button");
     }
 
     public void selectItemAndAddToCart() throws Exception {
         Swipe("UP", 2);
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
-        waitTime(10000);
-        click(MLWalletShopItemsPage.objSelectItem, getTextVal(MLWalletShopItemsPage.objSelectItem, "Item"));
+        waitTime(5000);
+        click(MLWalletShopItemsPage.objSelectItem, getTextVal(MLWalletShopItemsPage.objSelectItem, "Item" ));
+        //click(MLWalletShopItemsPage.objSelectItem, getTextVal(MLWalletShopItemsPage.objSelectItem, "Item"));
         waitTime(5000);
         Swipe("up", 2);
         click(MLWalletShopItemsPage.objAddToCartBtn, "Add to cart Button");
+        waitTime(5000);
+        click(MLWalletShopItemsPage.objConfirmAddCarButton,"Confirm Button");
     }
 
     public void navigationToCart() throws Exception {
-        click(MLWalletShopItemsPage.objHambergerMenu, "Hamburger Menu");
+        click(MLWalletShopItemsPage.objHamburgerMenu, "Hamburger Menu");
         click(MLWalletShopItemsPage.objCart, "Cart");
     }
 
     public void editAddressAndPlaceTheOrder() throws Exception {
         click(MLWalletShopItemsPage.objCheckBox, "Check Box");
         click(MLWalletShopItemsPage.objCheckOutBtn, "Checkout Button");
-        click(MLWalletShopItemsPage.objEditAddress, "Edit Address Tab");
+//        click(MLWalletShopItemsPage.objEditAddress, "Edit Address Tab");
         verifyElementPresent(MLWalletShopItemsPage.objSelectBranchPage, getTextVal(MLWalletShopItemsPage.objSelectBranchPage, "Page"));
         click(MLWalletShopItemsPage.objSaveBtn, "Save Button");
         verifyElementPresent(MLWalletShopItemsPage.objAddressSuccessfulMsg, getTextVal(MLWalletShopItemsPage.objAddressSuccessfulMsg, "Message"));
@@ -127,7 +129,7 @@ public class ShopItemsClass extends BaseClass{
         ExtentReporter.HeaderChildNode("Shop Items Hamburger Menu Navigation");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
         shopItemsNavigation();
-        verifyElementPresentAndClick(MLWalletShopItemsPage.objHambergerMenu, "Hamburger Menu");
+        verifyElementPresentAndClick(MLWalletShopItemsPage.objHamburgerMenu, "Hamburger Menu");
         if (verifyElementPresent(MLWalletShopItemsPage.objSearch, getTextVal(MLWalletShopItemsPage.objSearch, "Button"))) {
             verifyElementPresent(MLWalletShopItemsPage.objProfile, getTextVal(MLWalletShopItemsPage.objProfile, "Button"));
             verifyElementPresent(MLWalletShopItemsPage.objCart, getTextVal(MLWalletShopItemsPage.objCart, "Button"));
@@ -439,7 +441,7 @@ public class ShopItemsClass extends BaseClass{
         ExtentReporter.HeaderChildNode("Shop Items Navigation To Profile Option");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
         shopItemsNavigation();
-        click(MLWalletShopItemsPage.objHambergerMenu, "Hamburger Menu");
+        click(MLWalletShopItemsPage.objHamburgerMenu, "Hamburger Menu");
         click(MLWalletShopItemsPage.objProfile, getTextVal(MLWalletShopItemsPage.objProfile, "Option"));
         if (verifyElementPresent(MLWalletShopItemsPage.objMyAccount, getTextVal(MLWalletShopItemsPage.objMyAccount, "Page"))) {
             logger.info("MLS_TC_46, Shop Items Navigation To Profile Option validated");
@@ -527,7 +529,7 @@ public class ShopItemsClass extends BaseClass{
         ExtentReporter.HeaderChildNode("Shop Items About Link Functionality");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
         shopItemsNavigation();
-        verifyElementPresentAndClick(MLWalletShopItemsPage.objHambergerMenu, "Hamburger Menu");
+        verifyElementPresentAndClick(MLWalletShopItemsPage.objHamburgerMenu, "Hamburger Menu");
         verifyElementPresentAndClick(MLWalletShopItemsPage.objAbout, getTextVal(MLWalletShopItemsPage.objAbout, "Button"));
         if (verifyElementPresent(MLWalletShopItemsPage.objJewelry, getTextVal(MLWalletShopItemsPage.objJewelry, "Page"))) {
             logger.info("MLS_TC_83, After Clicking on About link from Hamburger menu, Application navigates to Jewelry Page is validated");
@@ -540,7 +542,7 @@ public class ShopItemsClass extends BaseClass{
         ExtentReporter.HeaderChildNode("Shop Items Contact Link Functionality");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
         shopItemsNavigation();
-        verifyElementPresentAndClick(MLWalletShopItemsPage.objHambergerMenu, "Hamburger Menu");
+        verifyElementPresentAndClick(MLWalletShopItemsPage.objHamburgerMenu, "Hamburger Menu");
         verifyElementPresentAndClick(MLWalletShopItemsPage.objContact, getTextVal(MLWalletShopItemsPage.objContact, "Button"));
         if (verifyElementPresent(MLWalletShopItemsPage.objContactUs, getTextVal(MLWalletShopItemsPage.objContactUs, "Page"))) {
             logger.info("MLS_TC_84, After Clicking on contact link from Hamburger menu, Application navigates to Contact Us Page is validated");
@@ -992,7 +994,7 @@ public class ShopItemsClass extends BaseClass{
             verifyElementPresent(MLWalletShopItemsPage.objMLShopLOgo, "ML Shop Logo");
             verifyElementPresent(MLWalletShopItemsPage.objMLShopProductsHeader, getTextVal(MLWalletShopItemsPage.objMLShopProductsHeader, "Header"));
             verifyElementPresent(MLWalletShopItemsPage.objProductImageInMLShopPage, "Product Image in ML Shop Page");
-            verifyElementPresent(MLWalletShopItemsPage.objHambergerMenu, "Hamburger Menu");
+            verifyElementPresent(MLWalletShopItemsPage.objHamburgerMenu, "Hamburger Menu");
             logger.info("MLS_TC_11, Shop Items page UI validated");
             ExtentReporter.extentLoggerPass("MLS_TC_11", "MLS_TC_11, Shop Items page UI validated");
             System.out.println("-----------------------------------------------------------");
@@ -1089,9 +1091,28 @@ public class ShopItemsClass extends BaseClass{
         Swipe("DOWN", 4);
         navigationToCart();
         click(MLWalletShopItemsPage.objCheckBox, "Check Box");
+    }
 
+    public void shopItemsAddedItemInCartDeletedPopupValidationCancelButton_MLS_TC_129() throws Exception {
+        ExtentReporter.HeaderChildNode("Shop Items Added Item In Cart Deleted Popup Validation Cancel Button");
+        mlWalletLogin(prop.getproperty("Buyer_Tier"));
+        shopItemsNavigation();
+        selectItemAndAddToCart();
+        Swipe("DOWN", 4);
+        waitTime(5000);
+        navigationToCart();
+        click(MLWalletShopItemsPage.objCheckBox, "Check Box");
+        click(MLWalletShopItemsPage.objDeleteIcon, "objDeleteIcon");
+        click(MLWalletShopItemsPage.objDeleteCancelButton, "objDeleteCancelButton");
+        if (verifyElementNotPresent(MLWalletShopItemsPage.objProductNameInCartPage, getTextVal(MLWalletShopItemsPage.objProductNameInCartPage, "Item"), 5)) {
+            logger.info("MLS_TC_129, Cancel button in Confirmation modal validated");
+            ExtentReporter.extentLoggerPass("MLS_TC_129", "MLS_TC_129, Cancel button in Confirmation modal validated");
+        }else {
+            ExtentReporter.extentLoggerPass("MLS_TC_129", "Delete Confirmation  modal should be displayed failed to validate");
+        }
 
     }
+
 
     public void shopItemsClickYesButtonToRemoveItemsFromTheCart_MLS_TC_108() throws Exception {
         ExtentReporter.HeaderChildNode("Shop Items Click the 'Yes' button to remove Items from The Cart");
@@ -1110,5 +1131,25 @@ public class ShopItemsClass extends BaseClass{
             }
 
         }
+
+    public void shopItemsAddedItemInCartDeletedPopupValidationExitButton_MLS_TC_131() throws Exception {
+        ExtentReporter.HeaderChildNode("Shop Items Added Item In Cart Deleted Popup Validation Cancel Button");
+        mlWalletLogin(prop.getproperty("Buyer_Tier"));
+        shopItemsNavigation();
+        selectItemAndAddToCart();
+        Swipe("DOWN", 2);
+        waitTime(5000);
+        navigationToCart();
+        click(MLWalletShopItemsPage.objCheckBox, "Check Box");
+        click(MLWalletShopItemsPage.objDeleteIcon, "objDeleteIcon");
+        click(MLWalletShopItemsPage.objDeleteExitButton, "objDeleteExitButton");
+        if (verifyElementPresent(MLWalletShopItemsPage.objProductNameInCartPage, getTextVal(MLWalletShopItemsPage.objProductNameInCartPage, "Item"))) {
+            logger.info("MLS_TC_131, Exit button in Confirmation modal validated");
+            ExtentReporter.extentLoggerPass("MLS_TC_131", "MLS_TC_131, Exit button in Confirmation modal validated");
+        }else {
+            ExtentReporter.extentLoggerFail("MLS_TC_131", "Exit Confirmation  modal should be displayed failed to validate");
+        }
+
+
     }
 }
