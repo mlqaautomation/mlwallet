@@ -20,13 +20,14 @@ import java.util.List;
 import static com.utility.Utilities.*;
 
 public abstract class BaseClass {
-    static LoggingUtils logger = new LoggingUtils();
+    public static LoggingUtils logger = new LoggingUtils();
     private int timeout;
     private int retryCount;
 
     public static SoftAssert softAssert = new SoftAssert();
     public static PropertyFileReader prop = new PropertyFileReader(".\\properties\\testdata.properties");
     public static PropertyFileReader tierProp = new PropertyFileReader(".\\properties\\tierUpgrade.properties");
+    public static PropertyFileReader shopProp = new PropertyFileReader(".\\properties\\mlshop.properties");
     public BaseClass(){
 
     }

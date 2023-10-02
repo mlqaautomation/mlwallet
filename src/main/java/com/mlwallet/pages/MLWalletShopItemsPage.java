@@ -7,12 +7,13 @@ public class MLWalletShopItemsPage {
 	public static By objShopItemsTab=By.xpath("//*[@text='Shop']");
 	public static By objMLShopPage=By.xpath("//*[@text='ML Shop']");
 	public static By objItemMenu=By.xpath("//*[@text='Rings']");
+
+	public static By objCheckBox=By.xpath("(//*[@class='android.widget.CheckBox'])[1]");
 	public static By objSelectItem = By.xpath("(//*[@text='High to Low' or @text='Low to High']/following-sibling::android.view.View[1]/child::android.widget.TextView[1])");
 	public static By objAddToCartBtn=By.xpath("//*[@text='Add To Cart']");
 	public static By objHamburgerMenu=By.xpath("//*[@class='android.widget.TextView']/parent::android.webkit.WebView/child::android.view.View/child::android.widget.Image");
 	public static By objCart=By.xpath("//*[@content-desc='Cart']");
 	public static By objCartIcon = By.xpath("//*[@class='android.widget.TextView']/parent::android.webkit.WebView/child::android.view.View[1]/following-sibling::android.view.View[1]/child::android.view.View");
-	public static By objCheckBox=By.xpath("//*[@class='android.widget.CheckBox'][1]");
 	public static By objEditAddress=By.xpath("//*[@text='   ']");
 	public static By objCheckOutBtn=By.xpath("//android.widget.Button[@text='Checkout']");
 	public static By objSelectBranchPage=By.xpath("//*[@resource-id='exampleModalLabel']");
@@ -192,5 +193,33 @@ public class MLWalletShopItemsPage {
 	public static By objConfirmAddCarButton = By.xpath("//*[@text='Confirm']");
 	public static By objSuccessAddtoCartMsg = By.xpath("//*[@resource-id='swal2-html-container']");
 	public static By objExitHamburgerMenu = By.xpath("");
+
+	public static By objShoppingCartIcon=By.xpath("//android.view.View/child::android.view.View");
+
+	// --- SELECT PICK UP BRANCH SECTION ---
+	public static By objSelectBranchLabel=By.xpath("//*[@text='Select Pick Up Branch']");
+	public static By objProvinceStateDropDown=By.xpath("//*[@text='Select Pick Up Branch']/following-sibling::android.widget.TextView[1]/following-sibling::android.view.View[1]");
+	public static By objCityTownDropDown=By.xpath("//*[@text='Select Pick Up Branch']/following-sibling::android.widget.TextView[2]/following-sibling::android.view.View[1]");
+	public static By objBranchNameDropDown=By.xpath("//*[@text='Select Pick Up Branch']/following-sibling::android.widget.TextView[3]/following-sibling::android.view.View[1]");
+	public static By objSelectedBranchName=By.xpath("//*[@class='android.widget.ListView']/child::android.widget.CheckedTextView[2]");
+	public static By objBranchAddress=By.xpath("//*[@text='Select Pick Up Branch']/following-sibling::android.widget.TextView[3]/following-sibling::android.view.View[1]/following-sibling::android.widget.TextView");
+	// --- SELECT PICK UP BRANCH SECTION ---
+
+
+	// --- SELECT PAYMENT METHOD SECTION ---
+	public static By objPaymentMLWallet=By.xpath("//*[@text='ML WALLET']");
+	public static By objPaymentEWallet=By.xpath("//*[@text='E-WALLET']");
+	public static By objPaymentVisa=By.xpath("//*[@text='VISA/MASTERCARD']");
+	public static By objDirectOnlineBank=By.xpath("//*[@text='DIRECT ONLINE BANKING']");
+	// --- SELECT PAYMENT METHOD SECTION ---
+
+	public static By objProceedBtn=By.xpath("//*[@text='Proceed']");
+	public static By objCloseBtn=By.xpath("//*[@text='Close']");
+	public static By objPLaceOrderConfirmationMsg=By.xpath("//*[contains(@text,'You are about')]");
+	public static By objSuccesFullyCheckOutMsg=By.xpath("//*[@text='Successfully checkout items. Thank you!']");
+	public static By objSuccessFullyCheckOutOkayBtn=By.xpath("//*[@text='Okay']");
+	public static By objEWalletOptions(String option){
+		return By.xpath("//*[@text='"+option+"']");
+	}
 
 }

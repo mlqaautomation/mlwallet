@@ -291,6 +291,7 @@ public class MLWalletShopItemScripts {
 //       shopItemsClass.mlWallet_ShopItems_with_Insufficient_Balance();
 //   }
 
+
     @Test(priority = 1)
     public void shopItemsAddedItemInCartDeletedPopupValidationCancelButton_MLS_TC_129() throws Exception
     {
@@ -301,6 +302,15 @@ public class MLWalletShopItemScripts {
     {
         shopItemsClass.shopItemsAddedItemInCartDeletedPopupValidationExitButton_MLS_TC_131();
     }
+
+    @Test(priority = 54)
+    public void shopItemsClickYesButtonToRemoveItemsFromTheCart_MLS_TC_108() throws Exception {
+        shopItemsClass.shopItemsClickYesButtonToRemoveItemsFromTheCart_MLS_TC_108();
+    }
+
+
+
+
 
     @AfterMethod
     public void afterMethod(){

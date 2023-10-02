@@ -2073,6 +2073,12 @@ public class Utilities extends ExtentReporter {
             waitTime(4000);
         }
     }
+    public static void swipeToTopOfPage() throws Exception {
+        for (int i = 0; i < 5; i++) {
+            scrollToTopOfPage();
+            waitTime(4000);
+        }
+    }
 
     @SuppressWarnings({"unchecked", "rawtypes"})
     public void androidSwitchTab() {
