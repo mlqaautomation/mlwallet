@@ -221,5 +221,8 @@ public class MLWalletShopItemsPage {
 	public static By objEWalletOptions(String option){
 		return By.xpath("//*[@text='"+option+"']");
 	}
+	public static By objPaymongoPortalPage=By.xpath("//*[@text='PayMongo Logo']");
+	public static By objPaymongoPaymentAmount=By.xpath("//*[@text='Payment amount']/following-sibling::android.widget.TextView");
+
 
 }

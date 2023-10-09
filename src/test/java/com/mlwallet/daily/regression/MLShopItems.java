@@ -31,11 +31,34 @@ public class MLShopItems {
         shopItems.MLShop_PurchaseItemViaMlWallet_TC_178();
     }
 
-//    @Test(priority = 0)
-//    public void shopItemsAddedItemInCartDeletedPopupValidationExitButton_MLS_TC_131() throws Exception
-//    {
-//
-//    }
+
+    @Test(priority = 2)
+    public void MLShop_PaymongoPortalCreditDebit_TC_205() throws Exception
+    {
+        shopItems.MLShop_PaymongoPortalCreditDebit_TC_205();
+    }
+
+    @Test(priority = 3)
+    public void MLShop_PaymongoPortalGrabPay_TC_206() throws Exception
+    {
+        shopItems.MLShop_PaymongoPortalGrabPay_TC_206();
+    }
+
+    @Test(priority = 4)
+    public void MLShop_PaymongoPortalGcash_TC_207() throws Exception
+    {
+        shopItems.MLShop_PaymongoPortalGcash_TC_207();
+    }
+    @Test(priority = 5)
+    public void MLShop_PaymongoPortalMaya_TC_208() throws Exception
+    {
+        shopItems.MLShop_PaymongoPortalMaya_TC_208();
+    }
+    @Test(priority = 6)
+    public void MLShop_PaymongoPortalDirectOnlineBank_TC_209() throws Exception
+    {
+        shopItems.MLShop_PaymongoPortalDirectOnlineBank_TC_209();
+    }
 
     @AfterMethod
     public void afterMethod(){
