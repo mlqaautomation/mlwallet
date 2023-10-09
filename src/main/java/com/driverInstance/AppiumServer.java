@@ -23,22 +23,6 @@ public class AppiumServer{
       String cmd2 = "adb uninstall io.appium.uiautomator2.server.test";
       Runtime.getRuntime().exec(cmd1);
       Runtime.getRuntime().exec(cmd2);
-
-     /* service=new AppiumServiceBuilder().withAppiumJS(new File("C:\\Users\\IGS0502\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
-              .withIPAddress("127.0.0.1").usingPort(4723).withStartUpTimeOut(60, TimeUnit.SECONDS).build();
-
-      service.start();*/
-    /*  AppiumServiceBuilder builder = new AppiumServiceBuilder();
-      builder.withIPAddress ("127.0.0.1")
-              .usingPort(4723)
-              .usingAnyFreePort()
-              .withAppiumJS (new File ("C:\\Users\\IGS0502\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
-              .usingDriverExecutable (new File ("C:\\Program Files\\nodejs\\node.exe"))
-              .withArgument (() -> "-pa", "/wd/hub")
-              .withArgument (GeneralServerFlag.SESSION_OVERRIDE)
-              .withArgument (GeneralServerFlag.LOG_LEVEL, "debug");
-
-      service = AppiumDriverLocalService.buildService (builder);*/
       service = AppiumDriverLocalService.
               // buildDefaultService();
                       buildService(new AppiumServiceBuilder()

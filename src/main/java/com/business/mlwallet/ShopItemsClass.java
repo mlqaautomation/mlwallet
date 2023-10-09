@@ -41,7 +41,6 @@ public class ShopItemsClass extends BaseClass{
     public void editAddressAndPlaceTheOrder() throws Exception {
         click(MLWalletShopItemsPage.objCheckBox, "Check Box");
         click(MLWalletShopItemsPage.objCheckOutBtn, "Checkout Button");
-//        click(MLWalletShopItemsPage.objEditAddress, "Edit Address Tab");
         verifyElementPresent(MLWalletShopItemsPage.objSelectBranchPage, getTextVal(MLWalletShopItemsPage.objSelectBranchPage, "Page"));
         click(MLWalletShopItemsPage.objSaveBtn, "Save Button");
         verifyElementPresent(MLWalletShopItemsPage.objAddressSuccessfulMsg, getTextVal(MLWalletShopItemsPage.objAddressSuccessfulMsg, "Message"));
@@ -150,8 +149,9 @@ public class ShopItemsClass extends BaseClass{
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
         if (verifyElementDisplayed(MLWalletShopItemsPage.objItems)) {
             List<WebElement> values = findElements(MLWalletShopItemsPage.objItems);
-            for (int i = 0; i < values.size(); i++) {
-                String displayedItem = values.get(i).getText();
+            assert values != null;
+            for (WebElement value : values) {
+                String displayedItem = value.getText();
                 logger.info("Item : " + displayedItem + " is displayed");
                 ExtentReporter.extentLogger(" ", "Item : " + displayedItem + " is displayed");
             }
@@ -1108,11 +1108,29 @@ public class ShopItemsClass extends BaseClass{
             logger.info("MLS_TC_129, Cancel button in Confirmation modal validated");
             ExtentReporter.extentLoggerPass("MLS_TC_129", "MLS_TC_129, Cancel button in Confirmation modal validated");
         }else {
-            ExtentReporter.extentLoggerPass("MLS_TC_129", "Delete Confirmation  modal should be displayed failed to validate");
+            ExtentReporter.extentLoggerFail("MLS_TC_129", "Delete Confirmation  modal should be displayed failed to validate");
         }
-
     }
 
+
+    public void shopItemsClickYesButtonToRemoveItemsFromTheCart_MLS_TC_108() throws Exception {
+        ExtentReporter.HeaderChildNode("Shop Items Click the 'Yes' button to remove Items from The Cart");
+        mlWalletLogin(prop.getproperty("Branch_Verified"));
+        shopItemsNavigation();
+        selectItemAndAddToCart();
+        Swipe("DOWN", 2);
+        verifyElementPresentAndClick(MLWalletShopItemsPage.objShoppingCartIcon, "Shopping Cart Icon");
+        verifyElementPresentAndClick(MLWalletShopItemsPage.objDeleteIcon, "Button");
+        if (verifyElementPresent(MLWalletShopItemsPage.objDeleteConfirmation, "Popup Confirmation")) {
+            verifyElementPresentAndClick(MLWalletShopItemsPage.objDeleteYesButton, "Button");
+            if (verifyElementNotPresent(MLWalletShopItemsPage.objProductNameInCartPage, "Cart Page", 5)) {
+                logger.info("MLS_TC_108, Shop Items Click the 'Yes' button to remove Items from The Cart Validated");
+                ExtentReporter.extentLoggerPass("MLS_TC_108", "MLS_TC_108, Shop Items Click the 'Yes' button to remove Items from The Cart Validated");
+                System.out.println("-----------------------------------------------------------");
+            }
+
+        }
+    }
     public void shopItemsAddedItemInCartDeletedPopupValidationExitButton_MLS_TC_131() throws Exception {
         ExtentReporter.HeaderChildNode("Shop Items Added Item In Cart Deleted Popup Validation Cancel Button");
         mlWalletLogin(prop.getproperty("Buyer_Tier"));
@@ -1130,6 +1148,6 @@ public class ShopItemsClass extends BaseClass{
         }else {
             ExtentReporter.extentLoggerFail("MLS_TC_131", "Exit Confirmation  modal should be displayed failed to validate");
         }
-
     }
+
 }

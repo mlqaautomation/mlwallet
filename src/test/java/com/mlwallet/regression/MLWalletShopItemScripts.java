@@ -22,16 +22,6 @@ public class MLWalletShopItemScripts {
     }
 //=========================================================================================================//
 
-    @Test(priority = 1)
-    public void shopItemsAddedItemInCartDeletedPopupValidationCancelButton_MLS_TC_129() throws Exception
-    {
-        shopItemsClass.shopItemsAddedItemInCartDeletedPopupValidationCancelButton_MLS_TC_129();
-    }
-    @Test(priority = 0)
-    public void shopItemsAddedItemInCartDeletedPopupValidationExitButton_MLS_TC_131() throws Exception
-    {
-        shopItemsClass.shopItemsAddedItemInCartDeletedPopupValidationExitButton_MLS_TC_131();
-    }
 
 //    @Test(priority = 1)
 //    public void mlWalletShopItems_Scenario() throws Exception
@@ -302,7 +292,21 @@ public class MLWalletShopItemScripts {
 //   }
 
 
+    @Test(priority = 1)
+    public void shopItemsAddedItemInCartDeletedPopupValidationCancelButton_MLS_TC_129() throws Exception
+    {
+        shopItemsClass.shopItemsAddedItemInCartDeletedPopupValidationCancelButton_MLS_TC_129();
+    }
+    @Test(priority = 0)
+    public void shopItemsAddedItemInCartDeletedPopupValidationExitButton_MLS_TC_131() throws Exception
+    {
+        shopItemsClass.shopItemsAddedItemInCartDeletedPopupValidationExitButton_MLS_TC_131();
+    }
 
+    @Test(priority = 54)
+    public void shopItemsClickYesButtonToRemoveItemsFromTheCart_MLS_TC_108() throws Exception {
+        shopItemsClass.shopItemsClickYesButtonToRemoveItemsFromTheCart_MLS_TC_108();
+    }
 
 
 
