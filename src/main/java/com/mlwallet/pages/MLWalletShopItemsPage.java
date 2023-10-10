@@ -225,4 +225,12 @@ public class MLWalletShopItemsPage {
 	public static By objPaymongoPaymentAmount=By.xpath("//*[@text='Payment amount']/following-sibling::android.widget.TextView");
 
 
+	public static By objFilter = By.xpath("//*[@text='Filter']");
+	public static By objExitFilterIcon = By.xpath("//android.view.View[3]/android.view.View/android.view.View[1]");
+	public static By objAllCheckBox = By.xpath("//android.widget.CheckBox");
+	public static By objSelectMaterialOptions(String option){
+		return By.xpath("//*[@text='"+option+"']");
+	}
+
+	public static By objMaterialTextView = By.xpath("//android.view.View//android.widget.TextView[2]");
 }

@@ -1,10 +1,17 @@
 package com.mlshop;
 
 import com.business.mlwallet.BaseClass;
+import com.driverInstance.DriverManager;
 import com.mlwallet.pages.MLWalletShopItemsPage;
 import com.propertyfilereader.PropertyFileReader;
 import com.utility.ExtentReporter;
 import com.utility.LoggingUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import static com.utility.Utilities.*;
 import static com.utility.Utilities.waitTime;
@@ -88,4 +95,92 @@ public class MLShop_GenMethods extends BaseClass {
         waitTime(5000);
 
     }
+
+    public void selectFilterMaterial(By materialLocator, By materialDisplayed) throws Exception {
+        click(MLWalletShopItemsPage.objFilter, "Filter");
+        Swipe("UP", 1);
+        clickAllVisibleCheckBox(MLWalletShopItemsPage.objAllCheckBox);
+        waitTime(5000);
+        click(materialLocator, "Material locator is selected");
+        waitTime(5000);
+        Swipe("DOWN", 2);
+        click(MLWalletShopItemsPage.objExitFilterIcon, "Exit");
+        WebElement element = DriverManager.getAppiumDriver().findElement(materialDisplayed);
+        String materialValue = element.getText();
+        logger.info("Selected" + materialLocator + "" + materialDisplayed + "is displayed");
+        if(materialValue.contains("10k")){
+            waitTime(5000);
+            verifyElementPresent(materialDisplayed, "10k");
+            logger.info("10k Products is/are being displayed");
+        }else if(materialValue.contains("14k")){
+            waitTime(5000);
+            verifyElementPresent(materialDisplayed, "14k");
+            logger.info("14k Products is/are being displayed");
+        }else if(materialValue.contains("18k")){
+            waitTime(5000);
+            verifyElementPresent(materialDisplayed, "18k");
+            logger.info("18k Products is/are being displayed");
+        }else if(materialValue.contains("20k")){
+            waitTime(5000);
+            verifyElementPresent(materialDisplayed, "20k");
+            logger.info("20k Products is/are being displayed");
+        }else if(materialValue.contains("21k")){
+            waitTime(5000);
+            verifyElementPresent(materialDisplayed, "21k");
+            logger.info("21k Products is/are being displayed");
+        }else if(materialValue.contains("22k")){
+            waitTime(5000);
+            verifyElementPresent(materialDisplayed, "22k");
+            logger.info("22k Products is/are being displayed");
+        }else if(materialValue.contains("12k")){
+            waitTime(5000);
+            verifyElementPresent(materialDisplayed, "12k");
+            logger.info("12k Products is/are being displayed");
+        }else{
+            verifyElementPresent(MLWalletShopItemsPage.objMLShopPage, "No Products Found!");
+            logger.info("No Products Found!");
+        }
+    }
+
+    public void clickAllVisibleCheckBox(By locator) throws Exception {
+        List<WebElement> elements = DriverManager.getAppiumDriver().findElements(locator);
+
+        for (WebElement element : elements) {
+            if (element.isDisplayed() && element.isEnabled()) {
+                element.click();
+            }
+        }
+    }
+
+//    public void selectFilterMaterial(By materialLocator, By materialDisplayed) throws Exception {
+//        click(MLWalletShopItemsPage.objFilter, "Filter");
+//        Swipe("UP", 1);
+//        clickAllVisibleCheckBox(MLWalletShopItemsPage.objAllCheckBox);
+//        waitTime(5000);
+//        click(materialLocator, "Material locator is selected");
+//        waitTime(5000);
+//        Swipe("DOWN", 2);
+//        click(MLWalletShopItemsPage.objExitFilterIcon, "Exit");
+//        WebElement element = DriverManager.getAppiumDriver().findElement(materialDisplayed);
+//        String materialValue = element.getAttribute("text");
+//        logger.info("Selected material " + materialValue + " is displayed");
+//
+//        Map<String, String> materialMessages = new HashMap<>();
+//        materialMessages.put("10k", "10k");
+//        materialMessages.put("14k", "14k");
+//        materialMessages.put("18k", "18k");
+//        materialMessages.put("20k", "20k");
+//        materialMessages.put("21k", "21k");
+//        materialMessages.put("22k", "22k");
+//        materialMessages.put("12k", "12k");
+//
+//        if (materialMessages.containsKey(materialValue)) {
+//            waitTime(5000);
+//            verifyElementPresent(materialDisplayed, materialValue);
+//            logger.info(materialMessages.get(materialValue));
+//        } else {
+//            verifyElementPresent(MLWalletShopItemsPage.objMLShopPage, "No Products Found!");
+//            logger.info("No Products Found!");
+//        }
+//    }
 }
