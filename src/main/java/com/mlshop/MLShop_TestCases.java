@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
+import static com.mlwallet.pages.MLWalletShopItemsPage.objSelectMaterialColorOptions;
 import static com.mlwallet.pages.MLWalletShopItemsPage.objSelectMaterialOptions;
 import static com.utility.Utilities.*;
 import static com.utility.Utilities.click;
@@ -79,74 +80,125 @@ public class MLShop_TestCases extends MLShop_GenMethods {
             extentLoggerPass("MLS_TC_209", "Paymongo Portal Page Direct Online Banking UI Validation, Validated");
         }
     }
-    public void MLShop_Select10kMaterialDisplayProductionValidation_SI_TC_41()throws Exception{
-        ExtentReporter.HeaderChildNode("MLS_TC_41, Select 10k material display production Validation");
+    public void MLShop_Select10kMaterialDisplayProductValidation_SI_TC_41()throws Exception{
+        ExtentReporter.HeaderChildNode("MLS_TC_41, Select 10k material display product Validation");
         mlWalletLogin(prop.getproperty("New_Branch_Verified"));
         shopItemsNavigation();
         Swipe("UP", 2);
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
         selectFilterMaterial(objSelectMaterialOptions("10k"), MLWalletShopItemsPage.objMaterialTextView );
-        logger.info("Select 10k material display Production validated successfully");
+        logger.info("Select 10k material display Product validated successfully");
     }
 
-    public void MLShop_Select14kMaterialDisplayProductionValidation_SI_TC_42()throws Exception{
-        ExtentReporter.HeaderChildNode("MLS_TC_41, Select 14k material display production Validation");
+    public void MLShop_Select14kMaterialDisplayProductValidation_SI_TC_42()throws Exception{
+        ExtentReporter.HeaderChildNode("MLS_TC_41, Select 14k material display product Validation");
         mlWalletLogin(prop.getproperty("New_Branch_Verified"));
         shopItemsNavigation();
         Swipe("UP", 2);
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
         selectFilterMaterial(objSelectMaterialOptions("14k"), MLWalletShopItemsPage.objMaterialTextView );
-        logger.info("Select 14k material display Production validated successfully");
+        logger.info("Select 14k material display Product validated successfully");
     }
 
-    public void MLShop_Select18kMaterialDisplayProductionValidation_SI_TC_43()throws Exception{
-        ExtentReporter.HeaderChildNode("MLS_TC_41, Select 18k material display production Validation");
+    public void MLShop_Select18kMaterialDisplayProductValidation_SI_TC_43()throws Exception{
+        ExtentReporter.HeaderChildNode("MLS_TC_41, Select 18k material display product Validation");
         mlWalletLogin(prop.getproperty("New_Branch_Verified"));
         shopItemsNavigation();
         Swipe("UP", 2);
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
         selectFilterMaterial(objSelectMaterialOptions("18k"), MLWalletShopItemsPage.objMaterialTextView );
-        logger.info("Select 18k material display Production validated successfully");
+        logger.info("Select 18k material display Product validated successfully");
     }
 
-    public void MLShop_Select20kMaterialDisplayProductionValidation_SI_TC_44()throws Exception{
-        ExtentReporter.HeaderChildNode("MLS_TC_41, Select 20k material display production Validation");
+    public void MLShop_Select20kMaterialDisplayProductValidation_SI_TC_44()throws Exception{
+        ExtentReporter.HeaderChildNode("MLS_TC_41, Select 20k material display product Validation");
         mlWalletLogin(prop.getproperty("New_Branch_Verified"));
         shopItemsNavigation();
         Swipe("UP", 2);
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
         selectFilterMaterial(objSelectMaterialOptions("20k"), MLWalletShopItemsPage.objMaterialTextView );
-        logger.info("Select 20k material display Production validated successfully");
+        logger.info("Select 20k material display Productvalidated successfully");
     }
 
-    public void MLShop_Select21kMaterialDisplayProductionValidation_SI_TC_45()throws Exception{
-        ExtentReporter.HeaderChildNode("MLS_TC_41, Select 21k material display production Validation");
+    public void MLShop_Select21kMaterialDisplayProductValidation_SI_TC_45()throws Exception{
+        ExtentReporter.HeaderChildNode("MLS_TC_41, Select 21k material display product Validation");
         mlWalletLogin(prop.getproperty("New_Branch_Verified"));
         shopItemsNavigation();
         Swipe("UP", 2);
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
         selectFilterMaterial(objSelectMaterialOptions("21k"), MLWalletShopItemsPage.objMaterialTextView );
-        logger.info("Select 21k material display Production validated successfully");
+        logger.info("Select 21k material display Product validated successfully");
     }
 
-    public void MLShop_Select22kMaterialDisplayProductionValidation_SI_TC_46()throws Exception{
-        ExtentReporter.HeaderChildNode("MLS_TC_41, Select 22k material display production Validation");
+    public void MLShop_Select22kMaterialDisplayProductValidation_SI_TC_46()throws Exception{
+        ExtentReporter.HeaderChildNode("MLS_TC_41, Select 22k material display product Validation");
         mlWalletLogin(prop.getproperty("New_Branch_Verified"));
         shopItemsNavigation();
         Swipe("UP", 2);
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
         selectFilterMaterial(objSelectMaterialOptions("22k"), MLWalletShopItemsPage.objMaterialTextView );
-        logger.info("Select 22k material display Production validated successfully");
+        logger.info("Select 22k material display Product validated successfully");
     }
 
-    public void MLShop_Select12kMaterialDisplayProductionValidation_SI_TC_47()throws Exception{
-        ExtentReporter.HeaderChildNode("MLS_TC_41, Select 12k material display production Validation");
+    public void MLShop_Select12kMaterialDisplayProductValidation_SI_TC_47()throws Exception{
+        ExtentReporter.HeaderChildNode("MLS_TC_41, Select 12k material display product Validation");
         mlWalletLogin(prop.getproperty("New_Branch_Verified"));
         shopItemsNavigation();
         Swipe("UP", 2);
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
         selectFilterMaterial(objSelectMaterialOptions("12k"), MLWalletShopItemsPage.objMaterialTextView );
-        logger.info("Select 12k material display Production validated successfully");
+        logger.info("Select 12k material display Product validated successfully");
+    }
+
+    public void MLShop_SelectYellowGoldMaterialColorDisplayProductValidation_SI_TC_48()throws Exception{
+        ExtentReporter.HeaderChildNode("MLS_TC_41, Select Yellow Gold material color display product Validation");
+        mlWalletLogin(prop.getproperty("New_Branch_Verified"));
+        shopItemsNavigation();
+        Swipe("UP", 2);
+        click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
+        selectFilterMaterialColor(objSelectMaterialColorOptions("Yellow Gold"), MLWalletShopItemsPage.objMaterialTextView );
+        logger.info("Select Yellow Gold material color display product validated successfully");
+    }
+
+    public void MLShop_SelectWhiteGoldMaterialColorDisplayProductValidation_SI_TC_49()throws Exception{
+        ExtentReporter.HeaderChildNode("MLS_TC_41, Select White Gold material color display product Validation");
+        mlWalletLogin(prop.getproperty("New_Branch_Verified"));
+        shopItemsNavigation();
+        Swipe("UP", 2);
+        click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
+        selectFilterMaterialColor(objSelectMaterialColorOptions("White Gold"), MLWalletShopItemsPage.objMaterialTextView );
+        logger.info("Select White Gold material color display product validated successfully");
+    }
+
+    public void MLShop_SelectRoseGoldMaterialColorDisplayProductValidation_SI_TC_50()throws Exception{
+        ExtentReporter.HeaderChildNode("MLS_TC_41, Select Rose Gold material color display product Validation");
+        mlWalletLogin(prop.getproperty("New_Branch_Verified"));
+        shopItemsNavigation();
+        Swipe("UP", 2);
+        click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
+        selectFilterMaterialColor(objSelectMaterialColorOptions("Rose Gold"), MLWalletShopItemsPage.objMaterialTextView );
+        logger.info("Select Rose Gold material color display product validated successfully");
+    }
+
+    public void MLShop_SelectTwoToneMaterialColorDisplayProductValidation_SI_TC_51()throws Exception{
+        ExtentReporter.HeaderChildNode("MLS_TC_41, Select  Two Tone material color display product Validation");
+        mlWalletLogin(prop.getproperty("New_Branch_Verified"));
+        shopItemsNavigation();
+        Swipe("UP", 2);
+        click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
+        selectFilterMaterialColor(objSelectMaterialColorOptions("Two - Tone"), MLWalletShopItemsPage.objMaterialTextView );
+        logger.info("Select Two Tone  material color display product validated successfully");
+    }
+
+    public void MLShop_SelectTriToneMaterialColorDisplayProductValidation_SI_TC_52()throws Exception{
+        ExtentReporter.HeaderChildNode("MLS_TC_41, Select  Two Tone material color display product Validation");
+        mlWalletLogin(prop.getproperty("New_Branch_Verified"));
+        shopItemsNavigation();
+        Swipe("UP", 2);
+        click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
+        selectFilterMaterialColor(objSelectMaterialColorOptions("Tri - Tone"), MLWalletShopItemsPage.objMaterialTextView );
+        logger.info("Select Two Tone  material color display product validated successfully");
     }
 
 }
+

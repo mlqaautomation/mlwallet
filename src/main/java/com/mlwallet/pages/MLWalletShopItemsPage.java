@@ -232,5 +232,10 @@ public class MLWalletShopItemsPage {
 		return By.xpath("//*[@text='"+option+"']");
 	}
 
+	public static By objSelectMaterialColorOptions(String option){
+		return By.xpath("//*[@text='"+option+"']");
+	}
+
 	public static By objMaterialTextView = By.xpath("//android.view.View//android.widget.TextView[2]");
+	public static By objNoProductFound= By.xpath("//*[@text='No Products Found!']");
 }
