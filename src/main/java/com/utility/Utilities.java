@@ -2714,7 +2714,7 @@ public class Utilities extends ExtentReporter {
 
     public static String getTextVal(By byLocator, String concatValue) throws Exception {
         String Value = null;
-        WebElement element = DriverManager.getAppiumDriver().findElement(byLocator);
+        WebElement element = DriverManager.getAppiumDriver().   findElement(byLocator);
         Value = element.getText();
         String finalValue = Value + " " + concatValue;
         return finalValue;

@@ -1,0 +1,42 @@
+
+v
+java:S1192Y"TDefine a constant instead of duplicating this literal "New_Branch_Verified" 7 times.(¢Ïòùÿÿÿÿ8ÁíãÅ±1
+m
+java:S1192\"KDefine a constant instead of duplicating this literal "Rings Item" 7 times.(ø§¾ûÿÿÿÿ8ÂíãÅ±1
+s
+java:S1192"QDefine a constant instead of duplicating this literal "Branch_Verified" 12 times.(€ÏÙûÿÿÿÿ8ÂíãÅ±1
+p
+java:S1192¥"MDefine a constant instead of duplicating this literal "Product Type" 6 times.(ÊøİÖıÿÿÿÿ8ÂíãÅ±1
+j
+java:S1192£"GDefine a constant instead of duplicating this literal "Filter" 6 times.(òïéÿÿÿÿÿ8¸–çÅ±1
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«À‹Ú8ÂíãÅ±1
+n	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Æ¡Ğìøÿÿÿÿ8ÄíãÅ±1
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ’áĞûÿÿÿÿ8ÛíãÅ±1
+T
+java:S1135"2Complete the task associated to this TODO comment.(ñ•Ôøÿÿÿÿ8ÜíãÅ±1
+o	java:S100%"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôü£Àùÿÿÿÿ8İíãÅ±1
+j	java:S100/"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•Ù‹8ŞíãÅ±1
+j	java:S1009"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÌÖŸĞ8ßíãÅ±1
+o	java:S100C"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷àëöùÿÿÿÿ8àíãÅ±1
+o	java:S100M"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃŠ¼ûÿÿÿÿ8áíãÅ±1
+o	java:S100W"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’Ÿƒÿÿÿÿÿ8âíãÅ±1
+o	java:S100a"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨ŒÂºúÿÿÿÿ8êíãÅ±1
+o	java:S100k"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤„Èüøÿÿÿÿ8ëíãÅ±1
+i	java:S100u"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èµd8ìíãÅ±1
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŞÓÜ–ıÿÿÿÿ8ííãÅ±1
+j	java:S100‰"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ó­Ö18îíãÅ±1
+p	java:S100“"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßªĞ–ûÿÿÿÿ8ïíãÅ±1
+k	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤öíî8ğíãÅ±1
+k	java:S100«"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š¸‰8òíãÅ±1
+p	java:S100¹"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íÌ“ÿÿÿÿÿ8óíãÅ±1
+k	java:S100Ç"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„¼±Ñ8ç–çÅ±1
+k	java:S100Õ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºÄùø8é–çÅ±1
+p	java:S100ã"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜¶Ò§ıÿÿÿÿ8ê–çÅ±1
+Y
+java:S1128"<Remove this unused import 'com.business.mlwallet.BaseClass'.(¸È³Æ8øíãÅ±1
+]
+java:S1128";Remove this unused import 'org.openqa.selenium.WebElement'.(‰ïµ”şÿÿÿÿ8øíãÅ±1
+Z
+java:S1128"8Remove this unused import 'org.testng.annotations.Test'.(á½úáùÿÿÿÿ8øíãÅ±1
+M
+java:S1128	"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8øíãÅ±1

@@ -109,39 +109,38 @@ public class MLWalletShopItemsPage {
 	public static By objOriginalPrice = By.xpath("((//*[@text='product image'])[1]/parent::android.view.View/following-sibling::android.view.View)[2]/child::android.view.View");
 	public static By objDiscountPrice = By.xpath("(//*[@text='product image'])[1]/parent::android.view.View/following-sibling::android.widget.TextView");
 
-	public static By objCategoriesHamburgerMenu = By.xpath("//*[@resource-id='show-sidebar']");
-	public static By objCategory = By.xpath("//*[@text='CATEGORY']");
+	public static By objCategoriesHamburgerMenu = By.xpath("//*[contains(@text,'C A T E G O R Y')]");
 	public static By objAmparitoCollections = By.xpath("//*[@text='Amparito Collections']");
 	public static By objFineJewelry = By.xpath("//*[@text='Fine Jewelry']");
 	public static By objAmparitoCollectionsProductTypes(int i) {
 		return By.xpath("(//*[@text='Amparito Collections']/parent::android.view.View/following-sibling::android.view.View/child::android.widget.TextView)["+i+"]");
 	}
-	public static By objRing = By.xpath("//*[@text='Ring']");
+	public static By objRing = By.xpath("//*[contains(@text,'Ring')]");
 	public static By objRingsSubTypes(int i){
 		return By.xpath("(//*[@resource-id='amparitoCollRing1']/child::android.widget.Button)["+i+"]");
 	}
-	public static By objNecklace = By.xpath("//*[@text='Necklace']");
+	public static By objNecklace = By.xpath("//*[contains(@text,'Necklace')]");
 	public static By objNecklaceSubTypes(int i){
 		return By.xpath("(//*[@text='Necklace']/following-sibling::android.view.View/child::android.widget.Button)["+i+"]");
 	}
-	public static By objBraceletAndBangle = By.xpath("//*[@text='Bracelet & Bangle']");
+	public static By objBraceletAndBangle = By.xpath("//*[contains(@text,'Bracelet & Bangle')]");
 	public static By objBraceletAndBangleSubTypes(int i){
 		return By.xpath("(//*[@text='Bracelet & Bangle']/following-sibling::android.view.View/child::android.widget.Button)["+i+"]");
 	}
-	public static By objEarrings = By.xpath("//*[@text='Earrings']");
+	public static By objEarrings = By.xpath("//*[contains(@text,'Earrings')]");
 	public static By objEarringsSubTypes(int i){
-		return By.xpath("(//*[@text='Earrings']/following-sibling::android.view.View/child::android.widget.Button)["+i+"]");
+		return By.xpath("(//*[contains(@text,'Earrings')]/following-sibling::android.view.View/child::android.widget.Button)["+i+"]");
 	}
-	public static By objPendant = By.xpath("//*[@text='Pendant']");
+	public static By objPendant = By.xpath("//*[contains(@text,'Pendant')]");
 	public static By objPendantSubTypes(int i){
 		return By.xpath("(//*[@text='Pendant']/following-sibling::android.view.View/child::android.widget.Button)["+i+"]");
 	}
-	public static By objTernoAndSet = By.xpath("//*[@text='Terno & Set']");
+	public static By objTernoAndSet = By.xpath("//*[contains(@text,'Terno & Set')]");
 	public static By objTernoAndSetSubTypes = By.xpath("//*[@text='Terno & Set']/following-sibling::android.view.View/child::android.widget.Button");
 	public static By objWeddingRing = By.xpath("//*[@text='Wedding Ring']");
 	public static By objWeddingRingSubTypes = By.xpath("//*[@text='Wedding Ring']/following-sibling::android.view.View/child::android.widget.Button");
 
-	public static By objPinBrouchAndScalpings = By.xpath("//*[@text='Pin, Brouch & Scaplings']");
+	public static By objPinBrouchAndScalpings = By.xpath("//*[contains(@text,'Brooch')]");
 	public static By objPinBrouchAndScalpingsSubTypes = By.xpath("//*[@text='Pin, Brouch & Scaplings']/following-sibling::android.view.View/child::android.widget.Button");
 
 	public static By objWatches = By.xpath("//*[@text='Watches']");
@@ -223,8 +222,6 @@ public class MLWalletShopItemsPage {
 	}
 	public static By objPaymongoPortalPage=By.xpath("//*[@text='PayMongo Logo']");
 	public static By objPaymongoPaymentAmount=By.xpath("//*[@text='Payment amount']/following-sibling::android.widget.TextView");
-
-
 	public static By objFilter = By.xpath("//*[@text='Filter']");
 	public static By objExitFilterIcon = By.xpath("//android.view.View[3]/android.view.View/android.view.View[1]");
 	public static By objAllCheckBox = By.xpath("//android.widget.CheckBox");

@@ -1,0 +1,677 @@
+
+‹
+java:S1192&"iDefine a constant instead of duplicating this literal "//*[@resource-id='swal2-html-container']" 4 times.(¡¹“ªúÿÿÿÿ8Ïî›Æ±1
+z
+java:S1192:"]Define a constant instead of duplicating this literal "//*[@resource-id='drpKarat']" 3 times.(ÍÀÉ»8Ïî›Æ±1
+x
+java:S1104"[Make objShopItemsTab a static final constant or non-public and provide accessors if needed.(é÷üë8Ñî›Æ±1
+v
+java:S1104"YMake objMLShopPage a static final constant or non-public and provide accessors if needed.(şú–¬8Òî›Æ±1
+s
+java:S1104	"WMake objItemMenu a static final constant or non-public and provide accessors if needed.(§¼8Òî›Æ±1
+y
+java:S1104"WMake objCheckBox a static final constant or non-public and provide accessors if needed.(æûÅÍúÿÿÿÿ8Òî›Æ±1
+v
+java:S1104"YMake objSelectItem a static final constant or non-public and provide accessors if needed.(€µÜ8Òî›Æ±1
+x
+java:S1104"[Make objAddToCartBtn a static final constant or non-public and provide accessors if needed.(Ó˜ù 8Òî›Æ±1
+y
+java:S1104"\Make objHamburgerMenu a static final constant or non-public and provide accessors if needed.(·ìÅÒ8Òî›Æ±1
+u
+java:S1104"SMake objCart a static final constant or non-public and provide accessors if needed.(ÖËàøÿÿÿÿ8Òî›Æ±1
+t
+java:S1104"WMake objCartIcon a static final constant or non-public and provide accessors if needed.(ØÍùÀ8Òî›Æ±1
+|
+java:S1104"ZMake objEditAddress a static final constant or non-public and provide accessors if needed.(öÎ£›üÿÿÿÿ8Òî›Æ±1
+w
+java:S1104"ZMake objCheckOutBtn a static final constant or non-public and provide accessors if needed.(È°È¥8Òî›Æ±1
+|
+java:S1104"_Make objSelectBranchPage a static final constant or non-public and provide accessors if needed.(Æš’»8Òî›Æ±1
+y
+java:S1104"\Make objInputFieldOne a static final constant or non-public and provide accessors if needed.(’ˆ›Š8Òî›Æ±1
+v
+java:S1104"YMake objBranchName a static final constant or non-public and provide accessors if needed.(¡Şİ¿8Òî›Æ±1
+~
+java:S1104"\Make objInputFieldTwo a static final constant or non-public and provide accessors if needed.(ÜËš¬ûÿÿÿÿ8Òî›Æ±1
+~
+java:S1104"\Make objSubBranchName a static final constant or non-public and provide accessors if needed.(ÓÒ…¤şÿÿÿÿ8Òî›Æ±1
+{
+java:S1104"^Make objInputFieldThree a static final constant or non-public and provide accessors if needed.(‘ıñ8Òî›Æ±1
+
+java:S1104"_Make objSubBranchNameTwo a static final constant or non-public and provide accessors if needed.(İ€“•üÿÿÿÿ8Òî›Æ±1
+x
+java:S1104"VMake objSaveBtn a static final constant or non-public and provide accessors if needed.(ÓâÄùÿÿÿÿ8Òî›Æ±1
+€
+java:S1104"cMake objAddressSuccessfulMsg a static final constant or non-public and provide accessors if needed.(ØÀ ´8Òî›Æ±1
+v
+java:S1104"TMake objOkBtn a static final constant or non-public and provide accessors if needed.(¦â¥¡øÿÿÿÿ8Òî›Æ±1
+w
+java:S1104"UMake objYesBtn a static final constant or non-public and provide accessors if needed.(£ŞÂÅıÿÿÿÿ8Óî›Æ±1
+y
+java:S1104"\Make objPlaceOrderBtn a static final constant or non-public and provide accessors if needed.(òäÔİ8Óî›Æ±1
+x
+java:S1104 "VMake objOtpPage a static final constant or non-public and provide accessors if needed.(“£àÅûÿÿÿÿ8Óî›Æ±1
+ˆ
+java:S1104!"fMake objCheckOutConfirmationMsg a static final constant or non-public and provide accessors if needed.(Ô¯˜ øÿÿÿÿ8Óî›Æ±1
+w
+java:S1104""[Make objOtpTextField a static final constant or non-public and provide accessors if needed.(ƒƒß8Óî›Æ±1
+|
+java:S1104#"ZMake objValidateBtn a static final constant or non-public and provide accessors if needed.(ÜŸÌóıÿÿÿÿ8Óî›Æ±1
+€
+java:S1104%"^Make objInvalidOtpPopUp a static final constant or non-public and provide accessors if needed.(ìªşÎıÿÿÿÿ8Óî›Æ±1
+ƒ
+java:S1104&"aMake objInvalidOtpPopUpMsg a static final constant or non-public and provide accessors if needed.(¡¹“ªúÿÿÿÿ8Óî›Æ±1
+y
+java:S1104("WMake objCanceBtn a static final constant or non-public and provide accessors if needed.(óÒ’Œÿÿÿÿÿ8Óî›Æ±1
+}
+java:S1104)"[Make objBackArrowBtn a static final constant or non-public and provide accessors if needed.(¤á¸øÿÿÿÿ8Óî›Æ±1
+
+java:S1104*"_Make objAvailableBalance a static final constant or non-public and provide accessors if needed.(ğÆñ–ùÿÿÿÿ8Óî›Æ±1
+„
+java:S1104+"bMake objSelectPaymentMethod a static final constant or non-public and provide accessors if needed.(‰è¤×ùÿÿÿÿ8Óî›Æ±1
+y
+java:S1104,"WMake objMLWallet a static final constant or non-public and provide accessors if needed.(ÕÏÛ“úÿÿÿÿ8Óî›Æ±1
+|
+java:S1104-"_Make objPayUsingMlWallet a static final constant or non-public and provide accessors if needed.(©ÂûĞ8Óî›Æ±1
+
+java:S1104/"dMake objPayUsingOnlineBanking a static final constant or non-public and provide accessors if needed.(éÎ«“8Óî›Æ±1
+r
+java:S11042"UMake objSearch a static final constant or non-public and provide accessors if needed.(Ó¢™Œ8Óî›Æ±1
+s
+java:S11043"VMake objProfile a static final constant or non-public and provide accessors if needed.(ğ”„8Óî›Æ±1
+p
+java:S11044"SMake objShop a static final constant or non-public and provide accessors if needed.(Æ…î®8Óî›Æ±1
+v
+java:S11045"TMake objAbout a static final constant or non-public and provide accessors if needed.(Ö²±øÿÿÿÿ8Óî›Æ±1
+s
+java:S11046"VMake objContact a static final constant or non-public and provide accessors if needed.(¤ƒ¿è8Óî›Æ±1
+q
+java:S11047"TMake objItems a static final constant or non-public and provide accessors if needed.(úş˜–8Óî›Æ±1
+y
+java:S11048"]Make objGenderDropdown a static final constant or non-public and provide accessors if needed.(©ÓÓ=8Óî›Æ±1
+~
+java:S11049"\Make objColorDropdown a static final constant or non-public and provide accessors if needed.(€Ô—ıùÿÿÿÿ8Óî›Æ±1
+y
+java:S1104:"\Make objKaratDropdown a static final constant or non-public and provide accessors if needed.(ÍÀÉ»8Ôî›Æ±1
+~
+java:S1104;"\Make objPriceDropdown a static final constant or non-public and provide accessors if needed.(§²Î¶øÿÿÿÿ8Ôî›Æ±1
+x
+java:S1104="[Make objProductImage a static final constant or non-public and provide accessors if needed.(¥öŞ½8Ôî›Æ±1
+w
+java:S1104>"[Make objProductPrice a static final constant or non-public and provide accessors if needed.(â¬ši8Ôî›Æ±1
+{
+java:S1104?"YMake objShippingTo a static final constant or non-public and provide accessors if needed.(íßÃôÿÿÿÿÿ8Ôî›Æ±1
+|
+java:S1104@"ZMake objShippingFee a static final constant or non-public and provide accessors if needed.(øûßßûÿÿÿÿ8Ôî›Æ±1
+t
+java:S1104A"WMake objViewShop a static final constant or non-public and provide accessors if needed.(Ş“¹Ë8Ôî›Æ±1
+z
+java:S1104C"]Make objCartPageHeader a static final constant or non-public and provide accessors if needed.(ùÛÇ¶8Ôî›Æ±1
+{
+java:S1104D"YMake objDeleteIcon a static final constant or non-public and provide accessors if needed.(åäš—øÿÿÿÿ8Ôî›Æ±1
+†
+java:S1104E"dMake objProductNameInCartPage a static final constant or non-public and provide accessors if needed.(¦Ù…Íøÿÿÿÿ8Ôî›Æ±1
+€
+java:S1104F"^Make objPriceInCartPage a static final constant or non-public and provide accessors if needed.(¦ÑıÔüÿÿÿÿ8Ôî›Æ±1
+€
+java:S1104H"^Make objShippingDetails a static final constant or non-public and provide accessors if needed.(ÏùÙùÿÿÿÿ8Ôî›Æ±1
+{
+java:S1104I"YMake objAddAddress a static final constant or non-public and provide accessors if needed.(—üÉÁùÿÿÿÿ8Ôî›Æ±1
+‡
+java:S1104J"kMake objProductNameInShippingDetails a static final constant or non-public and provide accessors if needed.(…ß8Ôî›Æ±1
+{
+java:S1104K"^Make objProductQuantity a static final constant or non-public and provide accessors if needed.(Àó¬ƒ8Ôî›Æ±1
+}
+java:S1104L"[Make objItemSubTotal a static final constant or non-public and provide accessors if needed.(·¿îôûÿÿÿÿ8Ôî›Æ±1
+r
+java:S1104M"UMake objHeader a static final constant or non-public and provide accessors if needed.(ááø8Ôî›Æ±1
+v
+java:S1104N"YMake objTotalOrder a static final constant or non-public and provide accessors if needed.(åõÇ8Ôî›Æ±1
+v
+java:S1104O"YMake objServiceFee a static final constant or non-public and provide accessors if needed.(Éç­8Ôî›Æ±1
+
+java:S1104P"kMake objShippingFeeInShippingDetails a static final constant or non-public and provide accessors if needed.(ÚĞİµùÿÿÿÿ8Ôî›Æ±1
+~
+java:S1104R"\Make objOnlineBanking a static final constant or non-public and provide accessors if needed.(‡…ö†ûÿÿÿÿ8Ôî›Æ±1
+~
+java:S1104S"bMake objMerchandiseSubTotal a static final constant or non-public and provide accessors if needed.(É·æ8Ôî›Æ±1
+x
+java:S1104T"[Make objServiceTotal a static final constant or non-public and provide accessors if needed.(ê£® 8Ôî›Æ±1
+y
+java:S1104U"\Make objShippingTotal a static final constant or non-public and provide accessors if needed.(Ùı‡°8Ôî›Æ±1
+}
+java:S1104V"[Make objPaymentTotal a static final constant or non-public and provide accessors if needed.(ëÕ¾­ıÿÿÿÿ8Ôî›Æ±1
+w
+java:S1104W"UMake objCancel a static final constant or non-public and provide accessors if needed.(±¼­Úøÿÿÿÿ8Ôî›Æ±1
+|
+java:S1104X"_Make objAddressUpdateMsg a static final constant or non-public and provide accessors if needed.(âó´Â8Ôî›Æ±1
+r
+java:S1104Z"UMake objOTPMsg a static final constant or non-public and provide accessors if needed.(˜³»Æ8Ôî›Æ±1
+v
+java:S1104["YMake objErrorPopup a static final constant or non-public and provide accessors if needed.(áÜßÃ8Ôî›Æ±1
+t
+java:S1104\"XMake objMyAccount a static final constant or non-public and provide accessors if needed.(—‹…u8Ôî›Æ±1
+‚
+java:S1104]"`Make objMyAccountDropdown a static final constant or non-public and provide accessors if needed.(™ò–êúÿÿÿÿ8Ôî›Æ±1
+
+java:S1104^"dMake objMyAccountPageCrossBtn a static final constant or non-public and provide accessors if needed.(¢Ä÷¢8Ôî›Æ±1
+€
+java:S1104_"^Make objMyProfileHeader a static final constant or non-public and provide accessors if needed.(Í°©şÿÿÿÿ8Ôî›Æ±1
+{
+java:S1104`"YMake objMyPurchase a static final constant or non-public and provide accessors if needed.(™ü¯Õÿÿÿÿÿ8Õî›Æ±1
+x
+java:S1104a"[Make objOrderDetails a static final constant or non-public and provide accessors if needed.(ë¡„™8Õî›Æ±1
+
+java:S1104b"]Make objSubtotalAmount a static final constant or non-public and provide accessors if needed.(ÄÇÏ„şÿÿÿÿ8Õî›Æ±1
+‚
+java:S1104c"`Make objSelectedItemPrice a static final constant or non-public and provide accessors if needed.(ÁÚ÷îûÿÿÿÿ8Õî›Æ±1
+x
+java:S1104d"VMake objJewelry a static final constant or non-public and provide accessors if needed.(İ–‘ÿüÿÿÿÿ8Õî›Æ±1
+t
+java:S1104e"XMake objContactUs a static final constant or non-public and provide accessors if needed.(ÉÍŞc8Õî›Æ±1
+„
+java:S1104f"gMake objGreatDealsForFineWatches a static final constant or non-public and provide accessors if needed.(›šÜÔ8Õî›Æ±1
+v
+java:S1104g"TMake objRolex a static final constant or non-public and provide accessors if needed.(³‡æøÿÿÿÿ8Õî›Æ±1
+y
+java:S1104h"WMake objHamilton a static final constant or non-public and provide accessors if needed.(çãÍèüÿÿÿÿ8Õî›Æ±1
+q
+java:S1104i"TMake objOmega a static final constant or non-public and provide accessors if needed.(î—¦­8Õî›Æ±1
+y
+java:S1104j"WMake objTagHeuer a static final constant or non-public and provide accessors if needed.(»ÚÎçıÿÿÿÿ8Õî›Æ±1
+ƒ
+java:S1104k"aMake objDiscountPercentage a static final constant or non-public and provide accessors if needed.(µ–—¡úÿÿÿÿ8Õî›Æ±1
+|
+java:S1104l"ZMake objProductName a static final constant or non-public and provide accessors if needed.(ˆƒö«üÿÿÿÿ8Õî›Æ±1
+y
+java:S1104m"\Make objOriginalPrice a static final constant or non-public and provide accessors if needed.(ó¢‘½8Õî›Æ±1
+y
+java:S1104n"\Make objDiscountPrice a static final constant or non-public and provide accessors if needed.(˜İ²›8Õî›Æ±1
+ˆ
+java:S1104p"fMake objCategoriesHamburgerMenu a static final constant or non-public and provide accessors if needed.(úİ“¤ûÿÿÿÿ8Õî›Æ±1
+„
+java:S1104q"bMake objAmparitoCollections a static final constant or non-public and provide accessors if needed.(‹ÑÌ›üÿÿÿÿ8Õî›Æ±1
+|
+java:S1104r"ZMake objFineJewelry a static final constant or non-public and provide accessors if needed.(Îé‹àüÿÿÿÿ8Õî›Æ±1
+u
+java:S1104v"SMake objRing a static final constant or non-public and provide accessors if needed.(£²¨×şÿÿÿÿ8Õî›Æ±1
+y
+java:S1104z"WMake objNecklace a static final constant or non-public and provide accessors if needed.(ˆ°Œ•ıÿÿÿÿ8Õî›Æ±1
+|
+java:S1104~"`Make objBraceletAndBangle a static final constant or non-public and provide accessors if needed.(¬üág8Õî›Æ±1
+z
+java:S1104‚"WMake objEarrings a static final constant or non-public and provide accessors if needed.(Æä†–ùÿÿÿÿ8Õî›Æ±1
+y
+java:S1104†"VMake objPendant a static final constant or non-public and provide accessors if needed.(‚ï­àüÿÿÿÿ8Õî›Æ±1
+}
+java:S1104Š"ZMake objTernoAndSet a static final constant or non-public and provide accessors if needed.(ö‹İıÿÿÿÿ8Õî›Æ±1
+€
+java:S1104‹"bMake objTernoAndSetSubTypes a static final constant or non-public and provide accessors if needed.(Àƒ™ê8Õî›Æ±1
+x
+java:S1104Œ"ZMake objWeddingRing a static final constant or non-public and provide accessors if needed.(“Í“·8Õî›Æ±1
+…
+java:S1104"bMake objWeddingRingSubTypes a static final constant or non-public and provide accessors if needed.(¾¼ßüıÿÿÿÿ8Õî›Æ±1
+‡
+java:S1104"dMake objPinBrouchAndScalpings a static final constant or non-public and provide accessors if needed.(Í´Ìôùÿÿÿÿ8Õî›Æ±1
+‰
+java:S1104"lMake objPinBrouchAndScalpingsSubTypes a static final constant or non-public and provide accessors if needed.(­Á¹\8Õî›Æ±1
+y
+java:S1104’"VMake objWatches a static final constant or non-public and provide accessors if needed.(ª¬åôşÿÿÿÿ8Õî›Æ±1
+x
+java:S1104—"UMake objGender a static final constant or non-public and provide accessors if needed.(¤ïÿ±ıÿÿÿÿ8Õî›Æ±1
+w
+java:S1104›"TMake objColor a static final constant or non-public and provide accessors if needed.(–Õ™øÿÿÿÿ8Õî›Æ±1
+r
+java:S1104œ"TMake objKarat a static final constant or non-public and provide accessors if needed.(îêş8Õî›Æ±1
+w
+java:S1104"TMake objPrice a static final constant or non-public and provide accessors if needed.(¢üí€ıÿÿÿÿ8Õî›Æ±1
+}
+java:S1104"_Make objMainProductImage a static final constant or non-public and provide accessors if needed.(³€‚‡8Õî›Æ±1
+€
+java:S1104Ÿ"cMake objOptionalProductImage a static final constant or non-public and provide accessors if needed.(·üàj8Öî›Æ±1
+
+java:S1104 "jMake objProductNameInProductDetails a static final constant or non-public and provide accessors if needed.(¯ìğ»ùÿÿÿÿ8Öî›Æ±1
+‚
+java:S1104¡"dMake objColorInProductDetails a static final constant or non-public and provide accessors if needed.(í«é8Öî›Æ±1
+‡
+java:S1104¢"dMake objKaratInProductDetails a static final constant or non-public and provide accessors if needed.(ÿüùÿÿÿÿ8Öî›Æ±1
+ƒ
+java:S1104£"eMake objGenderInProductDetails a static final constant or non-public and provide accessors if needed.(œñšÃ8Öî›Æ±1
+‡
+java:S1104¤"dMake objPriceInProductDetails a static final constant or non-public and provide accessors if needed.(ØßêÄşÿÿÿÿ8Öî›Æ±1
+ˆ
+java:S1104¥"jMake objActualPriceInProductDetails a static final constant or non-public and provide accessors if needed.(©Û®8Øî›Æ±1
+
+java:S1104¦"lMake objDiscountPriceInProductDetails a static final constant or non-public and provide accessors if needed.(‡íñ‡ùÿÿÿÿ8Øî›Æ±1
+z
+java:S1104§"WMake objShopName a static final constant or non-public and provide accessors if needed.(·ëò±ùÿÿÿÿ8Øî›Æ±1
+}
+java:S1104¨"_Make objShopMobileNumber a static final constant or non-public and provide accessors if needed.(Ü…Ó´8Øî›Æ±1
+}
+java:S1104©"ZMake objShopEmailID a static final constant or non-public and provide accessors if needed.(Êõ§½ÿÿÿÿÿ8Øî›Æ±1
+~
+java:S1104ª"[Make objShopAddress1 a static final constant or non-public and provide accessors if needed.(ºåøøÿÿÿÿ8Øî›Æ±1
+x
+java:S1104«"[Make objShopAddress2 a static final constant or non-public and provide accessors if needed.(ğ¾İf8Øî›Æ±1
+
+java:S1104¬"\Make objTotalProducts a static final constant or non-public and provide accessors if needed.(ªË‡´ûÿÿÿÿ8Øî›Æ±1
+~
+java:S1104­"[Make objSoldProducts a static final constant or non-public and provide accessors if needed.( „ÙÒùÿÿÿÿ8Øî›Æ±1
+‡
+java:S1104¯"iMake objProductImageInInterestedIn a static final constant or non-public and provide accessors if needed.(¾úó“8Øî›Æ±1
+‹
+java:S1104°"hMake objProductNameInInterestedIn a static final constant or non-public and provide accessors if needed.(óªÌšıÿÿÿÿ8Øî›Æ±1
+‹
+java:S1104±"hMake objActualPriceInInterestedIn a static final constant or non-public and provide accessors if needed.(ÿôğĞıÿÿÿÿ8Øî›Æ±1
+‡
+java:S1104²"jMake objDiscountPriceInInterestedIn a static final constant or non-public and provide accessors if needed.(‘œ	8Øî›Æ±1
+
+java:S1104³"oMake objDiscountPercentageInInterestedIn a static final constant or non-public and provide accessors if needed.(˜Ô’’8Øî›Æ±1
+w
+java:S1104µ"YMake objMLShopLOgo a static final constant or non-public and provide accessors if needed.(®Ù†Š8Øî›Æ±1
+Š
+java:S1104¶"gMake objProductImageInMLShopPage a static final constant or non-public and provide accessors if needed.(ÎÍ§øÿÿÿÿ8Øî›Æ±1
+†
+java:S1104·"cMake objMLShopProductsHeader a static final constant or non-public and provide accessors if needed.(çÅşÿÿÿÿ8Øî›Æ±1
+}
+java:S1104¸"_Make objMLShopPageBanner a static final constant or non-public and provide accessors if needed.(”Ó˜8Øî›Æ±1
+
+java:S1104º"aMake objSuccessfulLoginTxt a static final constant or non-public and provide accessors if needed.(¾Ä¦—8Øî›Æ±1
+|
+java:S1104»"^Make objloginOkayButton a static final constant or non-public and provide accessors if needed.(¹ıÉ‡8Øî›Æ±1
+
+java:S1104¼"^Make objDeleteYesButton a static final constant or non-public and provide accessors if needed.(“´­Óıÿÿÿÿ8Øî›Æ±1
+
+java:S1104½"aMake objDeleteCancelButton a static final constant or non-public and provide accessors if needed.(…ä»š8Øî›Æ±1
+„
+java:S1104¾"aMake objDeleteConfirmation a static final constant or non-public and provide accessors if needed.(ÎŠ¸¤ıÿÿÿÿ8Ùî›Æ±1
+}
+java:S1104¿"_Make objDeleteExitButton a static final constant or non-public and provide accessors if needed.(Ò«àš8Ùî›Æ±1
+€
+java:S1104À"bMake objConfirmAddCarButton a static final constant or non-public and provide accessors if needed.(¬Ú‹8Ùî›Æ±1
+€
+java:S1104Á"bMake objSuccessAddtoCartMsg a static final constant or non-public and provide accessors if needed.(³ñˆÉ8Ùî›Æ±1
+ƒ
+java:S1104Â"`Make objExitHamburgerMenu a static final constant or non-public and provide accessors if needed.(ÿÙÃìûÿÿÿÿ8Ùî›Æ±1
+|
+java:S1104Ä"_Make objShoppingCartIcon a static final constant or non-public and provide accessors if needed.(Æ”õ#8Ùî›Æ±1
+~
+java:S1104Ç"`Make objSelectBranchLabel a static final constant or non-public and provide accessors if needed.(ó‘ÔØ8Ùî›Æ±1
+‡
+java:S1104È"dMake objProvinceStateDropDown a static final constant or non-public and provide accessors if needed.(­Øşâşÿÿÿÿ8Ùî›Æ±1
+|
+java:S1104É"_Make objCityTownDropDown a static final constant or non-public and provide accessors if needed.(¿¢78Ùî›Æ±1
+
+java:S1104Ê"aMake objBranchNameDropDown a static final constant or non-public and provide accessors if needed.(ğ—‹í8Ùî›Æ±1
+„
+java:S1104Ë"aMake objSelectedBranchName a static final constant or non-public and provide accessors if needed.(Úõ©¯ùÿÿÿÿ8Ùî›Æ±1
+z
+java:S1104Ì"\Make objBranchAddress a static final constant or non-public and provide accessors if needed.(²˜±³8Ùî›Æ±1
+
+java:S1104Ñ"^Make objPaymentMLWallet a static final constant or non-public and provide accessors if needed.(ÁˆÆÇıÿÿÿÿ8Ùî›Æ±1
+€
+java:S1104Ò"]Make objPaymentEWallet a static final constant or non-public and provide accessors if needed.(’Ìììøÿÿÿÿ8Ùî›Æ±1
+}
+java:S1104Ó"ZMake objPaymentVisa a static final constant or non-public and provide accessors if needed.(ßš¨ÿÿÿÿÿ8Ùî›Æ±1
+‚
+java:S1104Ô"_Make objDirectOnlineBank a static final constant or non-public and provide accessors if needed.(„è¡Óşÿÿÿÿ8Ùî›Æ±1
+w
+java:S1104×"YMake objProceedBtn a static final constant or non-public and provide accessors if needed.(à´†8Ùî›Æ±1
+u
+java:S1104Ø"WMake objCloseBtn a static final constant or non-public and provide accessors if needed.(™ø¹ß8Ùî›Æ±1
+‹
+java:S1104Ù"hMake objPLaceOrderConfirmationMsg a static final constant or non-public and provide accessors if needed.(ş¾å˜úÿÿÿÿ8Ùî›Æ±1
+ƒ
+java:S1104Ú"eMake objSuccesFullyCheckOutMsg a static final constant or non-public and provide accessors if needed.(“ŒåÌ8Ùî›Æ±1
+ˆ
+java:S1104Û"jMake objSuccessFullyCheckOutOkayBtn a static final constant or non-public and provide accessors if needed.(Ú•·Î8Ùî›Æ±1
+
+java:S1104ß"aMake objPaymongoPortalPage a static final constant or non-public and provide accessors if needed.(şñË¥8Ùî›Æ±1
+‚
+java:S1104à"dMake objPaymongoPaymentAmount a static final constant or non-public and provide accessors if needed.(›×ı“8Ùî›Æ±1
+s
+java:S1104á"UMake objFilter a static final constant or non-public and provide accessors if needed.(²Ù•¶8Ùî›Æ±1
+€
+java:S1104â"]Make objExitFilterIcon a static final constant or non-public and provide accessors if needed.(óÒ³­ÿÿÿÿÿ8Ùî›Æ±1
+w
+java:S1104ã"ZMake objAllCheckBox a static final constant or non-public and provide accessors if needed.(²ù›8Ùî›Æ±1
+‚
+java:S1104è"_Make objMaterialTextView a static final constant or non-public and provide accessors if needed.(µ¶Ñşÿÿÿÿ8Ùî›Æ±1
+R
+java:S1444"5Make this "public static objShopItemsTab" field final(é÷üë8Ùî›Æ±1
+P
+java:S1444"3Make this "public static objMLShopPage" field final(şú–¬8Ùî›Æ±1
+M
+java:S1444	"1Make this "public static objItemMenu" field final(§¼8Úî›Æ±1
+S
+java:S1444"1Make this "public static objCheckBox" field final(æûÅÍúÿÿÿÿ8Úî›Æ±1
+P
+java:S1444"3Make this "public static objSelectItem" field final(€µÜ8Úî›Æ±1
+R
+java:S1444"5Make this "public static objAddToCartBtn" field final(Ó˜ù 8Úî›Æ±1
+S
+java:S1444"6Make this "public static objHamburgerMenu" field final(·ìÅÒ8Úî›Æ±1
+O
+java:S1444"-Make this "public static objCart" field final(ÖËàøÿÿÿÿ8Úî›Æ±1
+N
+java:S1444"1Make this "public static objCartIcon" field final(ØÍùÀ8Úî›Æ±1
+V
+java:S1444"4Make this "public static objEditAddress" field final(öÎ£›üÿÿÿÿ8Úî›Æ±1
+Q
+java:S1444"4Make this "public static objCheckOutBtn" field final(È°È¥8Úî›Æ±1
+V
+java:S1444"9Make this "public static objSelectBranchPage" field final(Æš’»8Úî›Æ±1
+S
+java:S1444"6Make this "public static objInputFieldOne" field final(’ˆ›Š8Úî›Æ±1
+P
+java:S1444"3Make this "public static objBranchName" field final(¡Şİ¿8Úî›Æ±1
+X
+java:S1444"6Make this "public static objInputFieldTwo" field final(ÜËš¬ûÿÿÿÿ8Úî›Æ±1
+X
+java:S1444"6Make this "public static objSubBranchName" field final(ÓÒ…¤şÿÿÿÿ8Úî›Æ±1
+U
+java:S1444"8Make this "public static objInputFieldThree" field final(‘ıñ8Úî›Æ±1
+[
+java:S1444"9Make this "public static objSubBranchNameTwo" field final(İ€“•üÿÿÿÿ8Úî›Æ±1
+R
+java:S1444"0Make this "public static objSaveBtn" field final(ÓâÄùÿÿÿÿ8Úî›Æ±1
+Z
+java:S1444"=Make this "public static objAddressSuccessfulMsg" field final(ØÀ ´8Úî›Æ±1
+P
+java:S1444".Make this "public static objOkBtn" field final(¦â¥¡øÿÿÿÿ8Úî›Æ±1
+Q
+java:S1444"/Make this "public static objYesBtn" field final(£ŞÂÅıÿÿÿÿ8Úî›Æ±1
+S
+java:S1444"6Make this "public static objPlaceOrderBtn" field final(òäÔİ8Úî›Æ±1
+R
+java:S1444 "0Make this "public static objOtpPage" field final(“£àÅûÿÿÿÿ8Úî›Æ±1
+b
+java:S1444!"@Make this "public static objCheckOutConfirmationMsg" field final(Ô¯˜ øÿÿÿÿ8Úî›Æ±1
+Q
+java:S1444""5Make this "public static objOtpTextField" field final(ƒƒß8Úî›Æ±1
+V
+java:S1444#"4Make this "public static objValidateBtn" field final(ÜŸÌóıÿÿÿÿ8Úî›Æ±1
+Z
+java:S1444%"8Make this "public static objInvalidOtpPopUp" field final(ìªşÎıÿÿÿÿ8Úî›Æ±1
+]
+java:S1444&";Make this "public static objInvalidOtpPopUpMsg" field final(¡¹“ªúÿÿÿÿ8Úî›Æ±1
+S
+java:S1444("1Make this "public static objCanceBtn" field final(óÒ’Œÿÿÿÿÿ8Úî›Æ±1
+W
+java:S1444)"5Make this "public static objBackArrowBtn" field final(¤á¸øÿÿÿÿ8Úî›Æ±1
+[
+java:S1444*"9Make this "public static objAvailableBalance" field final(ğÆñ–ùÿÿÿÿ8Úî›Æ±1
+^
+java:S1444+"<Make this "public static objSelectPaymentMethod" field final(‰è¤×ùÿÿÿÿ8Úî›Æ±1
+S
+java:S1444,"1Make this "public static objMLWallet" field final(ÕÏÛ“úÿÿÿÿ8Úî›Æ±1
+V
+java:S1444-"9Make this "public static objPayUsingMlWallet" field final(©ÂûĞ8Úî›Æ±1
+[
+java:S1444/">Make this "public static objPayUsingOnlineBanking" field final(éÎ«“8Úî›Æ±1
+L
+java:S14442"/Make this "public static objSearch" field final(Ó¢™Œ8Úî›Æ±1
+M
+java:S14443"0Make this "public static objProfile" field final(ğ”„8Úî›Æ±1
+J
+java:S14444"-Make this "public static objShop" field final(Æ…î®8Úî›Æ±1
+P
+java:S14445".Make this "public static objAbout" field final(Ö²±øÿÿÿÿ8Úî›Æ±1
+M
+java:S14446"0Make this "public static objContact" field final(¤ƒ¿è8Úî›Æ±1
+K
+java:S14447".Make this "public static objItems" field final(úş˜–8Úî›Æ±1
+S
+java:S14448"7Make this "public static objGenderDropdown" field final(©ÓÓ=8Ûî›Æ±1
+X
+java:S14449"6Make this "public static objColorDropdown" field final(€Ô—ıùÿÿÿÿ8Ûî›Æ±1
+S
+java:S1444:"6Make this "public static objKaratDropdown" field final(ÍÀÉ»8Ûî›Æ±1
+X
+java:S1444;"6Make this "public static objPriceDropdown" field final(§²Î¶øÿÿÿÿ8Ûî›Æ±1
+R
+java:S1444="5Make this "public static objProductImage" field final(¥öŞ½8Ûî›Æ±1
+Q
+java:S1444>"5Make this "public static objProductPrice" field final(â¬ši8Ûî›Æ±1
+U
+java:S1444?"3Make this "public static objShippingTo" field final(íßÃôÿÿÿÿÿ8Ûî›Æ±1
+V
+java:S1444@"4Make this "public static objShippingFee" field final(øûßßûÿÿÿÿ8Ûî›Æ±1
+N
+java:S1444A"1Make this "public static objViewShop" field final(Ş“¹Ë8Ûî›Æ±1
+T
+java:S1444C"7Make this "public static objCartPageHeader" field final(ùÛÇ¶8Ûî›Æ±1
+U
+java:S1444D"3Make this "public static objDeleteIcon" field final(åäš—øÿÿÿÿ8Ûî›Æ±1
+`
+java:S1444E">Make this "public static objProductNameInCartPage" field final(¦Ù…Íøÿÿÿÿ8Ûî›Æ±1
+Z
+java:S1444F"8Make this "public static objPriceInCartPage" field final(¦ÑıÔüÿÿÿÿ8Ûî›Æ±1
+Z
+java:S1444H"8Make this "public static objShippingDetails" field final(ÏùÙùÿÿÿÿ8Ûî›Æ±1
+U
+java:S1444I"3Make this "public static objAddAddress" field final(—üÉÁùÿÿÿÿ8Ûî›Æ±1
+a
+java:S1444J"EMake this "public static objProductNameInShippingDetails" field final(…ß8Ûî›Æ±1
+U
+java:S1444K"8Make this "public static objProductQuantity" field final(Àó¬ƒ8Ûî›Æ±1
+W
+java:S1444L"5Make this "public static objItemSubTotal" field final(·¿îôûÿÿÿÿ8Ûî›Æ±1
+L
+java:S1444M"/Make this "public static objHeader" field final(ááø8Ûî›Æ±1
+P
+java:S1444N"3Make this "public static objTotalOrder" field final(åõÇ8Ûî›Æ±1
+P
+java:S1444O"3Make this "public static objServiceFee" field final(Éç­8Ûî›Æ±1
+g
+java:S1444P"EMake this "public static objShippingFeeInShippingDetails" field final(ÚĞİµùÿÿÿÿ8Ûî›Æ±1
+X
+java:S1444R"6Make this "public static objOnlineBanking" field final(‡…ö†ûÿÿÿÿ8Ûî›Æ±1
+X
+java:S1444S"<Make this "public static objMerchandiseSubTotal" field final(É·æ8Ûî›Æ±1
+R
+java:S1444T"5Make this "public static objServiceTotal" field final(ê£® 8Ûî›Æ±1
+S
+java:S1444U"6Make this "public static objShippingTotal" field final(Ùı‡°8Ûî›Æ±1
+W
+java:S1444V"5Make this "public static objPaymentTotal" field final(ëÕ¾­ıÿÿÿÿ8Ûî›Æ±1
+Q
+java:S1444W"/Make this "public static objCancel" field final(±¼­Úøÿÿÿÿ8Ûî›Æ±1
+V
+java:S1444X"9Make this "public static objAddressUpdateMsg" field final(âó´Â8Ûî›Æ±1
+L
+java:S1444Z"/Make this "public static objOTPMsg" field final(˜³»Æ8Ûî›Æ±1
+P
+java:S1444["3Make this "public static objErrorPopup" field final(áÜßÃ8Ûî›Æ±1
+N
+java:S1444\"2Make this "public static objMyAccount" field final(—‹…u8Ûî›Æ±1
+\
+java:S1444]":Make this "public static objMyAccountDropdown" field final(™ò–êúÿÿÿÿ8Ûî›Æ±1
+[
+java:S1444^">Make this "public static objMyAccountPageCrossBtn" field final(¢Ä÷¢8Ûî›Æ±1
+Z
+java:S1444_"8Make this "public static objMyProfileHeader" field final(Í°©şÿÿÿÿ8Üî›Æ±1
+U
+java:S1444`"3Make this "public static objMyPurchase" field final(™ü¯Õÿÿÿÿÿ8Üî›Æ±1
+R
+java:S1444a"5Make this "public static objOrderDetails" field final(ë¡„™8Üî›Æ±1
+Y
+java:S1444b"7Make this "public static objSubtotalAmount" field final(ÄÇÏ„şÿÿÿÿ8Üî›Æ±1
+\
+java:S1444c":Make this "public static objSelectedItemPrice" field final(ÁÚ÷îûÿÿÿÿ8Üî›Æ±1
+R
+java:S1444d"0Make this "public static objJewelry" field final(İ–‘ÿüÿÿÿÿ8Üî›Æ±1
+N
+java:S1444e"2Make this "public static objContactUs" field final(ÉÍŞc8Üî›Æ±1
+^
+java:S1444f"AMake this "public static objGreatDealsForFineWatches" field final(›šÜÔ8Üî›Æ±1
+P
+java:S1444g".Make this "public static objRolex" field final(³‡æøÿÿÿÿ8Üî›Æ±1
+S
+java:S1444h"1Make this "public static objHamilton" field final(çãÍèüÿÿÿÿ8Üî›Æ±1
+K
+java:S1444i".Make this "public static objOmega" field final(î—¦­8Üî›Æ±1
+S
+java:S1444j"1Make this "public static objTagHeuer" field final(»ÚÎçıÿÿÿÿ8Üî›Æ±1
+]
+java:S1444k";Make this "public static objDiscountPercentage" field final(µ–—¡úÿÿÿÿ8Üî›Æ±1
+V
+java:S1444l"4Make this "public static objProductName" field final(ˆƒö«üÿÿÿÿ8Üî›Æ±1
+S
+java:S1444m"6Make this "public static objOriginalPrice" field final(ó¢‘½8Üî›Æ±1
+S
+java:S1444n"6Make this "public static objDiscountPrice" field final(˜İ²›8Üî›Æ±1
+b
+java:S1444p"@Make this "public static objCategoriesHamburgerMenu" field final(úİ“¤ûÿÿÿÿ8Üî›Æ±1
+^
+java:S1444q"<Make this "public static objAmparitoCollections" field final(‹ÑÌ›üÿÿÿÿ8Üî›Æ±1
+V
+java:S1444r"4Make this "public static objFineJewelry" field final(Îé‹àüÿÿÿÿ8Üî›Æ±1
+O
+java:S1444v"-Make this "public static objRing" field final(£²¨×şÿÿÿÿ8Üî›Æ±1
+S
+java:S1444z"1Make this "public static objNecklace" field final(ˆ°Œ•ıÿÿÿÿ8Üî›Æ±1
+V
+java:S1444~":Make this "public static objBraceletAndBangle" field final(¬üág8Üî›Æ±1
+T
+java:S1444‚"1Make this "public static objEarrings" field final(Æä†–ùÿÿÿÿ8Üî›Æ±1
+S
+java:S1444†"0Make this "public static objPendant" field final(‚ï­àüÿÿÿÿ8Üî›Æ±1
+W
+java:S1444Š"4Make this "public static objTernoAndSet" field final(ö‹İıÿÿÿÿ8Üî›Æ±1
+Z
+java:S1444‹"<Make this "public static objTernoAndSetSubTypes" field final(Àƒ™ê8Üî›Æ±1
+R
+java:S1444Œ"4Make this "public static objWeddingRing" field final(“Í“·8Üî›Æ±1
+_
+java:S1444"<Make this "public static objWeddingRingSubTypes" field final(¾¼ßüıÿÿÿÿ8Üî›Æ±1
+a
+java:S1444">Make this "public static objPinBrouchAndScalpings" field final(Í´Ìôùÿÿÿÿ8Üî›Æ±1
+c
+java:S1444"FMake this "public static objPinBrouchAndScalpingsSubTypes" field final(­Á¹\8Üî›Æ±1
+S
+java:S1444’"0Make this "public static objWatches" field final(ª¬åôşÿÿÿÿ8Üî›Æ±1
+R
+java:S1444—"/Make this "public static objGender" field final(¤ïÿ±ıÿÿÿÿ8Üî›Æ±1
+Q
+java:S1444›".Make this "public static objColor" field final(–Õ™øÿÿÿÿ8Üî›Æ±1
+L
+java:S1444œ".Make this "public static objKarat" field final(îêş8Üî›Æ±1
+Q
+java:S1444".Make this "public static objPrice" field final(¢üí€ıÿÿÿÿ8Üî›Æ±1
+W
+java:S1444"9Make this "public static objMainProductImage" field final(³€‚‡8Üî›Æ±1
+Z
+java:S1444Ÿ"=Make this "public static objOptionalProductImage" field final(·üàj8Üî›Æ±1
+g
+java:S1444 "DMake this "public static objProductNameInProductDetails" field final(¯ìğ»ùÿÿÿÿ8Üî›Æ±1
+\
+java:S1444¡">Make this "public static objColorInProductDetails" field final(í«é8Üî›Æ±1
+a
+java:S1444¢">Make this "public static objKaratInProductDetails" field final(ÿüùÿÿÿÿ8İî›Æ±1
+]
+java:S1444£"?Make this "public static objGenderInProductDetails" field final(œñšÃ8İî›Æ±1
+a
+java:S1444¤">Make this "public static objPriceInProductDetails" field final(ØßêÄşÿÿÿÿ8İî›Æ±1
+b
+java:S1444¥"DMake this "public static objActualPriceInProductDetails" field final(©Û®8İî›Æ±1
+i
+java:S1444¦"FMake this "public static objDiscountPriceInProductDetails" field final(‡íñ‡ùÿÿÿÿ8İî›Æ±1
+T
+java:S1444§"1Make this "public static objShopName" field final(·ëò±ùÿÿÿÿ8İî›Æ±1
+W
+java:S1444¨"9Make this "public static objShopMobileNumber" field final(Ü…Ó´8İî›Æ±1
+W
+java:S1444©"4Make this "public static objShopEmailID" field final(Êõ§½ÿÿÿÿÿ8İî›Æ±1
+X
+java:S1444ª"5Make this "public static objShopAddress1" field final(ºåøøÿÿÿÿ8İî›Æ±1
+R
+java:S1444«"5Make this "public static objShopAddress2" field final(ğ¾İf8İî›Æ±1
+Y
+java:S1444¬"6Make this "public static objTotalProducts" field final(ªË‡´ûÿÿÿÿ8İî›Æ±1
+X
+java:S1444­"5Make this "public static objSoldProducts" field final( „ÙÒùÿÿÿÿ8İî›Æ±1
+a
+java:S1444¯"CMake this "public static objProductImageInInterestedIn" field final(¾úó“8İî›Æ±1
+e
+java:S1444°"BMake this "public static objProductNameInInterestedIn" field final(óªÌšıÿÿÿÿ8İî›Æ±1
+e
+java:S1444±"BMake this "public static objActualPriceInInterestedIn" field final(ÿôğĞıÿÿÿÿ8İî›Æ±1
+a
+java:S1444²"DMake this "public static objDiscountPriceInInterestedIn" field final(‘œ	8İî›Æ±1
+g
+java:S1444³"IMake this "public static objDiscountPercentageInInterestedIn" field final(˜Ô’’8İî›Æ±1
+Q
+java:S1444µ"3Make this "public static objMLShopLOgo" field final(®Ù†Š8İî›Æ±1
+d
+java:S1444¶"AMake this "public static objProductImageInMLShopPage" field final(ÎÍ§øÿÿÿÿ8İî›Æ±1
+`
+java:S1444·"=Make this "public static objMLShopProductsHeader" field final(çÅşÿÿÿÿ8İî›Æ±1
+W
+java:S1444¸"9Make this "public static objMLShopPageBanner" field final(”Ó˜8İî›Æ±1
+Y
+java:S1444º";Make this "public static objSuccessfulLoginTxt" field final(¾Ä¦—8İî›Æ±1
+V
+java:S1444»"8Make this "public static objloginOkayButton" field final(¹ıÉ‡8İî›Æ±1
+[
+java:S1444¼"8Make this "public static objDeleteYesButton" field final(“´­Óıÿÿÿÿ8İî›Æ±1
+Y
+java:S1444½";Make this "public static objDeleteCancelButton" field final(…ä»š8İî›Æ±1
+^
+java:S1444¾";Make this "public static objDeleteConfirmation" field final(ÎŠ¸¤ıÿÿÿÿ8İî›Æ±1
+W
+java:S1444¿"9Make this "public static objDeleteExitButton" field final(Ò«àš8İî›Æ±1
+Z
+java:S1444À"<Make this "public static objConfirmAddCarButton" field final(¬Ú‹8İî›Æ±1
+Z
+java:S1444Á"<Make this "public static objSuccessAddtoCartMsg" field final(³ñˆÉ8İî›Æ±1
+]
+java:S1444Â":Make this "public static objExitHamburgerMenu" field final(ÿÙÃìûÿÿÿÿ8İî›Æ±1
+V
+java:S1444Ä"9Make this "public static objShoppingCartIcon" field final(Æ”õ#8İî›Æ±1
+X
+java:S1444Ç":Make this "public static objSelectBranchLabel" field final(ó‘ÔØ8İî›Æ±1
+a
+java:S1444È">Make this "public static objProvinceStateDropDown" field final(­Øşâşÿÿÿÿ8İî›Æ±1
+V
+java:S1444É"9Make this "public static objCityTownDropDown" field final(¿¢78İî›Æ±1
+Y
+java:S1444Ê";Make this "public static objBranchNameDropDown" field final(ğ—‹í8İî›Æ±1
+^
+java:S1444Ë";Make this "public static objSelectedBranchName" field final(Úõ©¯ùÿÿÿÿ8İî›Æ±1
+T
+java:S1444Ì"6Make this "public static objBranchAddress" field final(²˜±³8İî›Æ±1
+[
+java:S1444Ñ"8Make this "public static objPaymentMLWallet" field final(ÁˆÆÇıÿÿÿÿ8Şî›Æ±1
+Z
+java:S1444Ò"7Make this "public static objPaymentEWallet" field final(’Ìììøÿÿÿÿ8Şî›Æ±1
+W
+java:S1444Ó"4Make this "public static objPaymentVisa" field final(ßš¨ÿÿÿÿÿ8Şî›Æ±1
+\
+java:S1444Ô"9Make this "public static objDirectOnlineBank" field final(„è¡Óşÿÿÿÿ8Şî›Æ±1
+Q
+java:S1444×"3Make this "public static objProceedBtn" field final(à´†8Şî›Æ±1
+O
+java:S1444Ø"1Make this "public static objCloseBtn" field final(™ø¹ß8Şî›Æ±1
+e
+java:S1444Ù"BMake this "public static objPLaceOrderConfirmationMsg" field final(ş¾å˜úÿÿÿÿ8Şî›Æ±1
+]
+java:S1444Ú"?Make this "public static objSuccesFullyCheckOutMsg" field final(“ŒåÌ8Şî›Æ±1
+b
+java:S1444Û"DMake this "public static objSuccessFullyCheckOutOkayBtn" field final(Ú•·Î8Şî›Æ±1
+Y
+java:S1444ß";Make this "public static objPaymongoPortalPage" field final(şñË¥8Şî›Æ±1
+\
+java:S1444à">Make this "public static objPaymongoPaymentAmount" field final(›×ı“8Şî›Æ±1
+M
+java:S1444á"/Make this "public static objFilter" field final(²Ù•¶8Şî›Æ±1
+Z
+java:S1444â"7Make this "public static objExitFilterIcon" field final(óÒ³­ÿÿÿÿÿ8Şî›Æ±1
+Q
+java:S1444ã"4Make this "public static objAllCheckBox" field final(²ù›8Şî›Æ±1
+\
+java:S1444è"9Make this "public static objMaterialTextView" field final(µ¶Ñşÿÿÿÿ8Şî›Æ±1
+W
+java:S1118":Add a private constructor to hide the implicit public one.(õüÖÒ8ùî›Æ±1
+\
+java:S2479":Remove the non-escaped \u00A0 character from this literal.(öÎ£›üÿÿÿÿ8ıî›Æ±1
