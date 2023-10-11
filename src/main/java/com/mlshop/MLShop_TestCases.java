@@ -188,6 +188,7 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
         selectFilterMaterialColor(objSelectMaterialColorOptions("Two - Tone"), MLWalletShopItemsPage.objMaterialTextView );
         logger.info("Select Two Tone  material color display product validated successfully");
+
     }
 
     public void MLShop_SelectTriToneMaterialColorDisplayProductValidation_SI_TC_52()throws Exception{
@@ -199,6 +200,38 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         selectFilterMaterialColor(objSelectMaterialColorOptions("Tri - Tone"), MLWalletShopItemsPage.objMaterialTextView );
         logger.info("Select Two Tone  material color display product validated successfully");
     }
+    public void MLShop_SelectLadiesDisplayLadiesGenderProducts_SI_TC_53()throws Exception{
+        ExtentReporter.HeaderChildNode("MLS_TC_41, Select  Two Tone material color display product Validation");
+        mlWalletLogin(prop.getproperty("New_Branch_Verified"));
+        shopItemsNavigation();
+        Swipe("UP", 2);
+        click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
+        selectFilterMaterialColor(objSelectMaterialColorOptions("Tri - Tone"), MLWalletShopItemsPage.objMaterialTextView );
+        logger.info("Select Two Tone  material color display product validated successfully");
+    }
+    public void MLShop_SelectMensDisplayMensGenderProducts_SI_TC_54()throws Exception{
 
+    }
+    public void MLShop_SelectUnisexDisplayUnisexProducts_SI_TC_55()throws Exception{
+
+    }
+    public void MLShop_SI_TC_56()throws Exception{
+
+    }
+    public void MLShop_SI_TC_57()throws Exception{
+
+    }
+    public void MLShop_SI_TC_58()throws Exception{
+
+    }
+    public void MLShop_SI_TC_88()throws Exception{
+
+    }
+    public void MLShop_SI_TC_89()throws Exception{
+
+    }
+    public void MLShop_SI_TC_94()throws Exception{
+
+    }
 }
 
