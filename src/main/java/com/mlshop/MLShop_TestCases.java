@@ -199,11 +199,11 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
         selectFilterMaterialColor(objSelectMaterialColorOptions("Two - Tone"), MLWalletShopItemsPage.objMaterialTextView );
         logger.info("Select Two Tone  material color display product validated successfully");
-<<<<<<< HEAD
 
-=======
+
+
         ExtentReporter.extentLoggerPass("MLS_TC_51", "Select Two Tone material color display product validated successfully");
->>>>>>> 49d9623d91de4c6a374f3d78afc0e09b72e83131
+
     }
 
     public void MLShop_SelectTriToneMaterialColorDisplayProductValidation_SI_TC_52()throws Exception{
@@ -245,15 +245,10 @@ public class MLShop_TestCases extends MLShop_GenMethods {
     }
     public void MLShop_SI_TC_89()throws Exception{
 
-<<<<<<< HEAD
+
     }
     public void MLShop_SI_TC_94()throws Exception{
 
     }
-=======
-
-
-
->>>>>>> 49d9623d91de4c6a374f3d78afc0e09b72e83131
 }
 
