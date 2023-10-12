@@ -364,7 +364,7 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         shopItemsNavigation();
         Swipe("UP", 2);
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
-//        selectFilterMaterialColor(objSelectMaterialColorOptions("Tri - Tone"), MLWalletShopItemsPage.objMaterialTextView );
+        selectFilter(objSelectMaterialColorOptions("Tri - Tone"), MLWalletShopItemsPage.objMaterialTextView );
         logger.info("Select Two Tone  material color display product validated successfully");
     }
     public void MLShop_SelectMensDisplayMensGenderProducts_SI_TC_54()throws Exception{

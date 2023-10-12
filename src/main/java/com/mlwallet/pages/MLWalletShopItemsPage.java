@@ -247,4 +247,5 @@ public class MLWalletShopItemsPage {
 
 	public static By objMaterialTextView = By.xpath("//android.view.View//android.widget.TextView[2]");
 	public static By objNoProductFound= By.xpath("//*[@text='No Products Found!']");
+
 }
