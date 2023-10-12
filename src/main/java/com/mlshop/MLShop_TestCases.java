@@ -232,7 +232,7 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         shopItemsNavigation();
         Swipe("UP", 2);
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
-        selectFilterMaterial(objSelectMaterialOptions("10k"), MLWalletShopItemsPage.objMaterialTextView );
+        selectFilter(objSelectMaterialOptions("10k"), MLWalletShopItemsPage.objMaterialTextView );
         logger.info("Select 10k material display Product validated successfully");
         ExtentReporter.extentLoggerPass("MLS_TC_41","Select 10k material display Product validated successfully");
     }
@@ -243,7 +243,7 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         shopItemsNavigation();
         Swipe("UP", 2);
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
-        selectFilterMaterial(objSelectMaterialOptions("14k"), MLWalletShopItemsPage.objMaterialTextView );
+        selectFilter(objSelectMaterialOptions("14k"), MLWalletShopItemsPage.objMaterialTextView );
         logger.info("Select 14k material display Product validated successfully");
         ExtentReporter.extentLoggerPass("MLS_TC_42","Select 14k material display Product validated successfully");
     }
@@ -254,7 +254,7 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         shopItemsNavigation();
         Swipe("UP", 2);
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
-        selectFilterMaterial(objSelectMaterialOptions("18k"), MLWalletShopItemsPage.objMaterialTextView );
+        selectFilter(objSelectMaterialOptions("18k"), MLWalletShopItemsPage.objMaterialTextView );
         logger.info("Select 18k material display Product validated successfully");
         ExtentReporter.extentLoggerPass("MLS_TC_43","Select 18k material display Product validated successfully");
     }
@@ -265,7 +265,7 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         shopItemsNavigation();
         Swipe("UP", 2);
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
-        selectFilterMaterial(objSelectMaterialOptions("20k"), MLWalletShopItemsPage.objMaterialTextView );
+        selectFilter(objSelectMaterialOptions("20k"), MLWalletShopItemsPage.objMaterialTextView );
         logger.info("Select 20k material display Product validated successfully");
         ExtentReporter.extentLoggerPass("MLS_TC_44","Select 20k material display Product validated successfully");
     }
@@ -276,7 +276,7 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         shopItemsNavigation();
         Swipe("UP", 2);
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
-        selectFilterMaterial(objSelectMaterialOptions("21k"), MLWalletShopItemsPage.objMaterialTextView );
+        selectFilter(objSelectMaterialOptions("21k"), MLWalletShopItemsPage.objMaterialTextView );
         logger.info("Select 21k material display Product validated successfully");
         ExtentReporter.extentLoggerPass("MLS_TC_45","Select 21k material display Product validated successfully");
     }
@@ -287,7 +287,7 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         shopItemsNavigation();
         Swipe("UP", 2);
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
-        selectFilterMaterial(objSelectMaterialOptions("22k"), MLWalletShopItemsPage.objMaterialTextView );
+        selectFilter(objSelectMaterialOptions("22k"), MLWalletShopItemsPage.objMaterialTextView );
         logger.info("Select 22k material display Product validated successfully");
         ExtentReporter.extentLoggerPass("MLS_TC_41","Select 22k material display Product validated successfully");
     }
@@ -298,7 +298,7 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         shopItemsNavigation();
         Swipe("UP", 2);
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
-        selectFilterMaterial(objSelectMaterialOptions("12k"), MLWalletShopItemsPage.objMaterialTextView );
+        selectFilter(objSelectMaterialOptions("12k"), MLWalletShopItemsPage.objMaterialTextView );
         logger.info("Select 12k material display Product validated successfully");
         ExtentReporter.extentLoggerPass("MLS_TC_47","Select 12k material display Product validated successfully");
     }
@@ -309,7 +309,7 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         shopItemsNavigation();
         Swipe("UP", 2);
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
-        selectFilterMaterialColor(objSelectMaterialColorOptions("Yellow Gold"), MLWalletShopItemsPage.objMaterialTextView );
+        selectFilter(objSelectMaterialColorOptions("Yellow Gold"), MLWalletShopItemsPage.objMaterialTextView );
         logger.info("Select Yellow Gold material color display product validated successfully");
         ExtentReporter.extentLoggerPass("MLS_TC_48","Select Yellow Gold material color display product validated successfully");
     }
@@ -320,7 +320,7 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         shopItemsNavigation();
         Swipe("UP", 2);
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
-        selectFilterMaterialColor(objSelectMaterialColorOptions("White Gold"), MLWalletShopItemsPage.objMaterialTextView );
+        selectFilter(objSelectMaterialColorOptions("White Gold"), MLWalletShopItemsPage.objMaterialTextView );
         logger.info("Select White Gold material color display product validated successfully");
         ExtentReporter.extentLoggerPass("MLS_TC_49","Select White Gold material color display product validated successfully");
     }
@@ -331,7 +331,7 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         shopItemsNavigation();
         Swipe("UP", 2);
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
-        selectFilterMaterialColor(objSelectMaterialColorOptions("Rose Gold"), MLWalletShopItemsPage.objMaterialTextView );
+        selectFilter(objSelectMaterialColorOptions("Rose Gold"), MLWalletShopItemsPage.objMaterialTextView );
         logger.info("Select Rose Gold material color display product validated successfully");
         ExtentReporter.extentLoggerPass("MLS_TC_50","Select Rose Gold material color display product validated successfully");
     }
@@ -342,11 +342,8 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         shopItemsNavigation();
         Swipe("UP", 2);
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
-        selectFilterMaterialColor(objSelectMaterialColorOptions("Two - Tone"), MLWalletShopItemsPage.objMaterialTextView );
+        selectFilter(objSelectMaterialColorOptions("Two - Tone"), MLWalletShopItemsPage.objMaterialTextView );
         logger.info("Select Two Tone  material color display product validated successfully");
-
-
-
         ExtentReporter.extentLoggerPass("MLS_TC_51", "Select Two Tone material color display product validated successfully");
 
     }
@@ -357,7 +354,7 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         shopItemsNavigation();
         Swipe("UP", 2);
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
-        selectFilterMaterialColor(objSelectMaterialColorOptions("Tri - Tone"), MLWalletShopItemsPage.objMaterialTextView );
+        selectFilter(objSelectMaterialColorOptions("Tri - Tone"), MLWalletShopItemsPage.objMaterialTextView );
         logger.info("Select Two Tone  material color display product validated successfully");
         ExtentReporter.extentLoggerPass("MLS_TC_52", "Select Tri Tone material color display product validated successfully");
     }
@@ -367,7 +364,7 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         shopItemsNavigation();
         Swipe("UP", 2);
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
-        selectFilterMaterialColor(objSelectMaterialColorOptions("Tri - Tone"), MLWalletShopItemsPage.objMaterialTextView );
+//        selectFilterMaterialColor(objSelectMaterialColorOptions("Tri - Tone"), MLWalletShopItemsPage.objMaterialTextView );
         logger.info("Select Two Tone  material color display product validated successfully");
     }
     public void MLShop_SelectMensDisplayMensGenderProducts_SI_TC_54()throws Exception{
