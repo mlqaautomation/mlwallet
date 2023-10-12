@@ -234,4 +234,17 @@ public class MLWalletShopItemsPage {
 	public static By objLogout = By.xpath("//android.widget.TextView[@text='Logout']");
 	public static By objLogoutText=By.xpath("//android.widget.TextView[@text='GREAT SUMMER SALE']");
 
+	public static By objFilter = By.xpath("//*[@text='Filter']");
+	public static By objExitFilterIcon = By.xpath("//android.view.View[3]/android.view.View/android.view.View[1]");
+	public static By objAllCheckBox = By.xpath("//android.widget.CheckBox");
+	public static By objSelectMaterialOptions(String option){
+		return By.xpath("//*[@text='"+option+"']");
+	}
+
+	public static By objSelectMaterialColorOptions(String option){
+		return By.xpath("//*[@text='"+option+"']");
+	}
+
+	public static By objMaterialTextView = By.xpath("//android.view.View//android.widget.TextView[2]");
+	public static By objNoProductFound= By.xpath("//*[@text='No Products Found!']");
 }
