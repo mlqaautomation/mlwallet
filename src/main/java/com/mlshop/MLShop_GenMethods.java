@@ -97,40 +97,31 @@ public class MLShop_GenMethods extends BaseClass {
 
     }
 
-    public void selectFilterMaterial(By materialLocator, By materialDisplayed) throws Exception {
+    public void selectFilter(By byLocator, By byDisplay) throws Exception {
         click(MLWalletShopItemsPage.objFilter, "Filter");
         Swipe("UP", 1);
         clickAllVisibleCheckBox(MLWalletShopItemsPage.objAllCheckBox);
         waitTime(5000);
-        click(materialLocator, "Material locator is selected");
+        click(byLocator, "Material locator is selected");
+        WebElement selected = DriverManager.getAppiumDriver().findElement(byLocator);
+        String locaterValue = selected.getText();
         waitTime(5000);
         Swipe("DOWN", 2);
         click(MLWalletShopItemsPage.objExitFilterIcon, "Exit");
         if(verifyElementDisplayed(MLWalletShopItemsPage.objNoProductFound)){
             verifyElementPresent(MLWalletShopItemsPage.objNoProductFound, "No Products Found!");
             logger.info("No Products Found!");
-        } else {
-            WebElement element = DriverManager.getAppiumDriver().findElement(materialDisplayed);
+        } else if(verifyElementDisplayed(byDisplay)){
+            WebElement element = DriverManager.getAppiumDriver().findElement(byDisplay);
             String materialValue = element.getText();
-
-            Map<String, String> materialMessages = new HashMap<>();
-            materialMessages.put("10k", "10k");
-            materialMessages.put("14k", "14k");
-            materialMessages.put("18k", "18k");
-            materialMessages.put("20k", "20k");
-            materialMessages.put("21k", "21k");
-            materialMessages.put("22k", "22k");
-            materialMessages.put("12k", "12k");
-            for (Map.Entry<String, String> entry : materialMessages.entrySet()) {
-                if (materialValue.contains(entry.getKey())) {
-                    waitTime(5000);
-                    verifyElementPresent(materialDisplayed, entry.getKey());
-                    logger.info(entry.getValue() + "is/are displayed");
-                    return;
-                }
+            if (materialValue.contains(locaterValue)) {
+                waitTime(5000);
+                verifyElementPresent(byDisplay, "Material Displayed");
+                logger.info("Selected material " +locaterValue+ " displays" + materialValue );
+            }else {
+                logger.info("Selected material " +locaterValue+ " does not match with" + materialValue );
             }
         }
-        logger.info("No matching material found.");
     }
 
     public void clickAllVisibleCheckBox(By locator) throws Exception {
@@ -143,39 +134,5 @@ public class MLShop_GenMethods extends BaseClass {
         }
     }
 
-    public void selectFilterMaterialColor(By materialColorLocator, By materialColorDisplayed) throws Exception {
-        click(MLWalletShopItemsPage.objFilter, "Filter");
-        Swipe("UP", 1);
-        clickAllVisibleCheckBox(MLWalletShopItemsPage.objAllCheckBox);
-        waitTime(5000);
-        click(materialColorLocator, "Material Color locator is selected");
-        waitTime(5000);
-        Swipe("DOWN", 2);
-        click(MLWalletShopItemsPage.objExitFilterIcon, "Exit");
-
-        if(verifyElementDisplayed(MLWalletShopItemsPage.objNoProductFound)){
-            verifyElementPresent(MLWalletShopItemsPage.objNoProductFound, "No Products Found!");
-            logger.info("No Products Found!");
-        } else {
-            WebElement element = DriverManager.getAppiumDriver().findElement(materialColorDisplayed);
-            String materialValue = element.getText();
-
-            Map<String, String> materialMessages = new HashMap<>();
-            materialMessages.put("Yellow Gold", "Yellow Gold");
-            materialMessages.put("White Gold", "White Gold");
-            materialMessages.put("Rose Gold", "Rose Gold");
-            materialMessages.put("Two - Tone", "Two - Tone");
-            materialMessages.put("Tri - Tone", "Tri - Tone");
-            for (Map.Entry<String, String> entry : materialMessages.entrySet()) {
-                if (materialValue.contains(entry.getKey())) {
-                    waitTime(5000);
-                    verifyElementPresent(materialColorDisplayed, entry.getKey());
-                    logger.info(entry.getValue() + " is/are displayed");
-                    return;
-                }
-            }
-        }
-        logger.info("No matching material color found.");
-    }
 
 }
