@@ -93,7 +93,7 @@ public class MLWalletShopItemsPage {
 	public static By objMyAccountDropdown = By.xpath("//*[@text='My Account']");
 	public static By objMyAccountPageCrossBtn = By.xpath("//*[@resource-id='close-sidebar']/child::android.widget.TextView");
 	public static By objMyProfileHeader = By.xpath("(//*[@text='My Profile'])[2]");
-	public static By objMyPurchase = By.xpath("//*[@text='My Purchases']");
+	public static By objMyPurchase = By.xpath("//*[@text='Purchase History']");
 	public static By objOrderDetails = By.xpath("//*[@resource-id='orderDetails']");
 	public static By objSubtotalAmount = By.xpath("//*[@resource-id='cart-subtotal']");
 	public static By objSelectedItemPrice = By.xpath("((//*[@class='android.widget.CheckBox'])[1]/following-sibling::android.widget.TextView)[2]");
@@ -192,7 +192,7 @@ public class MLWalletShopItemsPage {
 	public static By objDeleteExitButton =By.xpath("//*[@text='Are you sure to remove this item?']/parent::android.view.View/preceding-sibling::android.view.View/child::android.widget.Button");
 	public static By objConfirmAddCarButton = By.xpath("//*[@text='Confirm']");
 	public static By objSuccessAddtoCartMsg = By.xpath("//*[@resource-id='swal2-html-container']");
-	public static By objExitHamburgerMenu = By.xpath("");
+	public static By objExitHamburgerMenu = By.xpath("//*[@content-desc='Profile']/parent::android.view.View/preceding-sibling::android.view.View");
 
 	public static By objShoppingCartIcon=By.xpath("//android.view.View/child::android.view.View");
 
@@ -224,6 +224,15 @@ public class MLWalletShopItemsPage {
 	public static By objPaymongoPortalPage=By.xpath("//*[@text='PayMongo Logo']");
 	public static By objPaymongoPaymentAmount=By.xpath("//*[@text='Payment amount']/following-sibling::android.widget.TextView");
 
+	public static By objGreatSalesText=By.xpath("//android.widget.TextView[@text='GREAT SUMMER SALE']");
+
+	public static By objJewelryText=By.xpath("//android.widget.TextView[@text='Jewelry']");
+	public static By objContactUsText=By.xpath("//android.widget.TextView[@text='Contact Us']");
+	public static By objShopCartText=By.xpath("//android.widget.TextView[@text='Shopping Cart']");
+	public static By objProfileText=By.xpath("//android.widget.TextView[@text='Full Name']");
+	public static By objPurchaseText=By.xpath("//android.widget.TextView[@text='ML Shop Jewelry Store']");
+	public static By objLogout = By.xpath("//android.widget.TextView[@text='Logout']");
+	public static By objLogoutText=By.xpath("//android.widget.TextView[@text='GREAT SUMMER SALE']");
 
 	public static By objFilter = By.xpath("//*[@text='Filter']");
 	public static By objExitFilterIcon = By.xpath("//android.view.View[3]/android.view.View/android.view.View[1]");

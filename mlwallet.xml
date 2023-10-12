@@ -10,7 +10,11 @@
 
 	<test name="MLWallet">
 		<parameter name="portno" value="4723"></parameter>
+<<<<<<< HEAD
+		<parameter name="deviceName" value="192.168.12.61:5559"></parameter>
+=======
 		<parameter name="deviceName" value="192.168.12.61:5555"></parameter>
+>>>>>>> fbbea188402b827f4058a28fa21f9093ecd857a5
 		<parameter name="browserType" value="Chrome"></parameter>
 		<parameter name="url" value="https://prnt.sc/4vyopNIICFNa"></parameter>
 		<parameter name="url1" value="https://prnt.sc/WlO6H7WpxvNY"></parameter>

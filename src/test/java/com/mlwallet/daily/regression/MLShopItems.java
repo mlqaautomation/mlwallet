@@ -25,6 +25,9 @@ public class MLShopItems {
         MLShopItems.portno= portno;
         shopItems = new MLShop_TestCases("MLWallet",deviceName,portno);
     }
+
+//
+
 //    @Test(priority = 1)
 //    public void MLShop_PurchaseItemViaMlWallet_TC_178() throws Exception
 //    {
@@ -60,6 +63,50 @@ public class MLShopItems {
 //        shopItems.MLShop_PaymongoPortalDirectOnlineBank_TC_209();
 //    }
 
+    @Test(priority = 0)
+    public void MLShop_Homepage_TC_01() throws Exception
+    {
+        shopItems.MLShop_Homepage_TC_01();
+    }
+    @Test(priority = 0)
+    public void MLShop_Aboutpage_TC_02() throws Exception
+    {
+        shopItems.MLShop_Aboutpage_TC_02();
+    }
+
+    @Test(priority = 0)
+    public void MLShop_Contactpage_TC_03() throws Exception
+    {
+        shopItems.MLShop_Contactpage_TC_03();
+    }
+
+    @Test(priority = 0)
+    public void MLShop_ShopCart_TC_04() throws Exception
+    {
+        shopItems.MLShop_ShopCart_TC_04();
+    }
+    @Test(priority = 0)
+    public void MLShop_Profile_TC_05() throws Exception
+    {
+        shopItems.MLShop_Profile_TC_05();
+    }
+    @Test(priority = 0)
+    public void MLShop_PurchaseHistory_TC_06() throws Exception
+    {
+        shopItems.MLShop_PurchaseHistory_TC_06();
+    }
+
+    @Test(priority = 0)
+    public void MLShop_Logout_TC_07() throws Exception
+    {
+        shopItems.MLShop_Logout_TC_07();
+    }
+
+    @Test(priority = 0)
+    public void MLShop_ExitIcon_TC_13() throws Exception
+    {
+        shopItems.MLShop_ExitIcon_TC_13();
+    }
 
 
     @Test(priority = 1)
