@@ -198,6 +198,10 @@ public class Utilities extends ExtentReporter {
         return element;
     }
 
+    public static String getTextFromElement(By locator) {
+        WebElement element = DriverManager.getAppiumDriver().findElement(locator);
+        return element.getText();
+    }
 
     public static void setWifiConnectionToONOFF(String Value) {
         try {
