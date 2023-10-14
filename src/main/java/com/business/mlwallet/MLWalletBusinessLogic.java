@@ -5135,7 +5135,7 @@ public class MLWalletBusinessLogic {
 		click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
 		waitTime(10000);
 		verifyElementPresentAndClick(MLWalletShopItemsPage.objCategoriesHamburgerMenu, "Categories Hamburger Menu");
-		if (verifyElementPresent(MLWalletShopItemsPage.objCategory, getTextVal(MLWalletShopItemsPage.objCategory, "Menu"))) {
+		if (verifyElementPresent(MLWalletShopItemsPage.objCategoriesHamburgerMenu, getTextVal(MLWalletShopItemsPage.objCategoriesHamburgerMenu, "Menu"))) {
 			verifyElementPresent(MLWalletShopItemsPage.objAmparitoCollections, getTextVal(MLWalletShopItemsPage.objAmparitoCollections, "Category Header"));
 			verifyElementPresent(MLWalletShopItemsPage.objFineJewelry, getTextVal(MLWalletShopItemsPage.objFineJewelry, "Category Header"));
 			logger.info("MLS_TC_88, Shop Items Categories validated");
@@ -5152,7 +5152,7 @@ public class MLWalletBusinessLogic {
 		click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
 		waitTime(10000);
 		verifyElementPresentAndClick(MLWalletShopItemsPage.objCategoriesHamburgerMenu, "Categories Hamburger Menu");
-		verifyElementPresent(MLWalletShopItemsPage.objCategory, getTextVal(MLWalletShopItemsPage.objCategory, "Menu"));
+		verifyElementPresent(MLWalletShopItemsPage.objCategoriesHamburgerMenu, getTextVal(MLWalletShopItemsPage.objCategoriesHamburgerMenu, "Menu"));
 		verifyElementPresent(MLWalletShopItemsPage.objAmparitoCollections, getTextVal(MLWalletShopItemsPage.objAmparitoCollections, "Category Header"));
 		for (int i = 1; i <= 9; i++) {
 			verifyElementPresent(MLWalletShopItemsPage.objAmparitoCollectionsProductTypes(i), getTextVal(MLWalletShopItemsPage.objAmparitoCollectionsProductTypes(i), "Product Type"));
@@ -5170,7 +5170,7 @@ public class MLWalletBusinessLogic {
 		click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
 		waitTime(10000);
 		verifyElementPresentAndClick(MLWalletShopItemsPage.objCategoriesHamburgerMenu, "Categories Hamburger Menu");
-		verifyElementPresent(MLWalletShopItemsPage.objCategory, getTextVal(MLWalletShopItemsPage.objCategory, "Menu"));
+		verifyElementPresent(MLWalletShopItemsPage.objCategoriesHamburgerMenu, getTextVal(MLWalletShopItemsPage.objCategoriesHamburgerMenu, "Menu"));
 		verifyElementPresent(MLWalletShopItemsPage.objAmparitoCollections, getTextVal(MLWalletShopItemsPage.objAmparitoCollections, "Category Header"));
 		verifyElementPresentAndClick(MLWalletShopItemsPage.objRings, getTextVal(MLWalletShopItemsPage.objRings, "Product Type"));
 		for (int i = 1; i <= 6; i++) {
@@ -5189,7 +5189,7 @@ public class MLWalletBusinessLogic {
 		click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
 		waitTime(10000);
 		verifyElementPresentAndClick(MLWalletShopItemsPage.objCategoriesHamburgerMenu, "Categories Hamburger Menu");
-		verifyElementPresent(MLWalletShopItemsPage.objCategory, getTextVal(MLWalletShopItemsPage.objCategory, "Menu"));
+		verifyElementPresent(MLWalletShopItemsPage.objCategoriesHamburgerMenu, getTextVal(MLWalletShopItemsPage.objCategoriesHamburgerMenu, "Menu"));
 		verifyElementPresent(MLWalletShopItemsPage.objAmparitoCollections, getTextVal(MLWalletShopItemsPage.objAmparitoCollections, "Category Header"));
 		verifyElementPresentAndClick(MLWalletShopItemsPage.objNecklacePendants, getTextVal(MLWalletShopItemsPage.objNecklacePendants, "Product Type"));
 		for (int i = 1; i <= 15; i++) {
@@ -5209,7 +5209,7 @@ public class MLWalletBusinessLogic {
 		click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
 		waitTime(10000);
 		verifyElementPresentAndClick(MLWalletShopItemsPage.objCategoriesHamburgerMenu, "Categories Hamburger Menu");
-		verifyElementPresent(MLWalletShopItemsPage.objCategory, getTextVal(MLWalletShopItemsPage.objCategory, "Menu"));
+		verifyElementPresent(MLWalletShopItemsPage.objCategoriesHamburgerMenu, getTextVal(MLWalletShopItemsPage.objCategoriesHamburgerMenu, "Menu"));
 		verifyElementPresent(MLWalletShopItemsPage.objAmparitoCollections, getTextVal(MLWalletShopItemsPage.objAmparitoCollections, "Category Header"));
 		verifyElementPresentAndClick(MLWalletShopItemsPage.objBraceletAndBangle, getTextVal(MLWalletShopItemsPage.objBraceletAndBangle, "Product Type"));
 		for (int i = 1; i <= 6; i++) {
@@ -5229,7 +5229,7 @@ public class MLWalletBusinessLogic {
 		click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
 		waitTime(10000);
 		verifyElementPresentAndClick(MLWalletShopItemsPage.objCategoriesHamburgerMenu, "Categories Hamburger Menu");
-		verifyElementPresent(MLWalletShopItemsPage.objCategory, getTextVal(MLWalletShopItemsPage.objCategory, "Menu"));
+		verifyElementPresent(MLWalletShopItemsPage.objCategoriesHamburgerMenu, getTextVal(MLWalletShopItemsPage.objCategoriesHamburgerMenu, "Menu"));
 		verifyElementPresent(MLWalletShopItemsPage.objAmparitoCollections, getTextVal(MLWalletShopItemsPage.objAmparitoCollections, "Category Header"));
 		verifyElementPresentAndClick(MLWalletShopItemsPage.objEarrings, getTextVal(MLWalletShopItemsPage.objEarrings, "Product Type"));
 		for (int i = 1; i <= 7; i++) {
@@ -5249,7 +5249,7 @@ public class MLWalletBusinessLogic {
 		click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
 		waitTime(10000);
 		verifyElementPresentAndClick(MLWalletShopItemsPage.objCategoriesHamburgerMenu, "Categories Hamburger Menu");
-		verifyElementPresent(MLWalletShopItemsPage.objCategory, getTextVal(MLWalletShopItemsPage.objCategory, "Menu"));
+		verifyElementPresent(MLWalletShopItemsPage.objCategoriesHamburgerMenu, getTextVal(MLWalletShopItemsPage.objCategoriesHamburgerMenu, "Menu"));
 		verifyElementPresent(MLWalletShopItemsPage.objAmparitoCollections, getTextVal(MLWalletShopItemsPage.objAmparitoCollections, "Category Header"));
 		verifyElementPresentAndClick(MLWalletShopItemsPage.objPendant, getTextVal(MLWalletShopItemsPage.objPendant, "Product Type"));
 		for (int i = 1; i <= 6; i++) {
@@ -5269,7 +5269,7 @@ public class MLWalletBusinessLogic {
 		click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
 		waitTime(10000);
 		verifyElementPresentAndClick(MLWalletShopItemsPage.objCategoriesHamburgerMenu, "Categories Hamburger Menu");
-		verifyElementPresent(MLWalletShopItemsPage.objCategory, getTextVal(MLWalletShopItemsPage.objCategory, "Menu"));
+		verifyElementPresent(MLWalletShopItemsPage.objCategoriesHamburgerMenu, getTextVal(MLWalletShopItemsPage.objCategoriesHamburgerMenu, "Menu"));
 		verifyElementPresent(MLWalletShopItemsPage.objAmparitoCollections, getTextVal(MLWalletShopItemsPage.objAmparitoCollections, "Category Header"));
 		if (verifyElementPresentAndClick(MLWalletShopItemsPage.objTernoAndSet, getTextVal(MLWalletShopItemsPage.objTernoAndSet, "Product Type"))) {
 			verifyElementPresent(MLWalletShopItemsPage.objTernoAndSetSubTypes, getTextVal(MLWalletShopItemsPage.objTernoAndSetSubTypes, "Terno and Set SubType"));
@@ -5288,7 +5288,7 @@ public class MLWalletBusinessLogic {
 		click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
 		waitTime(10000);
 		verifyElementPresentAndClick(MLWalletShopItemsPage.objCategoriesHamburgerMenu, "Categories Hamburger Menu");
-		verifyElementPresent(MLWalletShopItemsPage.objCategory, getTextVal(MLWalletShopItemsPage.objCategory, "Menu"));
+		verifyElementPresent(MLWalletShopItemsPage.objCategoriesHamburgerMenu, getTextVal(MLWalletShopItemsPage.objCategoriesHamburgerMenu, "Menu"));
 		verifyElementPresent(MLWalletShopItemsPage.objAmparitoCollections, getTextVal(MLWalletShopItemsPage.objAmparitoCollections, "Category Header"));
 		if (verifyElementPresentAndClick(MLWalletShopItemsPage.objWeddingRing, getTextVal(MLWalletShopItemsPage.objWeddingRing, "Product Type"))) {
 			verifyElementPresent(MLWalletShopItemsPage.objWeddingRingSubTypes, getTextVal(MLWalletShopItemsPage.objWeddingRingSubTypes, "Wedding Ring SubType"));
@@ -5306,7 +5306,7 @@ public class MLWalletBusinessLogic {
 		click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
 		waitTime(10000);
 		verifyElementPresentAndClick(MLWalletShopItemsPage.objCategoriesHamburgerMenu, "Categories Hamburger Menu");
-		verifyElementPresent(MLWalletShopItemsPage.objCategory, getTextVal(MLWalletShopItemsPage.objCategory, "Menu"));
+		verifyElementPresent(MLWalletShopItemsPage.objCategoriesHamburgerMenu, getTextVal(MLWalletShopItemsPage.objCategoriesHamburgerMenu, "Menu"));
 		verifyElementPresent(MLWalletShopItemsPage.objAmparitoCollections, getTextVal(MLWalletShopItemsPage.objAmparitoCollections, "Category Header"));
 		if (verifyElementPresentAndClick(MLWalletShopItemsPage.objPinBrouchAndScalpings, getTextVal(MLWalletShopItemsPage.objPinBrouchAndScalpings, "Product Type"))) {
 			verifyElementPresent(MLWalletShopItemsPage.objPinBrouchAndScalpingsSubTypes, getTextVal(MLWalletShopItemsPage.objPinBrouchAndScalpingsSubTypes, "Pin, Brouch & Scalpings SubType"));
@@ -5325,7 +5325,7 @@ public class MLWalletBusinessLogic {
 		click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
 		waitTime(10000);
 		verifyElementPresentAndClick(MLWalletShopItemsPage.objCategoriesHamburgerMenu, "Categories Hamburger Menu");
-		verifyElementPresent(MLWalletShopItemsPage.objCategory, getTextVal(MLWalletShopItemsPage.objCategory, "Menu"));
+		verifyElementPresent(MLWalletShopItemsPage.objCategoriesHamburgerMenu, getTextVal(MLWalletShopItemsPage.objCategoriesHamburgerMenu, "Menu"));
 		verifyElementPresent(MLWalletShopItemsPage.objAmparitoCollections, getTextVal(MLWalletShopItemsPage.objAmparitoCollections, "Category Header"));
 		verifyElementPresentAndClick(MLWalletShopItemsPage.objWatches, getTextVal(MLWalletShopItemsPage.objWatches, "Product Type"));
 		for (int i = 1; i <= 8; i++) {

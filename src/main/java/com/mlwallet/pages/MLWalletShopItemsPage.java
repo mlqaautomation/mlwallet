@@ -93,7 +93,7 @@ public class MLWalletShopItemsPage {
 	public static By objMyAccountDropdown = By.xpath("//*[@text='My Account']");
 	public static By objMyAccountPageCrossBtn = By.xpath("//*[@resource-id='close-sidebar']/child::android.widget.TextView");
 	public static By objMyProfileHeader = By.xpath("(//*[@text='My Profile'])[2]");
-	public static By objMyPurchase = By.xpath("//*[@text='Purchase History']");
+	public static By objMyPurchase = By.xpath("//*[@text='My Purchases']");
 	public static By objOrderDetails = By.xpath("//*[@resource-id='orderDetails']");
 	public static By objSubtotalAmount = By.xpath("//*[@resource-id='cart-subtotal']");
 	public static By objSelectedItemPrice = By.xpath("((//*[@class='android.widget.CheckBox'])[1]/following-sibling::android.widget.TextView)[2]");
@@ -109,39 +109,43 @@ public class MLWalletShopItemsPage {
 	public static By objOriginalPrice = By.xpath("((//*[@text='product image'])[1]/parent::android.view.View/following-sibling::android.view.View)[2]/child::android.view.View");
 	public static By objDiscountPrice = By.xpath("(//*[@text='product image'])[1]/parent::android.view.View/following-sibling::android.widget.TextView");
 
-	public static By objCategoriesHamburgerMenu = By.xpath("//*[@resource-id='show-sidebar']");
-	public static By objCategory = By.xpath("//*[@text='CATEGORY']");
+	public static By objCategoriesHamburgerMenu = By.xpath("//*[contains(@text,'C A T E G O R Y')]");
 	public static By objAmparitoCollections = By.xpath("//*[@text='Amparito Collections']");
 	public static By objFineJewelry = By.xpath("//*[@text='Fine Jewelry']");
 	public static By objAmparitoCollectionsProductTypes(int i) {
 		return By.xpath("(//*[@text='Amparito Collections']/parent::android.view.View/following-sibling::android.view.View/child::android.widget.TextView)["+i+"]");
 	}
 	public static By objRings = By.xpath("//*[@text='Rings']");
+
+	public static By objNecklacePendants= By.xpath("//*[@text='Necklaces & Pendants']");
+
+	public static By objBraceletAndBangle = By.xpath("//*[@text='Bracelets & Bangles']");
+	public static By objRing = By.xpath("//*[contains(@text,'Ring')]");
 	public static By objRingsSubTypes(int i){
 		return By.xpath("(//*[@resource-id='amparitoCollRing1']/child::android.widget.Button)["+i+"]");
 	}
-	public static By objNecklacePendants= By.xpath("//*[@text='Necklaces & Pendants']");
+	public static By objNecklace = By.xpath("//*[contains(@text,'Necklace')]");
 	public static By objNecklaceSubTypes(int i){
 		return By.xpath("(//*[@text='Necklace']/following-sibling::android.view.View/child::android.widget.Button)["+i+"]");
 	}
-	public static By objBraceletAndBangle = By.xpath("//*[@text='Bracelets & Bangles']");
+
 	public static By objBraceletAndBangleSubTypes(int i){
 		return By.xpath("(//*[@text='Bracelet & Bangle']/following-sibling::android.view.View/child::android.widget.Button)["+i+"]");
 	}
-	public static By objEarrings = By.xpath("//*[@text='Earrings']");
+	public static By objEarrings = By.xpath("//*[contains(@text,'Earrings')]");
 	public static By objEarringsSubTypes(int i){
-		return By.xpath("(//*[@text='Earrings']/following-sibling::android.view.View/child::android.widget.Button)["+i+"]");
+		return By.xpath("(//*[contains(@text,'Earrings')]/following-sibling::android.view.View/child::android.widget.Button)["+i+"]");
 	}
-	public static By objPendant = By.xpath("//*[@text='Pendant']");
+	public static By objPendant = By.xpath("//*[contains(@text,'Pendant')]");
 	public static By objPendantSubTypes(int i){
 		return By.xpath("(//*[@text='Pendant']/following-sibling::android.view.View/child::android.widget.Button)["+i+"]");
 	}
-	public static By objTernoAndSet = By.xpath("//*[@text='Terno & Set']");
+	public static By objTernoAndSet = By.xpath("//*[contains(@text,'Terno & Set')]");
 	public static By objTernoAndSetSubTypes = By.xpath("//*[@text='Terno & Set']/following-sibling::android.view.View/child::android.widget.Button");
 	public static By objWeddingRing = By.xpath("//*[@text='Wedding Ring']");
 	public static By objWeddingRingSubTypes = By.xpath("//*[@text='Wedding Ring']/following-sibling::android.view.View/child::android.widget.Button");
 
-	public static By objPinBrouchAndScalpings = By.xpath("//*[@text='Pin, Brouch & Scaplings']");
+	public static By objPinBrouchAndScalpings = By.xpath("//*[contains(@text,'Brooch')]");
 	public static By objPinBrouchAndScalpingsSubTypes = By.xpath("//*[@text='Pin, Brouch & Scaplings']/following-sibling::android.view.View/child::android.widget.Button");
 
 	public static By objWatches = By.xpath("//*[@text='Watches']");
@@ -192,7 +196,7 @@ public class MLWalletShopItemsPage {
 	public static By objDeleteExitButton =By.xpath("//*[@text='Are you sure to remove this item?']/parent::android.view.View/preceding-sibling::android.view.View/child::android.widget.Button");
 	public static By objConfirmAddCarButton = By.xpath("//*[@text='Confirm']");
 	public static By objSuccessAddtoCartMsg = By.xpath("//*[@resource-id='swal2-html-container']");
-	public static By objExitHamburgerMenu = By.xpath("//*[@content-desc='Profile']/parent::android.view.View/preceding-sibling::android.view.View");
+	public static By objExitHamburgerMenu = By.xpath("");
 
 	public static By objShoppingCartIcon=By.xpath("//android.view.View/child::android.view.View");
 
@@ -236,25 +240,10 @@ public class MLWalletShopItemsPage {
 	}
 	public static By objPaymongoPortalPage=By.xpath("//*[@text='PayMongo Logo']");
 	public static By objPaymongoPaymentAmount=By.xpath("//*[@text='Payment amount']/following-sibling::android.widget.TextView");
-
-	public static By objGreatSalesText=By.xpath("//android.widget.TextView[@text='GREAT SUMMER SALE']");
-
-	public static By objJewelryText=By.xpath("//android.widget.TextView[@text='Jewelry']");
-	public static By objContactUsText=By.xpath("//android.widget.TextView[@text='Contact Us']");
-	public static By objShopCartText=By.xpath("//android.widget.TextView[@text='Shopping Cart']");
-	public static By objProfileText=By.xpath("//android.widget.TextView[@text='Full Name']");
-	public static By objPurchaseText=By.xpath("//android.widget.TextView[@text='ML Shop Jewelry Store']");
-	public static By objLogout = By.xpath("//android.widget.TextView[@text='Logout']");
-	public static By objLogoutText=By.xpath("//android.widget.TextView[@text='GREAT SUMMER SALE']");
-
 	public static By objFilter = By.xpath("//*[@text='Filter']");
 	public static By objExitFilterIcon = By.xpath("//*[@text='C A T E G O R Y']/preceding-sibling::android.view.View");
 	public static By objAllCheckBox = By.xpath("//android.widget.CheckBox");
 	public static By objSelectMaterialOptions(String option){
-		return By.xpath("//*[@text='"+option+"']");
-	}
-
-	public static By objSelectMaterialColorOptions(String option){
 		return By.xpath("//*[@text='"+option+"']");
 	}
 

@@ -1,0 +1,18 @@
+
+a	java:S112‘"FDefine and throw a dedicated exception instead of using a generic one.(þ´Õœùÿÿÿÿ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹îÒ«
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(°Þ¼
+c	java:S100>"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß †ã
+ˆ
+java:S1130‘"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(þ´Õœùÿÿÿÿ
+W	java:S125›"<This block of commented-out lines of code should be removed.(Ñ¯Òãûÿÿÿÿ
+c
+java:S1128"FRemove this unused import 'com.propertyfilereader.PropertyFileReader'.( ñÏÎ8—ò¹Â±1
+T
+java:S1128"7Remove this unused import 'com.utility.ExtentReporter'.(½ÇÈÍ8—ò¹Â±1
+R
+java:S1128"5Remove this unused import 'com.utility.LoggingUtils'.(çªÖÂ8—ò¹Â±1
+P
+java:S1128".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8—ò¹Â±1
+L
+java:S1128"*Remove this unused import 'java.util.Map'.(¼è½Òþÿÿÿÿ8—ò¹Â±1
