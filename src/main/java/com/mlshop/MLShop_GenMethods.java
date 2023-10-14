@@ -7,6 +7,7 @@ import com.mlwallet.pages.MLWalletShopItemsPage;
 import com.propertyfilereader.PropertyFileReader;
 import com.utility.ExtentReporter;
 import com.utility.LoggingUtils;
+import com.utility.Utilities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -18,6 +19,7 @@ import static com.utility.Utilities.*;
 import static com.utility.Utilities.waitTime;
 
 public class MLShop_GenMethods extends BaseClass {
+
     public MLShop_GenMethods(String Application, String deviceName, String portno) throws InterruptedException {
         super(Application, deviceName, portno);
 
@@ -134,5 +136,29 @@ public class MLShop_GenMethods extends BaseClass {
         }
     }
 
-
+    public void clickSort() throws Exception{
+        click(MLWalletShopItemsPage.objsortByPrice, getTextVal(MLWalletShopItemsPage.objsortByPrice, "Option"));
+    }
+    public void filterGender(By genderLocator) throws Exception {
+        click(MLWalletShopItemsPage.objFilter, "Filter");
+        Swipe("UP", 3);
+        clickAllVisibleCheckBox(MLWalletShopItemsPage.objAllCheckBox);
+        waitTime(5000);
+        click(genderLocator, "Gender Selected");
+        waitTime(5000);
+        Swipe("DOWN", 3);
+        waitTime(5000);
+        click(MLWalletShopItemsPage.objExitFilterIcon, "Exit");
+    }
+    public void setFilterPriceRange(String min, String max) throws Exception{
+        click(MLWalletShopItemsPage.objFilter, "Filter");
+        Swipe("UP", 4);
+        waitTime(5000);
+        type(MLWalletShopItemsPage.objMin, min, "Value");
+        waitTime(5000);
+        type(MLWalletShopItemsPage.objMax, max, "Value");
+        Swipe("DOWN", 4);
+        waitTime(5000);
+        click(MLWalletShopItemsPage.objExitFilterIcon, "Exit");
+    }
 }

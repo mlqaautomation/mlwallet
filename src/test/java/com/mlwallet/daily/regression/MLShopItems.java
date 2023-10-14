@@ -25,9 +25,22 @@ public class MLShopItems {
         MLShopItems.portno= portno;
         shopItems = new MLShop_TestCases("MLWallet",deviceName,portno);
     }
-
+//    @Test(priority = 0)
+//   public void shopItemsJewelryAvailabilityProductTypesUIValidation_MLS_TC_18() throws Exception
+//    {
+//        shopItems.shopItemsJewelryAvailabilityProductTypesUIValidation_MLS_TC_18();
+//    }
+//    @Test(priority = 1)
+//    public void shopItemsSelectedItemScreenRingsDetailsUIValidation_MLS_TC_20() throws Exception
+//    {
+//        shopItems.shopItemsSelectedItemScreenRingsDetailsUIValidation_MLS_TC_20();
+//    }
 //
-
+//    @Test(priority = 2)
+//    public void shopItemsSelectedItemScreenBraceletAndBangleDetailsUIValidation_MLS_TC_21() throws Exception
+//    {
+//        shopItems.shopItemsSelectedItemScreenBraceletAndBangleDetailsUIValidation_MLS_TC_21();
+//    }
 //    @Test(priority = 1)
 //    public void MLShop_PurchaseItemViaMlWallet_TC_178() throws Exception
 //    {
@@ -108,12 +121,6 @@ public class MLShopItems {
 //        shopItems.MLShop_ExitIcon_TC_13();
 //    }
 
-
-    @Test(priority = 1)
-    public void MLShop_Select10kMaterialDisplayProductionValidation_SI_TC_41() throws Exception
-    {
-        shopItems.MLShop_Select10kMaterialDisplayProductValidation_SI_TC_41();
-    }
 //
 //    @Test(priority = 2)
 //    public void MLShop_Select14kMaterialDisplayProductionValidation_SI_TC_42() throws Exception
@@ -180,7 +187,21 @@ public class MLShopItems {
 //    {
 //        shopItems.MLShop_SelectTriToneMaterialColorDisplayProductValidation_SI_TC_52();
 //    }
-
+    @Test(priority = 13)
+    public void MLShop_FilteringLadiesProduct_SI_TC_53() throws Exception
+    {
+        shopItems.MLShop_FilteringLadiesProduct_SI_TC_53();
+    }
+    @Test(priority = 14)
+    public void MLShop_FilteringMensProduct_SI_TC_54() throws Exception
+    {
+        shopItems.MLShop_FilteringMensProduct_SI_TC_54();
+    }
+    @Test(priority = 15)
+    public void MLShop_FilteringUnisexProduct_SI_TC_55() throws Exception
+    {
+        shopItems.MLShop_FilteringUnisexProduct_SI_TC_55();
+    }
     @AfterMethod
     public void afterMethod(){
         AppiumServer.stopServer();
