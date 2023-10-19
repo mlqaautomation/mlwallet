@@ -198,6 +198,10 @@ public class Utilities extends ExtentReporter {
         return element;
     }
 
+    public static String getTextFromElement(By locator) {
+        WebElement element = DriverManager.getAppiumDriver().findElement(locator);
+        return element.getText();
+    }
 
     public static void setWifiConnectionToONOFF(String Value) {
         try {
@@ -2714,7 +2718,7 @@ public class Utilities extends ExtentReporter {
 
     public static String getTextVal(By byLocator, String concatValue) throws Exception {
         String Value = null;
-        WebElement element = DriverManager.getAppiumDriver().findElement(byLocator);
+        WebElement element = DriverManager.getAppiumDriver().   findElement(byLocator);
         Value = element.getText();
         String finalValue = Value + " " + concatValue;
         return finalValue;
