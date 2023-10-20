@@ -266,5 +266,24 @@ public class MLWalletShopItemsPage {
 	public static By objLogout = By.xpath("//android.widget.TextView[@text='Logout']");
 	public static By objLogoutText=By.xpath("//android.widget.TextView[@text='GREAT SUMMER SALE']");
 
+	public static By objFilter = By.xpath("//*[@text='Filter']");
+	public static By objExitFilterIcon = By.xpath("//*[@text='C A T E G O R Y']/preceding-sibling::android.view.View");
+	public static By objAllCheckBox = By.xpath("//android.widget.CheckBox");
+	public static By objSelectMaterialOptions(String option){
+		return By.xpath("//*[@text='"+option+"']");
+	}
+
+	public static By objSelectMaterialColorOptions(String option){
+		return By.xpath("//*[@text='"+option+"']");
+	}
+
+	public static By objItemDescription = By.xpath("//*[@text='Sort by: Price']/following-sibling::android.widget.Spinner/following-sibling::android.view.View/child::android.view.View[2]");
+	public static By objNoProductFound= By.xpath("//*[@text='No Products Found!']");
+	public static By objItemName = By.xpath("//*[@text='Sort by: Price']/following-sibling::android.widget.Spinner/following-sibling::android.view.View/child::android.view.View[1]");
+	public static By objMin=By.xpath("//*[@text='Min']/following-sibling::android.widget.EditText[1]");
+	public static By objMax=By.xpath("//*[@text='Max']/following-sibling::android.widget.EditText[1]");
+
+	public static By objsortByPrice=By.xpath("//*[@text='Sort by: Price']/following-sibling::android.widget.Spinner");
+
 
 }

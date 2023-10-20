@@ -123,7 +123,6 @@ public class MLShopItems {
 //        shopItems.MLShop_PaymongoPortalDirectOnlineBank_TC_209();
 //    }
 
-
 //
 //    @Test(priority = 2)
 //    public void MLShop_Select14kMaterialDisplayProductionValidation_SI_TC_42() throws Exception
@@ -206,7 +205,21 @@ public class MLShopItems {
 //    {
 //        shopItems.MLShop_BrouchCheckboxProductTypeUiValidation_TC_40();
 //    }
-
+    @Test(priority = 13)
+    public void MLShop_FilteringLadiesProduct_SI_TC_53() throws Exception
+    {
+        shopItems.MLShop_FilteringLadiesProduct_SI_TC_53();
+    }
+    @Test(priority = 14)
+    public void MLShop_FilteringMensProduct_SI_TC_54() throws Exception
+    {
+        shopItems.MLShop_FilteringMensProduct_SI_TC_54();
+    }
+    @Test(priority = 15)
+    public void MLShop_FilteringUnisexProduct_SI_TC_55() throws Exception
+    {
+        shopItems.MLShop_FilteringUnisexProduct_SI_TC_55();
+    }
     @AfterMethod
     public void afterMethod(){
         AppiumServer.stopServer();

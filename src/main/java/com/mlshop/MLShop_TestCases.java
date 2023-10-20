@@ -8,6 +8,9 @@ import com.utility.ExtentReporter;
 import static com.mlwallet.pages.MLWalletShopItemsPage.*;
 import java.util.List;
 import static com.mlwallet.pages.MLWalletShopItemsPage.objSelectMaterialOptions;
+import com.mlwallet.pages.MLWalletShopItemsPage;
+import com.utility.ExtentReporter;
+
 import static com.utility.Utilities.*;
 import static com.utility.Utilities.click;
 
@@ -227,9 +230,7 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
         selectFilterMaterial(objSelectMaterialOptions("10k"), MLWalletShopItemsPage.objItemDescription);
         logger.info("Select 10k material display Product validated successfully");
-        ExtentReporter.extentLoggerPass("MLS_TC_41","Select 10k material display Product validated successfully");
-        selectFilterMaterial(objSelectMaterialOptions("10k"), MLWalletShopItemsPage.objItemDescription);
-        logger.info("Select 10k material display Production validated successfully");
+        ExtentReporter.extentLoggerPass("MLS_TC_41","Select 10k material display Product validated successfully");        
     }
 
     public void MLShop_Select14kMaterialDisplayProductionValidation_SI_TC_42() throws Exception {
@@ -313,8 +314,6 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         Swipe("UP", 2);
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
         selectFilterMaterial(objSelectMaterialOptions("Yellow Gold"), MLWalletShopItemsPage.objItemDescription);
-        logger.info("Select Yellow Gold material color display product validated successfully");
-        ExtentReporter.extentLoggerPass("MLS_TC_48","Select Yellow Gold material color display product validated successfully");
         Swipe("up", 2);
         verifyElementPresentAndClick(MLWalletShopItemsPage.objNecklace, "Necklace item");
         verifyElementPresentAndClick(MLWalletShopItemsPage.objFilter,"Filter");
@@ -331,10 +330,7 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         shopItemsNavigation();
         Swipe("UP", 2);
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
-        selectFilterMaterial(objSelectMaterialOptions("White Gold"), MLWalletShopItemsPage.objItemDescription);
-        logger.info("Select White Gold material color display product validated successfully");
-        ExtentReporter.extentLoggerPass("MLS_TC_49","Select White Gold material color display product validated successfully");
-        Swipe("up", 2);
+        selectFilterMaterial(objSelectMaterialOptions("White Gold"), MLWalletShopItemsPage.objItemDescription);    
         verifyElementPresentAndClick(MLWalletShopItemsPage.objBraceletAndBangle, "Bracelet And Bangle item");
         verifyElementPresentAndClick(MLWalletShopItemsPage.objFilter,"Filter");
         if(verifyElementPresent(MLWalletShopItemsPage.objCategoriesHamburgerMenu,"Menu")){
@@ -350,10 +346,7 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         shopItemsNavigation();
         Swipe("UP", 2);
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
-        selectFilterMaterial(objSelectMaterialOptions("Rose Gold"), MLWalletShopItemsPage.objItemDescription);
-        logger.info("Select Rose Gold material color display product validated successfully");
-        ExtentReporter.extentLoggerPass("MLS_TC_50","Select Rose Gold material color display product validated successfully");
-
+        selectFilterMaterial(objSelectMaterialOptions("Rose Gold"), MLWalletShopItemsPage.objItemDescription);    
         Swipe("up", 2);
         verifyElementPresentAndClick(MLWalletShopItemsPage.objEarrings, "Earrings item");
         verifyElementPresentAndClick(MLWalletShopItemsPage.objFilter,"Filter");

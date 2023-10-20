@@ -154,7 +154,6 @@ public class MLShop_GenMethods extends BaseClass {
         }
     }
 
-
     public void clickSort() throws Exception{
         click(MLWalletShopItemsPage.objsortByPrice, getTextVal(MLWalletShopItemsPage.objsortByPrice, "Option"));
     }
