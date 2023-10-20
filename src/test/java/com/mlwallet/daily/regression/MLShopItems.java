@@ -25,6 +25,52 @@ public class MLShopItems {
         MLShopItems.portno= portno;
         shopItems = new MLShop_TestCases("MLWallet",deviceName,portno);
     }
+
+//    @Test(priority = 1)
+//    public void MLShop_Homepage_TC_01() throws Exception
+//    {
+//        shopItems.MLShop_Homepage_TC_01();
+//    }
+//    @Test(priority = 2)
+//    public void MLShop_Aboutpage_TC_02() throws Exception
+//    {
+//        shopItems.MLShop_Aboutpage_TC_02();
+//    }
+//    @Test(priority = 3)
+//    public void MLShop_Contactpage_TC_03() throws Exception
+//    {
+//        shopItems.MLShop_Contactpage_TC_03();
+//    }
+//    @Test(priority = 4)
+//
+//    public void MLShop_ShopCart_TC_04() throws Exception
+//    {
+//        shopItems.MLShop_ShopCart_TC_04();
+//    }
+//    @Test(priority = 5)
+//    public void MLShop_Profile_TC_05() throws Exception
+//    {
+//        shopItems.MLShop_Profile_TC_05();
+//    }
+//    @Test(priority = 6)
+//
+//    public void MLShop_PurchaseHistory_TC_06() throws Exception
+//    {
+//        shopItems.MLShop_PurchaseHistory_TC_06();
+//    }
+    @Test(priority = 7)
+    public void MLShop_Logout_TC_07() throws Exception
+    {
+        shopItems.MLShop_Logout_TC_07();
+    }
+
+    @Test(priority = 8)
+    public void MLShop_ExitIcon_TC_13() throws Exception
+    {
+        shopItems.MLShop_ExitIcon_TC_13();
+    }
+
+
 //    @Test(priority = 0)
 //   public void shopItemsJewelryAvailabilityProductTypesUIValidation_MLS_TC_18() throws Exception
 //    {
@@ -41,6 +87,7 @@ public class MLShopItems {
 //    {
 //        shopItems.shopItemsSelectedItemScreenBraceletAndBangleDetailsUIValidation_MLS_TC_21();
 //    }
+
 //    @Test(priority = 1)
 //    public void MLShop_PurchaseItemViaMlWallet_TC_178() throws Exception
 //    {
@@ -75,117 +122,88 @@ public class MLShopItems {
 //    {
 //        shopItems.MLShop_PaymongoPortalDirectOnlineBank_TC_209();
 //    }
-//
-//    @Test(priority = 0)
-//    public void MLShop_Homepage_TC_01() throws Exception
-//    {
-//        shopItems.MLShop_Homepage_TC_01();
-//    }
-//    @Test(priority = 0)
-//    public void MLShop_Aboutpage_TC_02() throws Exception
-//    {
-//        shopItems.MLShop_Aboutpage_TC_02();
-//    }
-//
-//    @Test(priority = 0)
-//    public void MLShop_Contactpage_TC_03() throws Exception
-//    {
-//        shopItems.MLShop_Contactpage_TC_03();
-//    }
-//
-//    @Test(priority = 0)
-//    public void MLShop_ShopCart_TC_04() throws Exception
-//    {
-//        shopItems.MLShop_ShopCart_TC_04();
-//    }
-//    @Test(priority = 0)
-//    public void MLShop_Profile_TC_05() throws Exception
-//    {
-//        shopItems.MLShop_Profile_TC_05();
-//    }
-//    @Test(priority = 0)
-//    public void MLShop_PurchaseHistory_TC_06() throws Exception
-//    {
-//        shopItems.MLShop_PurchaseHistory_TC_06();
-//    }
-//
-//    @Test(priority = 0)
-//    public void MLShop_Logout_TC_07() throws Exception
-//    {
-//        shopItems.MLShop_Logout_TC_07();
-//    }
-//
-//    @Test(priority = 0)
-//    public void MLShop_ExitIcon_TC_13() throws Exception
-//    {
-//        shopItems.MLShop_ExitIcon_TC_13();
-//    }
 
 //
 //    @Test(priority = 2)
 //    public void MLShop_Select14kMaterialDisplayProductionValidation_SI_TC_42() throws Exception
 //    {
-//        shopItems.MLShop_Select14kMaterialDisplayProductValidation_SI_TC_42();
+//        shopItems.MLShop_Select14kMaterialDisplayProductionValidation_SI_TC_42();
 //    }
 //
 //    @Test(priority = 3)
 //    public void MLShop_Select18kMaterialDisplayProductionValidation_SI_TC_43() throws Exception
 //    {
-//        shopItems.MLShop_Select18kMaterialDisplayProductValidation_SI_TC_43();
+//        shopItems.MLShop_Select18kMaterialDisplayProductionValidation_SI_TC_43();
 //    }
 //
 //    @Test(priority = 4)
 //    public void MLShop_Select20kMaterialDisplayProductionValidation_SI_TC_44() throws Exception
 //    {
-//        shopItems.MLShop_Select20kMaterialDisplayProductValidation_SI_TC_44();
+//        shopItems.MLShop_Select20kMaterialDisplayProductionValidation_SI_TC_44();
 //    }
 //
 //    @Test(priority = 5)
 //    public void MLShop_Select21kMaterialDisplayProductionValidation_SI_TC_45() throws Exception
 //    {
-//        shopItems.MLShop_Select21kMaterialDisplayProductValidation_SI_TC_45();
+//        shopItems.MLShop_Select21kMaterialDisplayProductionValidation_SI_TC_45();
 //    }
 //
 //    @Test(priority = 6)
 //    public void MLShop_Select22kMaterialDisplayProductionValidation_SI_TC_46() throws Exception
 //    {
-//        shopItems.MLShop_Select22kMaterialDisplayProductValidation_SI_TC_46();
+//        shopItems.MLShop_Select22kMaterialDisplayProductionValidation_SI_TC_46();
 //    }
 //
 //    @Test(priority = 7)
 //    public void MLShop_Select12kMaterialDisplayProductionValidation_SI_TC_47() throws Exception
 //    {
-//        shopItems.MLShop_Select12kMaterialDisplayProductValidation_SI_TC_47();
+//        shopItems.MLShop_Select12kMaterialDisplayProductionValidation_SI_TC_47();
 //    }
-//
-//    @Test(priority = 8)
-//    public void MLShop_SelectYellowGoldMaterialColorDisplayProductValidation_SI_TC_48() throws Exception
+
+//    @Test(priority = 13)
+//    public void MLShop_FilteringLadiesProduct_SI_TC_53() throws Exception
 //    {
-//        shopItems.MLShop_SelectYellowGoldMaterialColorDisplayProductValidation_SI_TC_48();
+//        shopItems.MLShop_FilteringLadiesProduct_SI_TC_53();
 //    }
-//
-//    @Test(priority = 9)
-//    public void MLShop_SelectWhiteGoldMaterialColorDisplayProductValidation_SI_TC_49() throws Exception
+//    @Test(priority = 14)
+//    public void MLShop_FilteringMensProduct_SI_TC_54() throws Exception
 //    {
-//        shopItems.MLShop_SelectWhiteGoldMaterialColorDisplayProductValidation_SI_TC_49();
+//        shopItems.MLShop_FilteringMensProduct_SI_TC_54();
 //    }
+//    @Test(priority = 15)
+//    public void MLShop_FilteringUnisexProduct_SI_TC_55() throws Exception {
+//        shopItems.MLShop_FilteringUnisexProduct_SI_TC_55();
 //
-//    @Test(priority = 10)
-//    public void MLShop_SelectRoseGoldMaterialColorDisplayProductValidation_SI_TC_50() throws Exception
-//    {
-//        shopItems.MLShop_SelectRoseGoldMaterialColorDisplayProductValidation_SI_TC_50();
 //    }
-//
-//    @Test(priority = 11)
-//    public void MLShop_SelectTwoToneMaterialColorDisplayProductValidation_SI_TC_51() throws Exception
+//    @Test(priority = 1)
+//    public void MLShop_NecklaceCheckboxProductTypeUiValidation_TC_35() throws Exception
 //    {
-//        shopItems.MLShop_SelectTwoToneMaterialColorDisplayProductValidation_SI_TC_51();
+//        shopItems.MLShop_NecklaceCheckboxProductTypeUiValidation_TC_35();
 //    }
-//
-//    @Test(priority = 12)
-//    public void MLShop_SelectTriToneMaterialColorDisplayProductValidation_SI_TC_52() throws Exception
+//    @Test(priority = 2)
+//    public void MLShop_objBraceletAndBangleCheckboxProductTypeUiValidation_TC_36() throws Exception
 //    {
-//        shopItems.MLShop_SelectTriToneMaterialColorDisplayProductValidation_SI_TC_52();
+//        shopItems.MLShop_objBraceletAndBangleCheckboxProductTypeUiValidation_TC_36();
+//    }
+//    @Test(priority = 3)
+//    public void MLShop_EarringsCheckboxProductTypeUiValidation_TC_37() throws Exception
+//    {
+//        shopItems.MLShop_EarringsCheckboxProductTypeUiValidation_TC_37();
+//    }
+//    @Test(priority = 4)
+//    public void MLShop_PendantCheckboxProductTypeUiValidation_TC_38() throws Exception
+//    {
+//        shopItems.MLShop_PendantCheckboxProductTypeUiValidation_TC_38();
+//    }
+//    @Test(priority = 5)
+//    public void MLShop_SetsCheckboxProductTypeUiValidation_TC_39() throws Exception
+//    {
+//        shopItems.MLShop_SetsCheckboxProductTypeUiValidation_TC_39();
+//    }
+//    @Test(priority = 6)
+//    public void MLShop_BrouchCheckboxProductTypeUiValidation_TC_40() throws Exception
+//    {
+//        shopItems.MLShop_BrouchCheckboxProductTypeUiValidation_TC_40();
 //    }
     @Test(priority = 13)
     public void MLShop_FilteringLadiesProduct_SI_TC_53() throws Exception
