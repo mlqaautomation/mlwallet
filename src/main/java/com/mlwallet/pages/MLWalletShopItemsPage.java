@@ -12,9 +12,9 @@ public class MLWalletShopItemsPage {
 	public static By objCheckBox=By.xpath("(//*[@class='android.widget.CheckBox'])[1]");
 	public static By objSelectItem = By.xpath("(//*[@text='High to Low' or @text='Low to High']/following-sibling::android.view.View[1]/child::android.widget.TextView[1])");
 	public static By objAddToCartBtn=By.xpath("//*[@text='Add To Cart']");
-	public static By objHamburgerMenu=By.xpath("//*[@class='android.widget.TextView']/parent::android.webkit.WebView/child::android.view.View/child::android.widget.Image");
+	public static By objHamburgerMenu=By.xpath("//*[@text='Enjoy up to 50% Discount on Selected Items']/following-sibling::android.view.View/child::android.widget.Image");
 	public static By objCart=By.xpath("//*[@content-desc='Cart']");
-	public static By objCartIcon = By.xpath("//*[@class='android.widget.TextView']/parent::android.webkit.WebView/child::android.view.View[1]/following-sibling::android.view.View[1]/child::android.view.View");
+	public static By objCartIcon = By.xpath("//android.view.View[3]/child::android.view.View/child::android.widget.Image");
 	public static By objEditAddress=By.xpath("//*[@text='   ']");
 	public static By objCheckOutBtn=By.xpath("//android.widget.Button[@text='Checkout']");
 	public static By objSelectBranchPage=By.xpath("//*[@resource-id='exampleModalLabel']");
@@ -264,5 +264,29 @@ public class MLWalletShopItemsPage {
 	public static By objPurchaseText=By.xpath("//android.widget.TextView[@text='ML Shop Jewelry Store']");
 	public static By objLogout = By.xpath("//android.widget.TextView[@text='Logout']");
 	public static By objLogoutText=By.xpath("//android.widget.TextView[@text='GREAT SUMMER SALE']");
+	public static By objHightoLow=By.xpath("//android.widget.CheckedTextView[1]");
+	public static By objLowtoHigh=By.xpath("//android.widget.CheckedTextView[2]");
+	public static By objContinuePaymongo=By.xpath("//*[@text='Continue']");
+	public static By objAgreePolicyPaymongo=By.xpath("//*[@resource-id='privacy-policy']");
+	public static By objCompletePaymentPaymongo=By.xpath("//*[@text='Complete payment']");
+	public static By objAuthorizeTestPaymentPaymongo=By.xpath("//*[@text='Authorize Test Payment']");
+	public static By objSuccessfulGrabPayPayment=By.xpath("//*[@text='GrabPay payment received!']");
+	public static By objSuccessfulGcashPayment=By.xpath("//*[@text='GCash payment received!']");
+	public static By objSuccessfulMayaPayment=By.xpath("//*[@text='Maya payment received!']");
+	public static By objSuccessfulCreditPayment=By.xpath("//*[@text='Credit or debit card payment received!']");
+
+
+	public static By objcardnumberCreditPayment=By.xpath("//*[@resource-id='cardNumber']");
+	public static By objExpMonthCreditPayment=By.xpath("//*[@resource-id='expMonth']");
+	public static By objExpYearCreditPayment=By.xpath("//*[@resource-id='expYear']");
+	public static By
+			objCvcCreditPayment=By.xpath("//*[@resource-id='cvc']");
+	public static By
+			objPaymentGrabPay=By.xpath("//*[@text='GRAB PAY']");
+	public static By
+			objPaymentGcash=By.xpath("//*[@text='GCASH']");
+	public static By
+			objPaymentPayMaya=By.xpath("//*[@text='PAYMAYA']");
+
 
 }

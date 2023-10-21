@@ -36,29 +36,37 @@ public class MLShop_GenMethods extends BaseClass {
         Swipe("UP", 2);
         click(MLWalletShopItemsPage.objItemMenu, "Rings Item");
         waitTime(5000);
+        clickSort();
+        waitTime(5000);
         click(MLWalletShopItemsPage.objSelectItem, getTextVal(MLWalletShopItemsPage.objSelectItem, "Item" ));
         waitTime(5000);
         Swipe("up", 2);
         click(MLWalletShopItemsPage.objAddToCartBtn, "Add to cart Button");
         waitTime(5000);
         click(MLWalletShopItemsPage.objConfirmAddCarButton,"Confirm Button");
+        click(MLWalletShopItemsPage.objConfirmAddCarButton,"Confirm Button");
     }
     public void navigationToCart() throws Exception {
-        click(MLWalletShopItemsPage.objCartIcon ,"Icon");
+        waitTime(5000);
+        click(MLWalletShopItemsPage.objHamburgerMenu ,"Menu");
+        click(MLWalletShopItemsPage.objCart , "Cart");
     }
 
     public void placeOrder(String option) throws Exception {
         logger.info("---------------Place Order----------------");
-        click(MLWalletShopItemsPage.objCheckBox, "Check Box");
+        Swipe("UP", 1);
         click(MLWalletShopItemsPage.objCheckOutBtn, "Checkout Button");
+        waitTime(5000);
         Swipe("UP", 4);
+        waitTime(5000);
         selectPickUpBranch();
         if(option.equals("MLWallet")) {
             selectWalletAsPaymentMethod();
         }else{
             selectEWalletAsPaymentMethod(option);
         }
-        click(MLWalletShopItemsPage.objPlaceOrderBtn ,"Button");
+        Swipe("UP", 2);
+        click(MLWalletShopItemsPage.objPlaceOrderBtn ,"Placer Order Button");
     }
 
     public void mlWallet_ShopItems_Successful_Purchase() throws Exception {
@@ -67,9 +75,10 @@ public class MLShop_GenMethods extends BaseClass {
         Swipe("DOWN", 4);
         navigationToCart();
         placeOrder(shopProp.getproperty("MLWallet"));
-        click(MLWalletShopItemsPage.objProceedBtn, "Proceed Button");
         waitTime(5000);
         enterOTP(prop.getproperty("Valid_OTP"));
+        waitTime(5000);
+        click(MLWalletShopItemsPage.objSuccessFullyCheckOutOkayBtn, "Button");
     }
 
 
@@ -155,7 +164,13 @@ public class MLShop_GenMethods extends BaseClass {
     }
 
     public void clickSort() throws Exception{
+        String value = getText(MLWalletShopItemsPage.objsortByPrice);
         click(MLWalletShopItemsPage.objsortByPrice, getTextVal(MLWalletShopItemsPage.objsortByPrice, "Option"));
+        if(value.equals("High to Low")){
+            click(MLWalletShopItemsPage.objLowtoHigh, "Low to High Option");
+        }else{
+            click(MLWalletShopItemsPage.objHightoLow, "High to Low Option");
+        }
     }
     public void filterGender(By genderLocator) throws Exception {
         click(MLWalletShopItemsPage.objFilter, "Filter");
