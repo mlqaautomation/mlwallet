@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: com.epam.reportportal:logger-java-log4j:5.0.1" type="java-imported" external-system-id="Maven">
+    <properties groupId="com.epam.reportportal" artifactId="logger-java-log4j" version="5.0.1" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/epam/reportportal/logger-java-log4j/5.0.1/logger-java-log4j-5.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/epam/reportportal/logger-java-log4j/5.0.1/logger-java-log4j-5.0.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/epam/reportportal/logger-java-log4j/5.0.1/logger-java-log4j-5.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
