@@ -504,6 +504,7 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         waitTime(5000);
         click(MLWalletShopItemsPage.objSuccessFullyCheckOutOkayBtn, "Button");
         click(objBackArrowBtn, "Exit MLShop Button");
+        Swipe("DOWN", 2);
         assertNotEquals(beforeBal, afterBal);
         logger.info("MLS_TC_202, Wallet Deduction on Success Purchased via Wallet");
         ExtentReporter.extentLoggerPass("MLS_TC_202", "Wallet Deduction on Success Purchased via Wallet");

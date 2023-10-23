@@ -6,7 +6,7 @@ public class MLWalletShopItemsPage {
 
 	public static By objShopItemsTab=By.xpath("//*[@text='Shop']");
 	public static By objMLShopPage=By.xpath("//*[@text='ML Shop']");
-	public static By objItemMenu=By.xpath("//*[@text='Rings']");
+	public static By objItemMenu=By.xpath("//*[@text='Rings']/parent::android.view.View");
 	public static By objHighPrice=By.xpath("//*[@text='High to Low']");
 	public static By objLowPrice=By.xpath("//*[@text='Low to High']");
 	public static By objCheckBox=By.xpath("(//*[@class='android.widget.CheckBox'])[1]");
@@ -29,7 +29,7 @@ public class MLWalletShopItemsPage {
 	public static By objAddressSuccessfulMsg=By.xpath("//*[@text='Successfully Update Delivery Address.']");
 	public static By objOkBtn=By.xpath("//*[@text='Ok' or @text='OK']");
 	public static By objYesBtn=By.xpath("//*[@text='Yes']");
-	public static By objPlaceOrderBtn=By.xpath("//*[@resource-id='PlaceOrder']");
+	public static By objPlaceOrderBtn=By.xpath("//*[@text='Place Order']");
 	public static By objOtpPage=By.xpath("//*[@text='One Time Pin']");
 	public static By objCheckOutConfirmationMsg = By.xpath("//*[@resource-id='mainCheckout']");
 	public static By objOtpTextField=By.xpath("//*[@class='android.widget.EditText']");
@@ -253,7 +253,7 @@ public class MLWalletShopItemsPage {
 	public static By objMin=By.xpath("//*[@text='Min']/following-sibling::android.widget.EditText[1]");
 	public static By objMax=By.xpath("//*[@text='Max']/following-sibling::android.widget.EditText[1]");
 
-	public static By objsortByPrice=By.xpath("//*[@text='Sort by: Price']/following-sibling::android.widget.Spinner");
+	public static By objsortByPrice=By.xpath("//*[@text='High to Low' or @text='Low to High']");
 
 	public static By objGreatSalesText=By.xpath("//android.widget.TextView[@text='HALLOWEEN SALE']");
 

@@ -44,7 +44,6 @@ public class MLShop_GenMethods extends BaseClass {
         click(MLWalletShopItemsPage.objAddToCartBtn, "Add to cart Button");
         waitTime(5000);
         click(MLWalletShopItemsPage.objConfirmAddCarButton,"Confirm Button");
-        click(MLWalletShopItemsPage.objConfirmAddCarButton,"Confirm Button");
     }
     public void navigationToCart() throws Exception {
         waitTime(5000);
@@ -60,12 +59,14 @@ public class MLShop_GenMethods extends BaseClass {
         Swipe("UP", 4);
         waitTime(5000);
         selectPickUpBranch();
+        Swipe("UP", 1);
+        waitTime(5000);
         if(option.equals("MLWallet")) {
             selectWalletAsPaymentMethod();
         }else{
             selectEWalletAsPaymentMethod(option);
         }
-        Swipe("UP", 2);
+        Swipe("UP", 1);
         click(MLWalletShopItemsPage.objPlaceOrderBtn ,"Placer Order Button");
     }
 
