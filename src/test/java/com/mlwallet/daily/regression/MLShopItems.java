@@ -139,43 +139,72 @@ public class MLShopItems {
         shopItems.MLShop_ExitIcon_TC_13();
     }
 
+    @Test(priority = 15)
+    public void MLShop_NecklaceCheckboxProductTypeUiValidation_TC_35() throws Exception
+    {
+        shopItems.MLShop_NecklaceCheckboxProductTypeUiValidation_TC_35();
+    }
 
-//    @Test(priority = 15)
-//    public void MLShop_Select14kMaterialDisplayProductionValidation_SI_TC_42() throws Exception
-//    {
-//        shopItems.MLShop_Select14kMaterialDisplayProductValidation_SI_TC_42();
-//    }
-//
-//    @Test(priority = 16)
-//    public void MLShop_Select18kMaterialDisplayProductionValidation_SI_TC_43() throws Exception
-//    {
-//        shopItems.MLShop_Select18kMaterialDisplayProductValidation_SI_TC_43();
-//    }
-//
-//    @Test(priority = 17)
-//    public void MLShop_Select20kMaterialDisplayProductionValidation_SI_TC_44() throws Exception
-//    {
-//        shopItems.MLShop_Select20kMaterialDisplayProductValidation_SI_TC_44();
-//    }
-//
-//    @Test(priority = 18)
-//    public void MLShop_Select21kMaterialDisplayProductionValidation_SI_TC_45() throws Exception
-//    {
-//        shopItems.MLShop_Select21kMaterialDisplayProductValidation_SI_TC_45();
-//    }
-//
-//    @Test(priority = 19)
-//    public void MLShop_Select22kMaterialDisplayProductionValidation_SI_TC_46() throws Exception
-//    {
-//        shopItems.MLShop_Select22kMaterialDisplayProductValidation_SI_TC_46();
-//    }
-//
-//    @Test(priority = 20)
-//    public void MLShop_Select12kMaterialDisplayProductionValidation_SI_TC_47() throws Exception
-//    {
-//        shopItems.MLShop_Select12kMaterialDisplayProductValidation_SI_TC_47();
-//    }
-//
+    @Test(priority = 16)
+    public void MLShop_objBraceletAndBangleCheckboxProductTypeUiValidation_TC_36() throws Exception
+    {
+        shopItems.MLShop_objBraceletAndBangleCheckboxProductTypeUiValidation_TC_36();
+    }
+
+    @Test(priority = 17)
+    public void MLShop_EarringsCheckboxProductTypeUiValidation_TC_37() throws Exception
+    {
+        shopItems.MLShop_EarringsCheckboxProductTypeUiValidation_TC_37();
+    }
+
+    @Test(priority = 18)
+    public void MLShop_PendantCheckboxProductTypeUiValidation_TC_38() throws Exception
+    {
+        shopItems.MLShop_PendantCheckboxProductTypeUiValidation_TC_38();
+    }
+
+    @Test(priority = 19)
+    public void MLShop_Select10kMaterialDisplayProductionValidation_SI_TC_41() throws Exception
+    {
+        shopItems.MLShop_Select10kMaterialDisplayProductionValidation_SI_TC_41();
+    }
+
+    @Test(priority = 20)
+    public void MLShop_Select14kMaterialDisplayProductionValidation_SI_TC_42() throws Exception
+    {
+        shopItems.MLShop_Select14kMaterialDisplayProductionValidation_SI_TC_42();
+    }
+
+    @Test(priority = 21)
+    public void MLShop_Select18kMaterialDisplayProductionValidation_SI_TC_43() throws Exception
+    {
+        shopItems.MLShop_Select18kMaterialDisplayProductionValidation_SI_TC_43();
+    }
+
+    @Test(priority = 22)
+    public void MLShop_Select20kMaterialDisplayProductionValidation_SI_TC_44() throws Exception
+    {
+        shopItems.MLShop_Select20kMaterialDisplayProductionValidation_SI_TC_44();
+    }
+
+    @Test(priority = 23)
+    public void MLShop_Select21kMaterialDisplayProductionValidation_SI_TC_45() throws Exception
+    {
+        shopItems.MLShop_Select21kMaterialDisplayProductionValidation_SI_TC_45();
+    }
+
+    @Test(priority = 24)
+    public void MLShop_Select22kMaterialDisplayProductionValidation_SI_TC_46() throws Exception
+    {
+        shopItems.MLShop_Select22kMaterialDisplayProductionValidation_SI_TC_46();
+    }
+
+    @Test(priority = 25)
+    public void MLShop_Select12kMaterialDisplayProductionValidation_SI_TC_47() throws Exception
+    {
+        shopItems.MLShop_Select12kMaterialDisplayProductionValidation_SI_TC_47();
+    }
+
 //    @Test(priority = 21)
 //    public void MLShop_SelectYellowGoldMaterialColorDisplayProductValidation_SI_TC_48() throws Exception
 //    {
@@ -200,60 +229,60 @@ public class MLShopItems {
 //        shopItems.MLShop_SelectTwoToneMaterialColorDisplayProductValidation_SI_TC_51();
 //    }
 
-    @Test(priority = 25)
+    @Test(priority = 26)
     public void MLShop_SelectTriToneMaterialColorDisplayProductValidation_SI_TC_52() throws Exception
     {
         shopItems.MLShop_SelectTriToneMaterialColorDisplayProductValidation_SI_TC_52();
     }
-    @Test(priority = 26)
+    @Test(priority = 27)
     public void MLShop_FilteringLadiesProduct_SI_TC_53() throws Exception
     {
         shopItems.MLShop_FilteringLadiesProduct_SI_TC_53();
     }
-    @Test(priority = 27)
+    @Test(priority = 28)
     public void MLShop_FilteringMensProduct_SI_TC_54() throws Exception
     {
         shopItems.MLShop_FilteringMensProduct_SI_TC_54();
     }
-    @Test(priority = 28)
+    @Test(priority = 29)
     public void MLShop_FilteringUnisexProduct_SI_TC_55() throws Exception
     {
         shopItems.MLShop_FilteringUnisexProduct_SI_TC_55();
     }
-    @Test(priority = 29)
+    @Test(priority = 30)
     public void MLShop_WalletDeductOnSuccessPurchased_TC_202() throws Exception{
         shopItems.MLShop_WalletDeductOnSuccessPurchased_TC_202();
     }
-    @Test(priority = 30)
+    @Test(priority = 31)
     public void MLShop_SuccessfullyPurchasedGCash_TC_308() throws Exception{
         shopItems.MLShop_SuccessfullyPurchasedGCash_TC_308();
     }
-    @Test(priority = 31)
+    @Test(priority = 32)
     public void MLShop_SuccessfullyPurchasedGrabPay_TC_309() throws Exception{
         shopItems.MLShop_SuccessfullyPurchasedGrabPay_TC_309();
     }
-    @Test(priority = 32)
+    @Test(priority = 33)
     public void MLShop_SuccessfullyPurchasedPaymaya_TC_310() throws Exception{
         shopItems.MLShop_SuccessfullyPurchasedPaymaya_TC_310();
     }
-    @Test(priority = 33)
+    @Test(priority = 34)
     public void MLShop_SuccessfullyPurchasedVisaMastercard_TC_311() throws Exception{
         shopItems.MLShop_SuccessfullyPurchasedVisaMastercard_TC_311();
     }
-    @Test(priority = 34)
+    @Test(priority = 35)
     public void MLShop_PaymongoVerifyListOfPaymentMethod_TC_204() throws Exception{
         shopItems.MLShop_PaymongoVerifyListOfPaymentMethod_TC_204();
     }
-    @Test(priority = 35)
+    @Test(priority = 36)
     public void shopItemsJewelryAvailabilityProductTypesUIValidation_MLS_TC_18() throws Exception{
         shopItems.shopItemsJewelryAvailabilityProductTypesUIValidation_MLS_TC_18();
     }
 
-    @Test(priority = 36)
+    @Test(priority = 37)
     public void shopItemsSelectedItemScreenRingsDetailsUIValidation_MLS_TC_20() throws Exception{
         shopItems.shopItemsSelectedItemScreenRingsDetailsUIValidation_MLS_TC_20();
     }
-    @Test(priority = 37)
+    @Test(priority = 38)
     public void shopItemsSelectedItemScreenBraceletAndBangleDetailsUIValidation_MLS_TC_21() throws Exception{
         shopItems.shopItemsSelectedItemScreenBraceletAndBangleDetailsUIValidation_MLS_TC_21();
     }
