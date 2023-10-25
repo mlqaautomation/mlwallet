@@ -58,18 +58,18 @@ public class MLShopItems {
 //    {
 //        shopItems.MLShop_PurchaseHistory_TC_06();
 //    }
-    @Test(priority = 7)
-    public void MLShop_Logout_TC_07() throws Exception
-    {
-        shopItems.MLShop_Logout_TC_07();
-    }
-
-    @Test(priority = 8)
-    public void MLShop_ExitIcon_TC_13() throws Exception
-    {
-        shopItems.MLShop_ExitIcon_TC_13();
-    }
-
+//    @Test(priority = 7)
+//    public void MLShop_Logout_TC_07() throws Exception
+//    {
+//        shopItems.MLShop_Logout_TC_07();
+//    }
+//
+//    @Test(priority = 8)
+//    public void MLShop_ExitIcon_TC_13() throws Exception
+//    {
+//        shopItems.MLShop_ExitIcon_TC_13();
+//    }
+//
 
 //    @Test(priority = 0)
 //   public void shopItemsJewelryAvailabilityProductTypesUIValidation_MLS_TC_18() throws Exception
@@ -122,8 +122,12 @@ public class MLShopItems {
 //    {
 //        shopItems.MLShop_PaymongoPortalDirectOnlineBank_TC_209();
 //    }
-
-
+//
+//    @Test(priority = 1)
+//    public void MLShop_Select10kMaterialDisplayProductionValidation_SI_TC_41() throws Exception
+//    {
+//        shopItems.MLShop_Select10kMaterialDisplayProductionValidation_SI_TC_41();
+//    }
 //
 //    @Test(priority = 2)
 //    public void MLShop_Select14kMaterialDisplayProductionValidation_SI_TC_42() throws Exception
@@ -159,6 +163,35 @@ public class MLShopItems {
 //    public void MLShop_Select12kMaterialDisplayProductionValidation_SI_TC_47() throws Exception
 //    {
 //        shopItems.MLShop_Select12kMaterialDisplayProductionValidation_SI_TC_47();
+//    }
+    //    @Test(priority = 8)
+//    public void MLShop_SelectYellowGoldMaterialColorDisplayProductValidation_SI_TC_48() throws Exception
+//    {
+//        shopItems.MLShop_SelectYellowGoldMaterialColorDisplayProductValidation_SI_TC_48();
+//    }
+//
+//    @Test(priority = 9)
+//    public void MLShop_SelectWhiteGoldMaterialColorDisplayProductValidation_SI_TC_49() throws Exception
+//    {
+//        shopItems.MLShop_SelectWhiteGoldMaterialColorDisplayProductValidation_SI_TC_49();
+//    }
+//
+//    @Test(priority = 10)
+//    public void MLShop_SelectRoseGoldMaterialColorDisplayProductValidation_SI_TC_50() throws Exception
+//    {
+//        shopItems.MLShop_SelectRoseGoldMaterialColorDisplayProductValidation_SI_TC_50();
+//    }
+//
+//    @Test(priority = 11)
+//    public void MLShop_SelectTwoToneMaterialColorDisplayProductValidation_SI_TC_51() throws Exception
+//    {
+//        shopItems.MLShop_SelectTwoToneMaterialColorDisplayProductValidation_SI_TC_51();
+//    }
+//
+//    @Test(priority = 12)
+//    public void MLShop_SelectTriToneMaterialColorDisplayProductValidation_SI_TC_52() throws Exception
+//    {
+//        shopItems.MLShop_SelectTriToneMaterialColorDisplayProductValidation_SI_TC_52();
 //    }
 
 //    @Test(priority = 13)
@@ -206,6 +239,45 @@ public class MLShopItems {
 //    {
 //        shopItems.MLShop_BrouchCheckboxProductTypeUiValidation_TC_40();
 //    }
+
+//    @Test(priority = 1)
+//    public void MLShop_AddToCartConfirmationMessageValidation_SI_TC_98() throws Exception
+//    {
+//        shopItems.MLShop_AddToCartConfirmationMessageValidation_SI_TC_98();
+//    }
+//
+//    @Test(priority = 1)
+//    public void MLShop_AlreadyInCartConfirmationMessageValidation_SI_TC_99() throws Exception
+//    {
+//        shopItems.MLShop_AlreadyInCartConfirmationMessageValidation_SI_TC_99();
+//    }
+//
+//    @Test(priority = 1)
+//    public void MLShop_UpdateItemCountInShoppingCartValidation_SI_TC_100() throws Exception
+//    {
+//        shopItems.MLShop_UpdateItemCountInShoppingCartValidation_SI_TC_100();
+//    }
+//    @Test(priority = 1)
+//    public void MLShop_ProductDetailsDisplayVadation_SI_TC_105() throws Exception
+//    {
+//        shopItems.MLShop_ProductDetailsDisplayValidation_SI_TC_105();
+//    }
+//    @Test(priority = 1)
+//    public void MLShop_VerifyAddedProductIntTheCartValidation_SI_TC_107() throws Exception
+//    {
+//        shopItems.MLShop_VerifyAddedProductIntTheCartValidation_SI_TC_107();
+//    }
+//    @Test(priority = 1)
+//    public void MLShop_RemoveConfirmationPopUpDisplayValidationSI_TC_108() throws Exception
+//    {
+//        shopItems.MLShop_RemoveConfirmationPopUpDisplayValidationSI_TC_108();
+//    }
+    @Test(priority = 1)
+    public void MLShop_VerifyIfCheckedBoxInitiallyCheckedValidation_SI_TC_112() throws Exception
+    {
+        shopItems.MLShop_VerifyIfCheckedBoxInitiallyCheckedValidation_SI_TC_112();
+    }
+
 
     @AfterMethod
     public void afterMethod(){

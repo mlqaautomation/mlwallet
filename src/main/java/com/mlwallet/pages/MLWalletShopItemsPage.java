@@ -266,5 +266,24 @@ public class MLWalletShopItemsPage {
 	public static By objLogout = By.xpath("//android.widget.TextView[@text='Logout']");
 	public static By objLogoutText=By.xpath("//android.widget.TextView[@text='GREAT SUMMER SALE']");
 
+	public static By objSuccessfullyAddedToCart = By.xpath("//*[@text= 'Item has been successfully added to your cart.']");
+	public static By objItemAlreadyAddedInCart = By.xpath("//*[@text= 'This item is already in your cart.']");
+	public static By objCartItemCount = By.xpath("//android.widget.Image/following-sibling::android.widget.TextView']");
+
+	public static By objWatchProducts = By.xpath("(//android.view.View[@content-desc='watchproducts'])[1]");
+
+	public static By objProductDetailsModelName = By.xpath("//*[@text='Model Name']/following-sibling::android.widget.TextView[2]");
+	public static By objProductDetailsMaterial = By.xpath("//*[@text='Material']/following-sibling::android.widget.TextView[2]");
+
+	public static By objProductDetailsColor = By.xpath("//*[@text='Color']/following-sibling::android.widget.TextView[2]");
+	public static By objProductDetailsSize = By.xpath("//*[@text='Size']/following-sibling::android.widget.TextView[2]");
+	public static By objProductDetailsBrand = By.xpath("//*[@text='Brand']/following-sibling::android.widget.TextView[2]");
+	public static By objProductDetailsMovement = By.xpath("//*[@text='Movement']/following-sibling::android.widget.TextView[2]");
+	public static By objProductDetailsGender = By.xpath("//*[@text='Gender']/following-sibling::android.widget.TextView[2]");
+	public static By objProductDetailsStockNumber = By.xpath("//*[@text='Stock no.']/following-sibling::android.widget.TextView[2]");
+	public static By objProductDetailsNote = By.xpath("//*[@text='Notes']/following-sibling::android.widget.TextView[2]");
+	public static By objItemInTheCartName = By.xpath("//android.widget.ListView//android.widget.TextView[1]");
+	public static By objShoppngCartCheckBox = By.xpath("//android.widget.CheckBox");
+
 
 }

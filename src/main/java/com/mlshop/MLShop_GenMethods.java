@@ -98,6 +98,35 @@ public class MLShop_GenMethods extends BaseClass {
 
     }
 
+    public void selectFilter(By byLocator, By byDisplay) throws Exception {
+        click(MLWalletShopItemsPage.objFilter, "Filter");
+        Swipe("UP", 1);
+        clickAllVisibleCheckBox(MLWalletShopItemsPage.objAllCheckBox);
+        waitTime(5000);
+        click(byLocator, "Material locator is selected");
+        WebElement selected = DriverManager.getAppiumDriver().findElement(byLocator);
+        String locaterValue = selected.getText();
+        waitTime(5000);
+        Swipe("DOWN", 2);
+        click(MLWalletShopItemsPage.objExitFilterIcon, "Exit");
+        if(verifyElementDisplayed(MLWalletShopItemsPage.objNoProductFound)){
+            verifyElementPresent(MLWalletShopItemsPage.objNoProductFound, "No Products Found!");
+            logger.info("No Products Found!");
+        }else if(verifyElementDisplayed(byDisplay)) {
+            WebElement element = DriverManager.getAppiumDriver().findElement(byDisplay);
+            String materialValue = element.getText();
+            if (materialValue.contains(locaterValue)) {
+                waitTime(5000);
+                verifyElementPresent(byDisplay, "Material Displayed");
+                logger.info("Selected material " +locaterValue+ " displays" + materialValue );
+            }else {
+                logger.info("Selected material " +locaterValue+ " does not match with" + materialValue );
+            }
+        }
+    }
+
+
+
     public void selectFilterMaterial(By materialLocator, By materialDisplayed) throws Exception {
         click(MLWalletShopItemsPage.objFilter, "Filter");
         Swipe("UP", 1);
@@ -180,4 +209,24 @@ public class MLShop_GenMethods extends BaseClass {
         waitTime(5000);
         click(MLWalletShopItemsPage.objExitFilterIcon, "Exit");
     }
+
+
+    public void checkProductDetails(By... byLocators) throws Exception {
+        for (By byLocator : byLocators) {
+            try {
+                WebElement element = DriverManager.getAppiumDriver().findElement(byLocator);
+                String initialValue = element.getText();
+
+                if (element.isDisplayed()) {
+                    logger.info(initialValue + " is displayed");
+                } else {
+                    logger.info(initialValue + " is not displayed");
+                }
+            } catch (Exception e) {
+                logger.error(e);
+            }
+        }
+    }
+
+
 }
