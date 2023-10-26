@@ -101,7 +101,7 @@ public class MLShopItems {
 //        shopItems.MLShop_PaymongoPortalCreditDebit_TC_205();
 //    }
 //
-//    @Test(priority = 3)
+//    @Test(priority = 1)
 //    public void MLShop_PaymongoPortalGrabPay_TC_206() throws Exception
 //    {
 //        shopItems.MLShop_PaymongoPortalGrabPay_TC_206();
@@ -272,11 +272,23 @@ public class MLShopItems {
 //    {
 //        shopItems.MLShop_RemoveConfirmationPopUpDisplayValidationSI_TC_108();
 //    }
+//    @Test(priority = 1)
+//    public void MLShop_VerifyIfCheckedBoxInitiallyCheckedValidation_SI_TC_112() throws Exception
+//    {
+//        shopItems.MLShop_VerifyIfCheckedBoxInitiallyCheckedValidation_SI_TC_112();
+//    }
     @Test(priority = 1)
-    public void MLShop_VerifyIfCheckedBoxInitiallyCheckedValidation_SI_TC_112() throws Exception
+    public void MLShop_RedirectToGrabPayPortalValidationSI_TC_216() throws Exception
     {
-        shopItems.MLShop_VerifyIfCheckedBoxInitiallyCheckedValidation_SI_TC_112();
+        shopItems.MLShop_RedirectToGrabPayPortalValidationSI_TC_216();
     }
+
+    @Test(priority = 2)
+    public void MLShop_RedirectToPayMayaPortalValidationSI_TC_218() throws Exception
+    {
+        shopItems.MLShop_RedirectToPayMayaPortalValidationSI_TC_218();
+    }
+
 
 
     @AfterMethod

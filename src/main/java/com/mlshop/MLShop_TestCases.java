@@ -722,4 +722,62 @@ public class MLShop_TestCases extends MLShop_GenMethods {
             extentLoggerPass("MLS_TC_112", "Verify If Checked Box Initially Checked Validated successfully");
         }
     }
+
+    public void MLShop_RedirectToGrabPayPortalValidationSI_TC_216() throws Exception {
+        ExtentReporter.HeaderChildNode("SI_TC_216, Redirect To Grab Pay Portal Validation");
+        mlWalletLogin(prop.getproperty("Branch_Verified"));
+        shopItemsNavigation();
+        Swipe("UP", 3);
+        click(MLWalletShopItemsPage.objWatchProducts, "Watches Item");
+        waitTime(5000);
+        click(MLWalletShopItemsPage.objSelectItem, getTextVal(MLWalletShopItemsPage.objSelectItem, "Item" ));
+        waitTime(5000);
+        Swipe("up", 1);
+        click(MLWalletShopItemsPage.objAddToCartBtn, "Add to cart Button");
+        click(MLWalletShopItemsPage.objConfirmAddCarButton, "Confirm Button");
+        Swipe("DOWN", 1);
+        click(MLWalletShopItemsPage.objCartIcon, "Cart");
+        click(MLWalletShopItemsPage.objCheckOutBtn, "Checkout");
+        waitTime(5000);
+        Swipe("up", 3);
+        selectPickUpBranch();
+        click(MLWalletShopItemsPage.objPaymentEWallet, "Option");
+        click(MLWalletShopItemsPage.objGrabPay, "Grab Pay");
+        Swipe("up", 2);
+        click(MLWalletShopItemsPage.objPlaceOrderBtn, "Place Order");
+        click(MLWalletShopItemsPage.objProceedBtn, "Proceed");
+        if (verifyElementPresent(MLWalletShopItemsPage.objPaymongoPortalPage, "Pay Mongo Portal")) {
+            logger.info("Pay Mongo Portal Grab Pay is displayed");
+            extentLoggerPass("MLS_TC_216", " Redirect To Grab Pay Portal Validated successfully");
+        }
+    }
+
+    public void MLShop_RedirectToPayMayaPortalValidationSI_TC_218() throws Exception {
+        ExtentReporter.HeaderChildNode("SI_TC_218, Redirect To Pay Maya Portal Validation");
+        mlWalletLogin(prop.getproperty("Branch_Verified"));
+        shopItemsNavigation();
+        Swipe("UP", 3);
+        click(MLWalletShopItemsPage.objWatchProducts, "Watches Item");
+        waitTime(5000);
+        click(MLWalletShopItemsPage.objSelectItem, getTextVal(MLWalletShopItemsPage.objSelectItem, "Item" ));
+        waitTime(5000);
+        Swipe("up", 1);
+        click(MLWalletShopItemsPage.objAddToCartBtn, "Add to cart Button");
+        click(MLWalletShopItemsPage.objConfirmAddCarButton, "Confirm Button");
+        Swipe("DOWN", 1);
+        click(MLWalletShopItemsPage.objCartIcon, "Cart");
+        click(MLWalletShopItemsPage.objCheckOutBtn, "Checkout");
+        waitTime(5000);
+        Swipe("up", 3);
+        selectPickUpBranch();
+        click(MLWalletShopItemsPage.objPaymentEWallet, "Option");
+        click(MLWalletShopItemsPage.objPayMaya, "Pay Maya");
+        Swipe("up", 2);
+        click(MLWalletShopItemsPage.objPlaceOrderBtn, "Place Order");
+        click(MLWalletShopItemsPage.objProceedBtn, "Proceed");
+        if (verifyElementPresent(MLWalletShopItemsPage.objPaymongoPortalPage, "Pay Mongo Portal")) {
+            logger.info("Pay Mongo Portal Paya Maya is displayed");
+            extentLoggerPass("MLS_TC_216", " Redirect To Pay Maya Portal Validated successfully");
+        }
+    }
 }

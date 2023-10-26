@@ -29,7 +29,7 @@ public class MLWalletShopItemsPage {
 	public static By objAddressSuccessfulMsg=By.xpath("//*[@text='Successfully Update Delivery Address.']");
 	public static By objOkBtn=By.xpath("//*[@text='Ok' or @text='OK']");
 	public static By objYesBtn=By.xpath("//*[@text='Yes']");
-	public static By objPlaceOrderBtn=By.xpath("//*[@resource-id='PlaceOrder']");
+	public static By objPlaceOrderBtn=By.xpath("//*[@text='Place Order']");
 	public static By objOtpPage=By.xpath("//*[@text='One Time Pin']");
 	public static By objCheckOutConfirmationMsg = By.xpath("//*[@resource-id='mainCheckout']");
 	public static By objOtpTextField=By.xpath("//*[@class='android.widget.EditText']");
@@ -285,5 +285,7 @@ public class MLWalletShopItemsPage {
 	public static By objItemInTheCartName = By.xpath("//android.widget.ListView//android.widget.TextView[1]");
 	public static By objShoppngCartCheckBox = By.xpath("//android.widget.CheckBox");
 
+	public static By objGrabPay = By.xpath("//*[@text='GRAB PAY']");
+	public static By objPayMaya = By.xpath("//*[@text='PAYMAYA']");
 
 }
