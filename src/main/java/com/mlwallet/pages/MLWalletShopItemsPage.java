@@ -229,7 +229,6 @@ public class MLWalletShopItemsPage {
 	public static By objPaymentVisa=By.xpath("//*[@text='VISA/MASTERCARD']");
 	public static By objDirectOnlineBank=By.xpath("//*[@text='DIRECT ONLINE BANKING']");
 	// --- SELECT PAYMENT METHOD SECTION ---
-
 	public static By objProceedBtn=By.xpath("//*[@text='Proceed']");
 	public static By objCloseBtn=By.xpath("//*[@text='Close']");
 	public static By objPLaceOrderConfirmationMsg=By.xpath("//*[contains(@text,'You are about')]");
@@ -246,17 +245,13 @@ public class MLWalletShopItemsPage {
 	public static By objSelectMaterialOptions(String option){
 		return By.xpath("//*[@text='"+option+"']");
 	}
-
 	public static By objItemDescription = By.xpath("//*[@text='Sort by: Price']/following-sibling::android.widget.Spinner/following-sibling::android.view.View/child::android.view.View[2]");
 	public static By objNoProductFound= By.xpath("//*[@text='No Products Found!']");
 	public static By objItemName = By.xpath("//*[@text='Sort by: Price']/following-sibling::android.widget.Spinner/following-sibling::android.view.View/child::android.view.View[1]");
 	public static By objMin=By.xpath("//*[@text='Min']/following-sibling::android.widget.EditText[1]");
 	public static By objMax=By.xpath("//*[@text='Max']/following-sibling::android.widget.EditText[1]");
-
 	public static By objsortByPrice=By.xpath("//*[@text='High to Low' or @text='Low to High']");
-
 	public static By objGreatSalesText=By.xpath("//android.widget.TextView[@text='HALLOWEEN SALE']");
-
 	public static By objJewelryText=By.xpath("//android.widget.TextView[@text='Jewelry']");
 	public static By objContactUsText=By.xpath("//android.widget.TextView[@text='Contact Us']");
 	public static By objShopCartText=By.xpath("//android.widget.TextView[@text='Shopping Cart']");
@@ -264,6 +259,21 @@ public class MLWalletShopItemsPage {
 	public static By objPurchaseText=By.xpath("//android.widget.TextView[@text='ML Shop Jewelry Store']");
 	public static By objLogout = By.xpath("//android.widget.TextView[@text='Logout']");
 	public static By objLogoutText=By.xpath("//android.widget.TextView[@text='GREAT SUMMER SALE']");
+	public static By objSuccessfullyAddedToCart = By.xpath("//*[@text= 'Item has been successfully added to your cart.']");
+	public static By objItemAlreadyAddedInCart = By.xpath("//*[@text= 'This item is already in your cart.']");
+	public static By objCartItemCount = By.xpath("//android.widget.Image/following-sibling::android.widget.TextView']");
+	public static By objWatchProducts = By.xpath("(//android.view.View[@content-desc='watchproducts'])[1]");
+	public static By objProductDetailsModelName = By.xpath("//*[@text='Model Name']/following-sibling::android.widget.TextView[2]");
+	public static By objProductDetailsMaterial = By.xpath("//*[@text='Material']/following-sibling::android.widget.TextView[2]");
+	public static By objProductDetailsColor = By.xpath("//*[@text='Color']/following-sibling::android.widget.TextView[2]");
+	public static By objProductDetailsSize = By.xpath("//*[@text='Size']/following-sibling::android.widget.TextView[2]");
+	public static By objProductDetailsBrand = By.xpath("//*[@text='Brand']/following-sibling::android.widget.TextView[2]");
+	public static By objProductDetailsMovement = By.xpath("//*[@text='Movement']/following-sibling::android.widget.TextView[2]");
+	public static By objProductDetailsGender = By.xpath("//*[@text='Gender']/following-sibling::android.widget.TextView[2]");
+	public static By objProductDetailsStockNumber = By.xpath("//*[@text='Stock no.']/following-sibling::android.widget.TextView[2]");
+	public static By objProductDetailsNote = By.xpath("//*[@text='Notes']/following-sibling::android.widget.TextView[2]");
+	public static By objItemInTheCartName = By.xpath("//android.widget.ListView//android.widget.TextView[1]");
+	public static By objShoppngCartCheckBox = By.xpath("//android.widget.CheckBox");
 	public static By objHightoLow=By.xpath("//android.widget.CheckedTextView[1]");
 	public static By objLowtoHigh=By.xpath("//android.widget.CheckedTextView[2]");
 	public static By objContinuePaymongo=By.xpath("//*[@text='Continue']");
@@ -274,8 +284,6 @@ public class MLWalletShopItemsPage {
 	public static By objSuccessfulGcashPayment=By.xpath("//*[@text='GCash payment received!']");
 	public static By objSuccessfulMayaPayment=By.xpath("//*[@text='Maya payment received!']");
 	public static By objSuccessfulCreditPayment=By.xpath("//*[@text='Credit or debit card payment received!']");
-
-
 	public static By objcardnumberCreditPayment=By.xpath("//*[@resource-id='cardNumber']");
 	public static By objExpMonthCreditPayment=By.xpath("//*[@resource-id='expMonth']");
 	public static By objExpYearCreditPayment=By.xpath("//*[@resource-id='expYear']");
@@ -287,6 +295,7 @@ public class MLWalletShopItemsPage {
 			objPaymentGcash=By.xpath("//*[@text='GCASH']");
 	public static By
 			objPaymentPayMaya=By.xpath("//*[@text='PAYMAYA']");
-
+	public static By objGrabPay = By.xpath("//*[@text='GRAB PAY']");
+	public static By objPayMaya = By.xpath("//*[@text='PAYMAYA']");
 
 }

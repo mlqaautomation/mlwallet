@@ -15,7 +15,6 @@
 		<parameter name="url" value="https://prnt.sc/4vyopNIICFNa"></parameter>
 		<parameter name="url1" value="https://prnt.sc/WlO6H7WpxvNY"></parameter>
 		<parameter name="kpxurl" value="https://ml-kpx-qa.df.r.appspot.com/"></parameter>
-
 		<classes>
 			<!--			RZ8T20EDQ5W-->
 			<!--			4TWOGQCM6589MBZD-->
@@ -24,7 +23,7 @@
 
 <!--						<class name="com.mlwallet.regression.MLWalletLoginScripts" />-->
 <!--						<class name="com.mlwallet.regression.MLWalletCashInViaBankScripts" />-->
-<!--						<class name="com.mlwallet.regression.MLWalletCashInViaBranch" />-->
+<!--						<class name="com.mlwallet.regression.MLWalletCashInVia Branch" />-->
 <!--						<class name="com.mlwallet.regression.MLWalletCashOutWithdrawScripts" />-->
 <!--						<class name="com.mlwallet.regression.MLWalletSendTransferToAnyMLBranchScripts" />-->
 <!--						<class name="com.mlwallet.regression.MLWalletSendTransferToMLWalletUserScripts" />-->
