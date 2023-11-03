@@ -20,19 +20,6 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         super(Application, deviceName, portno);
     }
 
-
-    //todo
-    // TEST CASES FOR HOMEPAGE
-    //
-    //SI_TC_01
-    //SI_TC_02
-    //SI_TC_03
-    //SI_TC_04
-    //SI_TC_05
-    //SI_TC_06
-    //SI_TC_07
-    //SI_TC_13
-
     public void MLShop_Homepage_TC_01() throws Exception {
 
         ExtentReporter.HeaderChildNode("SI_TC_01, Shop menu link will redirect to the ML Shop Homepage");
@@ -267,8 +254,7 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         selectFilterMaterial(objSelectMaterialOptions("20k"), MLWalletShopItemsPage.objItemDescription);
         logger.info("Select 20k material display Product validated successfully");
         ExtentReporter.extentLoggerPass("MLS_TC_44","Select 20k material display Product validated successfully");
-        selectFilterMaterial(objSelectMaterialOptions("20k"), MLWalletShopItemsPage.objItemDescription);
-        logger.info("Select 20k material display Production validated successfully");
+
     }
 
     public void MLShop_Select21kMaterialDisplayProductionValidation_SI_TC_45() throws Exception {
@@ -280,8 +266,7 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         selectFilterMaterial(objSelectMaterialOptions("21k"), MLWalletShopItemsPage.objItemDescription);
         logger.info("Select 21k material display Product validated successfully");
         ExtentReporter.extentLoggerPass("MLS_TC_45","Select 21k material display Product validated successfully");
-        selectFilterMaterial(objSelectMaterialOptions("21k"), MLWalletShopItemsPage.objItemDescription);
-        logger.info("Select 21k material display Production validated successfully");
+
     }
 
     public void MLShop_Select22kMaterialDisplayProductionValidation_SI_TC_46() throws Exception {
@@ -293,8 +278,6 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         selectFilterMaterial(objSelectMaterialOptions("22k"), MLWalletShopItemsPage.objItemDescription);
         logger.info("Select 22k material display Product validated successfully");
         ExtentReporter.extentLoggerPass("MLS_TC_41","Select 22k material display Product validated successfully");
-        selectFilterMaterial(objSelectMaterialOptions("22k"), MLWalletShopItemsPage.objItemDescription);
-        logger.info("Select 22k material display Production validated successfully");
     }
 
     public void MLShop_Select12kMaterialDisplayProductionValidation_SI_TC_47() throws Exception {
@@ -306,8 +289,6 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         selectFilterMaterial(objSelectMaterialOptions("12k"), MLWalletShopItemsPage.objItemDescription);
         logger.info("Select 12k material display Product validated successfully");
         ExtentReporter.extentLoggerPass("MLS_TC_47","Select 12k material display Product validated successfully");
-        selectFilterMaterial(objSelectMaterialOptions("12k"), MLWalletShopItemsPage.objItemDescription);
-        logger.info("Select 12k material display Production validated successfully");
     }
 
     public void MLShop_SelectYellowGoldMaterialColorDisplayProductValidation_SI_TC_48()throws Exception{
@@ -525,7 +506,6 @@ public class MLShop_TestCases extends MLShop_GenMethods {
     }
     public void MLShop_SI_TC_88()throws Exception{
 
-
     }
     public void MLShop_SI_TC_89()throws Exception{
         Swipe("up", 2);
@@ -566,7 +546,6 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         }
     }
 
-
     public void MLShop_AddToCartConfirmationMessageValidation_SI_TC_98()throws Exception{
         ExtentReporter.HeaderChildNode("MLS_TC_98, Add to Cart Confirmation Message Validation");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
@@ -586,7 +565,6 @@ public class MLShop_TestCases extends MLShop_GenMethods {
             logger.info("Already in your cart Confirmation Message validated");
         }
     }
-
     public void MLShop_AlreadyInCartConfirmationMessageValidation_SI_TC_99()throws Exception{
         ExtentReporter.HeaderChildNode("MLS_TC_99, Already in your cart Confirmation Message Validation");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
@@ -610,7 +588,6 @@ public class MLShop_TestCases extends MLShop_GenMethods {
                 verifyElementPresent(MLWalletShopItemsPage.objItemAlreadyAddedInCart,"This item is already in your cart.");
                 logger.info("Already in your cart Confirmation Message validated");
                 extentLoggerPass("MLS_TC_99", "Already in your cart Confirmation Message Validation");
-
             }
         }
     }
@@ -635,7 +612,6 @@ public class MLShop_TestCases extends MLShop_GenMethods {
             extentLoggerPass("MLS_TC_100", "Update item count In Shopping Cart validated successfully");
         }
     }
-
     public void MLShop_ProductDetailsDisplayValidation_SI_TC_105()throws Exception{
         ExtentReporter.HeaderChildNode("MLS_TC_105, Product Details Display Validation ");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
@@ -652,7 +628,6 @@ public class MLShop_TestCases extends MLShop_GenMethods {
             extentLoggerPass("MLS_TC_105", "Product Details Display Validated successfully");
         }
     }
-
     public void MLShop_VerifyAddedProductIntTheCartValidation_SI_TC_107()throws Exception{
         ExtentReporter.HeaderChildNode("MLS_TC_107, Verify added product in the cart validation");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
@@ -675,10 +650,7 @@ public class MLShop_TestCases extends MLShop_GenMethods {
             logger.info("Selected Item " + displayedProduct + " is displayed in the cart " + addedProduct);
             extentLoggerPass("MLS_TC_107", "Verify added product in the cart validated successfully");
         }
-
-
     }
-
     public void MLShop_RemoveConfirmationPopUpDisplayValidationSI_TC_108()throws Exception{
         ExtentReporter.HeaderChildNode("MLS_TC_108, Remove Confirmation Pop Up Display Validation");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
@@ -700,7 +672,6 @@ public class MLShop_TestCases extends MLShop_GenMethods {
             extentLoggerPass("MLS_TC_108", "Remove Confirmation Pop Up Display Validated successfully");
         }
     }
-
     public void MLShop_VerifyIfCheckedBoxInitiallyCheckedValidation_SI_TC_112()throws Exception {
         ExtentReporter.HeaderChildNode("MLS_TC_112, Verify If Checked Box Initially Checked Validation");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
@@ -722,7 +693,6 @@ public class MLShop_TestCases extends MLShop_GenMethods {
             extentLoggerPass("MLS_TC_112", "Verify If Checked Box Initially Checked Validated successfully");
         }
     }
-
     public void MLShop_RedirectToGrabPayPortalValidationSI_TC_216() throws Exception {
         ExtentReporter.HeaderChildNode("SI_TC_216, Redirect To Grab Pay Portal Validation");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
@@ -751,7 +721,6 @@ public class MLShop_TestCases extends MLShop_GenMethods {
             extentLoggerPass("MLS_TC_216", " Redirect To Grab Pay Portal Validated successfully");
         }
     }
-
     public void MLShop_RedirectToPayMayaPortalValidationSI_TC_218() throws Exception {
         ExtentReporter.HeaderChildNode("SI_TC_218, Redirect To Pay Maya Portal Validation");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
@@ -779,5 +748,154 @@ public class MLShop_TestCases extends MLShop_GenMethods {
             logger.info("Pay Mongo Portal Paya Maya is displayed");
             extentLoggerPass("MLS_TC_216", " Redirect To Pay Maya Portal Validated successfully");
         }
+    public void MLShop_WalletDeductOnSuccessPurchased_TC_202() throws Exception{
+        ExtentReporter.HeaderChildNode("MLS_TC_202,Check Wallet Balance After Purchasing via Wallet");
+        mlWalletLogin(prop.getproperty("Branch_Verified_LowBalance"));
+        String beforeBal =null , afterBal  = null;
+        getWallentBalance(beforeBal);
+        shopItemsNavigation();
+        selectItemAndAddToCart();
+        navigationToCart();
+        placeOrder(shopProp.getproperty("MLWallet"));
+        waitTime(5000);
+        enterOTP(prop.getproperty("Valid_OTP"));
+        waitTime(5000);
+        click(MLWalletShopItemsPage.objSuccessFullyCheckOutOkayBtn, "Button");
+        click(objBackArrowBtn, "Exit MLShop Button");
+        Swipe("DOWN", 2);
+        assertNotEquals(beforeBal, afterBal);
+        logger.info("MLS_TC_202, Wallet Deduction on Success Purchased via Wallet");
+        ExtentReporter.extentLoggerPass("MLS_TC_202", "Wallet Deduction on Success Purchased via Wallet");
+
+    }
+    public void MLShop_SuccessfullyPurchasedGCash_TC_308() throws Exception {
+        ExtentReporter.HeaderChildNode("MLS_TC_308, MLShop Successfully Purchased GCash");
+        MLShop_PaymongoPortalGcash_TC_207();
+        click(MLWalletShopItemsPage.objContinuePaymongo, "Continue");
+        Swipe("UP", 1);
+        click(MLWalletShopItemsPage.objAgreePolicyPaymongo, "Agree Policy");
+        click(MLWalletShopItemsPage.objCompletePaymentPaymongo, "CompletePayment");
+        click(MLWalletShopItemsPage.objAuthorizeTestPaymentPaymongo, "Authorize Test Payment");
+        verifyElementPresent(MLWalletShopItemsPage.objSuccessfulGcashPayment, getTextVal(MLWalletShopItemsPage.objSuccessfulGcashPayment, "GCash payment received!"));
+        logger.info("MLS_TC_308, MLShop Successfully Purchased GCash");
+        extentLoggerPass("MLS_TC_308", "MLShop Successfully Purchased GCash");
+    }
+    public void MLShop_SuccessfullyPurchasedGrabPay_TC_309() throws Exception {
+        ExtentReporter.HeaderChildNode("MLS_TC_309, MLShop Successfully Purchased GrabPay");
+        MLShop_PaymongoPortalGrabPay_TC_206();
+        click(MLWalletShopItemsPage.objContinuePaymongo, "Continue");
+        Swipe("UP", 1);
+        click(MLWalletShopItemsPage.objAgreePolicyPaymongo, "Agree Policy");
+        click(MLWalletShopItemsPage.objCompletePaymentPaymongo, "CompletePayment");
+        click(MLWalletShopItemsPage.objAuthorizeTestPaymentPaymongo, "Authorize Test Payment");
+        verifyElementPresent(MLWalletShopItemsPage.objSuccessfulGrabPayPayment, getTextVal(MLWalletShopItemsPage.objSuccessfulGrabPayPayment, "GrabPay payment received!"));
+        logger.info("MLS_TC_309, MLShop Successfully Purchased GrabPay");
+        extentLoggerPass("MLS_TC_309", "MLShop Successfully Purchased GrabPay");
+    }
+
+
+    public void MLShop_SuccessfullyPurchasedPaymaya_TC_310() throws Exception {
+        ExtentReporter.HeaderChildNode("MLS_TC_310, MLShop Successfully Purchased Paymaya");
+        MLShop_PaymongoPortalMaya_TC_208();
+        click(MLWalletShopItemsPage.objContinuePaymongo, "Continue");
+        Swipe("UP", 1);
+        click(MLWalletShopItemsPage.objAgreePolicyPaymongo, "Agree Policy");
+        click(MLWalletShopItemsPage.objCompletePaymentPaymongo, "CompletePayment");
+        click(MLWalletShopItemsPage.objAuthorizeTestPaymentPaymongo, "Authorize Test Payment");
+        verifyElementPresent(MLWalletShopItemsPage.objSuccessfulMayaPayment, getTextVal(MLWalletShopItemsPage.objSuccessfulMayaPayment, "Maya payment received!"));
+        logger.info("MLS_TC_310, MLShop Successfully Purchased Paymaya");
+        extentLoggerPass("MLS_TC_310", "MLShop Successfully Purchased Paymaya");
+    }
+    public void MLShop_SuccessfullyPurchasedVisaMastercard_TC_311() throws Exception {
+        ExtentReporter.HeaderChildNode("MLS_TC_311, MLShop Successfully Purchased Visa Mastercard");
+        MLShop_PaymongoPortalCreditDebit_TC_205();
+        click(MLWalletShopItemsPage.objContinuePaymongo, "Continue");
+        Swipe("UP", 1);
+        type(objcardnumberCreditPayment, shopProp.getproperty("CardNumber"), "Card Number");
+        type(objExpMonthCreditPayment, shopProp.getproperty("CardMonth"), "Card Month");
+        type(objExpYearCreditPayment, shopProp.getproperty("CardYear"), "Card Year");
+        type(objCvcCreditPayment, shopProp.getproperty("CardCVC"), "Card CVC");
+        Swipe("UP", 3);
+        click(MLWalletShopItemsPage.objAgreePolicyPaymongo, "Agree Policy");
+        click(MLWalletShopItemsPage.objCompletePaymentPaymongo, "CompletePayment");
+        verifyElementPresent(MLWalletShopItemsPage.objSuccessfulCreditPayment, getTextVal(MLWalletShopItemsPage.objSuccessfulCreditPayment, "Credit or debit card payment received!"));
+        logger.info("MLS_TC_311, MLShop Successfully Purchased Visa Mastercard");
+        extentLoggerPass("MLS_TC_311", "MLShop Successfully Purchased Visa Mastercard");
+    }
+
+    public void MLShop_PaymongoVerifyListOfPaymentMethod_TC_204() throws Exception {
+        ExtentReporter.HeaderChildNode("MLS_TC_204, Paymongo Verify List Of Payment Method");
+        mlWalletLogin(prop.getproperty("Branch_Verified"));
+        placeOrder(shopProp.getproperty("Ewallet"));
+        if (verifyElementPresent(MLWalletShopItemsPage.objPaymentEWallet, getTextVal(MLWalletShopItemsPage.objPaymentEWallet, "E-Wallet"))) {
+            verifyElementPresent(MLWalletShopItemsPage.objPaymentGrabPay, getTextVal(MLWalletShopItemsPage.objPaymentGrabPay, "Grab Pay"));
+            verifyElementPresent(MLWalletShopItemsPage.objPaymentGcash, getTextVal(MLWalletShopItemsPage.objPaymentGcash, "Gcash"));
+            verifyElementPresent(MLWalletShopItemsPage.objPaymentPayMaya, getTextVal(MLWalletShopItemsPage.objPaymentPayMaya, "PayMaya"));
+            logger.info("MLS_TC_204, Paymongo Verify List Of Payment Method");
+            extentLoggerPass("MLS_TC_204", "Paymongo Verify List Of Payment Method");
+        }
+    }
+
+    public void shopItemsJewelryAvailabilityProductTypesUIValidation_MLS_TC_18 () throws Exception {
+        ExtentReporter.HeaderChildNode("Shop Items Jewelry Availability Product Types UI Validation");
+        mlWalletLogin(prop.getproperty("Branch_Verified"));
+        shopItemsNavigation();
+        waitTime(5000);
+        Swipe("UP", 2);
+        verifyElementPresent(MLWalletShopItemsPage.objRings, getTextVal(MLWalletShopItemsPage.objRings, "Rings"));
+        verifyElementPresent(MLWalletShopItemsPage.objNecklacePendants, getTextVal(MLWalletShopItemsPage.objNecklacePendants, "Necklaces And Pendants"));
+        verifyElementPresent(MLWalletShopItemsPage.objBraceletAndBangle, getTextVal(MLWalletShopItemsPage.objBraceletAndBangle, "Bracelets And Bangles"));
+        verifyElementPresent(MLWalletShopItemsPage.objEarrings, getTextVal(MLWalletShopItemsPage.objEarrings, "Earrings"));
+        logger.info("MLS_TC_adb , Shop Items Jewelry Availability Product Types UI Validation");
+        ExtentReporter.extentLoggerPass("MLS_TC_18", "MLS_TC_18, Shop Items Jewelry Availability Product Types UI Validation");
+        System.out.println("-----------------------------------------------------------");
+    }
+
+    public void shopItemsSelectedItemScreenRingsDetailsUIValidation_MLS_TC_20 () throws Exception {
+        ExtentReporter.HeaderChildNode("shop Items Selected Item Screen Rings Details UI Validation");
+        mlWalletLogin(prop.getproperty("Branch_Verified"));
+        shopItemsNavigation();
+        waitTime(5000);
+        Swipe("UP", 2);
+        click(MLWalletShopItemsPage.objItemMenu, "Rings");
+        clickSort();
+        click(MLWalletShopItemsPage.objSelectItem, getTextVal(MLWalletShopItemsPage.objSelectItem, "Item"));
+        Swipe("UP", 2);
+        verifyElementPresent(MLWalletShopItemsPage.objProductName, getTextVal(MLWalletShopItemsPage.objProductName, "Product Name"));
+        verifyElementPresent(MLWalletShopItemsPage.objProductMaterial, getTextVal(MLWalletShopItemsPage.objProductMaterial, "Material"));
+        verifyElementPresent(MLWalletShopItemsPage.objProductMaterialColor, getTextVal(MLWalletShopItemsPage.objProductMaterialColor, "Material Color"));
+        verifyElementPresent(MLWalletShopItemsPage.objProductSize, getTextVal(MLWalletShopItemsPage.objProductSize, "Size"));
+        verifyElementPresent(MLWalletShopItemsPage.objProductStone, getTextVal(MLWalletShopItemsPage.objProductStone, "Stone"));
+        verifyElementPresent(MLWalletShopItemsPage.objProductItemWeight, getTextVal(MLWalletShopItemsPage.objProductItemWeight, "Item Weight"));
+        verifyElementPresent(MLWalletShopItemsPage.objProductStoneColor, getTextVal(MLWalletShopItemsPage.objProductStoneColor, "Stone Color"));
+        verifyElementPresent(MLWalletShopItemsPage.objProductGender, getTextVal(MLWalletShopItemsPage.objProductGender, "Gender"));
+        verifyElementPresent(MLWalletShopItemsPage.objProductStockNo, getTextVal(MLWalletShopItemsPage.objProductStockNo, "Stock No"));
+        logger.info("MLS_TC_20, shop Items Selected Item Screen Rings Details UI Validation");
+        ExtentReporter.extentLoggerPass("MLS_TC_20", "MLS_TC_20, shop Items Selected Item Screen Rings Details UI Validation");
+        System.out.println("-----------------------------------------------------------");
+    }
+
+    public void shopItemsSelectedItemScreenBraceletAndBangleDetailsUIValidation_MLS_TC_21 () throws Exception {
+        ExtentReporter.HeaderChildNode("shop Items Selected Item Screen Bracelet And Bangle Details UI Validation");
+        mlWalletLogin(prop.getproperty("Branch_Verified"));
+        shopItemsNavigation();
+        waitTime(5000);
+        Swipe("UP", 2);
+        click(MLWalletShopItemsPage.objBraceletAndBangle, "Bracelet And Bangle");
+        clickSort();
+        click(MLWalletShopItemsPage.objSelectItem, getTextVal(MLWalletShopItemsPage.objSelectItem, "Item"));
+        Swipe("UP", 2);
+        verifyElementPresent(MLWalletShopItemsPage.objProductName, getTextVal(MLWalletShopItemsPage.objProductName, "Product Name"));
+        verifyElementPresent(MLWalletShopItemsPage.objProductMaterial, getTextVal(MLWalletShopItemsPage.objProductMaterial, "Material"));
+        verifyElementPresent(MLWalletShopItemsPage.objProductMaterialColor, getTextVal(MLWalletShopItemsPage.objProductMaterialColor, "Material Color"));
+        verifyElementPresent(MLWalletShopItemsPage.objProductSize, getTextVal(MLWalletShopItemsPage.objProductSize, "Size"));
+        verifyElementPresent(MLWalletShopItemsPage.objProductStone, getTextVal(MLWalletShopItemsPage.objProductStone, "Stone"));
+        verifyElementPresent(MLWalletShopItemsPage.objProductItemWeight, getTextVal(MLWalletShopItemsPage.objProductItemWeight, "Item Weight"));
+        verifyElementPresent(MLWalletShopItemsPage.objProductStoneColor, getTextVal(MLWalletShopItemsPage.objProductStoneColor, "Stone Color"));
+        verifyElementPresent(MLWalletShopItemsPage.objProductGender, getTextVal(MLWalletShopItemsPage.objProductGender, "Gender"));
+        verifyElementPresent(MLWalletShopItemsPage.objProductStockNo, getTextVal(MLWalletShopItemsPage.objProductStockNo, "Stock No"));
+        logger.info("MLS_TC_21, shop Items Selected Item Screen Bracelet And Bangle Details UI Validation");
+        ExtentReporter.extentLoggerPass("MLS_TC_21", "MLS_TC_21, shop Items Selected Item Screen Bracelet And Bangle Details UI Validation");
+        System.out.println("-----------------------------------------------------------");
     }
 }

@@ -816,5 +816,17 @@ public abstract class BaseClass {
         }
     }
     //------------SHOP ITEMS--------------------
-
+    public String getWallentBalance(String balance) throws Exception{
+        if(verifyElementPresent(MLWalletHomePage.objHiddenAvailableBalance, "Hidden Balance")){
+            click(MLWalletHomePage.objEyeIcon, "Eye Icon");
+            waitTime(5000);
+            balance = getText(MLWalletHomePage.objAvailableBalance);
+            logger.info("balance is = " + getText(MLWalletHomePage.objAvailableBalance));
+            return balance;
+        }else{
+            balance = getText(MLWalletHomePage.objAvailableBalance);
+            logger.info("balance is = " + getText(MLWalletHomePage.objAvailableBalance));
+            return balance;
+        }
+    }
 }

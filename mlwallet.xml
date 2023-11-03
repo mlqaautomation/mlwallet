@@ -10,12 +10,11 @@
 
 	<test name="MLWallet">
 		<parameter name="portno" value="4723"></parameter>
-		<parameter name="deviceName" value="9cc133c6"></parameter>
+		<parameter name="deviceName" value="emulator-5554"></parameter>
 		<parameter name="browserType" value="Chrome"></parameter>
 		<parameter name="url" value="https://prnt.sc/4vyopNIICFNa"></parameter>
 		<parameter name="url1" value="https://prnt.sc/WlO6H7WpxvNY"></parameter>
 		<parameter name="kpxurl" value="https://ml-kpx-qa.df.r.appspot.com/"></parameter>
-
 		<classes>
 			<!--			RZ8T20EDQ5W-->
 			<!--			4TWOGQCM6589MBZD-->
