@@ -748,6 +748,7 @@ public class MLShop_TestCases extends MLShop_GenMethods {
             logger.info("Pay Mongo Portal Paya Maya is displayed");
             extentLoggerPass("MLS_TC_216", " Redirect To Pay Maya Portal Validated successfully");
         }
+    }
     public void MLShop_WalletDeductOnSuccessPurchased_TC_202() throws Exception{
         ExtentReporter.HeaderChildNode("MLS_TC_202,Check Wallet Balance After Purchasing via Wallet");
         mlWalletLogin(prop.getproperty("Branch_Verified_LowBalance"));

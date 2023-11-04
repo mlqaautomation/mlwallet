@@ -409,32 +409,28 @@ public class MLShopItems {
 //        shopItems.MLShop_VerifyIfCheckedBoxInitiallyCheckedValidation_SI_TC_112();
 //    }
     @Test(priority = 1)
-    public void MLShop_RedirectToGrabPayPortalValidationSI_TC_216() throws Exception
-
-    @Test(priority = 26)
-    public void MLShop_SelectTriToneMaterialColorDisplayProductValidation_SI_TC_52() throws Exception
-    {
-        shopItems.MLShop_SelectTriToneMaterialColorDisplayProductValidation_SI_TC_52();
-    }
-    @Test(priority = 27)
-    public void MLShop_FilteringLadiesProduct_SI_TC_53() throws Exception
-    {
-        shopItems.MLShop_FilteringLadiesProduct_SI_TC_53();
-    }
-    @Test(priority = 28)
-    public void MLShop_FilteringMensProduct_SI_TC_54() throws Exception
-
-    {
+    public void MLShop_RedirectToGrabPayPortalValidationSI_TC_216() throws Exception{
         shopItems.MLShop_RedirectToGrabPayPortalValidationSI_TC_216();
     }
 
+    @Test(priority = 26)
+    public void MLShop_SelectTriToneMaterialColorDisplayProductValidation_SI_TC_52() throws Exception {
+        shopItems.MLShop_SelectTriToneMaterialColorDisplayProductValidation_SI_TC_52();
+    }
+    @Test(priority = 27)
+    public void MLShop_FilteringLadiesProduct_SI_TC_53() throws Exception {
+        shopItems.MLShop_FilteringLadiesProduct_SI_TC_53();
+    }
+    @Test(priority = 28)
+    public void MLShop_FilteringMensProduct_SI_TC_54() throws Exception {
+        shopItems.MLShop_RedirectToGrabPayPortalValidationSI_TC_216();
+    }
     @Test(priority = 2)
-    public void MLShop_RedirectToPayMayaPortalValidationSI_TC_218() throws Exception
-
+    public void MLShop_RedirectToPayMayaPortalValidationSI_TC_218() throws Exception{
+        shopItems.MLShop_RedirectToPayMayaPortalValidationSI_TC_218();
+    }
     @Test(priority = 29)
-    public void MLShop_FilteringUnisexProduct_SI_TC_55() throws Exception
-
-    {
+    public void MLShop_FilteringUnisexProduct_SI_TC_55() throws Exception {
         shopItems.MLShop_RedirectToPayMayaPortalValidationSI_TC_218();
     }
 
