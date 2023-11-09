@@ -31,9 +31,9 @@ public abstract class BaseClass {
     public static PropertyFileReader shopProp;
     public void propertyFileReader(){
         if(osName.contains("linux")){
-             prop = new PropertyFileReader(".//properties//testdata.properties");
-             tierProp = new PropertyFileReader(".//properties//tierUpgrade.properties");
-             shopProp = new PropertyFileReader(".//properties//mlshop.properties");
+             prop = new PropertyFileReader("./properties/testdata.properties");
+             tierProp = new PropertyFileReader("./properties/tierUpgrade.properties");
+             shopProp = new PropertyFileReader("./properties/mlshop.properties");
         }else{
              prop = new PropertyFileReader(".\\properties\\testdata.properties");
              tierProp = new PropertyFileReader(".\\properties\\tierUpgrade.properties");
@@ -46,14 +46,11 @@ public abstract class BaseClass {
     public BaseClass(String Application, String deviceName, String portno) throws InterruptedException{
         new CommandBase(Application, deviceName, portno);
         init();
+        propertyFileReader();
     }
     public void init(){
         PropertyFileReader handler;
-        if(osName.contains("linux")){
-             handler = new PropertyFileReader(".//properties//Execution.properties");
-        }else{
-             handler = new PropertyFileReader(".\\properties\\Execution.properties");
-        }
+        handler = new PropertyFileReader("properties/Execution.properties");
         setTimeout(Integer.parseInt(handler.getproperty("TIMEOUT")));
         setRetryCount(Integer.parseInt(handler.getproperty("RETRY_COUNT")));
         logger.info("Loaded the following properties" + " TimeOut :" + getTimeout() + " RetryCount :" + getRetryCount());
