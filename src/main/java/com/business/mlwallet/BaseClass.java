@@ -21,13 +21,25 @@ import static com.utility.Utilities.*;
 
 public abstract class BaseClass {
     public static LoggingUtils logger = new LoggingUtils();
+    public static String osName=System.getProperty("os.name").toLowerCase();
     private int timeout;
     private int retryCount;
 
     public static SoftAssert softAssert = new SoftAssert();
-    public static PropertyFileReader prop = new PropertyFileReader(".\\properties\\testdata.properties");
-    public static PropertyFileReader tierProp = new PropertyFileReader(".\\properties\\tierUpgrade.properties");
-    public static PropertyFileReader shopProp = new PropertyFileReader(".\\properties\\mlshop.properties");
+    public static PropertyFileReader prop;
+    public static PropertyFileReader tierProp;
+    public static PropertyFileReader shopProp;
+    public void propertyFileReader(){
+        if(osName.contains("linux")){
+             prop = new PropertyFileReader(".//properties//testdata.properties");
+             tierProp = new PropertyFileReader(".//properties//tierUpgrade.properties");
+             shopProp = new PropertyFileReader(".//properties//mlshop.properties");
+        }else{
+             prop = new PropertyFileReader(".\\properties\\testdata.properties");
+             tierProp = new PropertyFileReader(".\\properties\\tierUpgrade.properties");
+             shopProp = new PropertyFileReader(".\\properties\\mlshop.properties");
+        }
+    }
     public BaseClass(){
 
     }
@@ -36,7 +48,12 @@ public abstract class BaseClass {
         init();
     }
     public void init(){
-        PropertyFileReader handler = new PropertyFileReader("properties/Execution.properties");
+        PropertyFileReader handler;
+        if(osName.contains("linux")){
+             handler = new PropertyFileReader(".//properties//Execution.properties");
+        }else{
+             handler = new PropertyFileReader(".\\properties\\Execution.properties");
+        }
         setTimeout(Integer.parseInt(handler.getproperty("TIMEOUT")));
         setRetryCount(Integer.parseInt(handler.getproperty("RETRY_COUNT")));
         logger.info("Loaded the following properties" + " TimeOut :" + getTimeout() + " RetryCount :" + getRetryCount());
