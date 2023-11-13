@@ -19,7 +19,7 @@ import java.util.List;
 
 import static com.utility.Utilities.*;
 
-public abstract class BaseClass {
+public class BaseClass {
     public static LoggingUtils logger = new LoggingUtils();
     public static String osName=System.getProperty("os.name").toLowerCase();
     private int timeout;

@@ -3,7 +3,8 @@ package com.mlwallet.pages;
 import org.openqa.selenium.By;
 
 public class MLWalletTransactionHistoryPage {
-	
+
+	public static By objHistoryText = By.xpath("//*[@text='History']");
 	public static By objRecentTransaction=By.xpath("//*[@text='Recent Transactions']");
 	public static By objSeeMoreBtn=By.xpath("//*[@text='See More']");
 

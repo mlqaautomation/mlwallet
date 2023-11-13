@@ -7,9 +7,21 @@
 		<listener class-name="com.utility.ExtentReporter" />
 	</listeners>
 
+	<test name="CashIn">
+		<parameter name="portno" value="4723"></parameter>
+		<parameter name="deviceName" value="RRCW901MQLF"></parameter>
+		<parameter name="browserType" value="Chrome"></parameter>
+		<parameter name="url" value="https://prnt.sc/4vyopNIICFNa"></parameter>
+		<parameter name="url1" value="https://prnt.sc/WlO6H7WpxvNY"></parameter>
+		<parameter name="kpxurl" value="https://ml-kpx-qa.df.r.appspot.com/"></parameter>
+		<classes>
+			<class name="com.mlwallet.regression.MLWalletCashInViaBankScripts" />
+			<class name="com.mlwallet.regression.MLWalletCashInViaBranch" />
+		</classes>
+	</test>
 	<test name="MLWallet">
 		<parameter name="portno" value="4723"></parameter>
-		<parameter name="deviceName" value="192.168.12.61:5559"></parameter>
+		<parameter name="deviceName" value="RRCW901MQLF"></parameter>
 		<parameter name="browserType" value="Chrome"></parameter>
 		<parameter name="url" value="https://prnt.sc/4vyopNIICFNa"></parameter>
 		<parameter name="url1" value="https://prnt.sc/WlO6H7WpxvNY"></parameter>
@@ -19,7 +31,7 @@
 <!--						<class name="com.mlwallet.regression.MLWalletCashInViaBankScripts" />-->
 <!--						<class name="com.mlwallet.regression.MLWalletCashInVia Branch" />-->
 <!--						<class name="com.mlwallet.regression.MLWalletCashOutWithdrawScripts" />-->
-						<class name="com.mlwallet.regression.MLWalletSendTransferToAnyMLBranchScripts" />
+<!--						<class name="com.mlwallet.regression.MLWalletSendTransferToAnyMLBranchScripts" />-->
 <!--						<class name="com.mlwallet.regression.MLWalletSendTransferToMLWalletUserScripts" />-->
 <!--						<class name="com.mlwallet.regression.MLWalletRegressionPayBillsScripts" />-->
 <!--						<class name="com.mlwallet.regression.MLWalletShopItemScripts" />-->
@@ -34,9 +46,8 @@
 <!--						<class name="com.mlwallet.regression.MLWalletTopUpGames" />-->
 <!--						<class name="com.mlwallet.regression.MLWalletTierUpgrade"/>-->
 <!--						<class name="com.mlwallet.regression.MLWalletSettingScripts" />-->
-<!--							<class name="com.mlwallet.daily.regression.MLShopItems" />-->
+<!--						<class name="com.mlwallet.daily.regression.MLShopItems" />-->
 		</classes>
 	</test>
-
-
 </suite>
+
