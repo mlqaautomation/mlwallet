@@ -234,7 +234,7 @@ public class CashInVia_BankClass extends BaseClass{
         ExtentReporter.HeaderChildNode("Cash In Via Bank Success transaction validation");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
         verifyElementPresentAndClick(MLWalletHomePage.objEyeIcon, "Eye Icon");
-        String sBalance = getText(MLWalletHomePage.objHiddenAvailableBalance);
+        String sBalance = getText(MLWalletHomePage.objAvailableBalance);
         selectBankAndInputAmount("1000");
         dragonPayChargesMsgValidation();
         reviewTransactionValidation();
@@ -248,7 +248,7 @@ public class CashInVia_BankClass extends BaseClass{
         verifyElementPresent(MLWalletCashInBank.objMessage, getTextVal(MLWalletCashInBank.objMessage, "Message"));
         verifyElementPresentAndClick(MLWalletCashInBank.objCompleteTransactionBtn, getTextVal(MLWalletCashInBank.objCompleteTransactionBtn, "Button"));
         Swipe("DOWN", 3);
-        String sBalanceAfterTransaction = getText(MLWalletHomePage.objHiddenAvailableBalance);
+        String sBalanceAfterTransaction = getText(MLWalletHomePage.objAvailableBalance);
         Swipe("UP", 1);
         if (verifyElementPresent(MLWalletHomePage.objSuccess, getTextVal(MLWalletHomePage.objSuccess, "Status"))) {
             assertNotEquals(sBalance, sBalanceAfterTransaction);
@@ -288,9 +288,7 @@ public class CashInVia_BankClass extends BaseClass{
     public void cashInViaBankWithExistingPendingTransaction_CIBA_TC_20() throws Exception {
         ExtentReporter.HeaderChildNode("Cash In Via Bank With Existing Pending Transaction");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
-        verifyElementPresent(MLWalletTransactionHistoryPage.objRecentTransaction, getText(MLWalletTransactionHistoryPage.objRecentTransaction));
-        Swipe("UP", 2);
-        click(MLWalletTransactionHistoryPage.objSeeMoreBtn, "See More Button");
+        click(MLWalletTransactionHistoryPage.objHistoryText, "History Icon/Text");
         scrollToFirstHorizontalScrollableElement("Cash In");
         click(MLWalletTransactionHistoryPage.objCashInTab, "Cash In");
         Thread.sleep(3000);

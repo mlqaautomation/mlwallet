@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Android" parallel="false" thread-count="1">
+
+    <listeners>
+        <listener class-name="com.utility.ExtentReporter" />
+    </listeners>
+
+    <test name="Transactional">
+        <parameter name="portno" value="4723"></parameter>
+        <parameter name="deviceName" value="RRCW901MQLF"></parameter>
+<!--        <classes>-->
+<!--            <class name="com.mlwallet.daily.regression.CashInViaBank">-->
+<!--            </class>-->
+<!--        </classes>-->
+    </test>
+</suite>
+
