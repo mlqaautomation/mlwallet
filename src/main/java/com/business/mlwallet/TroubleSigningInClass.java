@@ -25,6 +25,7 @@ public class TroubleSigningInClass extends BaseClass {
 
     public void troubleSigningInPageNavigationFromLoginScreen_TS_TC_10() throws Exception {
         ExtentReporter.HeaderChildNode("Trouble Signing In Page Navigation From Login Screen");
+        enableNotif();
         verifyElementPresentAndClick(MLWalletTroubleSigningInPage.objTroubleSigningIn, getTextVal(MLWalletTroubleSigningInPage.objTroubleSigningIn, "Button"));
         if (verifyElementPresent(MLWalletTroubleSigningInPage.objTroubleSingingInPAge, getTextVal(MLWalletTroubleSigningInPage.objTroubleSingingInPAge, "Page"))) {
             logger.info("TS_TC_10, Trouble Signing In Page Navigation From Login Screen Validated");
@@ -35,6 +36,7 @@ public class TroubleSigningInClass extends BaseClass {
 
     public void troubleSigningInPageBackArrowBtnFunctionality_TS_TC_11() throws Exception {
         ExtentReporter.HeaderChildNode("Trouble Signing In Page Back Arrow Button Functionality");
+        enableNotif();
         verifyElementPresentAndClick(MLWalletTroubleSigningInPage.objTroubleSigningIn, getTextVal(MLWalletTroubleSigningInPage.objTroubleSigningIn, "Button"));
         verifyElementPresentAndClick(MLWalletTroubleSigningInPage.objTroubleSigningInBackArrowBtn, "Back Arrow Button");
         if (verifyElementPresent(MLWalletLoginPage.objLoginBtn, getTextVal(MLWalletLoginPage.objLoginBtn, "Button"))) {
@@ -46,6 +48,7 @@ public class TroubleSigningInClass extends BaseClass {
 
     public void troubleSigningInClearFormFunctionality_TS_TC_12() throws Exception {
         ExtentReporter.HeaderChildNode("Trouble Signing In Clear form functionality");
+        enableNotif();
         verifyElementPresentAndClick(MLWalletTroubleSigningInPage.objTroubleSigningIn, getTextVal(MLWalletTroubleSigningInPage.objTroubleSigningIn, "Button"));
         type(MLWalletTroubleSigningInPage.objFullNameField, prop.getproperty("First_Name"), "First Name Field");
 //		String sFulName = getText(MLWalletTroubleSigningInPage.objFullNameField);
@@ -70,6 +73,7 @@ public class TroubleSigningInClass extends BaseClass {
 
     public void troubleSigningInClearFormButtonOnClearFormPopupFunctionality_TS_TC_13() throws Exception {
         ExtentReporter.HeaderChildNode("Trouble Signing In Clear form Btn on Clear form popup functionality");
+        enableNotif();
         verifyElementPresentAndClick(MLWalletTroubleSigningInPage.objTroubleSigningIn, getTextVal(MLWalletTroubleSigningInPage.objTroubleSigningIn, "Button"));
         type(MLWalletTroubleSigningInPage.objFullNameField, prop.getproperty("First_Name"), "First Name Field");
         String sFullName = getText(MLWalletTroubleSigningInPage.objFullNameField);
@@ -98,6 +102,7 @@ public class TroubleSigningInClass extends BaseClass {
 
     public void troubleSigningInCancelButtonOnClearFormPopupFunctionality_TS_TC_14() throws Exception {
         ExtentReporter.HeaderChildNode("Trouble Signing In Cancel form Btn on Clear form popup functionality");
+        enableNotif();
         verifyElementPresentAndClick(MLWalletTroubleSigningInPage.objTroubleSigningIn, getTextVal(MLWalletTroubleSigningInPage.objTroubleSigningIn, "Button"));
         type(MLWalletTroubleSigningInPage.objFullNameField, prop.getproperty("First_Name"), "First Name Field");
         String sFullName = getText(MLWalletTroubleSigningInPage.objFullNameField);
@@ -126,6 +131,7 @@ public class TroubleSigningInClass extends BaseClass {
 
     public void troubleSigningInEmptyFullNameFunctionality_TS_TC_15() throws Exception {
         ExtentReporter.HeaderChildNode("Trouble Signing In Empty Full Name Functionality");
+        enableNotif();
         verifyElementPresentAndClick(MLWalletTroubleSigningInPage.objTroubleSigningIn, getTextVal(MLWalletTroubleSigningInPage.objTroubleSigningIn, "Button"));
         Swipe("UP", 4);
         verifyElementPresentAndClick(MLWalletTroubleSigningInPage.objNextBtn, getTextVal(MLWalletTroubleSigningInPage.objNextBtn, "Button"));
@@ -141,6 +147,7 @@ public class TroubleSigningInClass extends BaseClass {
 
     public void troubleSigningInEmptyRegisteredEmailFunctionality_TS_TC_16() throws Exception {
         ExtentReporter.HeaderChildNode("Trouble Signing In Empty Registered Email Functionality");
+        enableNotif();
         verifyElementPresentAndClick(MLWalletTroubleSigningInPage.objTroubleSigningIn, getTextVal(MLWalletTroubleSigningInPage.objTroubleSigningIn, "Button"));
         type(MLWalletTroubleSigningInPage.objFullNameField, prop.getproperty("First_Name"), "First Name Field");
         Swipe("UP", 4);
@@ -158,6 +165,7 @@ public class TroubleSigningInClass extends BaseClass {
 
     public void troubleSigningInEmptyRegisteredMobileNumberFunctionality_TS_TC_17() throws Exception {
         ExtentReporter.HeaderChildNode("Trouble Signing In Empty Registered Mobile Number Functionality");
+        enableNotif();
         verifyElementPresentAndClick(MLWalletTroubleSigningInPage.objTroubleSigningIn, getTextVal(MLWalletTroubleSigningInPage.objTroubleSigningIn, "Button"));
         type(MLWalletTroubleSigningInPage.objFullNameField, prop.getproperty("First_Name"), "First Name Field");
         type(MLWalletTroubleSigningInPage.objRegisteredEmail, prop.getproperty("Email"), "Registered Email Field");
