@@ -32,7 +32,7 @@ public class TierUpgradeClass extends BaseClass {
 
     public void tierUpgradeHomePageIIconValidationAsSemiVerifiedTierUser_TU_TC_02() throws Exception {
         ExtentReporter.HeaderChildNode("Tier Upgrade Home Page I Icon Validation as as Semi verified Tier User");
-        mlWalletLogin(prop.getproperty("Semi_Verified"));
+        mlWalletLogin(prop.getproperty("Buyer_Tier"));
         if (verifyElementPresent(MLWalletHomePage.objIIcon, "i Icon")) {
             verifyElementPresent(MLWalletHomePage.objLearnMoreTxt,getTextVal(MLWalletHomePage.objLearnMoreTxt,"Text"));
             logger.info("TU_TC_02, Tier Upgrade Home Page I Icon validated as Semi verified User");
@@ -64,7 +64,7 @@ public class TierUpgradeClass extends BaseClass {
 
     public void tierUpgradeVerificationTierPerksPageNavigationAsSemiVerifiedTierUser_TU_TC_05() throws Exception {
         ExtentReporter.HeaderChildNode("Tier Upgrade Verification tier perks page navigation as Semi Verified Tier User");
-        mlWalletLogin(prop.getproperty("Semi_Verified"));
+        mlWalletLogin(prop.getproperty("Buyer_Tier"));
         verifyElementPresentAndClick(MLWalletHomePage.objIIcon, "i Icon");
         if (verifyElementPresent(MLWalletHomePage.objVerificationTierPerks, getTextVal(MLWalletHomePage.objVerificationTierPerks, "Page"))) {
             logger.info("TU_TC_05, Tier Upgrade Verification tier perks page navigation validated as Semi Verified Tier User");
@@ -126,7 +126,7 @@ public class TierUpgradeClass extends BaseClass {
 
     public void tierUpgradeUpgradeTierLevelBtnValidationForFullyVerifiedTabAsSemiVerifiedTierUser_TU_TC_10() throws Exception {
         ExtentReporter.HeaderChildNode("Tier Upgrade Upgrade tier level Button validation, For Fully verified tab As Semi verified tier User");
-        mlWalletLogin(prop.getproperty("Semi_Verified"));
+        mlWalletLogin(prop.getproperty("Buyer_Tier"));
         verifyElementPresentAndClick(MLWalletHomePage.objIIcon, "i Icon");
         verifyElementPresent(MLWalletHomePage.objVerificationTierPerks, getTextVal(MLWalletHomePage.objVerificationTierPerks, "Page"));
         verifyElementPresentAndClick(MLWalletTierUpgrade.objFullyVerifiedTab,getTextVal(MLWalletTierUpgrade.objFullyVerifiedTab,"Tab"));
@@ -139,7 +139,7 @@ public class TierUpgradeClass extends BaseClass {
 
     public void tierUpgradeUpgradeTierLevelBtnValidationForBranchVerifiedTabAsSemiVerifiedTierUser_TU_TC_11() throws Exception {
         ExtentReporter.HeaderChildNode("Tier Upgrade Upgrade tier level Button validation, For Branch verified tab As Semi verified tier User");
-        mlWalletLogin(prop.getproperty("Semi_Verified"));
+        mlWalletLogin(prop.getproperty("Buyer_Tier"));
         verifyElementPresentAndClick(MLWalletHomePage.objIIcon, "i Icon");
         verifyElementPresent(MLWalletHomePage.objVerificationTierPerks, getTextVal(MLWalletHomePage.objVerificationTierPerks, "Page"));
         verifyElementPresentAndClick(MLWalletTierUpgrade.objBranchVerifiedTab,getTextVal(MLWalletTierUpgrade.objBranchVerifiedTab,"Tab"));
@@ -182,7 +182,7 @@ public class TierUpgradeClass extends BaseClass {
 
     public void tierUpgradeAccountDetailsPageNavigationAsSemiVerifiedTierUserToUpgradeToFullyVerifiedTier_TU_TC_14() throws Exception {
         ExtentReporter.HeaderChildNode("Tier Upgrade Account details page navigation as Semi verified tier user to upgrade to Fully verified tier user");
-        mlWalletLogin(prop.getproperty("Semi_Verified"));
+        mlWalletLogin(prop.getproperty("Buyer_Tier"));
         verifyElementPresentAndClick(MLWalletHomePage.objIIcon, "i Icon");
         verifyElementPresent(MLWalletHomePage.objVerificationTierPerks, getTextVal(MLWalletHomePage.objVerificationTierPerks, "Page"));
         verifyElementPresentAndClick(MLWalletTierUpgrade.objFullyVerifiedTab,getTextVal(MLWalletTierUpgrade.objFullyVerifiedTab,"Tab"));

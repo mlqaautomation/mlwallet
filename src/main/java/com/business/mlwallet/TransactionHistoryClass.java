@@ -189,6 +189,7 @@ public class TransactionHistoryClass extends  BaseClass{
         ExtentReporter.HeaderChildNode("Transaction History Send Money Wallet To Wallet Transaction Details Validation");
         mlWallet_TransactionHistory_TH_TC_01();
         verifyElementPresentAndClick(MLWalletTransactionHistoryPage.objSendMoneyTab, getTextVal(MLWalletTransactionHistoryPage.objSendMoneyTab, "Tab"));
+        waitTime(5000);
         swipeDownUntilElementVisible("Wallet to Wallet");
         if (verifyElementPresentAndClick(MLWalletTransactionHistoryPage.objWalletToWallet, getTextVal(MLWalletTransactionHistoryPage.objWalletToWallet, "Transaction"))) {
 
@@ -212,6 +213,7 @@ public class TransactionHistoryClass extends  BaseClass{
         ExtentReporter.HeaderChildNode("Transaction History Send Money Kwarta Padala Transaction Details Validation");
         mlWallet_TransactionHistory_TH_TC_01();
         verifyElementPresentAndClick(MLWalletTransactionHistoryPage.objSendMoneyTab, getTextVal(MLWalletTransactionHistoryPage.objSendMoneyTab, "Tab"));
+        waitTime(5000);
         swipeDownUntilElementVisible("Kwarta Padala");
         if (verifyElementPresentAndClick(MLWalletTransactionHistoryPage.objKwartaPadala, getTextVal(MLWalletTransactionHistoryPage.objKwartaPadala, "Transaction"))) {
             verifyElementPresent(MLWalletTransactionHistoryPage.objTransactionDetails, getTextVal(MLWalletTransactionHistoryPage.objTransactionDetails, "Page"));
