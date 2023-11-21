@@ -569,8 +569,8 @@ public class BaseClass {
     }
 
     public void navigateToProfile() throws Exception {
-        click(MLWalletSettingsPage.objProfileIcon, "Profile Icon");
         waitTime(5000);
+        verifyElementPresentAndClick(MLWalletSettingsPage.objProfileIcon, "Profile Icon");
         if (verifyElementPresent(MLWalletSettingsPage.objAccountDetails, "Account Details Page")) {
             logger.info("Navigated to settings");
         }

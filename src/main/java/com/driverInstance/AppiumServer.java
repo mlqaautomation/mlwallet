@@ -19,41 +19,43 @@ public class AppiumServer{
       static AppiumDriverLocalService service;
       public static String osName=System.getProperty("os.name").toLowerCase();
    public static void startServer() throws IOException {
+      int[] ports ={4723, 4725, 4727, 4729, 4731, 4733, 4735, 4737, 4739, 4741};
       uninstallAppiumServer();
       switch (osName){
          case "linux":
                String nodePath = "/usr/bin/node"; // Path to the Node.js executable
                String appiumJSPath = "/usr/bin/appium"; // Path to the Appium main.js file
-               service = AppiumDriverLocalService.buildService(
-                       new AppiumServiceBuilder()
-                               .usingDriverExecutable(new File(nodePath))
-                               .withAppiumJS(new File(appiumJSPath))
-                               .withIPAddress("127.0.0.1")
-                               .usingPort(4723)
-                               .withArgument(GeneralServerFlag.LOG_LEVEL, "error")
-               );
+               for(int port : ports){
+                   service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder()
+                          .usingDriverExecutable(new File(nodePath))
+                          .withAppiumJS(new File(appiumJSPath))
+                          .withIPAddress("127.0.0.1")
+                          .usingPort(port)
+                          .withArgument(GeneralServerFlag.LOG_LEVEL
+                  ));
+               }
                if (service.isRunning()) {
                   service.stop();
                } else {
                   service.start();
                   service.clearOutPutStreams();
-                  System.out.println("[BEFORESUITE] Appium Server Started Sucessfully.");
+                  System.out.println("[EVENT] Appium Server Started Sucessfully.");
                }
             break;
          default:
-            service = AppiumDriverLocalService.
-                    // buildDefaultService();
-                            buildService(new AppiumServiceBuilder()
-                            .usingDriverExecutable(new File("C:\\Program Files\\nodejs\\node.exe"))
-                            .withAppiumJS(new File("C:\\Users\\" + System.getProperty("user.name")
-                                    + "\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
-                            .withIPAddress("127.0.0.1").usingPort(4723)
-                            //.usingAnyFreePort()
-                            .usingDriverExecutable (new File ("C:\\Program Files\\nodejs\\node.exe"))
-                            .withArgument(GeneralServerFlag.LOG_LEVEL, "error"));// this is the flag to remove debug
-            if (service.isRunning() == true) {
+            for(int port : ports){
+               service = AppiumDriverLocalService.
+                       buildService(new AppiumServiceBuilder()
+                               .usingDriverExecutable(new File("C:\\Program Files\\nodejs\\node.exe"))
+                               .withAppiumJS(new File("C:\\Users\\" + System.getProperty("user.name")
+                                       + "\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
+                               .withIPAddress("127.0.0.1").usingPort(port)
+                               .usingDriverExecutable (new File ("C:\\Program Files\\nodejs\\node.exe"))
+                               .withArgument(GeneralServerFlag.LOG_LEVEL, "error"
+                      ));
+            }
+            if (service.isRunning()) {
                service.stop();
-               //service.start();
             } else {
                service.start();
                System.out.println("[EVENT] Appium Server Started Successfully.");

@@ -37,7 +37,7 @@ public class CashInVia_BankClass extends BaseClass{
         }
     }
 
-    public void cashInViaBankMinimumTransactionLimit_CIBA_TC_03() throws Exception {
+    public void cashInViaBankMinimumTransactionLimit_CIBA_TC_05() throws Exception { //TC 05
         ExtentReporter.HeaderChildNode("Cash In Via Bank Minimum Transaction Limit");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
         selectBankAndInputAmount("20");
@@ -68,7 +68,7 @@ public class CashInVia_BankClass extends BaseClass{
     }
 
 
-    public void cashInViaBankInvalidAmount_STW_TC_05() throws Exception {
+    public void cashInViaBankInvalidAmount_STW_TC_03() throws Exception { //TC 03
         ExtentReporter.HeaderChildNode("Cash In Via Bank Invalid Amount");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
         selectBankAndInputAmount("0");
@@ -388,7 +388,7 @@ public class CashInVia_BankClass extends BaseClass{
         ExtentReporter.HeaderChildNode("Cash In Via Bank Semi Verified Tier Success transaction validation");
         mlWalletLogin(prop.getproperty("Semi_Verified"));
         verifyElementPresentAndClick(MLWalletHomePage.objEyeIcon, "Eye Icon");
-        String sBalance = getText(MLWalletHomePage.objHiddenAvailableBalance);
+        String sBalance = getText(MLWalletHomePage.objAvailableBalance);
         selectBankAndInputAmount("1000");
         dragonPayChargesMsgValidation();
         reviewTransactionValidation();
@@ -416,7 +416,7 @@ public class CashInVia_BankClass extends BaseClass{
         ExtentReporter.HeaderChildNode("Cash In Via Bank Fully Verified Tier Success transaction validation");
         mlWalletLogin(prop.getproperty("Fully_verified"));
         verifyElementPresentAndClick(MLWalletHomePage.objEyeIcon, "Eye Icon");
-        String sBalance = getText(MLWalletHomePage.objHiddenAvailableBalance);
+        String sBalance = getText(MLWalletHomePage.objAvailableBalance);
         selectBankAndInputAmount("1000");
         dragonPayChargesMsgValidation();
         reviewTransactionValidation();

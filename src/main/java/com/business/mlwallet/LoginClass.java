@@ -23,7 +23,6 @@ public class LoginClass extends BaseClass{
 
         }
     }
-
     public void logInScenarioWithInvalidMobNumber_Lgn_TC_02() throws Exception {
         ExtentReporter.HeaderChildNode("Login Scenarios With Invalid Mobile Number");
         enableNotif();
@@ -61,6 +60,7 @@ public class LoginClass extends BaseClass{
 
     public void appLaunch_Lgn_TC_05() throws Exception {
         ExtentReporter.HeaderChildNode("App Launch");
+        enableNotif();
         if (verifyElementPresent(MLWalletLoginPage.objLoginBtn, "Login Button")) {
             logger.info("Lgn_TC_05, Application Launched Successfully");
             ExtentReporter.extentLoggerPass("Lgn_TC_05", "Lgn_TC_05, Application Launched Successfully");
@@ -70,6 +70,7 @@ public class LoginClass extends BaseClass{
 
     public void loginPageUIValidation_Lgn_TC_06() throws Exception {
         ExtentReporter.HeaderChildNode("Login Page UI Validation");
+        enableNotif();
         if (verifyElementPresent(MLWalletLoginPage.objLoginBtn, "Login Button")) {
             verifyElementPresent(MLWalletLoginPage.objMobileNumberTextField, "Mobile Number Text Field");
             verifyElementPresent(MLWalletLoginPage.objTroubleSigningIn, getTextVal(MLWalletLoginPage.objTroubleSigningIn, "Button"));
@@ -85,6 +86,7 @@ public class LoginClass extends BaseClass{
 
     public void loginTroubleSigningIn_Lgn_TC_07() throws Exception {
         ExtentReporter.HeaderChildNode("LogIn Trouble Signing In Validation");
+        enableNotif();
         if (verifyElementPresentAndClick(MLWalletLoginPage.objTroubleSigningIn, getTextVal(MLWalletLoginPage.objTroubleSigningIn, "Button"))) {
             waitTime(6000);
             verifyElementPresent(MLWalletLoginPage.objTroubleSigningPage, getTextVal(MLWalletLoginPage.objTroubleSigningPage, "Page"));
@@ -97,6 +99,7 @@ public class LoginClass extends BaseClass{
 
     public void loginCreateOne_Lgn_TC_08() throws Exception {
         ExtentReporter.HeaderChildNode("LogIn Create One");
+        enableNotif();
         if (verifyElementPresentAndClick(MLWalletLoginPage.objCreateOneBtn, getTextVal(MLWalletLoginPage.objCreateOneBtn, "Button"))) {
             verifyElementPresent(MLWalletLoginPage.objRegistrationNumber, getTextVal(MLWalletLoginPage.objRegistrationNumber, "Page"));
             logger.info("Lgn_TC_08, Navigated to Create One Page");
@@ -107,6 +110,7 @@ public class LoginClass extends BaseClass{
 
     public void loginBranchLocator_Lgn_TC_09() throws Exception {
         ExtentReporter.HeaderChildNode("LogIn Branch Locator");
+        enableNotif();
         if (verifyElementPresentAndClick(MLWalletLoginPage.objBranchLocator, getTextVal(MLWalletLoginPage.objBranchLocator, "Button"))) {
             waitTime(6000);
             enableLocation_PopUp();
@@ -119,12 +123,11 @@ public class LoginClass extends BaseClass{
 
     public void loginOTPPageUIValidation_Lgn_TC_10() throws Exception {
         ExtentReporter.HeaderChildNode("LogIn OTP Page UI Validation");
+        enableNotif();
         type(MLWalletLoginPage.objMobileNumberTextField, prop.getproperty("Branch_Verified"), "Mobile Number Text Field");
         click(MLWalletLoginPage.objLoginBtn, "Login Button");
         waitTime(5000);
         if (verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"))) {
-//			verifyElementPresent(MLWalletLoginPage.objOtpTextField, "OTP text Field");
-//			verifyElementPresent(MLWalletLoginPage.objResendCode, getTextVal(MLWalletCashOutPage.objResendCode, "Seconds"));
             logger.info("Lgn_TC_10, LogIn OTP Page UI Validated");
             ExtentReporter.extentLoggerPass("Lgn_TC_10", "Lgn_TC_10, LogIn OTP Page UI Validated");
             System.out.println("-----------------------------------------------------------");
@@ -278,6 +281,7 @@ public class LoginClass extends BaseClass{
 
     public void logInScenarioWithInvalidMobNumber_Lgn_TC_15() throws Exception {
         ExtentReporter.HeaderChildNode("Login Scenarios With Invalid Mobile Number");
+        enableNotif();
         explicitWaitVisibility(MLWalletLoginPage.objMobileNumberTextField, 10);
         type(MLWalletLoginPage.objMobileNumberTextField, prop.getproperty("Invalid_AlphaNumericMobileNumber"), "Mobile Number Text Field");
         click(MLWalletLoginPage.objLoginBtn, "Login Button");

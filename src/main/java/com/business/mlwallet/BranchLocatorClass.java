@@ -26,6 +26,7 @@ public class BranchLocatorClass extends BaseClass{
 
     public void branchLocatorNavigationFromLogInPage_BL_TC_02() throws Exception {
         ExtentReporter.HeaderChildNode("Branch Locator page Navigation From Login Page and UI validation");
+        enableNotif();
         branchLocatorNavigation();
         if (verifyElementPresent(MLWalletLoginPage.objBranchLocator, getTextVal(MLWalletLoginPage.objBranchLocator, "Page"))) {
             branchLocatorPageValidation();
@@ -37,6 +38,7 @@ public class BranchLocatorClass extends BaseClass{
 
     public void branchLocatorHamburgerFunctionality_BL_TC_05() throws Exception {
         ExtentReporter.HeaderChildNode("Branch Locator Hamburger Button Functionality");
+        enableNotif();
         branchLocatorNavigation();
         verifyElementPresentAndClick(MLWalletBranchLocator.objBranchLocatorHamburgerMenu, "Hamburger Menu Button");
         if (verifyElementPresent(MLWalletBranchLocator.objHome, getTextVal(MLWalletBranchLocator.objHome, "Option"))) {
@@ -58,6 +60,7 @@ public class BranchLocatorClass extends BaseClass{
 
     public void branchLocatorBranchesButtonFunctionality_BL_TC_07() throws Exception {
         ExtentReporter.HeaderChildNode("Branch Locator Branches Button Functionality");
+        enableNotif();
         branchLocatorNavigation();
         verifyElementPresentAndClick(MLWalletBranchLocator.objBranchLocatorHamburgerMenu, "Hamburger Menu Button");
         verifyElementPresentAndClick(MLWalletBranchLocator.objBranches, getTextVal(MLWalletBranchLocator.objBranches, "Option"));
@@ -71,6 +74,7 @@ public class BranchLocatorClass extends BaseClass{
 
     public void branchLocatorPromosFunctionality_BL_TC_08() throws Exception {
         ExtentReporter.HeaderChildNode("Branch Locator Promos Button Functionality");
+        enableNotif();
         branchLocatorNavigation();
         verifyElementPresentAndClick(MLWalletBranchLocator.objBranchLocatorHamburgerMenu, "Hamburger Menu Button");
         verifyElementPresentAndClick(MLWalletBranchLocator.objPromos, getTextVal(MLWalletBranchLocator.objPromos, "Option"));
@@ -84,6 +88,7 @@ public class BranchLocatorClass extends BaseClass{
 
     public void branchLocatorBlogFunctionality_BL_TC_09() throws Exception {
         ExtentReporter.HeaderChildNode("Branch Locator Blog Functionality");
+        enableNotif();
         branchLocatorNavigation();
         verifyElementPresentAndClick(MLWalletBranchLocator.objBranchLocatorHamburgerMenu, "Hamburger Menu Button");
         verifyElementPresentAndClick(MLWalletBranchLocator.objBlog, getTextVal(MLWalletBranchLocator.objBlog, "Option"));
@@ -97,6 +102,7 @@ public class BranchLocatorClass extends BaseClass{
 
     public void branchLocatorNewsLettersFunctionality_BL_TC_10() throws Exception {
         ExtentReporter.HeaderChildNode("Branch Locator NewsLetter Functionality");
+        enableNotif();
         branchLocatorNavigation();
         verifyElementPresentAndClick(MLWalletBranchLocator.objBranchLocatorHamburgerMenu, "Hamburger Menu Button");
         verifyElementPresentAndClick(MLWalletBranchLocator.objNewsLetters, getTextVal(MLWalletBranchLocator.objNewsLetters, "Option"));
@@ -110,6 +116,7 @@ public class BranchLocatorClass extends BaseClass{
 
     public void branchLocatorFAQFunctionality_BL_TC_11() throws Exception {
         ExtentReporter.HeaderChildNode("Branch Locator FAQ Functionality");
+        enableNotif();
         branchLocatorNavigation();
         verifyElementPresentAndClick(MLWalletBranchLocator.objBranchLocatorHamburgerMenu, "Hamburger Menu Button");
         verifyElementPresentAndClick(MLWalletBranchLocator.objFAQ, getTextVal(MLWalletBranchLocator.objFAQ, "Option"));
@@ -123,6 +130,7 @@ public class BranchLocatorClass extends BaseClass{
 
     public void branchLocatorCareersPageNavigation_BL_TC_13() throws Exception {
         ExtentReporter.HeaderChildNode("Branch Locator Carrers Page Navigation");
+        enableNotif();
         branchLocatorNavigation();
         verifyElementPresentAndClick(MLWalletBranchLocator.objBranchLocatorHamburgerMenu, "Hamburger Menu Button");
         verifyElementPresentAndClick(MLWalletBranchLocator.objCareers, getTextVal(MLWalletBranchLocator.objCareers, "Option"));
@@ -136,6 +144,7 @@ public class BranchLocatorClass extends BaseClass{
 
     public void branchLocatorShopItemsPageNavigation_BL_TC_16() throws Exception {
         ExtentReporter.HeaderChildNode("Branch Locator Shop Items Page Navigation");
+        enableNotif();
         branchLocatorNavigation();
         homePageNavigation();
         verifyElementPresentAndClick(MLWalletBranchLocator.objShop, getTextVal(MLWalletBranchLocator.objShop, "Option"));
@@ -148,6 +157,7 @@ public class BranchLocatorClass extends BaseClass{
 
     public void branchLocatorPayBillsPageNavigation_BL_TC_17() throws Exception {
         ExtentReporter.HeaderChildNode("Branch Locator Pay Bills Page Navigation");
+        enableNotif();
         branchLocatorNavigation();
         homePageNavigation();
         verifyElementPresentAndClick(MLWalletBranchLocator.objPayBillsLearnMore, getTextVal(MLWalletBranchLocator.objPayBillsLearnMore, "Option"));
@@ -160,6 +170,7 @@ public class BranchLocatorClass extends BaseClass{
 
     public void branchLocatorBuyELoadPageNavigation_BL_TC_19() throws Exception {
         ExtentReporter.HeaderChildNode("Branch Locator Buy ELoad Page Navigation");
+        enableNotif();
         branchLocatorNavigation();
         homePageNavigation();
         Swipe("UP", 1);
@@ -174,6 +185,7 @@ public class BranchLocatorClass extends BaseClass{
 
     public void branchLocatorLoansPageNavigation_BL_TC_22() throws Exception {
         ExtentReporter.HeaderChildNode("Branch Locator Loans Page Navigation");
+        enableNotif();
         branchLocatorNavigation();
         homePageNavigation();
         Swipe("UP", 2);
@@ -188,6 +200,7 @@ public class BranchLocatorClass extends BaseClass{
 
     public void branchLocatorInsurancePageNavigation_BL_TC_23() throws Exception {
         ExtentReporter.HeaderChildNode("Branch Locator Insurance Page Navigation");
+        enableNotif();
         branchLocatorNavigation();
         homePageNavigation();
         Swipe("UP", 2);
@@ -203,6 +216,7 @@ public class BranchLocatorClass extends BaseClass{
 
     public void branchLocatorLogInFunctionality_BL_TC_14() throws Exception {
         ExtentReporter.HeaderChildNode("Branch Locator LogIn Functionality");
+        enableNotif();
         branchLocatorNavigation();
         verifyElementPresentAndClick(MLWalletBranchLocator.objBranchLocatorHamburgerMenu, "Hamburger Menu Button");
         verifyElementPresentAndClick(MLWalletBranchLocator.objLogin, getTextVal(MLWalletBranchLocator.objLogin, "Option"));
@@ -216,6 +230,7 @@ public class BranchLocatorClass extends BaseClass{
 
     public void branchLocatorSendTransferPageNavigation_BL_TC_18() throws Exception {
         ExtentReporter.HeaderChildNode("Branch Locator Send transfer page Navigation");
+        enableNotif();
         branchLocatorNavigation();
         homePageNavigation();
         waitTime(5000);
@@ -234,6 +249,7 @@ public class BranchLocatorClass extends BaseClass{
 
     public void branchLocatorCashInPageNavigation_BL_TC_20() throws Exception {
         ExtentReporter.HeaderChildNode("Branch Locator Cash In page Navigation");
+        enableNotif();
         branchLocatorNavigation();
         homePageNavigation();
         waitTime(5000);
@@ -253,6 +269,7 @@ public class BranchLocatorClass extends BaseClass{
 
     public void branchLocatorCashOutPageNavigation_BL_TC_21() throws Exception {
         ExtentReporter.HeaderChildNode("Branch Locator Cash out page Navigation");
+        enableNotif();
         branchLocatorNavigation();
         homePageNavigation();
         waitTime(5000);

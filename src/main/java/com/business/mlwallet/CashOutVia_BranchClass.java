@@ -78,7 +78,7 @@ public class CashOutVia_BranchClass extends BaseClass {
         }
     }
 
-    public void cashOutBranchMaximumTransactionBranchVerifiedTier_WM_TC_08() throws Exception {
+    public void cashOutBranchMaximumTransactionBranchVerifiedTier_WM_TC_08() throws Exception { //
         ExtentReporter.HeaderChildNode("CashOut Branch Maximum Transaction Branch Verified Tier");
         mlWalletLogin(prop.getproperty("Semi_Verified"));
         click(MLWalletCashOutPage.objCashOut, "CashOut / Withdraw Button");

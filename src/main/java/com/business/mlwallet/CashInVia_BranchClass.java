@@ -95,7 +95,7 @@ public class CashInVia_BranchClass extends BaseClass{
 
 
     public void cashInViaBRanchInvalidAmount_CIBR_TC_05() throws Exception {
-        ExtentReporter.HeaderChildNode("ML Wallet Cash In via Branch Invalid Amount");
+        ExtentReporter.HeaderChildNode("ML Wallet Cash In via Branch Empty Amount Field Validation ");
         cashInViaBranchNavigation(prop.getproperty("Branch_Verified"));
         cancelPreviousTransactionAndContinue();
         cashInViaBranchEnterAmount("");

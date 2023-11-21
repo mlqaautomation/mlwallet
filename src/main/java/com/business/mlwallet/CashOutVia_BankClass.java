@@ -131,7 +131,7 @@ public class CashOutVia_BankClass extends BaseClass{
     }
 
     public void cashOutInvalidAmount_WM_TC_12() throws Exception {
-        ExtentReporter.HeaderChildNode("Search And Select Bank");
+        ExtentReporter.HeaderChildNode("Search And Select Bank To validate invalid amount for cash out");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
         cashOutSelectBank(prop.getproperty("Valid_BankName"));
         enterBankDetails(prop.getproperty("AccountNumber"));

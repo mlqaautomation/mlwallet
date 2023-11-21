@@ -21,6 +21,7 @@ public class TransactionHistoryClass extends  BaseClass{
         verifyElementPresent(MLWalletTransactionHistoryPage.objRecentTransaction, getText(MLWalletTransactionHistoryPage.objRecentTransaction));
         Swipe("UP", 2);
         click(MLWalletTransactionHistoryPage.objSeeMoreBtn, "See More Button");
+//        verifyElementPresentAndClick();
         if (verifyElementPresent(MLWalletTransactionHistoryPage.objTransactionHistory, getTextVal(MLWalletTransactionHistoryPage.objTransactionHistory, "Page"))) {
             logger.info("TH_TC_01, All Transactions are displayed");
             ExtentReporter.extentLoggerPass("TH_TC_01", "'TH_TC_01', All Transactions are displayed");
