@@ -609,7 +609,6 @@ public class CashInVia_BankClass extends BaseClass{
         setWifiConnectionToONOFF("ON");
     }
 
-
     public void cashInViaBankTransactionValidationAfterMinimizingApp_CIBA_TC_43() throws Exception {
         ExtentReporter.HeaderChildNode("Cash In Via Bank Transaction Validation After Minimizing App");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
