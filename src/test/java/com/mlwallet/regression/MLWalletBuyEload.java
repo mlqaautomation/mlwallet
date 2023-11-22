@@ -35,7 +35,7 @@ public class MLWalletBuyEload {
     @Test(priority = 1)
     public void buyELoadTransactionDetails_BE_TC_01() throws Exception
     {
-        buyEloadClass.buyELoadTransactionDetails_BE_TC_01(prop.getproperty("Fully_Verified"),2);
+        buyEloadClass.buyELoadTransactionDetails_BE_TC_01(prop.getproperty("Fully_Verified"),3);
     }
 
     @Test(priority = 2)
@@ -164,27 +164,27 @@ public class MLWalletBuyEload {
 
     @Test(priority = 26)
     public void buyELoadLocationPopupValidation_BE_TC_51() throws Exception {
-        buyEloadClass.buyELoadLocationPopupValidation_BE_TC_51(prop.getproperty("Fully_Verified"), 2);
+        buyEloadClass.buyELoadLocationPopupValidation_BE_TC_51(prop.getproperty("Fully_Verified"), 3);
     }
 
     @Test(priority = 27)
     public void buyELoadLocationDenyFunctionality_BE_TC_52() throws Exception {
-        buyEloadClass.buyELoadLocationDenyFunctionality_BE_TC_52(prop.getproperty("Fully_Verified"), 2);
+        buyEloadClass.buyELoadLocationDenyFunctionality_BE_TC_52(prop.getproperty("Fully_Verified"), 3);
     }
 
     @Test(priority = 28)
     public void buyELoadLocationPermissionDenyCloseBtnFunctionality_BE_TC_53() throws Exception {
-        buyEloadClass.buyELoadLocationPermissionDenyCloseBtnFunctionality_BE_TC_53(prop.getproperty("Fully_Verified"), 2);
+        buyEloadClass.buyELoadLocationPermissionDenyCloseBtnFunctionality_BE_TC_53(prop.getproperty("Fully_Verified"), 3);
     }
 
     @Test(priority = 29)
     public void buyELoadLocationPermissionDenyOpenSettingsBtnFunctionality_BE_TC_54() throws Exception {
-        buyEloadClass.buyELoadLocationPermissionDenyOpenSettingsBtnFunctionality_BE_TC_54(prop.getproperty("Fully_Verified"), 2);
+        buyEloadClass.buyELoadLocationPermissionDenyOpenSettingsBtnFunctionality_BE_TC_54(prop.getproperty("Fully_Verified"), 3);
     }
 
     @Test(priority = 30)
     public void buyELoadLocationPopUpAllowFunctionality_BE_TC_55() throws Exception {
-        buyEloadClass.buyELoadLocationPopUpAllowFunctionality_BE_TC_55(prop.getproperty("Fully_Verified"), 2);
+        buyEloadClass.buyELoadLocationPopUpAllowFunctionality_BE_TC_55(prop.getproperty("Fully_Verified"), 3);
     }
 
     @Test(priority = 31)
@@ -214,7 +214,7 @@ public class MLWalletBuyEload {
 
     @Test(priority = 36)
     public void buyELoadInternetInterruptionWhileEnteringOTP_BE_TC_61() throws Exception {
-        buyEloadClass.buyELoadInternetInterruptionWhileEnteringOTP_BE_TC_61(prop.getproperty("Fully_Verified"), 2);
+        buyEloadClass.buyELoadInternetInterruptionWhileEnteringOTP_BE_TC_61(prop.getproperty("Fully_Verified"), 3);
     }
 
     @Test(priority = 37)
@@ -244,81 +244,81 @@ public class MLWalletBuyEload {
 
     @Test(priority = 42)
     public void buyELoadTransactionValidationAfterMinimizingApp_BE_TC_069() throws Exception {
-        buyEloadClass.buyELoadTransactionValidationAfterMinimizingApp_BE_TC_069(prop.getproperty("Fully_Verified"), 2);
+        buyEloadClass.buyELoadTransactionValidationAfterMinimizingApp_BE_TC_069(prop.getproperty("Fully_Verified"), 3);
     }
 
     @Test(priority = 43)
     public void buyELoadTransactionWithValidMLPin_BE_TC_78() throws Exception {
-        buyEloadClass.buyELoadTransactionWithValidMLPin_BE_TC_78(prop.getproperty("Fully_Verified"), 2);
+        buyEloadClass.buyELoadTransactionWithValidMLPin_BE_TC_78(prop.getproperty("Fully_Verified"), 3);
     }
 
     @Test(priority = 44)
     public void buyELoadTransactionWithInValidMLPin_BE_TC_79() throws Exception {
-        buyEloadClass.buyELoadTransactionWithInValidMLPin_BE_TC_79(prop.getproperty("Fully_Verified"), 2);
+        buyEloadClass.buyELoadTransactionWithInValidMLPin_BE_TC_79(prop.getproperty("Fully_Verified"), 3);
     }
 
     @Test(priority = 45)
     public void buyELoadInOTPPopupValidation_BE_TC_089() throws Exception {
-        buyEloadClass.buyELoadInOTPPopupValidation_BE_TC_089(prop.getproperty("Fully_Verified"), 2);
+        buyEloadClass.buyELoadInOTPPopupValidation_BE_TC_089(prop.getproperty("Fully_Verified"), 3);
     }
 
     @Test(priority = 46)
     public void buyELoadTransactionInAppOTPPopupUIValidation_BE_TC_090() throws Exception {
-        buyEloadClass.buyELoadTransactionInAppOTPPopupUIValidation_BE_TC_090(prop.getproperty("Fully_Verified"), 2);
+        buyEloadClass.buyELoadTransactionInAppOTPPopupUIValidation_BE_TC_090(prop.getproperty("Fully_Verified"), 3);
     }
 
     @Test(priority = 47)
     public void buyELoadTransactionNewOTPAfterSixtySecondsValidation_BE_TC_091() throws Exception {
-        buyEloadClass.buyELoadTransactionNewOTPAfterSixtySecondsValidation_BE_TC_091(prop.getproperty("Fully_Verified"), 2);
+        buyEloadClass.buyELoadTransactionNewOTPAfterSixtySecondsValidation_BE_TC_091(prop.getproperty("Fully_Verified"), 3);
     }
 
     @Test(priority = 48)
     public void buyELoadTransactionOTPCancelBtnFunctionality_BE_TC_092() throws Exception {
-        buyEloadClass.buyELoadTransactionOTPCancelBtnFunctionality_BE_TC_092(prop.getproperty("Fully_Verified"), 2);
+        buyEloadClass.buyELoadTransactionOTPCancelBtnFunctionality_BE_TC_092(prop.getproperty("Fully_Verified"), 3);
     }
 
     @Test(priority = 49)
     public void buyELoadTransactionOTPContinueBtnFunctionality_BE_TC_093() throws Exception {
-        buyEloadClass.buyELoadTransactionOTPContinueBtnFunctionality_BE_TC_093(prop.getproperty("Fully_Verified"), 2);
+        buyEloadClass.buyELoadTransactionOTPContinueBtnFunctionality_BE_TC_093(prop.getproperty("Fully_Verified"), 3);
     }
 
     @Test(priority = 50)
     public void buyELoadMaximumTransactionForBranchVerifiedTier_BE_TC_42() throws Exception {
-        buyEloadClass.buyELoadMaximumTransactionForBranchVerifiedTier_BE_TC_42(prop.getproperty("Branch_Verified"), 2);
+        buyEloadClass.buyELoadMaximumTransactionForBranchVerifiedTier_BE_TC_42(prop.getproperty("Branch_Verified"), 3);
     }
 
     @Test(priority = 51)
     public void buyELoadMaximumLimitForSemiVerifiedTier_BE_TC_33() throws Exception {
-        buyEloadClass.buyELoadMaximumLimitForSemiVerifiedTier_BE_TC_33(prop.getproperty("Semi_Verified"), 2);
+        buyEloadClass.buyELoadMaximumLimitForSemiVerifiedTier_BE_TC_33(prop.getproperty("Semi_Verified"), 3);
     }
     @Test(priority = 52)
     public void buyELoadMaximumTransactionForSemiVerifiedTier_BE_TC_30() throws Exception {
-        buyEloadClass.buyELoadMaximumTransactionForSemiVerifiedTier_BE_TC_30(prop.getproperty("Semi_Verified"), 2);
+        buyEloadClass.buyELoadMaximumTransactionForSemiVerifiedTier_BE_TC_30(prop.getproperty("Semi_Verified"), 3);
     }
 
     @Test(priority = 53)
     public void buyELoadMaximumLimitForFullyVerifiedTier_BE_TC_39() throws Exception {
-        buyEloadClass.buyELoadMaximumLimitForFullyVerifiedTier_BE_TC_39(prop.getproperty("Fully_Verified"), 2);
+        buyEloadClass.buyELoadMaximumLimitForFullyVerifiedTier_BE_TC_39(prop.getproperty("Fully_Verified"), 3);
     }
 
     @Test(priority = 54)
     public void buyELoadMaximumTransactionForFullyVerifiedTier_BE_TC_36() throws Exception {
-        buyEloadClass.buyELoadMaximumTransactionForFullyVerifiedTier_BE_TC_36(prop.getproperty("Fully_Verified"), 2);
+        buyEloadClass.buyELoadMaximumTransactionForFullyVerifiedTier_BE_TC_36(prop.getproperty("Fully_Verified"), 3);
     }
 
     @Test(priority = 55)
     public void buyELoadMaximumLimitForBuyerTierVerifiedTier_BE_TC_45() throws Exception {
-        buyEloadClass.buyELoadMaximumLimitForBuyerTierVerifiedTier_BE_TC_45(prop.getproperty("Fully_Verified"), 2);
+        buyEloadClass.buyELoadMaximumLimitForBuyerTierVerifiedTier_BE_TC_45(prop.getproperty("Fully_Verified"), 3);
     }
 
     @Test(priority = 56)
     public void buyELoadMaximumTransactionForBuyerTierVerifiedTier_BE_TC_48() throws Exception {
-        buyEloadClass.buyELoadMaximumTransactionForBuyerTierVerifiedTier_BE_TC_48(prop.getproperty("Fully_Verified"), 2);
+        buyEloadClass.buyELoadMaximumTransactionForBuyerTierVerifiedTier_BE_TC_48(prop.getproperty("Fully_Verified"), 3);
     }
 
     @Test(priority = 57)
     public void buyELoadSecondTimeLoadSelectionPopupValidation_BE_TC_29() throws Exception {
-        buyEloadClass.buyELoadSecondTimeLoadSelectionPopupValidation_BE_TC_29(prop.getproperty("Fully_Verified"), 2);
+        buyEloadClass.buyELoadSecondTimeLoadSelectionPopupValidation_BE_TC_29(prop.getproperty("Fully_Verified"), 3);
     }
 
     @Test(priority = 58)

@@ -9,6 +9,11 @@ public class MLWalletEloadPage {
 	public static By objSelectTelco = By.xpath("//*[@text='Select Telco']");
 	public static By objPhoneToLoad = By.xpath("//*[@text='Phone to load']");
 	public static By objSelectFromContacts = By.xpath("//*[@text='Select from Contacts']");
+	public static By objSmartTelco = By.xpath("//*[@resource-id='BPNJRD-2']");
+	public static By objSmartProduct = By.xpath("//*[@content-desc='PHP, 30, UCT30 (SMART), UCT30 (SMART)']");
+	public static By objTelcoOption(int index){
+		return By.xpath("//*[@resource-id='BPNJRD-"+index+"']");
+	}
 	public static By telcoOptions(int indexTab)
 	{
 		return By.xpath("(//*[android.view.ViewGroup]/following-sibling::android.view.ViewGroup/(descendant::android.widget.ImageView)[1])["+indexTab+"]");

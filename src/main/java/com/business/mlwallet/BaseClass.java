@@ -355,8 +355,9 @@ public class BaseClass {
         click(MLWalletEloadPage.objEloadTab, "Buy eLoad");
         waitTime(5000);
         if (status.equals("true")) {
+
             verifyElementPresent(MLWalletEloadPage.objEloadtransactionPage, "eLoad Transaction Page");
-            click(MLWalletEloadPage.telcoOptions(telcoOption), "Telco");
+            click(MLWalletEloadPage.objSmartTelco, "Telco");
         }
         click(MLWalletEloadPage.objMobileNoField, "Mobile Number Field");
         type(MLWalletEloadPage.objMobileNoField, mobileNo, "Mobile Number Field");

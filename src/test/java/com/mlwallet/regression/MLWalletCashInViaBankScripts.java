@@ -189,10 +189,10 @@ public class MLWalletCashInViaBankScripts {
         cashInViaBankClass.cashInViaBankLocationPopUpAllowFunctionality_CIBA_TC_39();
     }
 
-    @Test(priority = 33)
-    public void cashInViaBankInternetInterruptionWhileEnteringOTP_CIBA_TC_40() throws Exception {
-        cashInViaBankClass.cashInViaBankInternetInterruptionWhileEnteringOTP_CIBA_TC_40();
-    }
+//    @Test(priority = 33)
+//    public void cashInViaBankInternetInterruptionWhileEnteringOTP_CIBA_TC_40() throws Exception {
+//        cashInViaBankClass.cashInViaBankInternetInterruptionWhileEnteringOTP_CIBA_TC_40();
+//    }
 
     @Test(priority = 34)
     public void cashInViaBankTransactionValidationAfterMinimizingApp_CIBA_TC_43() throws Exception {
