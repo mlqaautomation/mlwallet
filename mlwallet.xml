@@ -9,14 +9,14 @@
 
 	<test name="MLWallet">
 		<parameter name="portno" value="4723"></parameter>
-		<parameter name="deviceName" value="RRCW901MQLF"></parameter>
+		<parameter name="deviceName" value="192.168.12.61:5565"></parameter>
 		<parameter name="browserType" value="Chrome"></parameter>
 		<parameter name="url" value="https://prnt.sc/4vyopNIICFNa"></parameter>
 		<parameter name="url1" value="https://prnt.sc/WlO6H7WpxvNY"></parameter>
 		<parameter name="kpxurl" value="https://ml-kpx-qa.df.r.appspot.com/"></parameter>
 		<classes>
-<!--						<class name="com.mlwallet.regression.MLWalletLoginScripts" />-->
-							<class name="com.mlwallet.regression.MLWalletCashInViaBankScripts" />
+						<class name="com.mlwallet.regression.MLWalletLoginScripts" />
+<!--							<class name="com.mlwallet.regression.MLWalletCashInViaBankScripts" />-->
 <!--						<class name="com.mlwallet.regression.MLWalletCashInViaBranch" />-->
 <!--						<class name="com.mlwallet.regression.MLWalletCashOutWithdrawScripts" />-->
 <!--						<class name="com.mlwallet.regression.MLWalletSendTransferToAnyMLBranchScripts" />
@@ -25,7 +25,7 @@
 <!--						<class name="com.mlwallet.regression.MLWalletShopItemScripts" />-->
 <!--						<class name="com.mlwallet.regression.MLWalletTransactionHistory" />-->
 <!--						<class name="com.mlwallet.regression.MLWalletBuyEload" />-->
-<!--						<class name="com.mlwallet.regression.MLWalletLogoutScripts"/>-->
+						<class name="com.mlwallet.regression.MLWalletLogoutScripts"/>
 <!--						<class name="com.mlwallet.regression.MLWalletBranchLocator"/>-->
 <!--						<class name="com.mlwallet.regression.MLWalletHomeAndDashboard"/>-->
 <!--						<class name="com.mlwallet.regression.MLWalletTroubleSingingIn" />-->
