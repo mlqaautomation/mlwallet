@@ -48,6 +48,7 @@ public class LoginClass extends BaseClass{
 
     public void LogInScenarioWithInValidOTP() throws Exception {
         ExtentReporter.HeaderChildNode("Login Scenarios With InValid OTP");
+        enableNotif();
         explicitWaitVisibility(MLWalletLoginPage.objMobileNumberTextField, 10);
 //		click(MLWalletLoginPage.objMobileNumberTextField, "Mobile Number Text Field");
         type(MLWalletLoginPage.objMobileNumberTextField, prop.getproperty("Branch_Verified"), "Mobile Number Text Field");
@@ -167,6 +168,7 @@ public class LoginClass extends BaseClass{
 
     public void loginNetworkInterruptionWhileLoggingInValidation_Lgn_TC_19(String sTier) throws Exception {
         ExtentReporter.HeaderChildNode("Login Network Interruption Validation");
+        enableNotif();
         waitTime(5000);
         type(MLWalletLoginPage.objMobileNumberTextField, sTier, "Mobile Number Text Field");
         click(MLWalletLoginPage.objLoginBtn, "Login Button");
@@ -184,6 +186,7 @@ public class LoginClass extends BaseClass{
 
     public void loginInternetInterruptionWhileLaunchingApp_Lgn_TC_20() throws Exception {
         ExtentReporter.HeaderChildNode("Login Internet Interruption While Launching App");
+        enableNotif();
         setWifiConnectionToONOFF("OFF");
         if (verifyElementDisplayed(MLWalletLoginPage.objErrorPopup)) {
             verifyElementPresentAndClick(MLWalletLoginPage.objOkBtn, getTextVal(MLWalletLoginPage.objOkBtn, "Button"));
@@ -201,6 +204,7 @@ public class LoginClass extends BaseClass{
 
     public void loginInAppOTPNavigation_Lgn_TC_22() throws Exception {
         ExtentReporter.HeaderChildNode("LogIn In App OTP Navigation");
+        enableNotif();
 //		click(MLWalletLoginPage.objMobileNumberTextField, "Mobile Number Text Field");
         type(MLWalletLoginPage.objMobileNumberTextField, prop.getproperty("Branch_Verified"), "Mobile Number Text Field");
         click(MLWalletLoginPage.objLoginBtn, "Login Button");
@@ -215,6 +219,7 @@ public class LoginClass extends BaseClass{
 
     public void loginInAppOTPPageUIValidation_Lgn_TC_23() throws Exception {
         ExtentReporter.HeaderChildNode("Login InApp OTP Page UI Validation");
+        enableNotif();
 //		click(MLWalletLoginPage.objMobileNumberTextField, "Mobile Number Text Field");
         type(MLWalletLoginPage.objMobileNumberTextField, prop.getproperty("Branch_Verified"), "Mobile Number Text Field");
         click(MLWalletLoginPage.objLoginBtn, "Login Button");
@@ -232,6 +237,7 @@ public class LoginClass extends BaseClass{
 
     public void loginNewOTPAfterSixtySecondsValidation_Lgn_TC_24() throws Exception {
         ExtentReporter.HeaderChildNode("LogIn New OTP After Sixty Seconds Validation");
+        enableNotif();
 //		click(MLWalletLoginPage.objMobileNumberTextField, "Mobile Number Text Field");
         type(MLWalletLoginPage.objMobileNumberTextField, prop.getproperty("Branch_Verified"), "Mobile Number Text Field");
         click(MLWalletLoginPage.objLoginBtn, "Login Button");
@@ -250,6 +256,7 @@ public class LoginClass extends BaseClass{
 
     public void loginOTPCancelBtnFunctionality_Lgn_TC_25() throws Exception {
         ExtentReporter.HeaderChildNode("LogIn OTP Cancel Button Functionality");
+        enableNotif();
 //		click(MLWalletLoginPage.objMobileNumberTextField, "Mobile Number Text Field");
         type(MLWalletLoginPage.objMobileNumberTextField, prop.getproperty("Branch_Verified"), "Mobile Number Text Field");
         click(MLWalletLoginPage.objLoginBtn, "Login Button");
@@ -266,6 +273,7 @@ public class LoginClass extends BaseClass{
 
     public void loginOTPContinueBtnFunctionality_Lgn_TC_26() throws Exception {
         ExtentReporter.HeaderChildNode("LogIn OTP Continue Button Functionality");
+        enableNotif();
 //		click(MLWalletLoginPage.objMobileNumberTextField, "Mobile Number Text Field");
         type(MLWalletLoginPage.objMobileNumberTextField, prop.getproperty("Branch_Verified"), "Mobile Number Text Field");
         click(MLWalletLoginPage.objLoginBtn, "Login Button");

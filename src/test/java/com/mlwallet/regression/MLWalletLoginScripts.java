@@ -30,11 +30,6 @@ public class MLWalletLoginScripts {
     public void LogInScenarioWithValidMobNumber()throws Exception{
         LoginClass.logInScenarioWithValidMobNumber_Lgn_TC_01();
     }
-//    @Test(priority = 1)
-//    public void LogInScenarioWithValidMobNumber() throws Exception
-//    {
-//        LoginClass.logInScenarioWithValidMobNumber_Lgn_TC_01();
-//    }
     @Test(priority = 2)
     public void LogInScenarioWithInvalidMobNumber() throws Exception {
         LoginClass.logInScenarioWithInvalidMobNumber_Lgn_TC_02();
@@ -43,10 +38,7 @@ public class MLWalletLoginScripts {
     public void LogInScenarioWithValidOTP() throws Exception {
         LoginClass.logInScenarioWithValidOTP_Lgn_TC_03();
     }
-////==============================================================================================================//
-////
-//
-//
+
     @Test(priority = 4)
     public void appLaunch_Lgn_TC_05() throws Exception {
         LoginClass.appLaunch_Lgn_TC_05();
@@ -94,16 +86,16 @@ public class MLWalletLoginScripts {
         LoginClass.loginMPinPageUIValidation_Lgn_TC_18();
     }
 
-//    @Test(priority = 13)
-//    public void loginNetworkInterruptionValidation_Lgn_TC_19() throws Exception {
-//        LoginClass.loginNetworkInterruptionWhileLoggingInValidation_Lgn_TC_19(prop.getproperty("Branch_Verified"));
-//    }
-//
-//    @Test(priority = 14)
-//    public void loginInternetInterruptionWhileLaunchingApp_Lgn_TC_20() throws Exception {
-//        LoginClass.loginInternetInterruptionWhileLaunchingApp_Lgn_TC_20();
-//        setWifiConnectionToONOFF("ON");
-//    }
+    @Test(priority = 13)
+    public void loginNetworkInterruptionValidation_Lgn_TC_19() throws Exception {
+        LoginClass.loginNetworkInterruptionWhileLoggingInValidation_Lgn_TC_19(prop.getproperty("Branch_Verified"));
+    }
+
+    @Test(priority = 14)
+    public void loginInternetInterruptionWhileLaunchingApp_Lgn_TC_20() throws Exception {
+        LoginClass.loginInternetInterruptionWhileLaunchingApp_Lgn_TC_20();
+        setWifiConnectionToONOFF("ON");
+    }
 
     @Test(priority = 15)
     public void loginInAppOTPNavigation_Lgn_TC_22() throws Exception {
