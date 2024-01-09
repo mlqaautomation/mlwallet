@@ -16,11 +16,11 @@
 		<parameter name="kpxurl" value="https://ml-kpx-qa.df.r.appspot.com/"></parameter>
 		<classes>
 <!--						<class name="com.mlwallet.regression.MLWalletLoginScripts" />-->
-							<class name="com.mlwallet.regression.MLWalletCashInViaBankScripts" />
+<!--							<class name="com.mlwallet.regression.MLWalletCashInViaBankScripts" />-->
 <!--						<class name="com.mlwallet.regression.MLWalletCashInViaBranch" />-->
 <!--						<class name="com.mlwallet.regression.MLWalletCashOutWithdrawScripts" />-->
-<!--						<class name="com.mlwallet.regression.MLWalletSendTransferToAnyMLBranchScripts" />
-							<class name="com.mlwallet.regression.MLWalletSendTransferToMLWalletUserScripts" />-->
+<!--						<class name="com.mlwallet.regression.MLWalletSendTransferToAnyMLBranchScripts" />-->
+<!--								<class name="com.mlwallet.regression.MLWalletSendTransferToMLWalletUserScripts" />-->
 <!--						<class name="com.mlwallet.regression.MLWalletRegressionPayBillsScripts" />-->
 <!--						<class name="com.mlwallet.regression.MLWalletShopItemScripts" />-->
 <!--						<class name="com.mlwallet.regression.MLWalletTransactionHistory" />-->
@@ -32,10 +32,12 @@
 <!--						<class name="com.mlwallet.regression.MLWalletRegistration" />-->
 <!--						<class name="com.mlwallet.regression.MLWalletUseQR" />-->
 <!--						<class name="com.mlwallet.regression.MLWalletTopUpGames" />-->
-<!--						<class name="com.mlwallet.regression.MLWalletTierUpgrade"/>-->
-<!--						<class name="com.mlwallet.regression.MLWalletSettingScripts" />-->
-<!--						<class name="com.mlwallet.daily.regression.MLShopItems" />-->
 
+
+<!--									<class name="com.mlwallet.regression.MLWalletTierUpgrade"/>-->
+						<class name="com.mlwallet.regression.MLWalletSettingScripts" />
+<!--						<class name="com.mlwallet.daily.regression.MLShopItems" />-->
+<!--							<class name="com.mlwallet.regression.MLWalletGcash"></class>-->
 		</classes>
 	</test>
 </suite>

@@ -4,8 +4,7 @@ import org.bouncycastle.pqc.crypto.newhope.NHOtherInfoGenerator;
 import org.openqa.selenium.By;
 
 public class MLWalletSettingsPage {
-	public static By objProfileIcon=By.xpath("(//*[@class='android.widget.ImageView']/following-sibling::android.view.ViewGroup/child::android.view.ViewGroup/child::android.view.ViewGroup/child::android.view.ViewGroup/child::com.horcrux.svg.SvgView");
-	public static By objProfileIcon1=By.xpath("(//*[android.widget.ImageView]/ancestor::android.view.ViewGroup/descendant::android.view.ViewGroup/child::android.view.ViewGroup/following-sibling::android.view.ViewGroup)[2]");
+	public static By objProfileIcon=By.xpath("//*[@class='android.widget.ImageView']/following-sibling::android.view.ViewGroup/child::android.view.ViewGroup/child::android.view.ViewGroup/child::android.view.ViewGroup/child::com.horcrux.svg.SvgView");
 	public static By objSettings = By.xpath("//*[@text='Settings']");
 	public static By objProfileSettings = By.xpath("//*[@text='Profile Settings']");
 	public static By objNotification = By.xpath("//*[@text='Notification']");

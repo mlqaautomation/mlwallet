@@ -9,7 +9,7 @@
 
     <test name="MLWallet">
         <parameter name="portno" value="4723"></parameter>
-        <parameter name="deviceName" value="Google Pixel 6"></parameter>
+        <parameter name="deviceName" value="Samsung Galaxy S23 Ultra"></parameter>
         <parameter name="browserType" value="Chrome"></parameter>
         <parameter name="url" value="https://prnt.sc/4vyopNIICFNa"></parameter>
         <parameter name="url1" value="https://prnt.sc/WlO6H7WpxvNY"></parameter>
@@ -22,7 +22,7 @@
             <!--			Q4UKMR75WWQ8RSVG-->
             <!--			emulator-5554-->
 
-            			<class name="com.mlwallet.regression.MLWalletLoginScripts" />
+<!--            			<class name="com.mlwallet.regression.MLWalletLoginScripts" />-->
 <!--            			<class name="com.mlwallet.regression.MLWalletCashInViaBankScripts" />-->
 <!--            			<class name="com.mlwallet.regression.MLWalletCashInViaBranch" />-->
 <!--                        <class name="com.mlwallet.regression.MLWalletCashOutViaBranch" />-->
@@ -42,7 +42,7 @@
 <!--            			<class name="com.mlwallet.regression.MLWalletTopUpGames" />-->
 <!--            			<class name="com.mlwallet.regression.MLWalletTierUpgrade"/>-->
 <!--            			<class name="com.mlwallet.regression.MLWalletSettingScripts" />-->
-
+            <class name="com.mlwallet.regression.MLWalletGcash" />
 
         </classes>
     </test>

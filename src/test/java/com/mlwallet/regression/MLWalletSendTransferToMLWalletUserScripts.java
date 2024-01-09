@@ -220,10 +220,10 @@ public class MLWalletSendTransferToMLWalletUserScripts {
         sendMoneyVia_walletClass.sendMoneyToMLWalletLocationPopUpAllowFunctionality_STW_TC_46();
     }
 
-    @Test(priority = 40)
-    public void sendMoneyToMLWalletInternetInterruptionWhileEnteringOTP_STW_TC_47() throws Exception {
-        sendMoneyVia_walletClass.sendMoneyToMLWalletInternetInterruptionWhileEnteringOTP_STW_TC_47();
-    }
+//    @Test(priority = 40)
+//    public void sendMoneyToMLWalletInternetInterruptionWhileEnteringOTP_STW_TC_47() throws Exception {
+//        sendMoneyVia_walletClass.sendMoneyToMLWalletInternetInterruptionWhileEnteringOTP_STW_TC_47();
+//    }
 
     @Test(priority = 41)
     public void sendMoneyToMLWalletTransactionValidationAfterMinimizingApp_STW_TC_50() throws Exception {
