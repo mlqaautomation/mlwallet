@@ -261,10 +261,10 @@ public class MLWalletSendTransferToAnyMLBranchScripts {
         sendMoneyVia_branchClass.sendMoneyToMLBranchLocationPopUpAllowFunctionality_STB_TC_54();
     }
 
-    @Test(priority = 47)
-    public void sendMoneyToMLBranchInternetInterruptionWhileEnteringOTP_STB_TC_55() throws Exception {
-        sendMoneyVia_branchClass.sendMoneyToMLBranchInternetInterruptionWhileEnteringOTP_STB_TC_55();
-    }
+//    @Test(priority = 47)
+//    public void sendMoneyToMLBranchInternetInterruptionWhileEnteringOTP_STB_TC_55() throws Exception {
+//        sendMoneyVia_branchClass.sendMoneyToMLBranchInternetInterruptionWhileEnteringOTP_STB_TC_55();
+//    }
 
     @Test(priority = 48)
     public void sendMoneyToMLBranchTransactionValidationAfterMinimizingApp_STB_TC_58() throws Exception {

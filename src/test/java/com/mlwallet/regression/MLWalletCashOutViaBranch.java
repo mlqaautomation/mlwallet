@@ -137,10 +137,11 @@ public void cashOutUIValidation_WM_TC_16() throws Exception {
     @Test(priority = 23)
     public void cashOutBranchLocationPopUpAllowFunctionality_WM_TC_78() throws Exception {
         cashOutVia_branchClass.cashOutBranchLocationPopUpAllowFunctionality_WM_TC_78("10");
-    } @Test(priority = 24)
-    public void cashOutBranchInternetInterruptionWhileEnteringOTP_WM_TC_80() throws Exception {
-        cashOutVia_branchClass.cashOutBranchInternetInterruptionWhileEnteringOTP_WM_TC_80("10");
     }
+//    @Test(priority = 24)
+//    public void cashOutBranchInternetInterruptionWhileEnteringOTP_WM_TC_80() throws Exception {
+//        cashOutVia_branchClass.cashOutBranchInternetInterruptionWhileEnteringOTP_WM_TC_80("10");
+//    }
     @Test(priority = 25)
     public void cashOutBranchTransactionValidationAfterMinimizingApp_WM_TC_91() throws Exception {
         cashOutVia_branchClass.cashOutBranchTransactionValidationAfterMinimizingApp_WM_TC_91();

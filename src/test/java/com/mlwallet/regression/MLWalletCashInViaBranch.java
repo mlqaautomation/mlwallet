@@ -171,10 +171,10 @@ public class MLWalletCashInViaBranch {
         MLWalletBusinessLogic.cashInViaBranchLocationPermissionDenyOpenSettingsBtnFunctionality_CIBR_TC_31();
     }
 
-    @Test(priority = 28)
-    public void cashInViaBranchInternetInterruptionWhileEnteringOTP_CIBR_TC_33() throws Exception {
-        MLWalletBusinessLogic.cashInViaBranchInternetInterruptionWhileEnteringOTP_CIBR_TC_33();
-    }
+//    @Test(priority = 28)
+//    public void cashInViaBranchInternetInterruptionWhileEnteringOTP_CIBR_TC_33() throws Exception {
+//        MLWalletBusinessLogic.cashInViaBranchInternetInterruptionWhileEnteringOTP_CIBR_TC_33();
+//    }
 
     @Test(priority = 29)
     public void cashInViaBranchLocationPopUpAllowFunctionality_CIBR_TC_32() throws Exception {

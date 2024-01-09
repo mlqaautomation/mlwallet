@@ -74,5 +74,7 @@ public class MLWalletHomePage {
     public static By objDoYouHaveAnotherAccBtn = By.xpath("//*[@resource-id='SYOFR5']");
     public static By objAddAccFacility = By.xpath("//*[@text='ML Wallet Add Account Facility']");
     public static By objSuccess = By.xpath("(//*[@text='Success'])[1]");
+    //
+    public static By objGetStartedBtn = By.xpath("(//android.view.ViewGroup[@content-desc=\"Get's Started\"]");
 
 }

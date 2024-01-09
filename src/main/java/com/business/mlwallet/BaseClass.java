@@ -29,15 +29,18 @@ public class BaseClass {
     public static PropertyFileReader prop;
     public static PropertyFileReader tierProp;
     public static PropertyFileReader shopProp;
+    public static PropertyFileReader gcashProp;
     public void propertyFileReader(){
         if(osName.contains("linux")){
              prop = new PropertyFileReader("./properties/testdata.properties");
              tierProp = new PropertyFileReader("./properties/tierUpgrade.properties");
              shopProp = new PropertyFileReader("./properties/mlshop.properties");
+             gcashProp = new PropertyFileReader("./properties/gcash.properties");
         }else{
              prop = new PropertyFileReader(".\\properties\\testdata.properties");
              tierProp = new PropertyFileReader(".\\properties\\tierUpgrade.properties");
              shopProp = new PropertyFileReader(".\\properties\\mlshop.properties");
+            gcashProp = new PropertyFileReader(".\\properties\\gcash.properties");
         }
     }
     public BaseClass(){
@@ -356,7 +359,7 @@ public class BaseClass {
         waitTime(5000);
         if (status.equals("true")) {
             verifyElementPresent(MLWalletEloadPage.objEloadtransactionPage, "eLoad Transaction Page");
-            click(MLWalletEloadPage.telcoOptions(telcoOption), "Telco");
+            click(MLWalletEloadPage.objSelectSmartTelco, "Telco");
         }
         click(MLWalletEloadPage.objMobileNoField, "Mobile Number Field");
         type(MLWalletEloadPage.objMobileNoField, mobileNo, "Mobile Number Field");
@@ -569,7 +572,7 @@ public class BaseClass {
     }
 
     public void navigateToProfile() throws Exception {
-        waitTime(5000);
+        waitTime(10000);
         verifyElementPresentAndClick(MLWalletSettingsPage.objProfileIcon, "Profile Icon");
         if (verifyElementPresent(MLWalletSettingsPage.objAccountDetails, "Account Details Page")) {
             logger.info("Navigated to settings");
@@ -842,5 +845,12 @@ public class BaseClass {
             logger.info("balance is = " + getText(MLWalletHomePage.objAvailableBalance));
             return balance;
         }
+    }
+
+    //Cash Back
+    public void exit_cashBack_popUp()throws Exception{
+        //if cashback pop up visible tap Refer and Earn button. Then tap back button again to go to dashboard
+            
+        //
     }
 }

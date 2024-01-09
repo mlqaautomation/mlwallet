@@ -9,6 +9,7 @@ public class MLWalletEloadPage {
 	public static By objSelectTelco = By.xpath("//*[@text='Select Telco']");
 	public static By objPhoneToLoad = By.xpath("//*[@text='Phone to load']");
 	public static By objSelectFromContacts = By.xpath("//*[@text='Select from Contacts']");
+	public static By objSelectSmartTelco= By.xpath("//*[@resource-id='BPNJRD-2']");
 	public static By telcoOptions(int indexTab)
 	{
 		return By.xpath("(//*[android.view.ViewGroup]/following-sibling::android.view.ViewGroup/(descendant::android.widget.ImageView)[1])["+indexTab+"]");
@@ -81,4 +82,6 @@ public class MLWalletEloadPage {
 	public static By objBuyLoadBackArrowBtn = By.xpath("//*[@text='Buy Load']/parent::android.view.ViewGroup/preceding-sibling::android.view.ViewGroup");
 	public static By objSecondTimeConfirmationPopup = By.xpath("//*[@resource-id='modal-confirm-button']/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
 	public static By objMLPinEditField = By.xpath("//*[@resource-id='847305']");
+	public static  By obj5SmartRegularLoad = By.xpath("//*[@content-desc='PHP, 5, P5 Smart Regular, P5 Smart Regular']");
+
 }
