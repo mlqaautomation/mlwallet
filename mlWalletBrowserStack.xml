@@ -9,7 +9,7 @@
 
     <test name="MLWallet">
         <parameter name="portno" value="4723"></parameter>
-        <parameter name="deviceName" value="Google Pixel 6"></parameter>
+        <parameter name="deviceName" value="Samsung Galaxy Z Fold 5"></parameter>
         <parameter name="browserType" value="Chrome"></parameter>
         <parameter name="url" value="https://prnt.sc/4vyopNIICFNa"></parameter>
         <parameter name="url1" value="https://prnt.sc/WlO6H7WpxvNY"></parameter>
