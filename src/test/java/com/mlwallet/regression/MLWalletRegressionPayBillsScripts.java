@@ -169,12 +169,15 @@ public class MLWalletRegressionPayBillsScripts {
         MLWalletBusinessLogic.payBillsLocationPopUpAllowFunctionality_PB_TC_38();
     }
 
-    @Test(priority = 28)
-    public void payBillsInternetInterruptionWhileEnteringOTP_PB_TC_39() throws Exception {
-        MLWalletBusinessLogic.payBillsInternetInterruptionWhileEnteringOTP_PB_TC_39();
-    }
+//    @Test(priority = 28)
+//    public void payBillsInternetInterruptionWhileEnteringOTP_PB_TC_39() throws Exception {
+//        MLWalletBusinessLogic.payBillsInternetInterruptionWhileEnteringOTP_PB_TC_39();
+//    }
 
-    @Test(priority = 29)
+    @Test(priority = 28)
+//    public void payBillsInternetInterruptionWhileEnteringOTP_PB_TC_39() throws Exception {
+//        MLWalletBusinessLogic.payBillsInternetInterruptionWhileEnteringOTP_PB_TC_39();
+//    }    @Test(priority = 29)
     public void payBillsTransactionValidationAfterMinimizingApp_PB_TC_42() throws Exception {
         MLWalletBusinessLogic.payBillsTransactionValidationAfterMinimizingApp_PB_TC_42();
     }

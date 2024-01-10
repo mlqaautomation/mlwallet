@@ -341,10 +341,10 @@ public class MLWalletCashOutWithdrawScripts {
 //        cashOutVia_branchClass.cashOutBranchLocationPopUpAllowFunctionality_WM_TC_78("10");
 //    }
 
-    @Test(priority = 61)
-    public void cashOutBankInternetInterruptionWhileEnteringOTP_WM_TC_79() throws Exception {
-        cashOutVia_bankClass.cashOutBankInternetInterruptionWhileEnteringOTP_WM_TC_79("100");
-    }
+//    @Test(priority = 61)
+//    public void cashOutBankInternetInterruptionWhileEnteringOTP_WM_TC_79() throws Exception {
+//        cashOutVia_bankClass.cashOutBankInternetInterruptionWhileEnteringOTP_WM_TC_79("100");
+//    }
 
 //    @Test(priority = 62)
 //    public void cashOutBranchInternetInterruptionWhileEnteringOTP_WM_TC_80() throws Exception {

@@ -22,7 +22,7 @@
             <!--			Q4UKMR75WWQ8RSVG-->
             <!--			emulator-5554-->
 
-            			<class name="com.mlwallet.regression.MLWalletLoginScripts" />
+<!--            			<class name="com.mlwallet.regression.MLWalletLoginScripts" />-->
 <!--            			<class name="com.mlwallet.regression.MLWalletCashInViaBankScripts" />-->
 <!--            			<class name="com.mlwallet.regression.MLWalletCashInViaBranch" />-->
 <!--                        <class name="com.mlwallet.regression.MLWalletCashOutViaBranch" />-->
@@ -42,7 +42,7 @@
 <!--            			<class name="com.mlwallet.regression.MLWalletTopUpGames" />-->
 <!--            			<class name="com.mlwallet.regression.MLWalletTierUpgrade"/>-->
 <!--            			<class name="com.mlwallet.regression.MLWalletSettingScripts" />-->
-
+            <class name="com.mlwallet.regression.MLWalletGcash" />
 
         </classes>
     </test>

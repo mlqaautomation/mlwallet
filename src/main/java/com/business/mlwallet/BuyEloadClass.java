@@ -18,12 +18,12 @@ public class BuyEloadClass extends BaseClass{
     }
     public void buyELoadTransactionDetails_BE_TC_01(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Transaction Details Validation after Buying eLoad");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
-        click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
+        click(MLWalletEloadPage.objRegularLoadTab, "Regular Load Tab");
         waitTime(5000);
-        click(MLWalletEloadPage.objTransaction, getTextVal(MLWalletEloadPage.objTransaction, "Promo"));
+        click(MLWalletEloadPage.obj5SmartRegularLoad, getTextVal(MLWalletEloadPage.obj5SmartRegularLoad, "Regular Load"));
         verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
         waitTime(5000);
         click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
@@ -74,7 +74,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadWithoutTelecommunicationSelected_BE_TC_04() throws Exception {
         ExtentReporter.HeaderChildNode("Buying eLoad without telecommunication selected");
-        eLoad_generic(prop.getproperty("Fully_Verified"), prop.getproperty("GLOBE"), "false", 4);
+        eLoad_generic(prop.getproperty("Fully_Verified"), prop.getproperty("Smart"), "false", 4);
         enableLocation_PopUp();
         if (verifyElementPresent(MLWalletEloadPage.objErrorMsg, getTextVal(MLWalletEloadPage.objErrorMsg, "Pop Up Message"))) {
             String sActualErrorMsg = getText(MLWalletEloadPage.objErrorMsg);
@@ -87,12 +87,12 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadInsufficientBalance_BE_TC_05(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buying eLoad with insufficient balance");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
         waitTime(5000);
-        swipeDownUntilElementVisible("Globe Regular Load 3000");
+        swipeDownUntilElementVisible("Smart Regular Load 3000");
         verifyElementPresentAndClick(MLWalletEloadPage.obj2000PromoLoad, getTextVal(MLWalletEloadPage.obj2000PromoLoad, "Load"));
         verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
         waitTime(5000);
@@ -115,12 +115,12 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadMaxLimitPerTransaction_BE_TC_09(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad Maximum Limit per Transaction");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
         waitTime(5000);
-        swipeDownUntilElementVisible("Globe Regular Load 3000");
+        swipeDownUntilElementVisible("Smart Regular Load 3000");
         verifyElementPresentAndClick(MLWalletEloadPage.obj3000RegularLoad, getTextVal(MLWalletEloadPage.obj3000RegularLoad, "Load"));
         verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
         waitTime(5000);
@@ -176,7 +176,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadLoadSelectionPageBackBtnValidation_BE_TC_12() throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad Load Selection Back Arrow Button Validation");
-        buyELoadNextButtonFunctionalityOnELoadTransactionPage_BE_TC_11(prop.getproperty("Fully_Verified"), prop.getproperty("GLOBE"), 2);
+        buyELoadNextButtonFunctionalityOnELoadTransactionPage_BE_TC_11(prop.getproperty("Fully_Verified"), prop.getproperty("Smart"), 2);
         verifyElementPresentAndClick(MLWalletEloadPage.objLoadSelectionBackArrowBtn, "Load Selection Back Arrow Button");
         if (verifyElementPresent(MLWalletEloadPage.objEloadtransactionPage, getTextVal(MLWalletEloadPage.objEloadtransactionPage, "Page"))) {
             logger.info("BE_TC_12, After clicking on Back Arrow Btn on Load Selection Page, Application Navigates to eLoad Transaction Page is Validated");
@@ -187,7 +187,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadLoadSelectionPageUIValidation_BE_TC_13(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad Load Selection Page UI Validation");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
         if (verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, getTextVal(MLWalletEloadPage.objLoadSelectionPage, "Page"))) {
             verifyElementPresent(MLWalletEloadPage.objMobileNumberInLoadSelection, getTextVal(MLWalletEloadPage.objMobileNumberInLoadSelection, "Number"));
@@ -209,7 +209,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadLoadSelectionChangeBtnFunctionality_BE_TC_14(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad Load Selection Change Button Functionality Validation");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
         verifyElementPresentAndClick(MLWalletEloadPage.objChange, getTextVal(MLWalletEloadPage.objChange, "Button"));
         if (verifyElementPresent(MLWalletEloadPage.objEloadtransactionPage, getTextVal(MLWalletEloadPage.objEloadtransactionPage, "Page"))) {
@@ -221,7 +221,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadTransactionDetailsPageUIValidation_BE_TC_15(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad Transaction Details Page UI Validation");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -420,7 +420,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadPromoConfirmationPopupValidation_BE_TC_24(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad Promo Confirmation Popup Validation");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -438,7 +438,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadOTPPageUIValidation_BE_TC_25(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad OTP page UI Validation");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
         waitTime(5000);
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
@@ -463,7 +463,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadSuccessfulTransactionUIValidation_BE_TC_26(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad Successful Transaction UI Validation");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         waitTime(5000);
@@ -526,7 +526,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadLocationPopupValidation_BE_TC_51(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad Location Popup Validation");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         if (verifyElementPresent(MLWalletHomePage.objPopUpMsg, getTextVal(MLWalletHomePage.objPopUpMsg, "Popup Msg"))) {
             locationPopUpValidation();
             logger.info("BE_TC_51, Buy ELoad Location Popup Validated");
@@ -537,7 +537,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadLocationDenyFunctionality_BE_TC_52(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad Location Deny Functionality");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         if (verifyElementPresent(MLWalletHomePage.objPopUpMsg, getTextVal(MLWalletHomePage.objPopUpMsg, "Popup Msg"))) {
             permissionDenyPopUp();
             logger.info("BE_TC_52, Buy ELoad Location Deny Functionality Validated");
@@ -548,7 +548,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadLocationPermissionDenyCloseBtnFunctionality_BE_TC_53(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad Location Permission Deny Close Button Functionality");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         if (verifyElementPresent(MLWalletHomePage.objPopUpMsg, getTextVal(MLWalletHomePage.objPopUpMsg, "Popup Msg"))) {
             permissionDenyCloseBtnFunctionality();
             if (verifyElementPresent(MLWalletLoginPage.objAvailableBalance, getTextVal(MLWalletLoginPage.objAvailableBalance, "Page"))) {
@@ -562,7 +562,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadLocationPermissionDenyOpenSettingsBtnFunctionality_BE_TC_54(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad Location Permission Deny open Settings Button Functionality Validation");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         if (verifyElementPresent(MLWalletHomePage.objPopUpMsg, getTextVal(MLWalletHomePage.objPopUpMsg, "Popup Msg"))) {
             permissionDenyOpenSettingsBtnFunctionality();
             if (verifyElementPresent(MLWalletEloadPage.objAppInfo, getTextVal(MLWalletEloadPage.objAppInfo, "Page"))) {
@@ -576,7 +576,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadLocationPopUpAllowFunctionality_BE_TC_55(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad Location popup Allow Button Functionality Validation");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         if (verifyElementPresent(MLWalletHomePage.objPopUpMsg, getTextVal(MLWalletHomePage.objPopUpMsg, "Popup Msg"))) {
             locationPopUpAllowFunctionality();
             verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, getTextVal(MLWalletEloadPage.objLoadSelectionPage, "Page"));
@@ -683,7 +683,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadInternetInterruptionWhileEnteringOTP_BE_TC_61(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad Internet Interruption While Entering OTP Validation");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -781,7 +781,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadTransactionValidationAfterMinimizingApp_BE_TC_069(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad Transaction Validation After Minimizing App");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -806,7 +806,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadTransactionWithValidMLPin_BE_TC_78(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad Transaction With Valid MLPin");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -835,7 +835,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadTransactionWithInValidMLPin_BE_TC_79(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad Transaction With InValid MLPin");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -860,7 +860,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadInOTPPopupValidation_BE_TC_089(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad Transaction IN App OTP Popup Validation");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -883,7 +883,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadTransactionInAppOTPPopupUIValidation_BE_TC_090(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad Transaction InApp OTP popup UI Validation");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -909,7 +909,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadTransactionNewOTPAfterSixtySecondsValidation_BE_TC_091(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad New OTP got generated After Sixty Seconds validation");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -935,7 +935,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadTransactionOTPCancelBtnFunctionality_BE_TC_092(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad Transaction OTP Cancel Button Functionality");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -959,7 +959,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadTransactionOTPContinueBtnFunctionality_BE_TC_093(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad Transaction OTP Continue Button Functionality");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -983,7 +983,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadMaximumTransactionForBranchVerifiedTier_BE_TC_42(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad maximum transaction for Branch verified Tier");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -1007,7 +1007,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadMaximumTransactionForSemiVerifiedTier_BE_TC_30(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad maximum transaction for Semi verified Tier");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -1031,7 +1031,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadMaximumLimitForSemiVerifiedTier_BE_TC_33(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad maximum Limit reached Error msg validation for Semi verified Tier");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -1056,7 +1056,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadMaximumLimitForFullyVerifiedTier_BE_TC_39(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad maximum Limit reached Error msg validation for Fully verified Tier");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -1081,7 +1081,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadMaximumTransactionForFullyVerifiedTier_BE_TC_36(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad maximum transaction for Fully verified Tier");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -1106,7 +1106,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadMaximumLimitForBuyerTierVerifiedTier_BE_TC_45(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad maximum Limit reached Error msg validation for Buyer Tier verified Tier");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -1131,7 +1131,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadMaximumTransactionForBuyerTierVerifiedTier_BE_TC_48(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad maximum transaction for Buyer Tier verified Tier");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -1155,7 +1155,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadSecondTimeLoadSelectionPopupValidation_BE_TC_29(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad Second time Load selection popup validation");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
@@ -1177,7 +1177,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadMLPinPageNavigation_BE_TC_87(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad ML pin page navigation");
-        eLoad_generic(sTier, prop.getproperty("GLOBE"), "true", promotab);
+        eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
