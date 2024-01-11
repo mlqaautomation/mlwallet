@@ -19,11 +19,8 @@ public class AppiumServer{
       static AppiumDriverLocalService service;
       public static String osName=System.getProperty("os.name").toLowerCase();
       private static String getAppiumJSPath() {
-         String userDir = System.getProperty("user.dir");
-         return userDir + File.separator + "AppData" + File.separator + "Roaming" +
-                 File.separator + "npm" + File.separator + "node_modules" +
-                 File.separator + "appium" + File.separator + "build" +
-                 File.separator + "lib" + File.separator + "main.js";
+         String userName = System.getenv("USERNAME");
+         return "C:\\Users\\" + userName + "\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js";
    }
    public static void startServer() throws IOException {
       int[] ports ={4723, 4725, 4727, 4729, 4731, 4733, 4735, 4737, 4739, 4741};
