@@ -4,20 +4,27 @@ import com.utility.Utilities;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.service.local.flags.GeneralServerFlag;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
+
 
 import java.io.File;
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
+import com.utility.LoggingUtils;
 
 public class AppiumServer{
 
    public AppiumServer(){
 
    }
+      public static LoggingUtils logger = new LoggingUtils();
       static AppiumDriverLocalService service;
       public static String osName=System.getProperty("os.name").toLowerCase();
+      private static String getAppiumJSPath() {
+      String userHome = System.getProperty("user.home");
+      return userHome + File.separator + "AppData" + File.separator + "Roaming" +
+              File.separator + "npm" + File.separator + "node_modules" +
+              File.separator + "appium" + File.separator + "build" +
+              File.separator + "lib" + File.separator + "main.js";
+   }
    public static void startServer() throws IOException {
       int[] ports ={4723, 4725, 4727, 4729, 4731, 4733, 4735, 4737, 4739, 4741};
       uninstallAppiumServer();
@@ -39,7 +46,7 @@ public class AppiumServer{
                } else {
                   service.start();
                   service.clearOutPutStreams();
-                  System.out.println("[EVENT] Appium Server Started Sucessfully.");
+                  logger.info("[EVENT] Appium Server Started Sucessfully.");
                }
             break;
          default:
@@ -47,8 +54,7 @@ public class AppiumServer{
                service = AppiumDriverLocalService.
                        buildService(new AppiumServiceBuilder()
                                .usingDriverExecutable(new File("C:\\Program Files\\nodejs\\node.exe"))
-                               .withAppiumJS(new File("C:\\Users\\" + System.getProperty("user.name")
-                                       + "\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
+                               .withAppiumJS(new File(getAppiumJSPath()))
                                .withIPAddress("127.0.0.1").usingPort(port)
                                .usingDriverExecutable (new File ("C:\\Program Files\\nodejs\\node.exe"))
                                .withArgument(GeneralServerFlag.LOG_LEVEL, "error"
@@ -58,7 +64,8 @@ public class AppiumServer{
                service.stop();
             } else {
                service.start();
-               System.out.println("[EVENT] Appium Server Started Successfully.");
+               logger.info(getAppiumJSPath());
+               logger.info("[EVENT] Appium Server Started Successfully.");
             }
          }
    }
@@ -73,6 +80,6 @@ public class AppiumServer{
       DriverManager.getAppiumDriver().quit();
       service.stop();
       Utilities.waitTime(3000);
-      System.out.println("[EVENT] Appium Server Stopped Successfully.");
+      logger.info("[EVENT] Appium Server Stopped Successfully.");
    }
 }
