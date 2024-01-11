@@ -19,7 +19,7 @@ public class AppiumServer{
       static AppiumDriverLocalService service;
       public static String osName=System.getProperty("os.name").toLowerCase();
       private static String getAppiumJSPath() {
-      String userName = System.getenv("USERNAME");
+      String userName = System.getProperty("user.name");
       return userName + File.separator + "AppData" + File.separator + "Roaming" +
               File.separator + "npm" + File.separator + "node_modules" +
               File.separator + "appium" + File.separator + "build" +
