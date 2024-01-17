@@ -15,13 +15,11 @@
         <parameter name="url1" value="https://prnt.sc/WlO6H7WpxvNY"></parameter>
         <parameter name="kpxurl" value="https://ml-kpx-qa.df.r.appspot.com/"></parameter>
 
-
         <classes>
             <!--			RZ8T20EDQ5W-->
             <!--			4TWOGQCM6589MBZD-->
             <!--			Q4UKMR75WWQ8RSVG-->
             <!--			emulator-5554-->
-
             			<class name="com.mlwallet.regression.MLWalletLoginScripts" />
 <!--            			<class name="com.mlwallet.regression.MLWalletCashInViaBankScripts" />-->
 <!--            			<class name="com.mlwallet.regression.MLWalletCashInViaBranch" />-->
