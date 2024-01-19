@@ -29,21 +29,37 @@ public class AppiumServer{
    //   }
    public static void startServer() throws IOException {
       uninstallAppiumServer();
-      String nodePath = osName.startsWith("linux") ? NODE_PATH_LINUX : NODE_PATH_WINDOWS;
-      String appiumJSPath = osName.startsWith("linux") ? APPIUM_JS_PATH_LINUX : APPIUM_JS_PATH_WINDOWS;
-      for (int port : PORTS) {
+      String nodePath = "";
+      String appiumJSPath = "";
+
+      if (osName.toLowerCase().contains("linux")) {
+         nodePath = NODE_PATH_LINUX;
+         appiumJSPath = APPIUM_JS_PATH_LINUX;
+
+      } else if (osName.toLowerCase().contains("windows")) {
+         nodePath = NODE_PATH_WINDOWS;
+         appiumJSPath = APPIUM_JS_PATH_WINDOWS;
+
+      } else {
+         // Handle the case where the OS is not supported
+         throw new UnsupportedOperationException("Unsupported OS: " + osName);
+      }
          service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder()
                  .usingDriverExecutable(new File(nodePath))
                  .withAppiumJS(new File(appiumJSPath))
                  .withIPAddress(IP_ADDRESS)
-                 .usingPort(port)
+                 .usingAnyFreePort()
+                 .usingDriverExecutable(new File(nodePath))
                  .withArgument(GeneralServerFlag.LOG_LEVEL, "error"));
-      }
 
       if (service.isRunning()) {
          service.stop();
       } else {
+         String projectDirectory = System.getProperty("user.dir");
+         String batFilePath = projectDirectory + "\\runAppiumPorts.bat";
+         Runtime.getRuntime().exec("cmd /c start " + batFilePath);
          service.start();
+         // Run the runAppiumPorts.bat file
          service.clearOutPutStreams();
          logger.info("[EVENT] Appium Server Started Successfully.");
       }
