@@ -14,10 +14,9 @@ import static com.utility.Utilities.getTextVal;
 
 public class TierUpgradeClass extends BaseClass {
 
-    public TierUpgradeClass(String Application, String deviceName, String portno) throws InterruptedException {
-        super(Application, deviceName, portno);
+    public TierUpgradeClass(){
+        super();
     }
-
 
     public void tierUpgradeHomePageIIconValidationAsBuyerTierUser_TU_TC_01() throws Exception {
         ExtentReporter.HeaderChildNode("Tier Upgrade Home Page I Icon Validation as BuyerTier User");

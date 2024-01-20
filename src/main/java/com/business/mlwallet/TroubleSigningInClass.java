@@ -7,8 +7,8 @@ import com.utility.ExtentReporter;
 import static com.utility.Utilities.*;
 
 public class TroubleSigningInClass extends BaseClass {
-    public TroubleSigningInClass(String Application, String deviceName, String portno) throws InterruptedException {
-        super(Application, deviceName, portno);
+    public TroubleSigningInClass() throws InterruptedException {
+        super();
     }
 
     public void troubleSigningInPageNavigationFromMpinScreen_TS_TC_01() throws Exception {

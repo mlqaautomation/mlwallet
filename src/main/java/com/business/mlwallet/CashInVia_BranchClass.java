@@ -10,8 +10,8 @@ import static com.utility.Utilities.*;
 
 public class CashInVia_BranchClass extends BaseClass{
 
-    public CashInVia_BranchClass(String Application, String deviceName, String portno ) throws InterruptedException{
-        super(Application, deviceName, portno);
+    public CashInVia_BranchClass() throws InterruptedException{
+        super();
     }
 
     public void cashInviaBranch_ValidAmount_Scenario_CIBR_TC_01() throws Exception {

@@ -6,11 +6,9 @@ import com.utility.ExtentReporter;
 import static com.utility.Utilities.*;
 
 public class TopUpGameClass extends BaseClass {
-    public TopUpGameClass(String Application, String deviceName, String portno) throws InterruptedException {
-        super(Application, deviceName, portno);
+    public TopUpGameClass() {
+        super();
     }
-
-
 
     public void topUpGamesHomePageValidation_TUG_TC_01() throws Exception {
         ExtentReporter.HeaderChildNode("TopUp Games Home Page Validation");

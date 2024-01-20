@@ -12,8 +12,8 @@ import static com.utility.Utilities.getTextVal;
 
 public class LogoutClass extends BaseClass{
 
-    public LogoutClass(String Application, String deviceName, String portno)throws InterruptedException{
-        super(Application, deviceName, portno);
+    public LogoutClass(){
+        super();
     }
 
     public void logOutMinimizeAndRelaunch_Lout_TC_03() throws Exception {

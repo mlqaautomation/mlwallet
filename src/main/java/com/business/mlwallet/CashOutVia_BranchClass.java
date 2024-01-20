@@ -14,8 +14,8 @@ import static com.utility.Utilities.assertionValidation;
 
 public class CashOutVia_BranchClass extends BaseClass {
 
-    public CashOutVia_BranchClass(String Application, String deviceName, String portno) throws InterruptedException{
-        super(Application, deviceName, portno);
+    public CashOutVia_BranchClass(){
+        super();
     }
     public void cashOutWithdrawBranch_WM_TC_05() throws Exception {
         ExtentReporter.HeaderChildNode("Cash Out Withdraw Branch");

@@ -9,8 +9,8 @@ import static com.utility.Utilities.*;
 
 public class LoginClass extends BaseClass{
 
-    public LoginClass(String Application, String deviceName, String portno) throws InterruptedException {
-        super(Application, deviceName, portno);
+    public LoginClass() {
+        super();
     }
 
     public void logInScenarioWithValidMobNumber_Lgn_TC_01() throws Exception {

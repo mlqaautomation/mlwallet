@@ -12,8 +12,8 @@ import static com.utility.Utilities.*;
 
 public class CashInVia_BankClass extends BaseClass{
 
-    public CashInVia_BankClass (String Application, String deviceName, String portno ) throws InterruptedException{
-        super(Application, deviceName, portno);
+    public CashInVia_BankClass (){
+        super();
     }
     public void cashInViaBank_CIBA_TC_01() throws Exception {
         ExtentReporter.HeaderChildNode("Cash In Via Bank");

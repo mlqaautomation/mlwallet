@@ -11,8 +11,8 @@ import java.util.List;
 import static com.utility.Utilities.*;
 import static com.utility.Utilities.verifyElementPresent;
 public class GCashClass extends BaseClass{
-    public GCashClass(String Application, String deviceName, String portno)throws InterruptedException {
-        super(Application, deviceName, portno);
+    public GCashClass(){
+        super();
     }
 
     //method for navigating gcash

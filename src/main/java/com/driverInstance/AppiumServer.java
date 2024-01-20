@@ -6,9 +6,14 @@ import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.service.local.flags.GeneralServerFlag;
 
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStreamReader;
+
 import com.utility.LoggingUtils;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 
 public class AppiumServer{
 
@@ -28,7 +33,6 @@ public class AppiumServer{
    //      return "C:\\npm\\node_modules\\appium\\build\\lib\\main.js";
    //   }
    public static void startServer() throws IOException {
-      uninstallAppiumServer();
       String nodePath = "";
       String appiumJSPath = "";
 
@@ -55,11 +59,8 @@ public class AppiumServer{
       if (service.isRunning()) {
          service.stop();
       } else {
-         String projectDirectory = System.getProperty("user.dir");
-         String batFilePath = projectDirectory + "\\runAppiumPorts.bat";
-         Runtime.getRuntime().exec("cmd /c start " + batFilePath);
+         runAppiumPort();
          service.start();
-         // Run the runAppiumPorts.bat file
          service.clearOutPutStreams();
          logger.info("[EVENT] Appium Server Started Successfully.");
       }
@@ -80,5 +81,38 @@ public class AppiumServer{
       service.stop();
       Utilities.waitTime(3000);
       logger.info("[EVENT] Appium Server Stopped Successfully.");
+   }
+
+   public static void runAppiumPort() throws IOException{
+      String projectDirectory = System.getProperty("user.dir");
+      String batFilePath = projectDirectory + "\\runAppiumPorts.bat";
+      Runtime.getRuntime().exec("cmd /c start " + batFilePath);
+      logger.info("Starting Appium Ports");
+   }
+
+
+   public static void terminateAppium(){
+      try{
+         Process process = Runtime.getRuntime().exec("tasklist /FI \"IMAGENAME eq node.exe\" /NH");
+         BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+         String line;
+         boolean appiumRunning = false;
+
+         while ((line = reader.readLine()) != null) {
+            if (line.contains("node.exe")) {
+               appiumRunning = true;
+               break;
+            }
+         }
+         reader.close();
+         if (appiumRunning) {
+            Runtime.getRuntime().exec("taskkill /F /IM node.exe");
+            logger.info("Appium Instance Running");
+         } else {
+            logger.info("No Appium Instance is running");
+         }
+      }catch (IOException e) {
+         throw new RuntimeException(e);
+      }
    }
 }

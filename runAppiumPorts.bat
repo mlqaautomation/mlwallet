@@ -13,5 +13,4 @@ for %%p in (%PORTS%) do (
     start "" "%NODE_PATH%" "%APPIUM_JS_PATH%" -a 127.0.0.1 -p %%p --log-level error
 )
 
-echo Appium servers started successfully.
 exit /b
