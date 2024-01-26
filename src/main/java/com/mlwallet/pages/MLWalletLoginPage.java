@@ -49,4 +49,5 @@ public class MLWalletLoginPage {
 	public static By objNotif = By.xpath("//*[contains(@text, 'notifications')]");
 	public static By objAllowNotif = By.xpath("//*[@text='Allow']");
 	public static By objdontAllowNotif = By.xpath("//*[@text='Don’t allow']");
+	public static By objAnnouncement_Exit_Button = By.xpath("//android.view.ViewGroup[@content-desc=\"×\"]");
 }

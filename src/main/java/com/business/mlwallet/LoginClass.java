@@ -13,6 +13,16 @@ public class LoginClass extends BaseClass{
         super();
     }
 
+    public static void clickAnnouncement_Exit()throws Exception{
+        waitTime(5000);
+        if(verifyElementDisplayed(MLWalletLoginPage.objAnnouncement_Exit_Button)){
+            click(MLWalletLoginPage.objAnnouncement_Exit_Button, "Exit Button");
+            logger.info("Exited Announcement Page");
+        }else {
+            logger.info("Announcement Page is not visible");
+        }
+    }
+
     public void logInScenarioWithValidMobNumber_Lgn_TC_01() throws Exception {
         ExtentReporter.HeaderChildNode("Login Scenarios With Valid Mobile Number");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
