@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Android" parallel="false" thread-count="1">
-
 	<listeners>
 		<listener class-name="com.utility.ExtentReporter" />
 	</listeners>
@@ -16,7 +15,7 @@
 	            <class name="com.mlwallet.regression.MLWalletCashInViaBankScripts" />
 	            <class name="com.mlwallet.regression.MLWalletCashInViaBranch" />
 	            <class name="com.mlwallet.regression.MLWalletCashOutViaBranch" />
-	            <class name="com.mlwallet.regression.MLWalletCashOutWithdrawScripts" />
+	            <class name="com.mlwallet.regression.MLWalletCashOutViaBank" />
 	            <class name="com.mlwallet.regression.MLWalletSendTransferToAnyMLBranchScripts" />
 	            <class name="com.mlwallet.regression.MLWalletSendTransferToMLWalletUserScripts" />
 	            <class name="com.mlwallet.regression.MLWalletRegressionPayBillsScripts" />
