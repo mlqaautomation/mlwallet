@@ -5,8 +5,8 @@
         <listener class-name="com.utility.ExtentReporter" />
     </listeners>
     <test name="Non-Transactionals">
-        <parameter name="portno" value="4725"></parameter>
-        <parameter name="deviceName" value="RRCW901MQLF"></parameter>
+        <parameter name="portno" value="4723"></parameter>
+        <parameter name="deviceName" value="emulator-5554"></parameter>
         <parameter name="browserType" value="Chrome"></parameter>
         <parameter name="url" value="https://prnt.sc/4vyopNIICFNa"></parameter>
         <parameter name="url1" value="https://prnt.sc/WlO6H7WpxvNY"></parameter>
