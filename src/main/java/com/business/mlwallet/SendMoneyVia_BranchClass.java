@@ -15,8 +15,8 @@ import static com.utility.Utilities.*;
 import static com.utility.Utilities.getTextVal;
 
 public class SendMoneyVia_BranchClass extends BaseClass{
-public SendMoneyVia_BranchClass(String Application, String deviceName, String portno) throws InterruptedException{
-    super(Application, deviceName, portno);
+public SendMoneyVia_BranchClass(){
+    super();
 }
     public void sendMoneyToMLBranch_STB_TC_01() throws Exception {
         ExtentReporter.HeaderChildNode("Send Money to any ML Branch");

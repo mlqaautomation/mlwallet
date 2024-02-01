@@ -9,8 +9,18 @@ import static com.utility.Utilities.*;
 
 public class LoginClass extends BaseClass{
 
-    public LoginClass(String Application, String deviceName, String portno) throws InterruptedException {
-        super(Application, deviceName, portno);
+    public LoginClass() {
+        super();
+    }
+
+    public static void clickAnnouncement_Exit()throws Exception{
+        waitTime(5000);
+        if(verifyElementDisplayed(MLWalletLoginPage.objAnnouncement_Exit_Button)){
+            click(MLWalletLoginPage.objAnnouncement_Exit_Button, "Exit Button");
+            logger.info("Exited Announcement Page");
+        }else {
+            logger.info("Announcement Page is not visible");
+        }
     }
 
     public void logInScenarioWithValidMobNumber_Lgn_TC_01() throws Exception {

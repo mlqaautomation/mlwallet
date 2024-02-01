@@ -9,9 +9,10 @@ import java.time.Duration;
 import static com.utility.Utilities.*;
 
 public class SendMoneyVia_WalletClass extends BaseClass{
-    public SendMoneyVia_WalletClass(String Application, String deviceName, String portno) throws InterruptedException{
-            super(Application, deviceName, portno);
-        }
+    public SendMoneyVia_WalletClass() {
+        super();
+    }
+
     public void sendToMLWalletUser_STW_TC_01() throws Exception {
         ExtentReporter.HeaderChildNode("Send Money to any ML Wallet");
         sendMoneyMLWallet(prop.getproperty("Fully_verified"));

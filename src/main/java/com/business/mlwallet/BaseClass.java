@@ -140,6 +140,7 @@ public class BaseClass {
         type(MLWalletLoginPage.objMobileNumberTextField, sTier, "Mobile Number Text Field");
         click(MLWalletLoginPage.objLoginBtn, "Login Button");
         enterOTP(prop.getproperty("Valid_OTP"));
+        LoginClass.clickAnnouncement_Exit();
         handleMpin("1111");
         waitTime(10000);
         if (verifyElementPresent(MLWalletLoginPage.objAvailableBalance, getTextVal(MLWalletLoginPage.objAvailableBalance, "Text"))) {

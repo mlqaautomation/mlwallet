@@ -10,10 +10,9 @@ import static com.utility.Utilities.*;
 import static com.utility.Utilities.getTextVal;
 
 public class TransactionHistoryClass extends  BaseClass{
-    public TransactionHistoryClass(String Application, String deviceName, String portno) throws InterruptedException {
-        super(Application, deviceName, portno);
+    public TransactionHistoryClass(){
+        super();
     }
-
 
     public void mlWallet_TransactionHistory_TH_TC_01() throws Exception {
         ExtentReporter.HeaderChildNode("MLWallet_TransactionHistory_Scenario");

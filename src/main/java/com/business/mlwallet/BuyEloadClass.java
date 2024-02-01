@@ -13,8 +13,8 @@ import static com.utility.Utilities.verifyElementPresent;
 
 public class BuyEloadClass extends BaseClass{
 
-    public BuyEloadClass(String Application, String deviceName, String portno) throws InterruptedException{
-        super(Application, deviceName, portno);
+    public BuyEloadClass(){
+        super();
     }
     public void buyELoadTransactionDetails_BE_TC_01(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Transaction Details Validation after Buying eLoad");

@@ -11,16 +11,9 @@ import static com.utility.Utilities.*;
 
 public class SettingsClass extends BaseClass{
 
-    public SettingsClass(String Application, String deviceName, String portno)throws InterruptedException{
-        super(Application, deviceName, portno);
+    public SettingsClass(){
+        super();
     }
-//    public void navigateToProfile() throws Exception {
-//        waitTime(5000);
-//        verifyElementPresentAndClick(MLWalletSettingsPage.objProfileIcon, "Profile Icon");
-//        if (verifyElementPresent(MLWalletSettingsPage.objAccountDetails, "Account Details Page")) {
-//            logger.info("Navigated to settings");
-//        }
-//    }
     public void settingsAccountDetailsValidation_SS_TC_01() throws Exception {
         ExtentReporter.HeaderChildNode("Settings Account Details validation");
         mlWalletLogin(prop.getproperty("Branch_Verified"));

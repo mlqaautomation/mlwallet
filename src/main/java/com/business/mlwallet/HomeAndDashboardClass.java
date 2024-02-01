@@ -10,8 +10,8 @@ import static com.utility.Utilities.*;
 
 public class HomeAndDashboardClass extends BaseClass{
 
-    public HomeAndDashboardClass(String Application, String deviceName, String portno)throws InterruptedException {
-        super(Application, deviceName, portno);
+    public HomeAndDashboardClass(){
+        super();
     }
     public void mlWalletHomePageUIValidation_HD_TC_01() throws Exception {
         ExtentReporter.HeaderChildNode("ML Wallet Home Page UI Validation");

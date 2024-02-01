@@ -12,11 +12,9 @@ import java.util.Date;
 import static com.utility.Utilities.*;
 
 public class RegistrationClass extends  BaseClass{
-    public RegistrationClass(String Application, String deviceName, String portno) throws InterruptedException {
-        super(Application, deviceName, portno);
+    public RegistrationClass(){
+        super();
     }
-
-
 
     public void registrationInvalidMobileNumber_RG_TC_02() throws Exception {
         ExtentReporter.HeaderChildNode("Registration With Invalid Number");

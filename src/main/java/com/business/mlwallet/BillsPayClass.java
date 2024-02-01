@@ -12,8 +12,8 @@ import java.util.List;
 import static com.utility.Utilities.*;
 
 public class BillsPayClass extends BaseClass{
-    public BillsPayClass(String Application, String deviceName, String portno) throws InterruptedException {
-        super(Application, deviceName, portno);
+    public BillsPayClass(){
+        super();
     }
 
     public void payBillsPageValidation_PB_TC_01() throws Exception {

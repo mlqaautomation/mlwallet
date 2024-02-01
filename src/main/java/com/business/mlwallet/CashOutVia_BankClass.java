@@ -1,6 +1,5 @@
 package com.business.mlwallet;
 
-import com.driverInstance.CommandBase;
 import com.driverInstance.DriverManager;
 import com.mlwallet.pages.*;
 import com.utility.ExtentReporter;
@@ -11,8 +10,8 @@ import static com.utility.Utilities.*;
 import static com.utility.Utilities.assertionValidation;
 
 public class CashOutVia_BankClass extends BaseClass{
-    public CashOutVia_BankClass(String Application, String deviceName, String portno) throws InterruptedException{
-        super(Application, deviceName, portno);
+    public CashOutVia_BankClass(){
+        super();
     }
     public void cashOutWithdrawBank_WM_TC_01(String Amount) throws Exception {
         ExtentReporter.HeaderChildNode("Cash Out Withdraw Branch");

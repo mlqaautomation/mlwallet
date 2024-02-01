@@ -8,8 +8,8 @@ import static com.utility.Utilities.*;
 import static com.utility.Utilities.getTextVal;
 
 public class BranchLocatorClass extends BaseClass{
-    public BranchLocatorClass(String Application, String deviceName, String portno)throws InterruptedException{
-        super(Application, deviceName, portno);
+    public BranchLocatorClass(){
+        super();
     }
     public void branchLocatorNavigationFromMPinPage_BL_TC_01() throws Exception {
         ExtentReporter.HeaderChildNode("Branch Locator Page Navigation from MPin Page and UI Validation");
