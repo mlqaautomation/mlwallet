@@ -83,5 +83,6 @@ public class MLWalletEloadPage {
 	public static By objSecondTimeConfirmationPopup = By.xpath("//*[@resource-id='modal-confirm-button']/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
 	public static By objMLPinEditField = By.xpath("//*[@resource-id='847305']");
 	public static  By obj5SmartRegularLoad = By.xpath("//*[@content-desc='PHP, 5, P5 Smart Regular, P5 Smart Regular']");
+	public static By obj10SmartRegular = By.xpath("//*[@text='P10 Smart Regular']");
 
 }

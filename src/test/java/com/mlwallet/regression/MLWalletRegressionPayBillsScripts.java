@@ -36,7 +36,7 @@ public class MLWalletRegressionPayBillsScripts extends BaseTest{
     }
 
 
-   @Test(priority = 7)
+   @Test(priority = 0)
     public void payBillsWithValidInputs_PB_TC_07() throws Exception {
         mlWalletBillsPay.payBillsWithValidInputs_PB_TC_07();
     }

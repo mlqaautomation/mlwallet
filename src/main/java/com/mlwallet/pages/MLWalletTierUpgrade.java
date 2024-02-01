@@ -135,7 +135,7 @@ public class MLWalletTierUpgrade {
     public static By objSourceOfFundsFieldMessage = By.xpath("//*[@text='Source of Funds']/parent::android.view.ViewGroup/following-sibling::android.widget.TextView");
 // Search Field
     public static By objSearchField =
-            By.xpath("//*[@class='android.view.ViewGroup'][1]/child::android.widget.EditText");
+            By.xpath("//*[@class='android.view.ViewGroup']/child::android.widget.EditText");
 // Pension Fields
     public static By objReceivingPensionField = By.xpath("//*[@text='Receiving Pension From']/preceding-sibling::android.view.ViewGroup/child::android.view.ViewGroup/child::android.widget.TextView");
     public static By objYearRetiredField = By.xpath("//*[@text='Year Retired'][2]");
@@ -152,4 +152,9 @@ public class MLWalletTierUpgrade {
 // Other Source Income Fields
     public static By objOccupationField = By.xpath("//*[@text='Occupation']/following-sibling::android.widget.EditText");
     public static By objSourceOfFundsField = By.xpath("//*[@text='Source of Funds']/following-sibling::android.widget.EditText");
+
+    // is required error message locators
+    public static  By getObjIsRequired(String type){
+        return By.xpath("//*[@text='" + type + "']");
+    }
 }

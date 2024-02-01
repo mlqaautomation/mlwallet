@@ -5,7 +5,6 @@
 	<listeners>
 		<listener class-name="com.utility.ExtentReporter" />
 	</listeners>
-  
 	  <test name="MLWallet">
 	        <parameter name="portno" value="4725"></parameter>
 	        <parameter name="deviceName" value="RRCW901MQLF"></parameter>

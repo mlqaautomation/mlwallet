@@ -92,8 +92,8 @@ public class BuyEloadClass extends BaseClass{
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
         waitTime(5000);
-        swipeDownUntilElementVisible("Smart Regular Load 3000");
-        verifyElementPresentAndClick(MLWalletEloadPage.obj2000PromoLoad, getTextVal(MLWalletEloadPage.obj2000PromoLoad, "Load"));
+        //swipeDownUntilElementVisible("Smart Regular Load 3000");
+        verifyElementPresentAndClick(MLWalletEloadPage.obj10SmartRegular, getTextVal(MLWalletEloadPage.obj10SmartRegular, "Load"));
         verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
         waitTime(5000);
         click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
@@ -120,8 +120,8 @@ public class BuyEloadClass extends BaseClass{
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
         waitTime(5000);
-        swipeDownUntilElementVisible("Smart Regular Load 3000");
-        verifyElementPresentAndClick(MLWalletEloadPage.obj3000RegularLoad, getTextVal(MLWalletEloadPage.obj3000RegularLoad, "Load"));
+        //swipeDownUntilElementVisible("Smart Regular Load 3000");
+        verifyElementPresentAndClick(MLWalletEloadPage.obj10SmartRegular, getTextVal(MLWalletEloadPage.obj10SmartRegular, "Load"));
         verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
         waitTime(5000);
         click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
@@ -176,7 +176,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadLoadSelectionPageBackBtnValidation_BE_TC_12() throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad Load Selection Back Arrow Button Validation");
-        buyELoadNextButtonFunctionalityOnELoadTransactionPage_BE_TC_11(prop.getproperty("Fully_Verified"), prop.getproperty("Smart"), 2);
+        buyELoadNextButtonFunctionalityOnELoadTransactionPage_BE_TC_11(prop.getproperty("Fully_Verified"), prop.getproperty("Smart"), 3);
         verifyElementPresentAndClick(MLWalletEloadPage.objLoadSelectionBackArrowBtn, "Load Selection Back Arrow Button");
         if (verifyElementPresent(MLWalletEloadPage.objEloadtransactionPage, getTextVal(MLWalletEloadPage.objEloadtransactionPage, "Page"))) {
             logger.info("BE_TC_12, After clicking on Back Arrow Btn on Load Selection Page, Application Navigates to eLoad Transaction Page is Validated");
@@ -226,7 +226,7 @@ public class BuyEloadClass extends BaseClass{
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
         waitTime(5000);
-        click(MLWalletEloadPage.objTransaction, getTextVal(MLWalletEloadPage.objTransaction, "Promo"));
+        click(MLWalletEloadPage.obj10SmartRegular, getTextVal(MLWalletEloadPage.obj10SmartRegular, "Promo"));
         verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
         waitTime(5000);
         click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
@@ -425,7 +425,7 @@ public class BuyEloadClass extends BaseClass{
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
         waitTime(5000);
-        click(MLWalletEloadPage.objTransaction, "Promo");
+        click(MLWalletEloadPage.obj10SmartRegular, "Promo");
         waitTime(5000);
         if (verifyElementPresent(MLWalletEloadPage.objPromoConfirmationPopup, getTextVal(MLWalletEloadPage.objPromoConfirmationPopup, "Popup Msg"))) {
             verifyElementPresent(MLWalletEloadPage.objConfirmBtn, getTextVal(MLWalletEloadPage.objConfirmBtn, "Button"));
@@ -445,7 +445,7 @@ public class BuyEloadClass extends BaseClass{
         waitTime(5000);
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
         waitTime(5000);
-        click(MLWalletEloadPage.objTransaction, "Promo");
+        click(MLWalletEloadPage.obj10SmartRegular, "Promo");
         verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
         waitTime(5000);
         click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
@@ -469,7 +469,7 @@ public class BuyEloadClass extends BaseClass{
         waitTime(5000);
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
         waitTime(5000);
-        click(MLWalletEloadPage.objTransaction, "Promo");
+        click(MLWalletEloadPage.obj10SmartRegular, "Promo");
         verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
         waitTime(5000);
         click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
@@ -688,7 +688,7 @@ public class BuyEloadClass extends BaseClass{
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
         waitTime(5000);
-        click(MLWalletEloadPage.objTransaction, getTextVal(MLWalletEloadPage.objTransaction, "Promo"));
+        click(MLWalletEloadPage.obj10SmartRegular, getTextVal(MLWalletEloadPage.obj10SmartRegular, "Promo"));
         verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
         waitTime(5000);
         click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
@@ -786,7 +786,7 @@ public class BuyEloadClass extends BaseClass{
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
         waitTime(5000);
-        click(MLWalletEloadPage.objTransaction, getTextVal(MLWalletEloadPage.objTransaction, "Promo"));
+        click(MLWalletEloadPage.obj10SmartRegular, getTextVal(MLWalletEloadPage.obj10SmartRegular, "Promo"));
         verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
         waitTime(5000);
         click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
@@ -811,7 +811,7 @@ public class BuyEloadClass extends BaseClass{
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
         waitTime(5000);
-        click(MLWalletEloadPage.objTransaction, getTextVal(MLWalletEloadPage.objTransaction, "Promo"));
+        click(MLWalletEloadPage.obj10SmartRegular, getTextVal(MLWalletEloadPage.obj10SmartRegular, "Promo"));
         verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
         waitTime(5000);
         click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
@@ -840,7 +840,7 @@ public class BuyEloadClass extends BaseClass{
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
         waitTime(5000);
-        click(MLWalletEloadPage.objTransaction, getTextVal(MLWalletEloadPage.objTransaction, "Promo"));
+        click(MLWalletEloadPage.obj10SmartRegular, getTextVal(MLWalletEloadPage.obj10SmartRegular, "Promo"));
         verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
         waitTime(5000);
         click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
@@ -865,7 +865,7 @@ public class BuyEloadClass extends BaseClass{
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
         waitTime(5000);
-        click(MLWalletEloadPage.objTransaction, getTextVal(MLWalletEloadPage.objTransaction, "Promo"));
+        click(MLWalletEloadPage.obj10SmartRegular, getTextVal(MLWalletEloadPage.obj10SmartRegular, "Promo"));
         verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
         waitTime(5000);
         click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
@@ -888,7 +888,7 @@ public class BuyEloadClass extends BaseClass{
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
         waitTime(5000);
-        click(MLWalletEloadPage.objTransaction, getTextVal(MLWalletEloadPage.objTransaction, "Promo"));
+        click(MLWalletEloadPage.obj10SmartRegular, getTextVal(MLWalletEloadPage.obj10SmartRegular, "Promo"));
         verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
         waitTime(5000);
         click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
@@ -914,7 +914,7 @@ public class BuyEloadClass extends BaseClass{
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
         waitTime(5000);
-        click(MLWalletEloadPage.objTransaction, getTextVal(MLWalletEloadPage.objTransaction, "Promo"));
+        click(MLWalletEloadPage.obj10SmartRegular, getTextVal(MLWalletEloadPage.obj10SmartRegular, "Promo"));
         verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
         waitTime(5000);
         click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
@@ -940,7 +940,7 @@ public class BuyEloadClass extends BaseClass{
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
         waitTime(5000);
-        click(MLWalletEloadPage.objTransaction, getTextVal(MLWalletEloadPage.objTransaction, "Promo"));
+        click(MLWalletEloadPage.obj10SmartRegular, getTextVal(MLWalletEloadPage.obj10SmartRegular, "Promo"));
         verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
         waitTime(5000);
         click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
@@ -964,7 +964,7 @@ public class BuyEloadClass extends BaseClass{
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
         waitTime(5000);
-        click(MLWalletEloadPage.objTransaction, getTextVal(MLWalletEloadPage.objTransaction, "Promo"));
+        click(MLWalletEloadPage.obj10SmartRegular, getTextVal(MLWalletEloadPage.obj10SmartRegular, "Promo"));
         verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
         waitTime(5000);
         click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
