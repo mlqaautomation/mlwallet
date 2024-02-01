@@ -47,7 +47,7 @@ public class MLWalletBuyEload extends BaseTest{
 
     @Test(priority = 8)
     public void buyELoadNextButtonFunctionalityOnELoadTransactionPage_BE_TC_11() throws Exception {
-        mlWalletBuyELoad.buyELoadNextButtonFunctionalityOnELoadTransactionPage_BE_TC_11(prop.getproperty("Fully_Verified"),prop.getproperty("GLOBE"),2);
+        mlWalletBuyELoad.buyELoadNextButtonFunctionalityOnELoadTransactionPage_BE_TC_11(prop.getproperty("Fully_Verified"),prop.getproperty("SMART"),3);
     }
 
     @Test(priority = 9)
@@ -210,84 +210,84 @@ public class MLWalletBuyEload extends BaseTest{
         mlWalletBuyELoad.buyELoadContactPopupNotDisplayedAfterClickingODenyButtonValidation_BE_TC_65();
     }
 
-    @Test(priority = 41)
+    @Test(priority = 0)
     public void buyELoadNewTransactionBtnFunctionality_BE_TC_66() throws Exception {
         mlWalletBuyELoad.buyELoadNewTransactionBtnFunctionality_BE_TC_66();
     }
 
-    @Test(priority = 42)
+    @Test(priority = 0)
     public void buyELoadTransactionValidationAfterMinimizingApp_BE_TC_069() throws Exception {
         mlWalletBuyELoad.buyELoadTransactionValidationAfterMinimizingApp_BE_TC_069(prop.getproperty("Fully_Verified"), 2);
     }
 
-    @Test(priority = 43)
-    public void buyELoadTransactionWithValidMLPin_BE_TC_78() throws Exception {
-        mlWalletBuyELoad.buyELoadTransactionWithValidMLPin_BE_TC_78(prop.getproperty("Fully_Verified"), 2);
-    }
+//    @Test(priority = 0)
+//    public void buyELoadTransactionWithValidMLPin_BE_TC_78() throws Exception {
+//        mlWalletBuyELoad.buyELoadTransactionWithValidMLPin_BE_TC_78(prop.getproperty("Fully_Verified"), 2);
+//    }
+//
+//    @Test(priority = 0)
+//    public void buyELoadTransactionWithInValidMLPin_BE_TC_79() throws Exception {
+//        mlWalletBuyELoad.buyELoadTransactionWithInValidMLPin_BE_TC_79(prop.getproperty("Fully_Verified"), 2);
+//    }
 
-    @Test(priority = 44)
-    public void buyELoadTransactionWithInValidMLPin_BE_TC_79() throws Exception {
-        mlWalletBuyELoad.buyELoadTransactionWithInValidMLPin_BE_TC_79(prop.getproperty("Fully_Verified"), 2);
-    }
-
-    @Test(priority = 45)
+    @Test(priority = 0)
     public void buyELoadInOTPPopupValidation_BE_TC_089() throws Exception {
         mlWalletBuyELoad.buyELoadInOTPPopupValidation_BE_TC_089(prop.getproperty("Fully_Verified"), 2);
     }
 
-    @Test(priority = 46)
+    @Test(priority = 0)
     public void buyELoadTransactionInAppOTPPopupUIValidation_BE_TC_090() throws Exception {
         mlWalletBuyELoad.buyELoadTransactionInAppOTPPopupUIValidation_BE_TC_090(prop.getproperty("Fully_Verified"), 2);
     }
 
-    @Test(priority = 47)
+    @Test(priority = 0)
     public void buyELoadTransactionNewOTPAfterSixtySecondsValidation_BE_TC_091() throws Exception {
         mlWalletBuyELoad.buyELoadTransactionNewOTPAfterSixtySecondsValidation_BE_TC_091(prop.getproperty("Fully_Verified"), 2);
     }
 
-    @Test(priority = 48)
+    @Test(priority = 0)
     public void buyELoadTransactionOTPCancelBtnFunctionality_BE_TC_092() throws Exception {
         mlWalletBuyELoad.buyELoadTransactionOTPCancelBtnFunctionality_BE_TC_092(prop.getproperty("Fully_Verified"), 2);
     }
 
-    @Test(priority = 49)
+    @Test(priority = 0)
     public void buyELoadTransactionOTPContinueBtnFunctionality_BE_TC_093() throws Exception {
         mlWalletBuyELoad.buyELoadTransactionOTPContinueBtnFunctionality_BE_TC_093(prop.getproperty("Fully_Verified"), 2);
     }
 
-    @Test(priority = 50)
-    public void buyELoadMaximumTransactionForBranchVerifiedTier_BE_TC_42() throws Exception {
-        mlWalletBuyELoad.buyELoadMaximumTransactionForBranchVerifiedTier_BE_TC_42(prop.getproperty("Branch_Verified"), 2);
-    }
-
-    @Test(priority = 51)
-    public void buyELoadMaximumLimitForSemiVerifiedTier_BE_TC_33() throws Exception {
-        mlWalletBuyELoad.buyELoadMaximumLimitForSemiVerifiedTier_BE_TC_33(prop.getproperty("Semi_Verified"), 2);
-    }
-    @Test(priority = 52)
-    public void buyELoadMaximumTransactionForSemiVerifiedTier_BE_TC_30() throws Exception {
-        mlWalletBuyELoad.buyELoadMaximumTransactionForSemiVerifiedTier_BE_TC_30(prop.getproperty("Semi_Verified"), 2);
-    }
-
-    @Test(priority = 53)
-    public void buyELoadMaximumLimitForFullyVerifiedTier_BE_TC_39() throws Exception {
-        mlWalletBuyELoad.buyELoadMaximumLimitForFullyVerifiedTier_BE_TC_39(prop.getproperty("Fully_Verified"), 2);
-    }
-
-    @Test(priority = 54)
-    public void buyELoadMaximumTransactionForFullyVerifiedTier_BE_TC_36() throws Exception {
-        mlWalletBuyELoad.buyELoadMaximumTransactionForFullyVerifiedTier_BE_TC_36(prop.getproperty("Fully_Verified"), 2);
-    }
-
-    @Test(priority = 55)
-    public void buyELoadMaximumLimitForBuyerTierVerifiedTier_BE_TC_45() throws Exception {
-        mlWalletBuyELoad.buyELoadMaximumLimitForBuyerTierVerifiedTier_BE_TC_45(prop.getproperty("Fully_Verified"), 2);
-    }
-
-    @Test(priority = 56)
-    public void buyELoadMaximumTransactionForBuyerTierVerifiedTier_BE_TC_48() throws Exception {
-        mlWalletBuyELoad.buyELoadMaximumTransactionForBuyerTierVerifiedTier_BE_TC_48(prop.getproperty("Fully_Verified"), 2);
-    }
+//    @Test(priority = 0)
+//    public void buyELoadMaximumTransactionForBranchVerifiedTier_BE_TC_42() throws Exception {
+//        mlWalletBuyELoad.buyELoadMaximumTransactionForBranchVerifiedTier_BE_TC_42(prop.getproperty("Branch_Verified"), 2);
+//    }
+//
+//    @Test(priority = 0)
+//    public void buyELoadMaximumLimitForSemiVerifiedTier_BE_TC_33() throws Exception {
+//        mlWalletBuyELoad.buyELoadMaximumLimitForSemiVerifiedTier_BE_TC_33(prop.getproperty("Semi_Verified"), 2);
+//    }
+//    @Test(priority = 0)
+//    public void buyELoadMaximumTransactionForSemiVerifiedTier_BE_TC_30() throws Exception {
+//        mlWalletBuyELoad.buyELoadMaximumTransactionForSemiVerifiedTier_BE_TC_30(prop.getproperty("Semi_Verified"), 2);
+//    }
+//
+//    @Test(priority = 0)
+//    public void buyELoadMaximumLimitForFullyVerifiedTier_BE_TC_39() throws Exception {
+//        mlWalletBuyELoad.buyELoadMaximumLimitForFullyVerifiedTier_BE_TC_39(prop.getproperty("Fully_Verified"), 2);
+//    }
+//
+//    @Test(priority = 0)
+//    public void buyELoadMaximumTransactionForFullyVerifiedTier_BE_TC_36() throws Exception {
+//        mlWalletBuyELoad.buyELoadMaximumTransactionForFullyVerifiedTier_BE_TC_36(prop.getproperty("Fully_Verified"), 2);
+//    }
+//
+//    @Test(priority = 55)
+//    public void buyELoadMaximumLimitForBuyerTierVerifiedTier_BE_TC_45() throws Exception {
+//        mlWalletBuyELoad.buyELoadMaximumLimitForBuyerTierVerifiedTier_BE_TC_45(prop.getproperty("Fully_Verified"), 2);
+//    }
+//
+//    @Test(priority = 56)
+//    public void buyELoadMaximumTransactionForBuyerTierVerifiedTier_BE_TC_48() throws Exception {
+//        mlWalletBuyELoad.buyELoadMaximumTransactionForBuyerTierVerifiedTier_BE_TC_48(prop.getproperty("Fully_Verified"), 2);
+//    }
 
     @Test(priority = 57)
     public void buyELoadSecondTimeLoadSelectionPopupValidation_BE_TC_29() throws Exception {

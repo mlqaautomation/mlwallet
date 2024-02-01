@@ -592,6 +592,7 @@ public class BaseClass {
     public void payBillsNavigation() throws Exception {
         verifyElementPresent(MLWalletPayBillsPage.objPayBills, getTextVal(MLWalletPayBillsPage.objPayBills, "Icon"));
         click(MLWalletPayBillsPage.objPayBills, getTextVal(MLWalletPayBillsPage.objPayBills, "Icon"));
+        waitTime(5000);
     }
 
 
@@ -787,7 +788,7 @@ public class BaseClass {
     public void selectNatureOfWork(String nature)throws Exception{
         try{
             verifyElementPresentAndClick(MLWalletTierUpgrade.ObjNatureOfWork, getTextVal(MLWalletTierUpgrade.ObjNatureOfWork , "DropDown"));
-            waitTime(3000);
+            waitTime(5000);
             verifyElementPresent(MLWalletTierUpgrade.ObjNatureOfWorkPage, getTextVal(MLWalletTierUpgrade.ObjNatureOfWorkPage, "Header"));
             type(MLWalletTierUpgrade.objSearchField, nature, "Search Field");
             verifyElementPresentAndClick(MLWalletTierUpgrade.getObjNatureOfWork(nature),

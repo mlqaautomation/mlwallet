@@ -168,14 +168,14 @@ public class MLWalletTierUpgrade extends BaseTest{
         mlWalletTierUpgrade.tierUpgradeTakeAFaceIdentityPhotoPageBackArrowBtnValidation_TU_TC_33();
     }
 
-    @Test(priority = 33)
-    public void tierUpgradeToBranchVerifiedFromBuyerTier_TU_TC_244() throws Exception {
-        mlWalletTierUpgrade.tierUpgradeToBranchVerifiedFromBuyerTier_TU_TC_244();
-    }
-    @Test(priority = 34)
-    public void TierUpgradeSourceOfIncomeFieldValidation_TU_TC_85() throws Exception {
-    mlWalletTierUpgrade.TierUpgradeSourceOfIncomeFieldValidation_TU_TC_85();
-    }
+//    @Test(priority = 33)
+//    public void tierUpgradeToBranchVerifiedFromBuyerTier_TU_TC_244() throws Exception { // this opens the web browser kpx hence deferred for now
+//        mlWalletTierUpgrade.tierUpgradeToBranchVerifiedFromBuyerTier_TU_TC_244();
+//    }
+//    @Test(priority = 34)
+//    public void TierUpgradeSourceOfIncomeFieldValidation_TU_TC_85() throws Exception { // deferred for now needs new buyer tier acc to validate
+//    mlWalletTierUpgrade.TierUpgradeSourceOfIncomeFieldValidation_TU_TC_85();
+//    }
     @Test(priority = 35)
     public void TierUpgradeCompanyFieldValidation_TU_TC_86() throws Exception {
         mlWalletTierUpgrade.TierUpgradeCompanyFieldValidation_TU_TC_86();
