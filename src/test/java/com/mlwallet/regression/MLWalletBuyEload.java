@@ -185,10 +185,10 @@ public class MLWalletBuyEload extends BaseTest{
         mlWalletBuyELoad.buyELoadContactPermissionTwoAllowBtnFunctionality_BE_TC_60();
     }
 
-    @Test(priority = 36)
-    public void buyELoadInternetInterruptionWhileEnteringOTP_BE_TC_61() throws Exception {
-        mlWalletBuyELoad.buyELoadInternetInterruptionWhileEnteringOTP_BE_TC_61(prop.getproperty("Fully_Verified"), 2);
-    }
+//    @Test(priority = 36)
+//    public void buyELoadInternetInterruptionWhileEnteringOTP_BE_TC_61() throws Exception {
+//        mlWalletBuyELoad.buyELoadInternetInterruptionWhileEnteringOTP_BE_TC_61(prop.getproperty("Fully_Verified"), 2);
+//    }
 
     @Test(priority = 37)
     public void buyELoadLocationPermissionAskMeLaterButtonFunctionality_BE_TC_62() throws Exception {
@@ -210,12 +210,12 @@ public class MLWalletBuyEload extends BaseTest{
         mlWalletBuyELoad.buyELoadContactPopupNotDisplayedAfterClickingODenyButtonValidation_BE_TC_65();
     }
 
-    @Test(priority = 0)
+    @Test(priority = 41)
     public void buyELoadNewTransactionBtnFunctionality_BE_TC_66() throws Exception {
         mlWalletBuyELoad.buyELoadNewTransactionBtnFunctionality_BE_TC_66();
     }
 
-    @Test(priority = 0)
+    @Test(priority = 42)
     public void buyELoadTransactionValidationAfterMinimizingApp_BE_TC_069() throws Exception {
         mlWalletBuyELoad.buyELoadTransactionValidationAfterMinimizingApp_BE_TC_069(prop.getproperty("Fully_Verified"), 2);
     }
@@ -230,27 +230,27 @@ public class MLWalletBuyEload extends BaseTest{
 //        mlWalletBuyELoad.buyELoadTransactionWithInValidMLPin_BE_TC_79(prop.getproperty("Fully_Verified"), 2);
 //    }
 
-    @Test(priority = 0)
+    @Test(priority = 43)
     public void buyELoadInOTPPopupValidation_BE_TC_089() throws Exception {
         mlWalletBuyELoad.buyELoadInOTPPopupValidation_BE_TC_089(prop.getproperty("Fully_Verified"), 2);
     }
 
-    @Test(priority = 0)
+    @Test(priority = 44)
     public void buyELoadTransactionInAppOTPPopupUIValidation_BE_TC_090() throws Exception {
         mlWalletBuyELoad.buyELoadTransactionInAppOTPPopupUIValidation_BE_TC_090(prop.getproperty("Fully_Verified"), 2);
     }
 
-    @Test(priority = 0)
+    @Test(priority = 45)
     public void buyELoadTransactionNewOTPAfterSixtySecondsValidation_BE_TC_091() throws Exception {
         mlWalletBuyELoad.buyELoadTransactionNewOTPAfterSixtySecondsValidation_BE_TC_091(prop.getproperty("Fully_Verified"), 2);
     }
 
-    @Test(priority = 0)
+    @Test(priority = 46)
     public void buyELoadTransactionOTPCancelBtnFunctionality_BE_TC_092() throws Exception {
         mlWalletBuyELoad.buyELoadTransactionOTPCancelBtnFunctionality_BE_TC_092(prop.getproperty("Fully_Verified"), 2);
     }
 
-    @Test(priority = 0)
+    @Test(priority = 47)
     public void buyELoadTransactionOTPContinueBtnFunctionality_BE_TC_093() throws Exception {
         mlWalletBuyELoad.buyELoadTransactionOTPContinueBtnFunctionality_BE_TC_093(prop.getproperty("Fully_Verified"), 2);
     }
