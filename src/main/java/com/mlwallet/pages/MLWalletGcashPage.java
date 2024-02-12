@@ -19,8 +19,8 @@ public class MLWalletGcashPage {
     public static By objGcashMobileNumText = By.xpath("//*[@resource-id='JBOTZ0']");
     public static By objReceiverNumber = By.xpath("//*[@resource-id='X8L073']");
     public static By objConfirmDetailsPage = By.xpath("//*[@text='Confirm Details']");
-    public static By objConfirmBtn = By.xpath("//*[@text='Confirm']");
 
+    public static By objConfirmBtn = By.xpath("//*[@text='Confirm']");
     public static By objSendMoney_WalletUserBtn = By.xpath("//*[@text='Send Money to ML Wallet User']");
     public static By objTransactionDetailsText = By.xpath("//*[@resource-id='2VIMA3']");
     public static By objReceiverNumber_Transaction = By.xpath("//*[@resource-id='Receiver GCash Mobile #']");

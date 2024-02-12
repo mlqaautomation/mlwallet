@@ -6,6 +6,8 @@ public class MLWalletLoginPage {
 	
 	public static By objMobileNumberTextField=By.xpath("//*[android.view.ViewGroup]/descendant::android.widget.EditText");
 	public static By objLoginBtn=By.xpath("//*[@text='Login']");
+	public static By objOtpTextField;
+
 	public static By objOtpTextField(int i){
 		return By.xpath("(//*[@class='android.widget.EditText'])["+i+"]");
 	}
