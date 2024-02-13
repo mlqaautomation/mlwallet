@@ -5,23 +5,14 @@
 		<listener class-name="com.utility.ExtentReporter" />
 	</listeners>
 	  <test name="MLWallet">
-	        <parameter name="portno" value="4725"></parameter>
+	        <parameter name="portno" value="4723"></parameter>
 	        <parameter name="deviceName" value="RRCW901MQLF"></parameter>
 	        <parameter name="browserType" value="Chrome"></parameter>
 	        <parameter name="url" value="https://prnt.sc/4vyopNIICFNa"></parameter>
 	        <parameter name="url1" value="https://prnt.sc/WlO6H7WpxvNY"></parameter>
 	        <parameter name="kpxurl" value="https://ml-kpx-qa.df.r.appspot.com/"></parameter>
 	        <classes>
-<<<<<<< Updated upstream
-	            <class name="com.mlwallet.regression.MLWalletCashInViaBankScripts" />
-	            <class name="com.mlwallet.regression.MLWalletCashInViaBranch" />
-	            <class name="com.mlwallet.regression.MLWalletCashOutViaBranch" />
-	            <class name="com.mlwallet.regression.MLWalletCashOutViaBank" />
-	            <class name="com.mlwallet.regression.MLWalletSendTransferToAnyMLBranchScripts" />
-	            <class name="com.mlwallet.regression.MLWalletSendTransferToMLWalletUserScripts" />
-	            <class name="com.mlwallet.regression.MLWalletRegressionPayBillsScripts" />
-	            <class name="com.mlwallet.regression.MLWalletBuyEload"/>
-=======
+
 <!--	            <class name="com.mlwallet.regression.MLWalletCashInViaBankScripts" />-->
 <!--	            <class name="com.mlwallet.regression.MLWalletCashInViaBranch" />-->
 <!--	            <class name="com.mlwallet.regression.MLWalletCashOutViaBranch" />-->
@@ -30,7 +21,15 @@
 <!--	            <class name="com.mlwallet.regression.MLWalletSendTransferToMLWalletUserScripts" />-->
 <!--	            <class name="com.mlwallet.regression.MLWalletRegressionPayBillsScripts" />-->
 <!--	            <class name="com.mlwallet.regression.MLWalletBuyEload"/>-->
->>>>>>> Stashed changes
+
+<!--	            <class name="com.mlwallet.regression.MLWalletCashInViaBankScripts" />-->
+<!--	            <class name="com.mlwallet.regression.MLWalletCashInViaBranch" />-->
+<!--	            <class name="com.mlwallet.regression.MLWalletCashOutViaBranch" />-->
+<!--	            <class name="com.mlwallet.regression.MLWalletCashOutViaBank" />-->
+<!--	            <class name="com.mlwallet.regression.MLWalletSendTransferToAnyMLBranchScripts" />-->
+<!--	            <class name="com.mlwallet.regression.MLWalletSendTransferToMLWalletUserScripts" />-->
+<!--	            <class name="com.mlwallet.regression.MLWalletRegressionPayBillsScripts" />-->
+<!--	            <class name="com.mlwallet.regression.MLWalletBuyEload"/>-->
 				<class name="com.mlwallet.regression.MLWalletGcash"/>
 	        </classes>
    	 </test>

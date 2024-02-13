@@ -63,7 +63,7 @@ public class BaseTest {
         mlWalletTopUp = new TopUpGameClass();
         mlWalletTransactionHistory = new TransactionHistoryClass();
         mlWalletTroubleSignIn = new TroubleSigningInClass();
-        //mlWalletGCash = new GCashClass();
+        mlWalletGCash = new GCashClass();
     }
     @AfterSuite
     public void endAppiumServer(){
