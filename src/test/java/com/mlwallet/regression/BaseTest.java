@@ -20,7 +20,7 @@ public class BaseTest {
     protected CashInVia_BranchClass mlWalletCashInViaBranch;
     protected CashOutVia_BankClass mlWalletCashOutViaBank;
     protected CashOutVia_BranchClass mlWalletCashOutViaBranch;
-    protected GCashClass mlWalletGCash;
+    protected GCashClass mlWalletGCashScripts;
     protected HomeAndDashboardClass mlWalletHomeDashBoard;
     protected LogoutClass mlWalletLogout;
     protected RegistrationClass mlWalletRegistration;
@@ -63,7 +63,7 @@ public class BaseTest {
         mlWalletTopUp = new TopUpGameClass();
         mlWalletTransactionHistory = new TransactionHistoryClass();
         mlWalletTroubleSignIn = new TroubleSigningInClass();
-        mlWalletGCash = new GCashClass();
+        mlWalletGCashScripts = new GCashClass();
     }
     @AfterSuite
     public void endAppiumServer(){

@@ -78,7 +78,7 @@ public class GCashClass extends BaseClass {
         verifyElementPresent(MLWalletGcashPage.objGcashReminder, "Reminder");
     }
 
-    public void GC_Land_TC_01() throws Exception {
+    public void GC_SM_TC_01_Verify_user_able_see_Gcash_icon_Dashborad() throws Exception {
         ExtentReporter.HeaderChildNode("To verify user is able to see Gcash icon in Dashborad on sucessfull login to the application");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
         waitTime(5000);
@@ -88,7 +88,7 @@ public class GCashClass extends BaseClass {
     }
 
     //GC_Land_TC_02
-    public void GC_Land_TC_02() throws Exception {
+    public void GC_SM_TC_02_Verify_user_able_navigate_Gcash_services_page_tapping_Gcash_icon() throws Exception {
         ExtentReporter.HeaderChildNode("To verify user is able to navigate to \"Gcash services\" page on tapping Gcash icon from the Dashboard");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
         goToGcash();
@@ -99,7 +99,7 @@ public class GCashClass extends BaseClass {
     }
     //GC_Land_TC_04
 
-    public void GC_Land_TC_03() throws Exception {
+    public void GC_SM_TC_03_Verify_UI_Gcash_Services_page() throws Exception {
         ExtentReporter.HeaderChildNode("To verify the UI of Gcash Services page");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
         waitTime(5000);
@@ -110,7 +110,7 @@ public class GCashClass extends BaseClass {
         ExtentReporter.extentLoggerPass("GC_Land_TC_03", "To verify the UI of Gcash Services page");
     }
 
-    public void GC_Land_TC_04() throws Exception {
+    public void GC_SM_TC_04_Verify_user_redirected_back_Dashboard_tapping_back_arrow_btn() throws Exception {
         ExtentReporter.HeaderChildNode("To verify user is redirected  back to Dashboard on tapping <(back arrow) from the Gcash Services page");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
         waitTime(5000);
@@ -132,7 +132,7 @@ public class GCashClass extends BaseClass {
         }
     }
 
-    public void GC_SM_TC_43() throws Exception {
+    public void GC_SM_TC_43_Verify_user_redirected_back_Dashboard_tapping_back_arrow_btn() throws Exception {
         ExtentReporter.HeaderChildNode("To verify user is able to navigate to \"Gcash services\" page on tapping Gcash icon from the Dashboard");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
         goToSendMoneyToGcash();
@@ -215,7 +215,7 @@ public class GCashClass extends BaseClass {
         waitTime(5000);
     }
 
-    public void GC_Land_TC_58() throws Exception {
+    public void GC_SM_TC_58_Validate_user_able_see_NextBtn_Send_money_Gcash_page() throws Exception {
         ExtentReporter.HeaderChildNode("To validate user is able to see Next button Send money to Gcash page");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
         waitTime(5000);
@@ -579,6 +579,10 @@ public class GCashClass extends BaseClass {
             verifyElementPresent(MLWalletGcashPage.objSendViaMLWalletlabel, "Send Via ML Wallet");
             verifyElementPresent(MLWalletGcashPage.objSendViaMLWalletBtn, "Send Via ML Wallet Button");
             verifyElementPresent(MLWalletGcashPage.objCloseBtn, "Close Button");
+            if(verifyElementDisplayed(MLWalletGcashPage.objSendViaMLWalletBtn)){
+                click(MLWalletGcashPage.objSendViaMLWalletBtn, "Send Via Kwarta Padala Button");
+                verifyElementPresent(MLWalletTransactionHistoryPage.objSendMoneyTab,"Kwarta Padala Label");
+            }
         }
     }
     public void GC_RM_TC_181_SendMoney_NoGCash_thru_KwartaPadala()throws Exception{
@@ -589,6 +593,10 @@ public class GCashClass extends BaseClass {
             verifyElementPresent(MLWalletGcashPage.objSendViaMLKwartaWallelabel, "Send Via Kwarta Padala");
             verifyElementPresent(MLWalletGcashPage.objSendViaMLKwartaPadalaBtn, "Send Via Kwarta Padala Button");
             verifyElementPresent(MLWalletGcashPage.objCloseBtn, "Close Button");
+            if(verifyElementDisplayed(MLWalletGcashPage.objSendViaMLKwartaPadalaBtn)){
+                click(MLWalletGcashPage.objSendViaMLKwartaPadalaBtn, "Send Via Kwarta Padala Button");
+                verifyElementPresent(MLWalletTransactionHistoryPage.objKwartaPadala,"Kwarta Padala Label");
+            }
         }
     }
 
@@ -610,5 +618,6 @@ public class GCashClass extends BaseClass {
         }
 
     }
+
 }
 
