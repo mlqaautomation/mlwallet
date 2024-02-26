@@ -20,6 +20,7 @@
             <class name="com.mlwallet.regression.MLWalletSendTransferToMLWalletUserScripts" />
             <class name="com.mlwallet.regression.MLWalletRegressionPayBillsScripts" />
             <class name="com.mlwallet.regression.MLWalletBuyEload"/>
+            <class name="com.mlwallet.regression.MLWalletGCashScripts"/>
         </classes>
     </test>
 </suite>
