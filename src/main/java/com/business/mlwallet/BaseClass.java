@@ -141,7 +141,7 @@ public class BaseClass {
         click(MLWalletLoginPage.objLoginBtn, "Login Button");
         enterOTP(prop.getproperty("Valid_OTP"));
         LoginClass.clickAnnouncement_Exit();
-        handleMpin("1111");
+        handleMpin("1234");
         waitTime(10000);
         if (verifyElementPresent(MLWalletLoginPage.objAvailableBalance, getTextVal(MLWalletLoginPage.objAvailableBalance, "Text"))) {
             logger.info("Application Logged In Successfully");
