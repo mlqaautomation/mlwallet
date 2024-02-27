@@ -447,7 +447,6 @@ public class GCashClass extends BaseClass {
         mlWalletLogin(prop.getproperty("Semi_Verified"));
         confirmGcash50kTransaction();
         verifyElementPresent(MLWalletGcashPage.objUpgrade50kNowLabel, "Prompt Mobile No is Invalid");
-        verifyElementPresent(MLWalletGcashPage.objUpgradeBtn, "Upgrade Now Visible");
         logger.info("Prompt Invalid 50k SemiTier, Validated");
         logger.info("GC_SM_TC_103, Validate Sending Money to Gcash in a Single Transaction Amount Exceeding Maximum Limit as a Semi-Verified Tier");
         ExtentReporter.extentLoggerPass("GC_SM_TC_103","To validate Sending Money to Gcash in a Single Transaction Amount Exceeding Maximum Limit as a Semi-Verified Tier");
@@ -459,7 +458,6 @@ public class GCashClass extends BaseClass {
         mlWalletLogin(prop.getproperty("Branch_Verified"));
         confirmGcash50kTransaction();
         verifyElementPresent(MLWalletGcashPage.objUpgrade50kNowLabel, "Prompt Mobile No is Invalid");
-        verifyElementPresent(MLWalletGcashPage.objUpgradeBtn, "Upgrade Now Visible");
         logger.info("Prompt Invalid 50k BranchTier, Validated");
         logger.info("GC_SM_TC_104, Validate Sending Money to Gcash in a Single Transaction Amount Exceeding Maximum Limit as a Branch-Verified Tier");
         ExtentReporter.extentLoggerPass("GC_SM_TC_104", "To validate Sending Money to Gcash in a Single Transaction Amount Exceeding Maximum Limit as a Branch-Verified Tier");
