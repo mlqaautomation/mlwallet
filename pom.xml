@@ -304,7 +304,7 @@
 						
 <!--					</systemPropertyVariables>-->
 					<suiteXmlFiles>
-					 <suiteXmlFile>mlwallet.xml</suiteXmlFile>					 
+					 <suiteXmlFile>transactionals.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
