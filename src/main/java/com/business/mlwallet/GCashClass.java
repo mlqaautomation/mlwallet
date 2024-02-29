@@ -355,24 +355,38 @@ public class GCashClass extends BaseClass {
     public void GC_SM_TC_76_Validate_Back_Home_Btn_In_GCash_View_Recent_Transaction_Dashboard_Page() throws Exception {
         ExtentReporter.HeaderChildNode("To Validate Back Home Button In GCash View Recent Transaction Dashboard Page");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
+        verifyElementPresentAndClick(MLWalletHomePage.objEyeIcon,"Eye Icon");
+        String currentBalance = getText(MLWalletHomePage.objAvailableBalance);
         confirmGcashTransaction();
         waitTime(5000);
         verifyElementPresent(MLWalletGcashPage.objTransactionDetailsText, "Transaction Details");
+        String amount = getText(MLWalletGcashPage.objAmountSendTransactText);
         verifyElementPresentAndClick(MLWalletGcashPage.objBack_to_Home_Page, "Back to Home Page");
         if (verifyElementPresent(MLWalletLoginPage.objAvailableBalance, getTextVal(MLWalletLoginPage.objAvailableBalance, "Text"))) {
+            verifyElementPresentAndClick(MLWalletHomePage.objEyeIcon,"Eye Icon");
+            String NewBalance = getText(MLWalletHomePage.objAvailableBalance);
+            Swipe("DOWN", 1);
             Swipe("UP", 1);
             verifyElementPresent(MLWalletHomePage.objRecentTransactions, getTextVal(MLWalletHomePage.objRecentTransactions, "Header"));
-            List<WebElement> values = findElements(MLWalletHomePage.objTransactions);
-
-            for (int i = 4; i < values.size(); i += 4) {
-                String sTransactionType = values.get(i).getText();
-                logger.info("Transaction Type : " + sTransactionType + " is displayed");
-                ExtentReporter.extentLogger(" ", "Transaction Type : " + sTransactionType + " is displayed");
+            Swipe("UP", 1);
+            //-----------Formula----------------------
+            int cBalance = Integer.parseInt(currentBalance);
+            int cAmount = Integer.parseInt(amount);
+            int deduction = cBalance- cAmount;
+            String Sdeduction = String.valueOf(deduction);
+            //----------------------------------------
+            click(MLWalletTransactionHistoryPage.objSeeMoreBtn, "See More Button");
+            waitTime(10000);
+            verifyElementPresent(MLWalletTransactionHistoryPage.objTransactionHistory, getTextVal(MLWalletTransactionHistoryPage.objTransactionHistory, "Page"));
+            verifyElementPresentAndClick(MLWalletTransactionHistoryPage.objSendMoneyTab, getTextVal(MLWalletTransactionHistoryPage.objSendMoneyTab, "Tab"));
+            verifyElementPresentAndClick(MLWalletTransactionHistoryPage.objFirstTransaction, getTextVal(MLWalletTransactionHistoryPage.objFirstTransaction,"First Transaction"));
+            String amountHistory = getText(MLWalletTransactionHistoryPage.objTotalAmount);
+            if(amount == amountHistory && currentBalance != NewBalance && Sdeduction == NewBalance){
+                logger.info("GC_SM_TC_76, Same amount in transaction history Validated");
             }
-            for (int i = 2; i < values.size(); i += 4) {
-                String sAmount = values.get(i).getText();
-                logger.info("Amount : " + sAmount + " is displayed");
-                ExtentReporter.extentLogger(" ", "Amount : " + sAmount + " is displayed");
+            else
+            {
+                logger.info("GC_SM_TC_76, Not same amount in transaction history Failed");
             }
         }
         logger.info("GC_SM_TC_76, Back Home Button In GCash View Recent Transaction Dashboard Page Validated");
