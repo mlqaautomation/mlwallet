@@ -305,7 +305,7 @@
 						
 <!--					</systemPropertyVariables>-->
 					<suiteXmlFiles>
-<!--						<suiteXmlFile>transactionals.xml</suiteXmlFile>-->
+						<suiteXmlFile>transactionals.xml</suiteXmlFile>
 						<suiteXmlFile>TestRunner/${filename}</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
