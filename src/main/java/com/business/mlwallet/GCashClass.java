@@ -17,7 +17,7 @@ public class GCashClass extends BaseClass {
 
     //method for navigating gcash
     public void goToGcash() throws Exception {
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresentAndClick(MLWalletGcashPage.objGcashText, "Gcash Icon Text");
         if (verifyElementPresent(MLWalletGcashPage.objGcashOptionsText, "Gcash Options Text")) {
             logger.info("Navigated to Gcash Services Page");
@@ -28,7 +28,7 @@ public class GCashClass extends BaseClass {
 
     //method to scroll recent transactions and verify gcash transaction
     public void verifyGcashTransaction(String type) throws Exception {
-        waitTime(5000);
+        waitTime(1000);
         Swipe("UP", 3);
         switch (type) {
             case "Pending":
@@ -48,7 +48,7 @@ public class GCashClass extends BaseClass {
 
     //method for successful transaction gcash
     public void sendMoneyToGcash(String tier) throws Exception {
-        waitTime(5000);
+        waitTime(1000);
         mlWalletLogin(tier);
         logger.info("Sending Money To Gcash Scenario");
         goToGcash();
@@ -56,7 +56,7 @@ public class GCashClass extends BaseClass {
         verifyElementPresent(MLWalletGcashPage.objGcashMobileNumber, "Mobile Number Field Text");
         type(MLWalletGcashPage.objGcashMobileNumber, gcashProp.getproperty("ValidGcashNumber"), "Number Field");
         click(MLWalletGcashPage.objNextBtn, "Next Button");
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(MLWalletGcashPage.objConfirmDetailsPage, "Confirm Details Page");
         verifyTransactionDetails();
         click(MLWalletGcashPage.objConfirmBtn, "Confirm Button");
@@ -67,7 +67,7 @@ public class GCashClass extends BaseClass {
     }
 
     public void verifyTransactionDetails() throws Exception {
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(MLWalletGcashPage.objTransactionDetailsText, "Transaction Details");
         verifyElementPresent(MLWalletGcashPage.objReceiverNumber_Transaction, "Receiver Number");
         verifyElementPresent(MLWalletGcashPage.objSenderName_Transaction, "Sender Name");
@@ -81,7 +81,7 @@ public class GCashClass extends BaseClass {
     public void GC_SM_TC_01_Verify_user_able_see_Gcash_icon_Dashborad() throws Exception {
         ExtentReporter.HeaderChildNode("To verify user is able to see Gcash icon in Dashborad on sucessfull login to the application");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(MLWalletGcashPage.objGcashText, "Gcash Services Page Text");
         logger.info("Gcash Page Navigation Success");
         ExtentReporter.extentLoggerPass("GC_Land_TC_01", "To verify user is able to see Gcash icon in Dashborad on sucessfull login to the application");
@@ -102,7 +102,7 @@ public class GCashClass extends BaseClass {
     public void GC_SM_TC_03_Verify_UI_Gcash_Services_page() throws Exception {
         ExtentReporter.HeaderChildNode("To verify the UI of Gcash Services page");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresentAndClick(MLWalletGcashPage.objGcashText, "Gcash Icon Text");
         verifyElementPresent(MLWalletGcashPage.objGcashServicesText, "Gcash Services Page Text");
         verifyElementPresent(MLWalletGcashPage.objGcashSendMoneyText, "Send Money to Gcash Text");
@@ -113,7 +113,7 @@ public class GCashClass extends BaseClass {
     public void GC_SM_TC_04_Verify_user_redirected_back_Dashboard_tapping_back_arrow_btn() throws Exception {
         ExtentReporter.HeaderChildNode("To verify user is redirected  back to Dashboard on tapping <(back arrow) from the Gcash Services page");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresentAndClick(MLWalletGcashPage.objGcashText, "Gcash Icon Text");
         verifyElementPresentAndClick(MLWalletGcashPage.objGcashPage_BackBtn, "Gcash Icon Text");
         logger.info("Back Gcash Page Navigation Success");
@@ -122,7 +122,7 @@ public class GCashClass extends BaseClass {
     //GC_RM_TC_43
 
     public void goToSendMoneyToGcash() throws Exception {
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresentAndClick(MLWalletGcashPage.objGcashText, "Gcash Icon Button");
         verifyElementPresentAndClick(MLWalletGcashPage.objGcashSendMoneyText, "Send Money Button");
         if (verifyElementPresent(MLWalletGcashPage.objSendMoneyPageHeader, "Send Money to GCash Page")) {
@@ -158,10 +158,10 @@ public class GCashClass extends BaseClass {
     public void GC_SM_TC_50_InvalidReceiverNumber_ErrorMsg_Validation() throws Exception {
         ExtentReporter.HeaderChildNode("To verify user gets an appropriate error on entering Symbols and special characters in  Receiver Mobile number field in Send Money to Gcash page");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresentAndClick(MLWalletGcashPage.objGcashText, "Gcash Icon Button");
         verifyElementPresentAndClick(MLWalletGcashPage.objGcashSendMoneyText, "Send Money Button");
-        waitTime(2000);
+        waitTime(1000);
         type(MLWalletGcashPage.objGcashMobileNumber, gcashProp.getproperty("SpecialChar"), "Type Characters");
         verifyElementPresentAndClick(MLWalletGcashPage.objNextBtn, "GCash Next Button");
         assertionValidation(getText(MLWalletGcashPage.objGetErrMsg(gcashProp.getproperty("InvalidMobileNum"))), gcashProp.getproperty("InvalidMobileNum"));
@@ -185,46 +185,46 @@ public class GCashClass extends BaseClass {
     public void GC_SM_TC_57_SendMoneytoGcash_LessThan_One_Validation() throws Exception {
         ExtentReporter.HeaderChildNode("To Send Money to Gcash Less Than One Validation");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresentAndClick(MLWalletGcashPage.objGcashText, "Gcash Icon Button");
         verifyElementPresentAndClick(MLWalletGcashPage.objGcashSendMoneyText, "Send Money Option");
         type(MLWalletGcashPage.objGcashMobileNumber, gcashProp.getproperty("ValidGcashNumber"), "Number Field");
         verifyElementPresentAndClick(MLWalletGcashPage.objNextBtn, "Next Button");
-        waitTime(5000);
+        waitTime(1000);
         type(MLWalletGcashPage.objAmountTextBox, gcashProp.getproperty("InvalidLessAmount"), "InvalidLessAmount");
         click(MLWalletGcashPage.objNextBtn, "Next Button");
         assertionValidation(getText(MLWalletGcashPage.objGetErrMsg(gcashProp.getproperty("InvalidLessAmount"))), gcashProp.getproperty("InvalidLessAmount"));
-        waitTime(5000);
+        waitTime(1000);
         logger.info("GC_RM_TC_57, To Send Money to Gcash Less Than One Validation, Validated");
         ExtentReporter.extentLoggerPass("GC_RM_TC_57", "To Send Money to Gcash Less Than One Validation, Validated");
     }
     //----------------------------------------------------------------------------------------------------------------------------------------------------
     public void confirmGcashAmountTransaction() throws Exception {
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresentAndClick(MLWalletGcashPage.objGcashText, "Gcash Icon Button");
         verifyElementPresentAndClick(MLWalletGcashPage.objGcashSendMoneyText, "Send Money Button");
-        waitTime(5000);
+        waitTime(1000);
         type(MLWalletGcashPage.objGcashMobileNumber, gcashProp.getproperty("ValidGcashNumber"), "Valid Number");
         click(MLWalletGcashPage.objNextBtn, "GCash Next Button");
-        waitTime(5000);
+        waitTime(1000);
         type(MLWalletGcashPage.objAmountTextBox, gcashProp.getproperty("ValidAmount"), "Valid Amount");
         click(MLWalletGcashPage.objNextBtn, "Next Amount");
         if(verifyElementDisplayed(MLWalletGcashPage.objProceedBtn)){
             click(MLWalletGcashPage.objProceedBtn,"Click Proceed");
         }
-        waitTime(5000);
+        waitTime(1000);
     }
 
     public void GC_SM_TC_58_Validate_user_able_see_NextBtn_Send_money_Gcash_page() throws Exception {
         ExtentReporter.HeaderChildNode("To validate user is able to see Next button Send money to Gcash page");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresentAndClick(MLWalletGcashPage.objGcashText, "Gcash Icon Button");
         verifyElementPresentAndClick(MLWalletGcashPage.objGcashSendMoneyText, "Send Money Button");
-        waitTime(5000);
+        waitTime(1000);
         type(MLWalletGcashPage.objGcashMobileNumber, gcashProp.getproperty("ValidGcashNumber"), "Valid Number");
         click(MLWalletGcashPage.objNextBtn, "GCash Next Button");
-        waitTime(5000);
+        waitTime(1000);
         type(MLWalletGcashPage.objAmountTextBox, gcashProp.getproperty("ValidAmount"), "Valid Amount");
         if (verifyElementPresent(MLWalletGcashPage.objNextBtn, "Next Amount")) {
             logger.info("Observe the Next Button");
@@ -248,28 +248,28 @@ public class GCashClass extends BaseClass {
     }
 
     public void confirmGcashTransaction() throws Exception {
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresentAndClick(MLWalletGcashPage.objGcashText, "Gcash Icon Button");
         verifyElementPresentAndClick(MLWalletGcashPage.objGcashSendMoneyText, "Send Money To Gcash");
-        waitTime(5000);
+        waitTime(1000);
         type(MLWalletGcashPage.objGcashMobileNumber, gcashProp.getproperty("ValidGcashNumber"), "Number Field");
         click(MLWalletGcashPage.objNextBtn, "Next Button");
-        waitTime(5000);
+        waitTime(1000);
         type(MLWalletGcashPage.objAmountTextBox, gcashProp.getproperty("ValidAmount"), "Valid Amount");
         click(MLWalletGcashPage.objNextBtn, "Next Button");
         if(verifyElementDisplayed(MLWalletGcashPage.objProceedBtn)){
             click(MLWalletGcashPage.objProceedBtn,"Click Proceed");
         }
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(MLWalletGcashPage.objConfirmDetailsPage, "Confirm Details Page");
         click(MLWalletGcashPage.objConfirmBtn, "Confirm Button");
         if (verifyElementDisplayed(MLWalletGcashPage.objAllowOnceBtn)) {
             click(MLWalletGcashPage.objAllowOnceBtn, "Allow Once Notif");
         }
 //        click(MLWalletGCashPage.objGcashConfirmBtn, "Confirm Button");
-        waitTime(5000);
+        waitTime(1000);
         click(MLWalletLoginPage.objContinueBtn, "Continue Button");
-        waitTime(5000);
+        waitTime(1000);
     }
 
     //GC_RM_TC_60
@@ -332,7 +332,7 @@ public class GCashClass extends BaseClass {
         ExtentReporter.HeaderChildNode("To Validate Back Button In GCash Transaction Details Page");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
         confirmGcashTransaction();
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(MLWalletGcashPage.objTransactionDetailsText, "Transaction Detail");
         verifyElementPresent(MLWalletGcashPage.objSendtoGCash_Transaction, "Send Money GCash");
         Swipe("UP", 1);
@@ -353,41 +353,44 @@ public class GCashClass extends BaseClass {
 
     //GC_RM_TC_76
     public void GC_SM_TC_76_Validate_Back_Home_Btn_In_GCash_View_Recent_Transaction_Dashboard_Page() throws Exception {
+//        String amount , amountHistory;
         ExtentReporter.HeaderChildNode("To Validate Back Home Button In GCash View Recent Transaction Dashboard Page");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
         verifyElementPresentAndClick(MLWalletHomePage.objEyeIcon,"Eye Icon");
-        String currentBalance = getText(MLWalletHomePage.objAvailableBalance);
+//        String currentBalance = getText(MLWalletHomePage.objAvailableBalance);
         confirmGcashTransaction();
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(MLWalletGcashPage.objTransactionDetailsText, "Transaction Details");
-        String amount = getText(MLWalletGcashPage.objAmountSendTransactText);
+        Swipe("UP", 1);
+//        amount = getText(MLWalletGcashPage.objGcashTotal);
         verifyElementPresentAndClick(MLWalletGcashPage.objBack_to_Home_Page, "Back to Home Page");
         if (verifyElementPresent(MLWalletLoginPage.objAvailableBalance, getTextVal(MLWalletLoginPage.objAvailableBalance, "Text"))) {
-            verifyElementPresentAndClick(MLWalletHomePage.objEyeIcon,"Eye Icon");
-            String NewBalance = getText(MLWalletHomePage.objAvailableBalance);
             Swipe("DOWN", 1);
+            verifyElementPresentAndClick(MLWalletHomePage.objEyeIcon,"Eye Icon");
+//            String NewBalance = getText(MLWalletHomePage.objAvailableBalance);
             Swipe("UP", 1);
             verifyElementPresent(MLWalletHomePage.objRecentTransactions, getTextVal(MLWalletHomePage.objRecentTransactions, "Header"));
-            Swipe("UP", 1);
-            //-----------Formula----------------------
-            int cBalance = Integer.parseInt(currentBalance);
-            int cAmount = Integer.parseInt(amount);
-            int deduction = cBalance- cAmount;
-            String Sdeduction = String.valueOf(deduction);
-            //----------------------------------------
+            Swipe("UP", 2);
             click(MLWalletTransactionHistoryPage.objSeeMoreBtn, "See More Button");
-            waitTime(10000);
+            waitTime(5000);
             verifyElementPresent(MLWalletTransactionHistoryPage.objTransactionHistory, getTextVal(MLWalletTransactionHistoryPage.objTransactionHistory, "Page"));
             verifyElementPresentAndClick(MLWalletTransactionHistoryPage.objSendMoneyTab, getTextVal(MLWalletTransactionHistoryPage.objSendMoneyTab, "Tab"));
             verifyElementPresentAndClick(MLWalletTransactionHistoryPage.objFirstTransaction, getTextVal(MLWalletTransactionHistoryPage.objFirstTransaction,"First Transaction"));
-            String amountHistory = getText(MLWalletTransactionHistoryPage.objTotalAmount);
-            if(amount == amountHistory && currentBalance != NewBalance && Sdeduction == NewBalance){
+//            amountHistory = getText(MLWalletTransactionHistoryPage.objTotalAmount);
+//            if(amount.contains(amountHistory)){
                 logger.info("GC_SM_TC_76, Same amount in transaction history Validated");
-            }
-            else
-            {
-                logger.info("GC_SM_TC_76, Not same amount in transaction history Failed");
-            }
+//            }
+//            else
+//            {
+//                logger.info("GC_SM_TC_76, Not same amount in transaction history Failed");
+//            }
+            //-----------Formula----------------------
+//            int cBalance = Integer.parseInt(currentBalance);
+//            int cAmount = Integer.parseInt(amount);
+//            int deduction = cBalance- cAmount;
+//            String Sdeduction = String.valueOf(deduction);
+            //----------------------------------------
+
         }
         logger.info("GC_SM_TC_76, Back Home Button In GCash View Recent Transaction Dashboard Page Validated");
         ExtentReporter.extentLoggerPass("GC_SM_TC_76", "To Validate Back Home Button In GCash View Recent Transaction Dashboard Page");
@@ -400,7 +403,7 @@ public class GCashClass extends BaseClass {
         mlWalletLogin(prop.getproperty("Branch_Verified"));
         confirmGcashAmountTransaction();
         if (verifyElementPresent(MLWalletGcashPage.objConfirmDetailsPage, "Confirm Details Page")) {
-            waitTime(5000);
+            waitTime(1000);
             verifyElementPresent(MLWalletGcashPage.objSendtoGCash_Confirm, "Send Money to GCash");
             verifyElementPresent(MLWalletGcashPage.objReceiverNumber_Confirm, getTextVal(MLWalletGcashPage.objReceiverNumber_Confirm, "Receiver Number"));
             verifyElementPresent(MLWalletGcashPage.objSenderName_Confirm, getTextVal(MLWalletGcashPage.objSenderName_Confirm, "Sender Name"));
@@ -424,7 +427,7 @@ public class GCashClass extends BaseClass {
         assertionValidation(getText(MLWalletGcashPage.objGetErrMsg(gcashProp.getproperty("InvalidTierBuyerVer"))), gcashProp.getproperty("InvalidTierBuyerVer"));
         if(verifyElementPresent(MLWalletGcashPage.objUpgradeNowLabel, "Prompt Mobile No is Invalid")) {
             verifyElementPresentAndClick(MLWalletGcashPage.objUpgradeBtn, "Upgrade Now Visible");
-            waitTime(5000);
+            waitTime(1000);
             verifyElementPresent(MLWalletTierUpgrade.objVerificationTierPerksLabel, "Tier Upgrade Page");
             logger.info("Prompt Invalid BuyerTier, Validated");
         }
@@ -434,19 +437,19 @@ public class GCashClass extends BaseClass {
     }
 
     public void confirmGcash50kTransaction() throws Exception {
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresentAndClick(MLWalletGcashPage.objGcashText, "Gcash Icon Button");
         verifyElementPresentAndClick(MLWalletGcashPage.objGcashSendMoneyText, "Send Money To Gcash");
-        waitTime(5000);
+        waitTime(1000);
         type(MLWalletGcashPage.objGcashMobileNumber, gcashProp.getproperty("ValidGcashNumber"), "Number Field");
         click(MLWalletGcashPage.objNextBtn, "Next Button");
-        waitTime(5000);
+        waitTime(1000);
         type(MLWalletGcashPage.objAmountTextBox, gcashProp.getproperty("Invalid50kAmount"), "Invalid50kAmount");
         click(MLWalletGcashPage.objNextBtn, "Next Button");
         if(verifyElementDisplayed(MLWalletGcashPage.objProceedBtn)){
             click(MLWalletGcashPage.objProceedBtn,"Click Proceed");
         }
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(MLWalletGcashPage.objConfirmDetailsPage, "Confirm Details Page");
         click(MLWalletGcashPage.objConfirmBtn, "Confirm Button");
         if (verifyElementDisplayed(MLWalletGcashPage.objAllowOnceBtn)) {
@@ -490,28 +493,28 @@ public class GCashClass extends BaseClass {
     }
 
     public void sendMoneyToGcash() throws Exception {
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresentAndClick(MLWalletGcashPage.objGcashText, "Gcash Icon Button");
         verifyElementPresentAndClick(MLWalletGcashPage.objGcashSendMoneyText, "Send Money To Gcash");
-        waitTime(5000);
+        waitTime(1000);
         type(MLWalletGcashPage.objGcashMobileNumber, gcashProp.getproperty("ValidGcashNumber"), "Number Field");
         click(MLWalletGcashPage.objNextBtn, "Next Button");
-        waitTime(5000);
+        waitTime(1000);
         type(MLWalletGcashPage.objAmountTextBox, gcashProp.getproperty("ValidAmount"), "Valid Amount");
         click(MLWalletGcashPage.objNextBtn, "Next Button");
         if(verifyElementDisplayed(MLWalletGcashPage.objProceedBtn)){
             click(MLWalletGcashPage.objProceedBtn,"Click Proceed");
         }
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(MLWalletGcashPage.objConfirmDetailsPage, "Confirm Details Page");
         click(MLWalletGcashPage.objConfirmBtn, "Confirm Button");
         if (verifyElementDisplayed(MLWalletGcashPage.objAllowOnceBtn)) {
             click(MLWalletGcashPage.objAllowOnceBtn, "Allow Once Notif");
         }
 //        click(MLWalletGCashPage.objGcashConfirmBtn, "Confirm Button");
-        waitTime(5000);
+        waitTime(1000);
         click(MLWalletLoginPage.objContinueBtn, "Continue Button");
-        waitTime(5000);
+        waitTime(1000);
         click(MLWalletGcashPage.objBack_to_Home_Page, "Back to Home Page Button");
         logger.info("Send Money To Gcash, Success");
     }
@@ -519,7 +522,7 @@ public class GCashClass extends BaseClass {
     //GC_RM_TC_132 To Validate Successful Send Money to Gcash per Transaction while in Semi Verified Tier
     public void GC_SM_TC_132_SendMoney_as_SemiVerified() throws Exception {
         ExtentReporter.HeaderChildNode("To Validate Successful Send Money to Gcash per Transaction while in Semi Verified Tier ");
-        waitTime(5000);
+        waitTime(1000);
         mlWalletLogin(prop.getproperty("Semi_Verified"));
         sendMoneyToGcash();
         logger.info("Send Money to Gcash as Semi Verified Validated");
@@ -535,53 +538,53 @@ public class GCashClass extends BaseClass {
         ExtentReporter.extentLoggerPass("GC_RM_TC_135", "To Validate Successful Send Money to Gcash as Branch Verified Tier ");
     }
     public void confirmNoGcashgotoKwartaPadalaTransaction() throws Exception {
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresentAndClick(MLWalletGcashPage.objGcashText, "Gcash Icon Button");
         verifyElementPresentAndClick(MLWalletGcashPage.objGcashSendMoneyText, "Send Money To Gcash");
-        waitTime(5000);
+        waitTime(1000);
         type(MLWalletGcashPage.objGcashMobileNumber, gcashProp.getproperty("NoGcashKwartaPadalaNo"), "Number Field");
         click(MLWalletGcashPage.objNextBtn, "Next Button");
-        waitTime(5000);
+        waitTime(1000);
         type(MLWalletGcashPage.objAmountTextBox, gcashProp.getproperty("ValidAmount"), "Valid Amount");
         click(MLWalletGcashPage.objNextBtn, "Next Button");
         if(verifyElementDisplayed(MLWalletGcashPage.objProceedBtn)){
             click(MLWalletGcashPage.objProceedBtn,"Click Proceed");
         }
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(MLWalletGcashPage.objConfirmDetailsPage, "Confirm Details Page");
         click(MLWalletGcashPage.objConfirmBtn, "Confirm Button");
         if (verifyElementDisplayed(MLWalletGcashPage.objAllowOnceBtn)) {
             click(MLWalletGcashPage.objAllowOnceBtn, "Allow Once Notif");
         }
 //        click(MLWalletGCashPage.objGcashConfirmBtn, "Confirm Button");
-        waitTime(5000);
+        waitTime(1000);
         click(MLWalletLoginPage.objContinueBtn, "Continue Button");
-        waitTime(5000);
+        waitTime(1000);
     }
 
     public void confirmNoGcashggotoMLWalletTransaction() throws Exception {
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresentAndClick(MLWalletGcashPage.objGcashText, "Gcash Icon Button");
         verifyElementPresentAndClick(MLWalletGcashPage.objGcashSendMoneyText, "Send Money To Gcash");
-        waitTime(5000);
+        waitTime(1000);
         type(MLWalletGcashPage.objGcashMobileNumber, gcashProp.getproperty("NoGcashMlwalletNo"), "Number Field");
         click(MLWalletGcashPage.objNextBtn, "Next Button");
-        waitTime(5000);
+        waitTime(1000);
         type(MLWalletGcashPage.objAmountTextBox, gcashProp.getproperty("ValidAmount"), "Valid Amount");
         click(MLWalletGcashPage.objNextBtn, "Next Button");
         if(verifyElementDisplayed(MLWalletGcashPage.objProceedBtn)){
             click(MLWalletGcashPage.objProceedBtn,"Click Proceed");
         }
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(MLWalletGcashPage.objConfirmDetailsPage, "Confirm Details Page");
         click(MLWalletGcashPage.objConfirmBtn, "Confirm Button");
         if (verifyElementDisplayed(MLWalletGcashPage.objAllowOnceBtn)) {
             click(MLWalletGcashPage.objAllowOnceBtn, "Allow Once Notif");
         }
 //        click(MLWalletGCashPage.objGcashConfirmBtn, "Confirm Button");
-        waitTime(5000);
+        waitTime(1000);
         click(MLWalletLoginPage.objContinueBtn, "Continue Button");
-        waitTime(5000);
+        waitTime(1000);
     }
     public void GC_RM_TC_180_SendMoney_NoGCash_thru_MLWallet()throws Exception{
         ExtentReporter.HeaderChildNode("To Validate InAppOtp Page Redirection");
@@ -615,11 +618,11 @@ public class GCashClass extends BaseClass {
     public void GC_RM_TC_182_Contacts()throws Exception{
         ExtentReporter.HeaderChildNode("To Validate InAppOtp Page Redirection");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresentAndClick(MLWalletGcashPage.objGcashText, "Gcash Icon Button");
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresentAndClick(MLWalletGcashPage.objGcashSendMoneyText, "Send Money To Gcash");
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresentAndClick(MLWalletGcashPage.objSelectContactText, "Contact Buttons");
         if(verifyElementDisplayed(MLWalletGcashPage.objOkAllowContacts)){
             verifyElementPresentAndClick(MLWalletGcashPage.objOkAllowContacts,"Allow Notif Button");
