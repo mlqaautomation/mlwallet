@@ -4,7 +4,7 @@
     <listeners>
         <listener class-name="com.utility.ExtentReporter" />
     </listeners>
-    <test name="MLWallet">
+    <test name="HappyPath">
         <parameter name="portno" value="4723"></parameter>
         <parameter name="deviceName" value="RRCW901MQLF"></parameter>
         <parameter name="browserType" value="Chrome"></parameter>

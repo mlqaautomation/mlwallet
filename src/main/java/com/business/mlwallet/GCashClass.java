@@ -9,7 +9,6 @@ import java.time.Duration;
 import java.util.List;
 
 import static com.utility.Utilities.*;
-import static com.utility.Utilities.verifyElementPresent;
 public class GCashClass extends BaseClass {
     public GCashClass() {
         super();
@@ -266,7 +265,6 @@ public class GCashClass extends BaseClass {
         if (verifyElementDisplayed(MLWalletGcashPage.objAllowOnceBtn)) {
             click(MLWalletGcashPage.objAllowOnceBtn, "Allow Once Notif");
         }
-//        click(MLWalletGCashPage.objGcashConfirmBtn, "Confirm Button");
         waitTime(1000);
         click(MLWalletLoginPage.objContinueBtn, "Continue Button");
         waitTime(1000);
@@ -353,21 +351,26 @@ public class GCashClass extends BaseClass {
 
     //GC_RM_TC_76
     public void GC_SM_TC_76_Validate_Back_Home_Btn_In_GCash_View_Recent_Transaction_Dashboard_Page() throws Exception {
-//        String amount , amountHistory;
         ExtentReporter.HeaderChildNode("To Validate Back Home Button In GCash View Recent Transaction Dashboard Page");
-        mlWalletLogin(prop.getproperty("Branch_Verified"));
-        verifyElementPresentAndClick(MLWalletHomePage.objEyeIcon,"Eye Icon");
-//        String currentBalance = getText(MLWalletHomePage.objAvailableBalance);
+        mlWalletLogin(prop.getproperty("Branch_Verified"));     
+        double prevBalance = getWalletBalance();
         confirmGcashTransaction();
         waitTime(1000);
         verifyElementPresent(MLWalletGcashPage.objTransactionDetailsText, "Transaction Details");
         Swipe("UP", 1);
-//        amount = getText(MLWalletGcashPage.objGcashTotal);
+
+        String total = getText(MLWalletGcashPage.objGcashTotal);
+        String numericTotal = total.replaceAll("[^\\d.]", ""); // Remove non-numeric characters    
+        double totalValue = parseDouble(numericTotal);
+
         verifyElementPresentAndClick(MLWalletGcashPage.objBack_to_Home_Page, "Back to Home Page");
-        if (verifyElementPresent(MLWalletLoginPage.objAvailableBalance, getTextVal(MLWalletLoginPage.objAvailableBalance, "Text"))) {
+        waitTime(5000);
+        if (verifyElementDisplayed(MLWalletLoginPage.objAvailableBalance)) {
             Swipe("DOWN", 1);
             verifyElementPresentAndClick(MLWalletHomePage.objEyeIcon,"Eye Icon");
-//            String NewBalance = getText(MLWalletHomePage.objAvailableBalance);
+            double newBalance = getWalletBalance();
+            double expectedBalance = prevBalance - totalValue;
+            assertionValidation(newBalance, expectedBalance);
             Swipe("UP", 1);
             verifyElementPresent(MLWalletHomePage.objRecentTransactions, getTextVal(MLWalletHomePage.objRecentTransactions, "Header"));
             Swipe("UP", 2);
@@ -376,28 +379,17 @@ public class GCashClass extends BaseClass {
             verifyElementPresent(MLWalletTransactionHistoryPage.objTransactionHistory, getTextVal(MLWalletTransactionHistoryPage.objTransactionHistory, "Page"));
             verifyElementPresentAndClick(MLWalletTransactionHistoryPage.objSendMoneyTab, getTextVal(MLWalletTransactionHistoryPage.objSendMoneyTab, "Tab"));
             verifyElementPresentAndClick(MLWalletTransactionHistoryPage.objFirstTransaction, getTextVal(MLWalletTransactionHistoryPage.objFirstTransaction,"First Transaction"));
-//            amountHistory = getText(MLWalletTransactionHistoryPage.objTotalAmount);
-//            if(amount.contains(amountHistory)){
-                logger.info("GC_SM_TC_76, Same amount in transaction history Validated");
-//            }
-//            else
-//            {
-//                logger.info("GC_SM_TC_76, Not same amount in transaction history Failed");
-//            }
-            //-----------Formula----------------------
-//            int cBalance = Integer.parseInt(currentBalance);
-//            int cAmount = Integer.parseInt(amount);
-//            int deduction = cBalance- cAmount;
-//            String Sdeduction = String.valueOf(deduction);
-            //----------------------------------------
 
-        }
-        logger.info("GC_SM_TC_76, Back Home Button In GCash View Recent Transaction Dashboard Page Validated");
-        ExtentReporter.extentLoggerPass("GC_SM_TC_76", "To Validate Back Home Button In GCash View Recent Transaction Dashboard Page");
-        System.out.println("-----------------------------------------------------------");
+            String amountHistory = getText(MLWalletTransactionHistoryPage.objTotalAmount);  
+            String historyTotal = amountHistory.replaceAll("[^\\d.]", ""); // Remove non-numeric characters
+            double amountHistoryValue = parseDouble(historyTotal);
+
+            assertionValidation(totalValue, amountHistoryValue);            
+            logger.info("GC_SM_TC_76, Back Home Button In GCash View Recent Transaction Dashboard Page Validated");
+        }  
+        ExtentReporter.extentLoggerPass("GC_SM_TC_76", "To Validate Back Home Button In GCash View Recent Transaction Dashboard Page"); 
     }
 
-    //GC_RM_TC_83
     public void GC_SM_TC_83_Validate_Transaction_Details_Match_User_Entered_Details() throws Exception {
         ExtentReporter.HeaderChildNode("To Validate transaction details are matching with user entered details");
         mlWalletLogin(prop.getproperty("Branch_Verified"));

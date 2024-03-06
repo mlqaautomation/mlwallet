@@ -55,7 +55,7 @@ public class MLWalletGcashPage {
     public static By objSenderNumber_Transaction = By.xpath("//*[@resource-id='X3HARL']/child::*[2]");
     public static By objGcashAmount = By.xpath("//*[@resource-id='YTS3NI']/child::*[2]");
     public static By objGcashServiceFee = By.xpath("//*[@resource-id='DTMI0G']/child::*[2]");
-    public static By objGcashTotal = By.xpath("//*[@resource-id='ID316A']/child::*[2]");
+    public static By objGcashTotal = By.xpath("(//*[@resource-id='Total'])[2]");
     public static By objGcashReminder = By.xpath("//*[@resource-id='ARX1Q6']");
     public static By objBack_to_Home_Page = By.xpath("//*[@resource-id='TN8ENX']");
     public static By objNew_Transaction = By.xpath("//*[@resource-id='22M10L']");
