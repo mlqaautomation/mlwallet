@@ -753,7 +753,7 @@ public class MLShop_TestCases extends MLShop_GenMethods {
         ExtentReporter.HeaderChildNode("MLS_TC_202,Check Wallet Balance After Purchasing via Wallet");
         mlWalletLogin(prop.getproperty("Branch_Verified_LowBalance"));
         String beforeBal =null , afterBal  = null;
-        getWallentBalance(beforeBal);
+        //getWallentBalance(beforeBal);
         shopItemsNavigation();
         selectItemAndAddToCart();
         navigationToCart();

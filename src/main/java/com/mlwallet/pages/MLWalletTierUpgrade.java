@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 
 public class MLWalletTierUpgrade {
 
+    public static By objVerificationTierPerksLabel = By.xpath("//*[@text='Verification Tier Perks']");
     //  Verification Tier perk page back button
     public static By objVerificationTierPerksBackBtn = By.xpath("//*[@text='Verification Tier Perks']/parent::android.view.ViewGroup/preceding-sibling::android.view.ViewGroup");
     //  Semi verified Tab

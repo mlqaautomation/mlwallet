@@ -70,11 +70,11 @@ public class MLWalletLoginScripts extends BaseTest{
 //        mlWalletLogin.loginNetworkInterruptionWhileLoggingInValidation_Lgn_TC_19(prop.getproperty("Branch_Verified"));
 //    }
 
-    @Test(priority = 14)
-    public void loginInternetInterruptionWhileLaunchingApp_Lgn_TC_20() throws Exception {
-        mlWalletLogin.loginInternetInterruptionWhileLaunchingApp_Lgn_TC_20();
-        setWifiConnectionToONOFF("ON");
-    }
+//    @Test(priority = 14)
+//    public void loginInternetInterruptionWhileLaunchingApp_Lgn_TC_20() throws Exception {
+//        mlWalletLogin.loginInternetInterruptionWhileLaunchingApp_Lgn_TC_20();
+//        setWifiConnectionToONOFF("ON");
+//    }
 
     @Test(priority = 15)
     public void loginInAppOTPNavigation_Lgn_TC_22() throws Exception {

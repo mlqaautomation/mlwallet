@@ -14,7 +14,7 @@ public class LoginClass extends BaseClass{
     }
 
     public static void clickAnnouncement_Exit()throws Exception{
-        waitTime(5000);
+        waitTime(1000);
         if(verifyElementDisplayed(MLWalletLoginPage.objAnnouncement_Exit_Button)){
             click(MLWalletLoginPage.objAnnouncement_Exit_Button, "Exit Button");
             logger.info("Exited Announcement Page");
@@ -98,7 +98,7 @@ public class LoginClass extends BaseClass{
         ExtentReporter.HeaderChildNode("LogIn Trouble Signing In Validation");
         enableNotif();
         if (verifyElementPresentAndClick(MLWalletLoginPage.objTroubleSigningIn, getTextVal(MLWalletLoginPage.objTroubleSigningIn, "Button"))) {
-            waitTime(6000);
+            waitTime(1000);
             verifyElementPresent(MLWalletLoginPage.objTroubleSigningPage, getTextVal(MLWalletLoginPage.objTroubleSigningPage, "Page"));
             verifyElementPresent(MLWalletLoginPage.objMLWalletSupport, getTextVal(MLWalletLoginPage.objMLWalletSupport, "Header"));
             logger.info("Lgn_TC_07, Navigated to Trouble Signing In Page");
@@ -122,7 +122,7 @@ public class LoginClass extends BaseClass{
         ExtentReporter.HeaderChildNode("LogIn Branch Locator");
         enableNotif();
         if (verifyElementPresentAndClick(MLWalletLoginPage.objBranchLocator, getTextVal(MLWalletLoginPage.objBranchLocator, "Button"))) {
-            waitTime(6000);
+            waitTime(1000);
             enableLocation_PopUp();
             verifyElementPresent(MLWalletLoginPage.objBranchLocator, getTextVal(MLWalletLoginPage.objBranchLocator, "Page"));
             logger.info("Lgn_TC_09, Navigated to Branch Locator Page");
@@ -136,7 +136,7 @@ public class LoginClass extends BaseClass{
         enableNotif();
         type(MLWalletLoginPage.objMobileNumberTextField, prop.getproperty("Branch_Verified"), "Mobile Number Text Field");
         click(MLWalletLoginPage.objLoginBtn, "Login Button");
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"))) {
             logger.info("Lgn_TC_10, LogIn OTP Page UI Validated");
             ExtentReporter.extentLoggerPass("Lgn_TC_10", "Lgn_TC_10, LogIn OTP Page UI Validated");
@@ -150,7 +150,7 @@ public class LoginClass extends BaseClass{
         mlWalletLogout();
         verifyElementPresent(MLWalletLogOutPage.objChangeNumber, "Mpin Page");
         enterMLPin();
-        waitTime(10000);
+        waitTime(1000);
         if (verifyElementPresent(MLWalletLoginPage.objAvailableBalance, getTextVal(MLWalletLoginPage.objAvailableBalance, "Text"))) {
             logger.info("Lgn_TC_17, Application Logged In Successfully");
             ExtentReporter.extentLoggerPass("Lgn_TC_17", "Lgn_TC_17, Application Logged In Successfully");
@@ -177,10 +177,10 @@ public class LoginClass extends BaseClass{
 
     public void loginNetworkInterruptionWhileLoggingInValidation_Lgn_TC_19(String sTier) throws Exception {
         ExtentReporter.HeaderChildNode("Login Network Interruption Validation");
-        waitTime(5000);
+        waitTime(1000);
         type(MLWalletLoginPage.objMobileNumberTextField, sTier, "Mobile Number Text Field");
         click(MLWalletLoginPage.objLoginBtn, "Login Button");
-        waitTime(5000);
+        waitTime(1000);
         setWifiConnectionToONOFF("OFF");
         enterOTP(prop.getproperty("Valid_OTP"));
         if (verifyElementPresent(MLWalletHomePage.objInternetConnectionPopUp, getTextVal(MLWalletHomePage.objInternetConnectionPopUp, "PopUp"))) {
@@ -214,7 +214,7 @@ public class LoginClass extends BaseClass{
 //		click(MLWalletLoginPage.objMobileNumberTextField, "Mobile Number Text Field");
         type(MLWalletLoginPage.objMobileNumberTextField, prop.getproperty("Branch_Verified"), "Mobile Number Text Field");
         click(MLWalletLoginPage.objLoginBtn, "Login Button");
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"))) {
             verifyElementPresent(MLWalletLoginPage.objOTP, getTextVal(MLWalletLoginPage.objOTP, "One Time Pin"));
             logger.info("Lgn_TC_22, LogIn In App OTP Navigation validated");
@@ -228,7 +228,7 @@ public class LoginClass extends BaseClass{
 //		click(MLWalletLoginPage.objMobileNumberTextField, "Mobile Number Text Field");
         type(MLWalletLoginPage.objMobileNumberTextField, prop.getproperty("Branch_Verified"), "Mobile Number Text Field");
         click(MLWalletLoginPage.objLoginBtn, "Login Button");
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"))) {
             verifyElementPresent(MLWalletLoginPage.objOTP, getTextVal(MLWalletLoginPage.objOTP, "One Time Pin"));
             verifyElementPresent(MLWalletLoginPage.objSeconds, getTextVal(MLWalletLoginPage.objSeconds, "Seconds"));
@@ -245,11 +245,11 @@ public class LoginClass extends BaseClass{
 //		click(MLWalletLoginPage.objMobileNumberTextField, "Mobile Number Text Field");
         type(MLWalletLoginPage.objMobileNumberTextField, prop.getproperty("Branch_Verified"), "Mobile Number Text Field");
         click(MLWalletLoginPage.objLoginBtn, "Login Button");
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
         if (verifyElementPresent(MLWalletLoginPage.objOTP, getTextVal(MLWalletLoginPage.objOTP, "One Time Pin"))) {
             String sGeneratedOTP = getText(MLWalletLoginPage.objOTP);
-            waitTime(70000);
+            waitTime(10000);
             String sNewlyGeneratedOTPAfterSixtySeconds = getText(MLWalletLoginPage.objOTP);
             assertNotEquals(sGeneratedOTP, sNewlyGeneratedOTPAfterSixtySeconds);
             logger.info("Lgn_TC_24, LogIn, After Sixty Seconds New OTP got generated is validated");
@@ -263,7 +263,7 @@ public class LoginClass extends BaseClass{
 //		click(MLWalletLoginPage.objMobileNumberTextField, "Mobile Number Text Field");
         type(MLWalletLoginPage.objMobileNumberTextField, prop.getproperty("Branch_Verified"), "Mobile Number Text Field");
         click(MLWalletLoginPage.objLoginBtn, "Login Button");
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
         verifyElementPresentAndClick(MLWalletLoginPage.objCancelBtn, getTextVal(MLWalletLoginPage.objCancelBtn, "Button"));
         if (verifyElementPresent(MLWalletLoginPage.objLoginBtn, getTextVal(MLWalletLoginPage.objLoginBtn, "Button"))) {
@@ -279,7 +279,7 @@ public class LoginClass extends BaseClass{
 //		click(MLWalletLoginPage.objMobileNumberTextField, "Mobile Number Text Field");
         type(MLWalletLoginPage.objMobileNumberTextField, prop.getproperty("Branch_Verified"), "Mobile Number Text Field");
         click(MLWalletLoginPage.objLoginBtn, "Login Button");
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
         verifyElementPresentAndClick(MLWalletLoginPage.objContinueBtn, getTextVal(MLWalletLoginPage.objContinueBtn, "Button"));
         if (verifyElementPresent(MLWalletLoginPage.objAvailableBalance, getTextVal(MLWalletLoginPage.objAvailableBalance, "Button"))) {

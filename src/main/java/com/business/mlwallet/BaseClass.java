@@ -93,24 +93,15 @@ public class BaseClass {
         }
     }
     public void enterOTP(String OTP) throws Exception {
-//		explicitWaitVisible(MLWalletLoginPage.objOneTimePin, 5);
-//		verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
-//		verifyElementPresent(MLWalletLoginPage.objOtpTextField, "OTP text Field");
-//		Thread.sleep(3000);
-//		for(int i=1;i<=6;i++) {
-//			type(MLWalletLoginPage.objOtpTextField(i), OTP, "OTP Text Field");
-//		}
-
-        waitTime(5000);
         if (verifyElementDisplayed(MLWalletLoginPage.objContinueBtn)) {
             click(MLWalletLoginPage.objContinueBtn, "OTP Continue Button");
         } else if (verifyElementDisplayed(MLWalletLoginPage.objOneTimePin)) {
-            waitTime(10000);
+            waitTime(5000);
             verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
             for (int i = 1; i <= 6; i++) {
                 type(MLWalletLoginPage.objOtpTextField(i), OTP, "OTP Text Field");
             }
-            waitTime(3000);
+            //waitTime(3000);
         } else {
             handleMpin(prop.getproperty("mPin"));
         }
@@ -149,6 +140,12 @@ public class BaseClass {
             logger.info("Application not get Logged In Successfully");
         }
     }
+    public String getBalance(String val) throws Exception {
+        verifyElementPresentAndClick(MLWalletHomePage.objEyeIcon,"Eye Icon");
+        logger.info("Current Balance is " + val);
+        return val = getText(MLWalletHomePage.objAvailableBalance);
+    }
+
 
     public void mlWalletLogout() throws Exception {
         if (verifyElementPresent(MLWalletLogOutPage.objHamburgerMenu, "Hamburger Menu")) {
@@ -834,21 +831,25 @@ public class BaseClass {
             ExtentReporter.extentLogger("", "No Recent Transactions Are Available for " + billModule + " Module");
         }
     }
-    //------------SHOP ITEMS--------------------
-    public String getWallentBalance(String balance) throws Exception{
-        if(verifyElementPresent(MLWalletHomePage.objHiddenAvailableBalance, "Hidden Balance")){
+    public double getWalletBalance() throws Exception {
+        String balanceText = "";
+        if (verifyElementPresent(MLWalletHomePage.objHiddenAvailableBalance, "Hidden Balance")) {
             click(MLWalletHomePage.objEyeIcon, "Eye Icon");
             waitTime(5000);
-            balance = getText(MLWalletHomePage.objAvailableBalance);
-            logger.info("balance is = " + getText(MLWalletHomePage.objAvailableBalance));
-            return balance;
-        }else{
-            balance = getText(MLWalletHomePage.objAvailableBalance);
-            logger.info("balance is = " + getText(MLWalletHomePage.objAvailableBalance));
-            return balance;
-        }
+            balanceText = getText(MLWalletHomePage.objAvailableBalance);
+            logger.info("Balance is = " + balanceText);
+        } else {
+            balanceText = getText(MLWalletHomePage.objAvailableBalance);
+            logger.info("Balance is = " + balanceText);
+        }   
+        // Remove commas from the balance text and parse it as a double
+        double balance = Double.parseDouble(balanceText.replace(",", "")); 
+        return balance;
     }
-
+    public double parseDouble(String value)throws Exception {
+        String cleanValue = value.replace(",", "").trim();
+        return Double.parseDouble(cleanValue);
+    }
     //Cash Back
     public void exit_cashBack_popUp()throws Exception{
         //if cashback pop up visible tap Refer and Earn button. Then tap back button again to go to dashboard

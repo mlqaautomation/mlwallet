@@ -3,8 +3,6 @@ package com.utility;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.*;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.lang.reflect.Field;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
@@ -470,7 +468,18 @@ public class Utilities extends ExtentReporter {
             ExtentReporter.extentLoggerFail("click", "Not Clicked on " + validationtext);
         }
     }
-
+        public static void waitClick(By byLocator, String validationText)throws Exception {
+        try {
+            WebDriverWait wait = new WebDriverWait(DriverManager.getAppiumDriver(), 10); // Set the desired wait time in seconds
+            WebElement element = wait.until(ExpectedConditions.elementToBeClickable(byLocator));
+            element.click();
+            logger.info("Clicked on " + validationText);
+            ExtentReporter.extentLoggerPass("click", "Clicked on " + validationText);
+        } catch (Exception e) {
+            logger.info("Not clicked on " + validationText);
+            ExtentReporter.extentLoggerFail("click", "Not Clicked on " + validationText);
+        }
+    }
     public static void DoubleClick(By locator, String OptionName) {
         try {
 
@@ -2830,7 +2839,26 @@ public class Utilities extends ExtentReporter {
         }
     }
 
-
+    public static void assertNotEquals(double actual, double expected) throws Exception {
+        MLWalletBusinessLogic.softAssert.assertNotEquals(actual, expected);
+        if (actual != expected) {
+            logger.info(actual + " and " + expected + " are not matched");
+            ExtentReporter.extentLoggerPass("Assertion", actual + " and " + expected + " are not matched");
+        } else {
+            logger.info(actual + " and " + expected + " are matched");
+            ExtentReporter.extentLoggerFail("Assertion", actual + " and " + expected + " are matched");
+        }
+    }
+    public static void assertionValidation(double actual, double expected) throws Exception {
+        MLWalletBusinessLogic.softAssert.assertEquals(actual, expected);
+        if (actual == expected) {
+            logger.info(actual + " and " + expected + " are matched");
+            ExtentReporter.extentLoggerPass("Assertion", actual + " and " + expected + " are matched");
+        } else {
+            logger.info(actual + " and " + expected + " are not matched");
+            ExtentReporter.extentLoggerFail("Assertion", actual + " and " + expected + " are not matched");
+        }
+    }
 
 
 

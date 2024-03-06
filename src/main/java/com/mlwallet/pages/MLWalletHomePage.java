@@ -29,7 +29,7 @@ public class MLWalletHomePage {
     public static By objProfileIcon=By.xpath("(//*[android.widget.ImageView]/ancestor::android.view.ViewGroup/descendant::android.view.ViewGroup/child::android.view.ViewGroup/following-sibling::android.view.ViewGroup)[1]");
     public static By objAvailableBalanceHeader = By.xpath("//*[@resource-id='UTJ9TN']");
     public static By objEyeIcon = By.xpath("//*[@resource-id='JKRBGQ']");
-    public static By objAvailableBalance = By.xpath("//*[@resource-id='UTJ9TN']");
+    public static By objAvailableBalance = By.xpath("//*[@resource-id='0619JV']");
     public static By objHiddenAvailableBalance = By.xpath("//*[@resource-id='3P4KX3']");
     public static By objTransactions = By.xpath("//*[@resource-id='OSJVNX']/child::android.view.ViewGroup/child::android.view.ViewGroup/child::android.view.ViewGroup/child::android.view.ViewGroup/child::android.view.ViewGroup/child::android.view.ViewGroup/child::android.widget.TextView");
     public static By objSeeMore = By.xpath("//*[@text='See More']");

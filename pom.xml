@@ -6,27 +6,6 @@
 	<groupId>MLWallet</groupId>
 	<artifactId>MLWallet</artifactId>
 	<version>1.0-SNAPSHOT</version>
-	<repositories>
-		<repository>
-			<releases>
-				<enabled>true</enabled>
-				<updatePolicy>always</updatePolicy>
-				<checksumPolicy>fail</checksumPolicy>
-			</releases>
-			<id>Experitest.repo1</id>
-			<name>YourName</name>
-			<url>https://cloud.experitest.com/repo/</url>
-			<layout>default</layout>
-		</repository>
-		<repository>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<id>bintray-epam-reportportal</id>
-			<name>bintray</name>
-			<url>http://dl.bintray.com/epam/reportportal</url>
-		</repository>
-	</repositories>
 	<packaging>jar</packaging>
 	<name>SeetestAutomation</name>
 	<url>http://maven.apache.org</url>
@@ -76,15 +55,11 @@
 			<version>4.1.1</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.apache.xmlbeans/xmlbeans -->
 		<dependency>
 			<groupId>org.apache.xmlbeans</groupId>
 			<artifactId>xmlbeans</artifactId>
 			<version>3.1.0</version>
 		</dependency>
-
-		<!-- <dependency> <groupId>org.testng</groupId> <artifactId>testng</artifactId> 
-			<version>6.9.10</version> </dependency> -->
 
 		<dependency>
 			<groupId>log4j</groupId>
@@ -111,16 +86,10 @@
 			<version>4.0.9</version>
 		</dependency>
 
-		<!-- <dependency>
-			<groupId>com.jayway.restassured</groupId>
-			<artifactId>rest-assured</artifactId>
-			<version>2.3.4</version>
-		</dependency> -->
 		<dependency>
 			<groupId>io.rest-assured</groupId>
 			<artifactId>rest-assured</artifactId>
 			<version>4.3.0</version>
-			<!--<scope>test</scope> -->
 		</dependency>
 
 		<dependency>
@@ -242,29 +211,6 @@
 		    <version>0.2.1</version>
 		</dependency>
 
-
-		<!-- <dependency> <groupId>com.epam.reportportal</groupId> <artifactId>agent-java-testng</artifactId> 
-			<version>5.0.8</version> </dependency> TODO Leave only one dependency, depends 
-			on what logger you use: <dependency> <groupId>com.epam.reportportal</groupId> 
-			<artifactId>logger-java-logback</artifactId> <version>5.0.3</version> </dependency> 
-			<dependency> <groupId>com.epam.reportportal</groupId> <artifactId>logger-java-log4j</artifactId> 
-			<version>5.0.3</version> </dependency> -->
-
-		<!-- <dependency> <groupId>ch.qos.logback</groupId> <artifactId>logback-classic</artifactId> 
-			<version>1.2.3</version> </dependency> -->
-
-		<!-- <dependency> <groupId>org.apache.logging.log4j</groupId> <artifactId>log4j-api</artifactId> 
-			<version>2.12.1</version> </dependency> <dependency> <groupId>org.apache.logging.log4j</groupId> 
-			<artifactId>log4j-core</artifactId> <version>2.12.1</version> </dependency> -->
-
-		<!-- <dependency> <groupId>org.slf4j</groupId> <artifactId>slf4j-api</artifactId> 
-			<version>1.7.28</version> </dependency> <dependency> <groupId>org.apache.logging.log4j</groupId> 
-			<artifactId>log4j-slf4j-impl</artifactId> <version>2.12.1</version> </dependency> -->
-
-		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl -->
-		<!-- <dependency> <groupId>org.apache.logging.log4j</groupId> <artifactId>log4j-slf4j-impl</artifactId> 
-			<version>2.13.3</version> </dependency> -->
-
 	</dependencies>
 	<build>
 		<plugins>
@@ -289,23 +235,8 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.20</version>
 				<configuration>
-<!--					<useSystemClassLoader>false</useSystemClassLoader>-->
-<!--					<systemPropertyVariables>-->
-					
-						<!-- comment below for local execution -->
-						<!-- <UserType>${UserType}</UserType>
-						<BrowserType>${BrowserType}</BrowserType>
-						<url>${url}</url>
-						<runMode>${runMode}</runMode> 
-						<runModule>${runModule}</runModule>
-						<BuildVersionChoice>${BuildVersionChoice}</BuildVersionChoice> 
-						<BuildVersion>${BuildVersion}</BuildVersion>  --> 
-						<!-- comment above for local execution -->
-						
-<!--					</systemPropertyVariables>-->
 					<suiteXmlFiles>
-<!--					 <suiteXmlFile>mlwallet.xml</suiteXmlFile>-->
-						<suiteXmlFile>transactionals.xml</suiteXmlFile>
+						<suiteXmlFile>TestRunner/${fileName}</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
