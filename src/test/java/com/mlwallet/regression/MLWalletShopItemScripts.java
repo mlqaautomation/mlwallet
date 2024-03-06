@@ -280,11 +280,11 @@ public class MLWalletShopItemScripts {
 //   public void shopItemsPayUsingOnlineBankingOptionSelectionValidation_MLS_TC_36() throws Exception {
 //       shopItemsClass.shopItemsPayUsingOnlineBankingOptionSelectionValidation_MLS_TC_36();
 //   }
-//
-//   @Test(priority = 52)
-//   public void shopItemsSubTotalAmountValidationBeforeSelectingItems_MLS_TC_59() throws Exception {
-//       shopItemsClass.shopItemsSubTotalAmountValidationBeforeSelectingItems_MLS_TC_59();
-//   }
+
+   @Test(priority = 52)
+   public void shopItemsSubTotalAmountValidationBeforeSelectingItems_MLS_TC_59() throws Exception {
+       shopItemsClass.shopItemsSubTotalAmountValidationBeforeSelectingItems_MLS_TC_59();
+   }
 //
 //   @Test(priority = 53)
 //   public void mlWallet_ShopItems_with_Insufficient_Balance() throws Exception {
