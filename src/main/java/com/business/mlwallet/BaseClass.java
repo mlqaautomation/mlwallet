@@ -30,16 +30,17 @@ public class BaseClass {
     public static PropertyFileReader tierProp;
     public static PropertyFileReader shopProp;
     public static PropertyFileReader gcashProp;
+    public static PropertyFileReader shopsafeprop;
     public void propertyFileReader(){
         if(osName.contains("linux")){
              prop = new PropertyFileReader("./properties/testdata.properties");
              tierProp = new PropertyFileReader("./properties/tierUpgrade.properties");
-             shopProp = new PropertyFileReader("./properties/mlshop.properties");
+            shopsafeprop = new PropertyFileReader("./properties/shopsafe.properties");
              gcashProp = new PropertyFileReader("./properties/gcash.properties");
         }else{
              prop = new PropertyFileReader(".\\properties\\testdata.properties");
              tierProp = new PropertyFileReader(".\\properties\\tierUpgrade.properties");
-             shopProp = new PropertyFileReader(".\\properties\\mlshop.properties");
+            shopsafeprop = new PropertyFileReader(".\\properties\\shopsafe.properties");
             gcashProp = new PropertyFileReader(".\\properties\\gcash.properties");
         }
     }

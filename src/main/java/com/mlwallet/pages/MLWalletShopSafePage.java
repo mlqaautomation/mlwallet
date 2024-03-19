@@ -1,6 +1,6 @@
 package com.mlwallet.pages;
 import org.openqa.selenium.By;
-public class ShopSafePage {
+public class MLWalletShopSafePage {
     //--------Home Dashboard
     public static By objShopSafeIconBtn = By.xpath("//XCUIElementTypeOther[@name=\"ShopSafe\"]");
     //-------Shop Safe Page
@@ -21,6 +21,7 @@ public class ShopSafePage {
     public static By objSuccessfInviteLabel = By.xpath("//XCUIElementTypeStaticText[@name=\"Successfully Invited\"]");
     public static By objOkayBtn = By.xpath("//XCUIElementTypeOther[@name=\"modal-confirm-button\"]");
     //-------Invites Transaction Page
+    public static By objFirstInTab = By.xpath("//XCUIElementTypeScrollView/XCUIElementTypeOther/XCUIElementTypeOther[1]");
 
     //--------Buyer Invite Seller Page
     public static By objBuyerDetailsLabel = By.xpath("//XCUIElementTypeStaticText[@name=\"Buyer Details\"]");
@@ -69,6 +70,9 @@ public class ShopSafePage {
     public static By obj40kgTxtBtn = By.xpath("(//XCUIElementTypeOther[@name=\"40.01 kg - 50.00kg Php 8,000.00\"])[2]");
 
     //-----------Select Drop Off Branch List
+    public static By objGetErrMsg (String msg){
+        return By.xpath("//*[@text='"+msg+"']");
+    }
     public static By objAllowWhileUsingAppBtn = By.xpath("//XCUIElementTypeButton[@name=\"Allow While Using App\"]");
 
     //-----------Confirmation Page
