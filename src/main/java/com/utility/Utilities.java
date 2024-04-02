@@ -1580,6 +1580,30 @@ public class Utilities extends ExtentReporter {
         }
     }
 
+
+    public void PartialZoomOutInConsumptionScreen(int count) {
+        TouchAction touchAction = new TouchAction(getDriver());
+
+        try {
+            for (int j = 0; j < count; j++) {
+                Dimension size = getDriver().manage().window().getSize();
+                int startX = size.width / 2;
+                int startY = size.height / 2;
+                int endX = startX - 200; // Adjust the value to control the zoom level
+                int endY = startY - 200; // Adjust the value to control the zoom level
+
+                touchAction.press(PointOption.point(startX, startY))
+                        .waitAction(WaitOptions.waitOptions(Duration.ofMillis(1000)))
+                        .moveTo(PointOption.point(endX, endY)).release().perform();
+
+                logger.info("Performing pinch-out or zoom-out action " + (j + 1) + " times");
+                ExtentReporter.extentLogger("PinchOut",
+                        "Performing pinch-out or zoom-out action " + (j + 1) + " times");
+            }
+        } catch (Exception e) {
+            // Handle any exceptions
+        }
+    }
 //====================================================================================================================================
     /** ::::::::::::::::Web Utilities:::::::::::: */
 

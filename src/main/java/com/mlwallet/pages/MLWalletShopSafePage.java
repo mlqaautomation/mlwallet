@@ -2,99 +2,142 @@ package com.mlwallet.pages;
 import org.openqa.selenium.By;
 public class MLWalletShopSafePage {
     //--------Home Dashboard
-    public static By objShopSafeIconBtn = By.xpath("//XCUIElementTypeOther[@name=\"ShopSafe\"]");
+    public static By objShopSafeIconBtn = By.xpath("//*[@text='ShopSafe']");
     //-------Shop Safe Page
-    public static By objShopSafeLabel = By.xpath("//XCUIElementTypeStaticText[@name=\"Shop Safe\"]");
-    public static By objStartTransactBtn = By.xpath("//XCUIElementTypeOther[@name=\"Start Transaction  +\"]");
-    public static By objInvitesLabel = By.xpath("//XCUIElementTypeStaticText[@name=\"Invites\"]");
-    public static By objOngoingTransactLabel = By.xpath("//XCUIElementTypeStaticText[@name=\"Ongoing Transactions\"]");
-    public static By objCompletedTransactLabel = By.xpath("//XCUIElementTypeStaticText[@name=\"Completed Transactions\"]");
-    public static By objCancelledTransactLabel = By.xpath("//XCUIElementTypeStaticText[@name=\"Cancelled Transactions\"]");
-    public static By objReturnedTransactLabel = By.xpath("//XCUIElementTypeStaticText[@name=\"Returned Transactions\"]");
-    public static By objInvitesTransactTxtBtn = By.xpath("(//XCUIElementTypeOther[@name=\"View All Invites\"])[1]");
-    public static By objOngoingTransactTxtBtn = By.xpath("(//XCUIElementTypeOther[@name=\"View All Invites\"])[2]");
+    public static By objShopSafeLabel = By.xpath("//*[@text='Shop Safe']");
+    public static By objStartTransactBtn = By.xpath("//*[@text='Start Transaction  +']");
+    public static By objInvitesLabel = By.xpath("//*[@text='Invites']");
+    public static By objOngoingTransactLabel = By.xpath("//*[@text='Ongoing Transactions']");
+    public static By objCompletedTransactLabel = By.xpath("//*[@text='Completed Transactions']");
+    public static By objCancelledTransactLabel = By.xpath("//*[@text='Cancelled Transactions']");
+    public static By objReturnedTransactLabel = By.xpath("//*[@text='Returned Transactions']");
+    public static By objInvitesTransactTxtBtn = By.xpath("(//android.view.ViewGroup[@content-desc=\"View All Invites\"])[1]/android.widget.TextView");
+    public static By objOngoingTransactTxtBtn = By.xpath("(//android.view.ViewGroup[@content-desc=\"View All Invites\"])[2]/android.widget.TextView");
     //------- Create Transaction Page
-    public static By objCreateTransactLabel = By.xpath("//XCUIElementTypeStaticText[@name=\"Create Transaction\"]");
-    public static By objBackBtn = By.xpath("//XCUIElementTypeOther[@name=\"\"]");
-    public static By objSellerNoTxtbx = By.xpath("//XCUIElementTypeOther[@name=\"Seller Mobile Number *\"]/XCUIElementTypeTextField");
-    public static By objInviteSellerBtn = By.xpath("//XCUIElementTypeOther[@name=\"Invite Seller\"]");
-    public static By objSuccessfInviteLabel = By.xpath("//XCUIElementTypeStaticText[@name=\"Successfully Invited\"]");
-    public static By objOkayBtn = By.xpath("//XCUIElementTypeOther[@name=\"modal-confirm-button\"]");
+    public static By objCreateTransactLabel = By.xpath("//*[@text='Create Transaction']");
+    public static By objBackBtn = By.xpath("//android.view.ViewGroup[@content-desc=\"\uE5CB\"]/android.widget.TextView");
+    public static By objSellerNoTxtbx = By.xpath("//*[@text='Seller Mobile Number *']");
+    public static By objInviteSellerBtn = By.xpath("//*[@text='Invite Seller']");
+    public static By objSuccessfInviteLabel = By.xpath("//*[@text='Successfully Invited']");
+    public static By objOkayBtn = By.xpath("//*[@text='Ok']");
     //-------Invites Transaction Page
-    public static By objFirstInTab = By.xpath("//XCUIElementTypeScrollView/XCUIElementTypeOther/XCUIElementTypeOther[1]");
+    public static By objFirstInTab = By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]");
 
     //--------Buyer Invite Seller Page
-    public static By objBuyerDetailsLabel = By.xpath("//XCUIElementTypeStaticText[@name=\"Buyer Details\"]");
-    public static By objBuyerNameVal = By.xpath("(//XCUIElementTypeStaticText[@name=\"Buyer Name\"])[2]");
-    public static By objBuyerNoVal = By.xpath("(//XCUIElementTypeStaticText[@name=\"Buyer Mobile No.\"])[2]");
-    public static By objSellerDetailsLabel = By.xpath("//XCUIElementTypeStaticText[@name=\"Seller Details\"]");
-    public static By objSellerNoVal = By.xpath("(//XCUIElementTypeStaticText[@name=\"Seller Mobile Number\"])[2]");
-    public static By objCancelInviteBtn = By.xpath("//XCUIElementTypeOther[@name=\"Cancel Invitation\"]");
-    public static By objBackToHomesBtn = By.xpath("//XCUIElementTypeOther[@name=\"Back To Home\"]");
+    public static By objInvtesSellerLabel = By.xpath("//*[@text='Seller Invitation']");
+    public static By objBuyerDetailsLabel = By.xpath("//*[@text='Buyer Details']");
+    public static By objBuyerNameVal = By.xpath("//*[@resource-id='X0AKRJ']/child::*[2]");
+    public static By objBuyerNoVal = By.xpath("//*[@resource-id='IMOO2V']/child::*[2]");
+    public static By objSellerDetailsLabel = By.xpath("//*[@text='Seller Details']");
+    public static By objSellerNoVal = By.xpath("//*[@resource-id='RTYWVC']/child::*[2]");
+    public static By objCancelInviteBtn = By.xpath("//*[@text='Cancel Invitation']");
+    public static By objBackToHomesBtn = By.xpath("//*[@text='Back To Home']");
 
     //--------Seller Received Invites Page
-    public static By objPicOfItemBtn = By.xpath("//XCUIElementTypeOther[@name=\"Pictures of your Item *\"]");
-    public static By objItemInformation = By.xpath("//XCUIElementTypeStaticText[@name=\"Item Information\"]");
-    public static By objItemNameTxtBx = By.xpath("//XCUIElementTypeOther[@name=\"Item Name *\"]/XCUIElementTypeTextField");
-    public static By objItemDescriptTxtBx = By.xpath("//XCUIElementTypeOther[@name=\"Item description/condition *\"]/XCUIElementTypeTextField");
-    public static By objBrandTxtBx = By.xpath("//XCUIElementTypeOther[@name=\"Brand (optional)\"]/XCUIElementTypeTextField");
-    public static By objModelNoTxtbox = By.xpath("//XCUIElementTypeOther[@name=\"Model No (optional)\"]/XCUIElementTypeTextField");
-    public static By objItemQuantityTxtbx = By.xpath("//XCUIElementTypeOther[@name=\"Item Quantity *\"]/XCUIElementTypeTextField");
-    public static By objCategoryDropDownlist = By.xpath("(//XCUIElementTypeOther[@name=\"Category * \"])[2]");
-    public static By objItemPriceTxtbx = By.xpath("//XCUIElementTypeOther[@name=\"Item Price *\"]/XCUIElementTypeTextField");
-    public static By objItemDimensionLabel = By.xpath("//XCUIElementTypeStaticText[@name=\"Item Dimensions\"]");
-    public static By objWeightRangeDropDownList = By.xpath("(//XCUIElementTypeOther[@name=\"Choose Weight Ranges \"])[2]");
-    public static By objNearestDropOffGMap = By.xpath("(//XCUIElementTypeOther[@name=\"Please choose nearest drop off branch * \"])[2]");
-    public static By objProceedsBtn = By.xpath("//XCUIElementTypeOther[@name=\"Proceed\"]");
-    public static By objDeclineBtn = By.xpath("//XCUIElementTypeOther[@name=\"Decline\"]");
-
+    public static By objPicOfItemBtn = By.xpath("//*[@text='\uE3B0Pictures of your Item *']");
+    public static By objItemNameTxtBx = By.xpath("//XCUIElementT//*[@text='Item name *']");
+    public static By objItemDescriptTxtBx = By.xpath("//*[@text='Item description/condition *']");
+    public static By objBrandTxtBx = By.xpath("//*[@text='Brand (optional)']");
+    public static By objModelNoTxtbox = By.xpath("//*[@text='Model No (optional)']");
+    public static By objItemQuantityTxtbx = By.xpath("//*[@text='Item quantity *']");
+    public static By objCategoryDropDownlist = By.xpath("//*[@text='Category *']");
+    public static By objItemPriceTxtbx = By.xpath("//*[@text='Item price *']");
+    public static By objWeightRangeDropDownList = By.xpath("//*[@text='Choose weight range']");
+    public static By objNearestDropOffGMap = By.xpath("//*[@text='Please choose nearest drop off branch *']");
+    public static By objProceedsBtn = By.xpath("//*[@text='Proceed']");
+    public static By objDeclineBtn = By.xpath("//*[@text='Decline']");
+    //-----Selection for Camera
+    public static By objCameraBtn = By.xpath("//*[@text='Camera']");
+    public static By objGalleryBtn = By.xpath("//*[@text='Gallery']");
+    public static By objCancelsBtn = By.xpath("//*[@text='Cancel']");
     //-------------Select Category List
-    public static By objSelectCategoryLabel = By.xpath("//XCUIElementTypeStaticText[@name=\"Select Category\"]");
-    public static By objSearchCategoryTxtbx = By.xpath("//XCUIElementTypeOther[@name=\"Search Category\"]/XCUIElementTypeTextField");
-    public static By objClothesTxtBtn = By.xpath("(//XCUIElementTypeOther[@name=\"Clothes / Bag / Shoes\"])[2]");
-    public static By objElectronicsTxtBtn = By.xpath("(//XCUIElementTypeOther[@name=\"Electronics / Appliance\"])[2]");
-    public static By objJewelryTxtBtn = By.xpath("(//XCUIElementTypeOther[@name=\"Jewelry / Watches\"])[2]");
-    public static By objSportGoodTxtBtn = By.xpath("(//XCUIElementTypeOther[@name=\"Sporting Goods\"])[2]");
-    public static By objToolsTxtBtn = By.xpath("(//XCUIElementTypeOther[@name=\"Tools / Supplies / Paper\"])[2]");
-    public static By objOthersTxtBtn = By.xpath("(//XCUIElementTypeOther[@name=\"Others\"])[2]");
+    public static By objSelectCategoryLabel = By.xpath("//*[@text='Select Category']");
+    public static By objSearchCategoryTxtbx = By.xpath("//*[@text='Search Category']");
+    public static By objClothesTxtBtn = By.xpath("//*[@text='Clothes / Bag / Shoes']");
+    public static By objElectronicsTxtBtn = By.xpath("//*[@text='Electronics / Appliance']");
+    public static By objJewelryTxtBtn = By.xpath("//*[@text='Jewelry / Watches']");
+    public static By objSportGoodTxtBtn = By.xpath("//*[@text='Sporting Goods']");
+    public static By objToolsTxtBtn = By.xpath("//*[@text='Tools / Supplies / Paper']");
+    public static By objOthersTxtBtn = By.xpath("//*[@text='Others']");
 
     //-----------Select Weight Ranges List
-    public static By objWeightRangeLabel = By.xpath("//XCUIElementTypeStaticText[@name=\"Weight Range\"]");
-    public static By objRateLabel = By.xpath("//XCUIElementTypeStaticText[@name=\"Rate\"]");
-    public static By obj0kgTxtBtn = By.xpath("(//XCUIElementTypeOther[@name=\"0.00 kg - 3.00kg Php 195.00\"])[2]");
-    public static By obj3kgTxtBtn = By.xpath("(//XCUIElementTypeOther[@name=\"3.01 kg - 5.00kg Php 375.00\"])[2]");
-    public static By obj5kgTxtBtn = By.xpath("(//XCUIElementTypeOther[@name=\"5.01 kg - 10.00kg Php 875.00\"])[2]");
-    public static By obj10kgTxtBtn = By.xpath("(//XCUIElementTypeOther[@name=\"10.01 kg - 20.00kg Php 2,000.00\"])[2]");
-    public static By obj20kgTxtBtn = By.xpath("(//XCUIElementTypeOther[@name=\"20.01 kg - 30.00kg Php 3,000.00\"])[2]");
-    public static By obj30kgTxtBtn = By.xpath("(//XCUIElementTypeOther[@name=\"30.01 kg - 40.00kg Php 6,500.00\"])[2]");
-    public static By obj40kgTxtBtn = By.xpath("(//XCUIElementTypeOther[@name=\"40.01 kg - 50.00kg Php 8,000.00\"])[2]");
+    public static By objWeightRangeLabel = By.xpath("//*[@text='Weight Range']");
+    public static By objRateLabel = By.xpath("//*[@text='Rate']");
+    public static By obj0kgTxtBtn = By.xpath("//android.view.ViewGroup[@content-desc=\"0.00 kg - 3.00kg, Php 195.00\"]");
+    public static By obj3kgTxtBtn = By.xpath("//android.view.ViewGroup[@content-desc=\"3.01 kg - 5.00kg, Php 375.00\"]");
+    public static By obj5kgTxtBtn = By.xpath("//android.view.ViewGroup[@content-desc=\"5.01 kg - 10.00kg, Php 875.00\"]");
+    public static By obj10kgTxtBtn = By.xpath("//android.view.ViewGroup[@content-desc=\"5.01 kg - 10.00kg, Php 875.00\"]");
+    public static By obj20kgTxtBtn = By.xpath("//android.view.ViewGroup[@content-desc=\"20.01 kg - 30.00kg, Php 3,000.00\"]");
+    public static By obj30kgTxtBtn = By.xpath("//android.view.ViewGroup[@content-desc=\"30.01 kg - 40.00kg, Php 6,500.00\"]");
+    public static By obj40kgTxtBtn = By.xpath("//android.view.ViewGroup[@content-desc=\"30.01 kg - 40.00kg, Php 6,500.00\"]");
 
     //-----------Select Drop Off Branch List
     public static By objGetErrMsg (String msg){
         return By.xpath("//*[@text='"+msg+"']");
     }
-    public static By objAllowWhileUsingAppBtn = By.xpath("//XCUIElementTypeButton[@name=\"Allow While Using App\"]");
-
+    public static By objAllowWhileUsingAppBtn = By.xpath("//*[@text='While using the app']");
+    public static By objSelectNearest = By.xpath("//android.view.View[@content-desc=\"Google Map\"]/android.view.View[2]\n");
+    public static By objBranchNameGMapVal = By.xpath("(//*[@resource-id='DJCC83']/child::*/child::*)[1]");
+    public static By objBranchAddressGMapVal = By.xpath("(//*[@resource-id='DJCC83']/child::*/child::*)[2]");
     //-----------Confirmation Page
-    public static By objPicture = By.xpath("(//XCUIElementTypeOther[@name=\"Vertical scroll bar, 3 pages Horizontal scroll bar, 3 pages\"])[2]/XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther");
-    public static By objRFTN = By.xpath("(//XCUIElementTypeOther[@name])[25]");
-    public static By objSellersDetailLabel = By.xpath("//XCUIElementTypeStaticText[@name=\"Seller Details\"]");
-    public static By objSellersNameVal = By.xpath("(//XCUIElementTypeStaticText[@name=\"Seller Name\"])[2]");
-    public static By objSellersNoVal = By.xpath("(//XCUIElementTypeStaticText[@name=\"Seller Mobile Number\"])[2]");
-    public static By objBuyersDetailLabel = By.xpath("//XCUIElementTypeStaticText[@name=\"Buyer Details\"]");
-    public static By objBuyersNameVal = By.xpath("(//XCUIElementTypeStaticText[@name=\"Buyer Name\"])[2]");
-    public static By objBuyersNoVal = By.xpath("(//XCUIElementTypeStaticText[@name=\"Buyer Mobile Number\"])[2]");
-    public static By objItemDetailsLabel = By.xpath("//XCUIElementTypeStaticText[@name=\"Item Details\"]");
-    public static By objItemNameVal = By.xpath("(//XCUIElementTypeStaticText[@name=\"Item Name])[2]");
-    public static By objItemDescriptVal = By.xpath("(//XCUIElementTypeStaticText[@name=\"Item description/condition\"])[2]");
-    public static By objBrandVal = By.xpath("(//XCUIElementTypeStaticText[@name=\"Brand\"])[2]");
-    public static By objModelNoVal = By.xpath("(//XCUIElementTypeStaticText[@name=\"Model No\"])[2]");
-    public static By objCategoryVal = By.xpath("(//XCUIElementTypeStaticText[@name=\"Category\"])[2]");
-    public static By objItemPriceVal = By.xpath("(//XCUIElementTypeStaticText[@name=\"Item Price\"])[2]");
-    public static By objShipDetailLabel = By.xpath("//XCUIElementTypeStaticText[@name=\"Shipping Details\"]");
-    public static By objOriginBranchVal = By.xpath("(//XCUIElementTypeStaticText[@name=\"Origin Branch\"])[2]");
-    public static By objConfirmInvitationBtn = By.xpath("//XCUIElementTypeOther[@name=\"Confirm Invitation\"]");
-    public static By objBacksBtn = By.xpath("//XCUIElementTypeOther[@name=\"Back\"]");
+    public static By objConfirmDetailsPage = By.xpath("//*[@text='Confirm Details']");
+    public static By objPicture = By.xpath("(//*[@resource-id='X63NQ1']/child::*/child::*/child::*)[1]");
+    public static By objRFTN = By.xpath("(//*[@resource-id='XHZ48R']/child::*/child::*)[1]");
+    public static By objSellersDetailLabel = By.xpath("//*[@text='Seller Details']");
+    public static By objSellersNameVal = By.xpath("(//*[@resource-id='XHZ48R']/child::*/child::*/child::*)[2]");
+    public static By objSellersNoVal = By.xpath("(//*[@resource-id='XHZ48R']/child::*/child::*/child::*)[4]");
+    public static By objBuyersDetailLabel = By.xpath("//*[@text='Buyer Details']");
+    public static By objBuyersNameVal = By.xpath("(//*[@resource-id='XHZ48R']/child::*/child::*/child::*)[6]");
+    public static By objBuyersNoVal = By.xpath("(//*[@resource-id='XHZ48R']/child::*/child::*/child::*)[8]");
+    public static By objItemDetailsLabel = By.xpath("//*[@text='Item details']");
+    public static By objItemNameVal = By.xpath("(//*[@resource-id='XHZ48R']/child::*/child::*/child::*)[10]");
+    public static By objItemDescriptVal = By.xpath("(//*[@resource-id='XHZ48R']/child::*/child::*/child::*)[12]");
+    public static By objBrandVal = By.xpath("(//*[@resource-id='XHZ48R']/child::*/child::*/child::*)[14]");
+    public static By objModelNoVal = By.xpath("(//*[@resource-id='XHZ48R']/child::*/child::*/child::*)[16]");
+    public static By objCategoryVal = By.xpath("(//*[@resource-id='XHZ48R']/child::*/child::*/child::*)[18]");
+    public static By objItemPriceVal = By.xpath("(//*[@resource-id='XHZ48R']/child::*/child::*/child::*)[20]");
+    public static By objShipDetailLabel = By.xpath("//*[@text='Shipping Details']");
+    public static By objOriginBranchVal = By.xpath("(//*[@resource-id='XHZ48R']/child::*/child::*/child::*)[22]");
+    public static By objConfirmInvitationBtn = By.xpath("//*[@text='Confirm Invitation']");
+    public static By objBacksBtn = By.xpath("//*[@text='Back']");
 
+    //-----------Transaction Details Page
+    public static By objTransactionDetailPage = By.xpath( "");
+    public static By objRFTNTransact = By.xpath("(//*[@resource-id='MQ33UF']/child::*/child::*)[2]");
+    public static By objSellersDetailTransactLabel = By.xpath("//*[@text='Seller Details']");
+    public static By objSellersNameTransactVal = By.xpath("(//*[@resource-id='PT340E']/child::android.view.ViewGroup)[2]");
+    public static By objSellersNoTransactVal = By.xpath("(//*[@resource-id='MQ33UF']/child::*/child::*/child::*)[4]");
+    public static By objBuyersDetailTransactLabel = By.xpath("//*[@text='Buyer Details']");
+    public static By objBuyersNameTransactVal = By.xpath("(//*[@resource-id='MQ33UF']/child::*/child::*/child::*)[6]");
+    public static By objBuyersNoTransactVal = By.xpath("(//*[@resource-id='MQ33UF']/child::*/child::*/child::*)[8]");
+    public static By objItemDetailsTransactLabel = By.xpath("//*[@text='Item details']");
+    public static By objItemNameTransactVal = By.xpath("(//*[@resource-id='MQ33UF']/child::*/child::*/child::*)[10]");
+    public static By objItemDescriptTransactVal = By.xpath("(//*[@resource-id='MQ33UF']/child::*/child::*/child::*)[12]");
+    public static By objBrandTransactVal = By.xpath("(//*[@resource-id='MQ33UF']/child::*/child::*/child::*)[14]");
+    public static By objModelNoTransactVal = By.xpath("(//*[@resource-id='MQ33UF']/child::*/child::*/child::*)[16]");
+    public static By objCategoryTransactVal = By.xpath("(//*[@resource-id='MQ33UF']/child::*/child::*/child::*)[18]");
+    public static By objItemPriceTransactVal = By.xpath("(//*[@resource-id='MQ33UF']/child::*/child::*/child::*)[20]");
+    public static By objShipDetailTransactLabel = By.xpath("//*[@text='Shipping Details']");
+    public static By objOriginBranchTransactVal = By.xpath("(//*[@resource-id='MQ33UF']/child::*/child::*/child::*)[22]");
+    public static By objPictureTransact = By.xpath("(//*[@resource-id='LWPG92']/child::*/child::*/child::*)[1]");
 
+    //----------- Ongoing Transaction
+    public static By objTransactionDetailPage = By.xpath( "");
+    public static By objRFTNTransact = By.xpath("(//*[@resource-id='MQ33UF']/child::*/child::*)[2]");
+    public static By objSellersDetailTransactLabel = By.xpath("//*[@text='Seller Details']");
+    public static By objSellersNameTransactVal = By.xpath("(//*[@resource-id='MQ33UF']/child::*/child::*/child::*)[3]");
+    public static By objSellersNoTransactVal = By.xpath("(//*[@resource-id='MQ33UF']/child::*/child::*/child::*)[5]");
+    public static By objBuyersDetailTransactLabel = By.xpath("//*[@text='Buyer Details']");
+    public static By objBuyersNameTransactVal = By.xpath("(//*[@resource-id='MQ33UF']/child::*/child::*/child::*)[7]");
+    public static By objBuyersNoTransactVal = By.xpath("(//*[@resource-id='MQ33UF']/child::*/child::*/child::*)[9]");
+    public static By objItemDetailsTransactLabel = By.xpath("//*[@text='Item details']");
+    public static By objItemNameTransactVal = By.xpath("(//*[@resource-id='MQ33UF']/child::*/child::*/child::*)[11]");
+    public static By objItemDescriptTransactVal = By.xpath("(//*[@resource-id='MQ33UF']/child::*/child::*/child::*)[13]");
+    public static By objBrandTransactVal = By.xpath("(//*[@resource-id='MQ33UF']/child::*/child::*/child::*)[15]");
+    public static By objModelNoTransactVal = By.xpath("(//*[@resource-id='MQ33UF']/child::*/child::*/child::*)[17]");
+    public static By objCategoryTransactVal = By.xpath("(//*[@resource-id='MQ33UF']/child::*/child::*/child::*)[19]");
+    public static By objItemPriceTransactVal = By.xpath("(//*[@resource-id='MQ33UF']/child::*/child::*/child::*)[21]");
+    public static By objShipDetailTransactLabel = By.xpath("//*[@text='Shipping Details']");
+    public static By objOriginBranchTransactVal = By.xpath("(//*[@resource-id='MQ33UF']/child::*/child::*/child::*)[22]");
+    public static By objPictureTransact = By.xpath("(//*[@resource-id='LWPG92']/child::*/child::*/child::*)[1]");
 }

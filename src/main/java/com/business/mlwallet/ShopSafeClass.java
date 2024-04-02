@@ -100,7 +100,6 @@ public class ShopSafeClass extends BaseClass {
         click(MLWalletShopSafePage.objInvitesTransactTxtBtn,"View all Invites Text Button");
         if(verifyElementPresentAndClick(MLWalletShopSafePage.objFirstInTab,"New Invitation in Invites list")){
             verifyElementPresent(MLWalletShopSafePage.objPicOfItemBtn,"Picture Of Item Button");
-            verifyElementPresent(MLWalletShopSafePage.objItemInformation,"Item Information label");
             verifyElementPresent(MLWalletShopSafePage.objItemNameTxtBx,"Item Name textbox");
             verifyElementPresent(MLWalletShopSafePage.objItemDescriptTxtBx,"Item Description TextBox");
             verifyElementPresent(MLWalletShopSafePage.objBrandTxtBx,"Brand TextBox");
@@ -108,7 +107,6 @@ public class ShopSafeClass extends BaseClass {
             verifyElementPresent(MLWalletShopSafePage.objItemQuantityTxtbx,"Item Quantity Textbx");
             verifyElementPresent(MLWalletShopSafePage.objCategoryDropDownlist,"Category DropDownlist");
             verifyElementPresent(MLWalletShopSafePage.objItemPriceTxtbx,"Item Price Textbox");
-            verifyElementPresent(MLWalletShopSafePage.objItemDimensionLabel,"Item Dimension Label");
             verifyElementPresent(MLWalletShopSafePage.objWeightRangeDropDownList,"Weight Range DropDownList");
             verifyElementPresent(MLWalletShopSafePage.objNearestDropOffGMap,"Nearest Drop Off GMap");
             verifyElementPresent(MLWalletShopSafePage.objProceedsBtn,"Proceeds Button");
