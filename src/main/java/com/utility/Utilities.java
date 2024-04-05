@@ -1581,7 +1581,7 @@ public class Utilities extends ExtentReporter {
     }
 
 
-    public void PartialZoomOutInConsumptionScreen(int count) {
+    public static void PartialZoomOutInConsumptionScreen(int count) {
         TouchAction touchAction = new TouchAction(getDriver());
 
         try {
