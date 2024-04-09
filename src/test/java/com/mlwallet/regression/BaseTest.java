@@ -21,6 +21,7 @@ public class BaseTest {
     protected CashOutVia_BankClass mlWalletCashOutViaBank;
     protected CashOutVia_BranchClass mlWalletCashOutViaBranch;
     protected GCashClass mlWalletGCashScripts;
+    protected ShopSafeClass mlWalletShopSafeScripts;
     protected HomeAndDashboardClass mlWalletHomeDashBoard;
     protected LogoutClass mlWalletLogout;
     protected RegistrationClass mlWalletRegistration;
@@ -58,6 +59,7 @@ public class BaseTest {
         mlWalletSendMoneyViaBranch = new SendMoneyVia_BranchClass();
         mlWalletSendMoneyViaWallet = new SendMoneyVia_WalletClass();
         mlWalletSettings = new SettingsClass();
+        mlWalletShopSafeScripts = new ShopSafeClass();
         //mlWalletShopItems = new ShopItemsClass();
         mlWalletTierUpgrade = new TierUpgradeClass();
         mlWalletTopUp = new TopUpGameClass();

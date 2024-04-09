@@ -7,7 +7,12 @@ public class MLWalletCashInBank {
     public static By objCashIn = By.xpath("//*[@text='Cash In']");
     public static By objCashInTransaction = By.xpath("(//*[@text='Cash In'])[1]");
     public static By objCashInOption = By.xpath("//*[@text='Cash In options']");
-
+    public static By objReceiveMoneyLabelQR = By.xpath("//*[@text='Receive Money via QR Ph']");
+    public static By objORInputAmount = By.xpath("//*[@text='0.00']");
+    public static By objConfirmQRBtn = By.xpath("//*[@text='Confirm']");
+    public static By objResetQRBtn = By.xpath("//*[@text='Reset']");
+    public static By objAllowWhileUseApp = By.xpath("//*[@text='While using the app']");
+    public static By objQRcode = By.xpath("//*[@class='android.view.ViewGroup']/child::com.horcrux.svg.SvgView");
     public static By objMyBankAccount = By.xpath("//*[@text='My Bank Account']");
     public static By objBranchName=By.xpath("//*[@text='ML Branch']");
 

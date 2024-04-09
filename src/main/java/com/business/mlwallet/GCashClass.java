@@ -247,27 +247,21 @@ public class GCashClass extends BaseClass {
     }
 
     public void confirmGcashTransaction() throws Exception {
-        waitTime(1000);
         verifyElementPresentAndClick(MLWalletGcashPage.objGcashText, "Gcash Icon Button");
         verifyElementPresentAndClick(MLWalletGcashPage.objGcashSendMoneyText, "Send Money To Gcash");
-        waitTime(1000);
         type(MLWalletGcashPage.objGcashMobileNumber, gcashProp.getproperty("ValidGcashNumber"), "Number Field");
         click(MLWalletGcashPage.objNextBtn, "Next Button");
-        waitTime(1000);
         type(MLWalletGcashPage.objAmountTextBox, gcashProp.getproperty("ValidAmount"), "Valid Amount");
         click(MLWalletGcashPage.objNextBtn, "Next Button");
         if(verifyElementDisplayed(MLWalletGcashPage.objProceedBtn)){
             click(MLWalletGcashPage.objProceedBtn,"Click Proceed");
         }
-        waitTime(1000);
         verifyElementPresent(MLWalletGcashPage.objConfirmDetailsPage, "Confirm Details Page");
         click(MLWalletGcashPage.objConfirmBtn, "Confirm Button");
         if (verifyElementDisplayed(MLWalletGcashPage.objAllowOnceBtn)) {
             click(MLWalletGcashPage.objAllowOnceBtn, "Allow Once Notif");
         }
-        waitTime(1000);
         click(MLWalletLoginPage.objContinueBtn, "Continue Button");
-        waitTime(1000);
     }
 
     //GC_RM_TC_60
@@ -355,16 +349,12 @@ public class GCashClass extends BaseClass {
         mlWalletLogin(prop.getproperty("Branch_Verified"));     
         double prevBalance = getWalletBalance();
         confirmGcashTransaction();
-        waitTime(1000);
         verifyElementPresent(MLWalletGcashPage.objTransactionDetailsText, "Transaction Details");
         Swipe("UP", 1);
-
         String total = getText(MLWalletGcashPage.objGcashTotal);
         String numericTotal = total.replaceAll("[^\\d.]", ""); // Remove non-numeric characters    
         double totalValue = parseDouble(numericTotal);
-
         verifyElementPresentAndClick(MLWalletGcashPage.objBack_to_Home_Page, "Back to Home Page");
-        waitTime(5000);
         if (verifyElementDisplayed(MLWalletLoginPage.objAvailableBalance)) {
             Swipe("DOWN", 1);
             verifyElementPresentAndClick(MLWalletHomePage.objEyeIcon,"Eye Icon");
@@ -379,11 +369,9 @@ public class GCashClass extends BaseClass {
             verifyElementPresent(MLWalletTransactionHistoryPage.objTransactionHistory, getTextVal(MLWalletTransactionHistoryPage.objTransactionHistory, "Page"));
             verifyElementPresentAndClick(MLWalletTransactionHistoryPage.objSendMoneyTab, getTextVal(MLWalletTransactionHistoryPage.objSendMoneyTab, "Tab"));
             verifyElementPresentAndClick(MLWalletTransactionHistoryPage.objFirstTransaction, getTextVal(MLWalletTransactionHistoryPage.objFirstTransaction,"First Transaction"));
-
             String amountHistory = getText(MLWalletTransactionHistoryPage.objTotalAmount);  
             String historyTotal = amountHistory.replaceAll("[^\\d.]", ""); // Remove non-numeric characters
             double amountHistoryValue = parseDouble(historyTotal);
-
             assertionValidation(totalValue, amountHistoryValue);            
             logger.info("GC_SM_TC_76, Back Home Button In GCash View Recent Transaction Dashboard Page Validated");
         }  

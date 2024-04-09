@@ -270,12 +270,11 @@ public class CashInVia_BranchClass extends BaseClass{
 
     public void cashInViaBranchBuyerTierUser_CIBR_TC_16() throws Exception {
         ExtentReporter.HeaderChildNode("Cash In Via Branch Buyer Tier User");
-        cashInViaBranchNavigation(prop.getproperty("Buyer_Tier"));
+        cashInViaBranchNavigation(prop.getproperty("Fully_Verified"));
         cancelPreviousTransactionAndContinue();
         cashInViaBranchEnterAmount("100");
         waitTime(2000);
-        verifyElementPresent(MLWalletCashInViaBranch.objWarningPopup,
-                getTextVal(MLWalletCashInViaBranch.objWarningPopup, "Pop Up"));
+        verifyElementPresent(MLWalletCashInViaBranch.objWarningPopup, getTextVal(MLWalletCashInViaBranch.objWarningPopup, "Pop Up"));
         click(MLWalletCashInViaBranch.objContinueButton, "Continue Button");
         enterOTP(prop.getproperty("Valid_OTP"));
         enableLocation_PopUp();

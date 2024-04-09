@@ -173,15 +173,13 @@ public SendMoneyVia_BranchClass(){
         ExtentReporter.HeaderChildNode("Send Money to any ML Branch");
         sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
         selectSavedRecipient();
-        waitTime(3000);
         click(SendTransferPage.objSelectRecipient, getTextVal(SendTransferPage.objSelectRecipient, "Button"));
         click(SendTransferPage.objCheckBox, "Check Box");
         Swipe("UP", 1);
         click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
-        waitTime(5000);
         enterAmountToKwartaPadala("100");
         enableLocation_PopUp();
-        enterOTP(prop.getproperty("Valid_OTP"));
+        enterMLPin();
         if (verifyElementPresent(SendTransferPage.objSendMoneySuccessful, getTextVal(SendTransferPage.objSendMoneySuccessful, "Message"))) {
             verifyElementPresent(SendTransferPage.objPHPAmount, getTextVal(SendTransferPage.objPHPAmount, "Amount"));
             verifyElementPresent(SendTransferPage.objDate, getTextVal(SendTransferPage.objDate, "Date"));
@@ -192,7 +190,6 @@ public SendMoneyVia_BranchClass(){
             System.out.println(sReferenceNumber);
             Swipe("UP", 2);
             click(SendTransferPage.objBackToHomeBtn, getTextVal(SendTransferPage.objBackToHomeBtn, "Button"));
-            waitTime(3000);
             Swipe("DOWN", 2);
             Swipe("UP", 1);
             verifyElementPresent(MLWalletHomePage.objRecentTransactions, getTextVal(MLWalletHomePage.objRecentTransactions, "Text"));

@@ -85,7 +85,7 @@ public class BaseClass {
         DriverManager.getAppiumDriver().quit();
     }
     public void enableNotif() throws Exception{
-        waitTime(5000);
+        waitTime(1000);
         if(verifyElementDisplayed(MLWalletLoginPage.objAllowNotif)){
             click(MLWalletLoginPage.objAllowNotif, getTextVal(MLWalletLoginPage.objAllowNotif, "Button"));
             logger.info("Notification is allowed");
@@ -97,12 +97,12 @@ public class BaseClass {
         if (verifyElementDisplayed(MLWalletLoginPage.objContinueBtn)) {
             click(MLWalletLoginPage.objContinueBtn, "OTP Continue Button");
         } else if (verifyElementDisplayed(MLWalletLoginPage.objOneTimePin)) {
-            waitTime(5000);
+            waitTime(1000);
             verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
             for (int i = 1; i <= 6; i++) {
                 type(MLWalletLoginPage.objOtpTextField(i), OTP, "OTP Text Field");
             }
-            //waitTime(3000);
+            //waitTime(1000);
         } else {
             handleMpin(prop.getproperty("mPin"));
         }
@@ -127,14 +127,14 @@ public class BaseClass {
 
     public void mlWalletLogin(String sTier) throws Exception {
         enableNotif();
-        waitTime(5000);
+        waitTime(1000);
 //		click(MLWalletLoginPage.objMobileNumberTextField, "Mobile Number Text Field");
         type(MLWalletLoginPage.objMobileNumberTextField, sTier, "Mobile Number Text Field");
         click(MLWalletLoginPage.objLoginBtn, "Login Button");
         enterOTP(prop.getproperty("Valid_OTP"));
         LoginClass.clickAnnouncement_Exit();
         handleMpin("1111");
-        waitTime(10000);
+        waitTime(1000);
         if (verifyElementPresent(MLWalletLoginPage.objAvailableBalance, getTextVal(MLWalletLoginPage.objAvailableBalance, "Text"))) {
             logger.info("Application Logged In Successfully");
         } else {
@@ -152,7 +152,7 @@ public class BaseClass {
         if (verifyElementPresent(MLWalletLogOutPage.objHamburgerMenu, "Hamburger Menu")) {
             click(MLWalletLogOutPage.objHamburgerMenu, "Hamburger Menu");
             click(MLWalletLogOutPage.objLogoutBtn, getTextVal(MLWalletLogOutPage.objLogoutBtn, "Button"));
-            Thread.sleep(2000);
+            Thread.sleep(1000);
             click(MLWalletLogOutPage.objLogoutBtn, getTextVal(MLWalletLogOutPage.objLogoutBtn, "Button"));
         }
         if (verifyElementPresent(MLWalletLogOutPage.objChangeNumber, getTextVal(MLWalletLogOutPage.objChangeNumber, "Link"))) {
@@ -209,14 +209,14 @@ public class BaseClass {
     public void maxTransactionLimitValidation(String sTier) throws Exception {
         cashInViaBranchNavigation(sTier);
         cancelPreviousTransactionAndContinue();
-        cashInViaBranchEnterAmount("50001");
+        cashInViaBranchEnterAmount("10001");
         click(MLWalletCashInViaBranch.objContinueButton, getTextVal(MLWalletCashInViaBranch.objContinueButton, "Button"));
     }
 
     public void cancelPreviousTransactionAndContinue() throws Exception {
         if (verifyElementDisplayed(MLWalletCashInViaBranch.objCancelTransactionBtn)) {
             click(MLWalletCashInViaBranch.objCancelTransactionBtn, getTextVal(MLWalletCashInViaBranch.objCancelTransactionBtn, "button"));
-            waitTime(3000);
+            waitTime(1000);
             click(MLWalletCashInViaBranch.objCancelBtn1, getTextVal(MLWalletCashInViaBranch.objCancelBtn1, "Button"));
             verifyElementPresentAndClick(MLWalletCashInViaBranch.objBackToHomeBtn, getTextVal(MLWalletCashInViaBranch.objBackToHomeBtn, "Button"));
             click(MLWalletCashInViaBranch.objCashInMenu, "Cash In");
@@ -266,7 +266,7 @@ public class BaseClass {
             verifyElementPresent(MLWalletCashInBank.objBankCashIn, getTextVal(MLWalletCashInBank.objBankCashIn, "Text"));
             type(MLWalletCashInBank.objAmountEditField, sAmount, "Amount Text Field");
             click(MLWalletCashInBank.objNextBtn, getTextVal(MLWalletCashInBank.objNextBtn, "Button"));
-            Thread.sleep(3000);
+            Thread.sleep(1000);
         }
     }
 
@@ -292,7 +292,7 @@ public class BaseClass {
 
 
     public void bankUserLogin(String sLoginId, String sPassword) throws Exception {
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(MLWalletCashInBank.objReferenceNumberMsg, getTextVal(MLWalletCashInBank.objReferenceNumberMsg, "Reference Information"))) {
             type(MLWalletCashInBank.objLoginIdTxtField, sLoginId, "Login Id Text Field");
             type(MLWalletCashInBank.objPasswordTxtField, sPassword, "Password Text Field");
@@ -330,7 +330,7 @@ public class BaseClass {
             type(MLWalletCashOutPage.objAmountField, nAmount, "Amount to Send");
             click(MLWalletCashOutPage.objNextBtn, getTextVal(MLWalletCashOutPage.objNextBtn, "Button"));
             click(MLWalletCashOutPage.objContinueBtn, getTextVal(MLWalletCashOutPage.objContinueBtn, "Button"));
-            Thread.sleep(3000);
+            Thread.sleep(1000);
         }
     }
 
@@ -338,14 +338,14 @@ public class BaseClass {
         if (verifyElementPresent(MLWalletCashOutPage.objAmountField, "Bank Cash Out Amount Field")) {
             type(MLWalletCashOutPage.objAmountField, sAmount, "Amount to Send");
             click(MLWalletCashOutPage.objNextBtn, getTextVal(MLWalletCashOutPage.objNextBtn, "Button"));
-            waitTime(10000);
+            waitTime(1000);
             String sDragonPopUpMsg = getText(MLWalletCashOutPage.objDragonPayPopUpMsg);
             String sExpectedMsg = "Dragon Pay charges a fee of 35.00 pesos for this transaction. Do you wish to continue with your transaction?";
             assertionValidation(sDragonPopUpMsg, sExpectedMsg);
             click(MLWalletCashOutPage.objContinueBtn, getTextVal(MLWalletCashOutPage.objContinueBtn, "Button"));
             swipeDownUntilElementVisible("Next");
             click(MLWalletCashOutPage.objNextBtn, getTextVal(MLWalletCashOutPage.objNextBtn, "Button"));
-            Thread.sleep(5000);
+            Thread.sleep(1000);
         }
     }
 
@@ -355,7 +355,7 @@ public class BaseClass {
     public void eLoad_generic(String sTier, String mobileNo, String status, int telcoOption) throws Exception {
         mlWalletLogin(sTier);
         click(MLWalletEloadPage.objEloadTab, "Buy eLoad");
-        waitTime(5000);
+        waitTime(1000);
         if (status.equals("true")) {
             verifyElementPresent(MLWalletEloadPage.objEloadtransactionPage, "eLoad Transaction Page");
             click(MLWalletEloadPage.objSelectSmartTelco, "Telco");
@@ -363,7 +363,7 @@ public class BaseClass {
         click(MLWalletEloadPage.objMobileNoField, "Mobile Number Field");
         type(MLWalletEloadPage.objMobileNoField, mobileNo, "Mobile Number Field");
         hideKeyboard();
-        waitTime(5000);
+        waitTime(1000);
         click(MLWalletEloadPage.objNextBtn, "Next Button");
 //		click(MLWalletEloadPage.objNextBtn, "Next Button");
 //		enableLocation_PopUp();
@@ -380,13 +380,13 @@ public class BaseClass {
     }
 
     public void enterMLBranchDetails() throws Exception {
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "Page"))) {
             verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "Page"));
             type(SendTransferPage.objFirstname, prop.getproperty("First_Name"), "First Name Text Field");
             type(SendTransferPage.objMiddleName, prop.getproperty("Middle_Name"), "Middle Name Text Field");
             click(SendTransferPage.objCheckBox, "Check Box");
-            waitTime(3000);
+            waitTime(1000);
             type(SendTransferPage.objLastName, prop.getproperty("Last_Name"), "Last Name Text Field");
             type(SendTransferPage.objMobileNumber, prop.getproperty("Branch_Verified"), "Mobile Number Text Field");
             click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
@@ -394,27 +394,28 @@ public class BaseClass {
     }
 
     public void enterAmountToKwartaPadala(String nAmount) throws Exception {
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "Page"));
         type(SendTransferPage.objAmountTxtField, nAmount, "Amount text Field");
         click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
         verifyElementPresent(SendTransferPage.objSelectPaymentMethod, getTextVal(SendTransferPage.objSelectPaymentMethod, "Page"));
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         click(SendTransferPage.objMLWalletBalance, getTextVal(SendTransferPage.objMLWalletBalance, "Button"));
         verifyElementPresent(SendTransferPage.objConfirmDetails, getTextVal(SendTransferPage.objConfirmDetails, "Page"));
         click(SendTransferPage.objConfirmBtn, getTextVal(SendTransferPage.objConfirmBtn, "Button"));
     }
 
     public void selectSavedRecipient() throws Exception {
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "Page"))) {
             click(SendTransferPage.objSavedRecipients, getTextVal(SendTransferPage.objSavedRecipients, "Button"));
-            waitTime(5000);
+            waitTime(1000);
             click(SendTransferPage.objSavedRecipients, getTextVal(SendTransferPage.objSavedRecipients, "Page"));
+            waitTime(2000);
             type(SendTransferPage.objSearchRecipient, prop.getproperty("Last_Name"), "Search Recipient Text Field");
             verifyElementPresent(SendTransferPage.objSelectLastName(prop.getproperty("Last_Name"), prop.getproperty("First_Name")), getTextVal(SendTransferPage.objSelectLastName(prop.getproperty("Last_Name"), prop.getproperty("First_Name")), "Recipient"));
             click(SendTransferPage.objSelectLastName(prop.getproperty("Last_Name"), prop.getproperty("First_Name")), getTextVal(SendTransferPage.objSelectLastName(prop.getproperty("Last_Name"), prop.getproperty("First_Name")), "Recipient"));
-            Thread.sleep(3000);
+            Thread.sleep(1000);
         }
     }
 
@@ -422,7 +423,7 @@ public class BaseClass {
         if (verifyElementPresent(SendTransferPage.objSavedRecipients, getTextVal(SendTransferPage.objSavedRecipients, "Button"))) {
             click(SendTransferPage.objSavedRecipients, getTextVal(SendTransferPage.objSavedRecipients, "Button"));
             click(SendTransferPage.objAddRecipient, getTextVal(SendTransferPage.objAddRecipient, "Button"));
-            waitTime(5000);
+            waitTime(1000);
             type(SendTransferPage.objFirstname, prop.getproperty("First_Name"), "First Name Text Field");
             type(SendTransferPage.objMiddleName, prop.getproperty("Middle_Name"), "Middle Name Text Field");
             click(SendTransferPage.objCheckBox, "Check Box");
@@ -491,7 +492,7 @@ public class BaseClass {
 
 
     public void enterMobileNumberMLWallet(String nMobileNumber) throws Exception {
-        waitTime(10000);
+        waitTime(1000);
         verifyElementPresent(SendTransferPage.objSendMoney, getTextVal(SendTransferPage.objSendMoney, "Page"));
         type(SendTransferPage.objMobileNumberField, nMobileNumber, "Mobile Number Text Field");
         click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
@@ -499,11 +500,11 @@ public class BaseClass {
     }
 
     public void enterAmountAndSendToMLWallet(String nAmount) throws Exception {
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(SendTransferPage.objToMLWalletUser, getTextVal(SendTransferPage.objToMLWalletUser, "Page"))) {
             type(SendTransferPage.objAmountTxtField, nAmount, "Amount Text Field");
             click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
-            waitTime(5000);
+            waitTime(1000);
             click(SendTransferPage.objMLWalletBalance, getTextVal(SendTransferPage.objMLWalletBalance, "Button"));
             verifyElementPresent(SendTransferPage.objConfirmDetails, getTextVal(SendTransferPage.objConfirmDetails, "Page"));
             Swipe("UP", 2);
@@ -539,39 +540,39 @@ public class BaseClass {
     public void homePageNavigation() throws Exception {
         verifyElementPresentAndClick(MLWalletBranchLocator.objBranchLocatorHamburgerMenu, "Hamburger Menu Button");
         verifyElementPresentAndClick(MLWalletBranchLocator.objHome, getTextVal(MLWalletBranchLocator.objHome, "Option"));
-        waitTime(8000);
+        waitTime(1000);
     }
 
     public void sendMoneyToMLBranchRatesValidation(String sAmount) throws Exception {
         sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
         enterMLBranchDetails();
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "Page"));
         type(SendTransferPage.objAmountTxtField, sAmount, "Amount text Field");
         click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
         verifyElementPresent(SendTransferPage.objSelectPaymentMethod, getTextVal(SendTransferPage.objSelectPaymentMethod, "Page"));
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         click(SendTransferPage.objMLWalletBalance, getTextVal(SendTransferPage.objMLWalletBalance, "Button"));
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(SendTransferPage.objConfirmDetails, getTextVal(SendTransferPage.objConfirmDetails, "Page"));
     }
 
     public void useQRCodeNavigation(String sTier) throws Exception {
         mlWalletLogin(sTier);
         verifyElementPresentAndClick(MLWalletUseQR.objUseQR, getTextVal(MLWalletUseQR.objUseQR, "Icon"));
-        waitTime(3000);
+        waitTime(1000);
         verifyElementPresent(MLWalletUseQR.objUseQR, getTextVal(MLWalletUseQR.objUseQR, "Page"));
     }
 
     public void scanQR(String url) {
         switchPlatformToWeb(url);
-        waitTime(5000);
+        waitTime(1000);
         closeWebBrowser();
         switchPlatformToAndroid();
     }
 
     public void navigateToProfile() throws Exception {
-        waitTime(10000);
+        waitTime(1000);
         verifyElementPresentAndClick(MLWalletSettingsPage.objProfileIcon, "Profile Icon");
         if (verifyElementPresent(MLWalletSettingsPage.objAccountDetails, "Account Details Page")) {
             logger.info("Navigated to settings");
@@ -590,7 +591,7 @@ public class BaseClass {
     public void payBillsNavigation() throws Exception {
         verifyElementPresent(MLWalletPayBillsPage.objPayBills, getTextVal(MLWalletPayBillsPage.objPayBills, "Icon"));
         click(MLWalletPayBillsPage.objPayBills, getTextVal(MLWalletPayBillsPage.objPayBills, "Icon"));
-        waitTime(5000);
+        waitTime(1000);
     }
 
 
@@ -622,7 +623,7 @@ public class BaseClass {
     public void addBiller() throws Exception {
         if (verifyElementPresent(MLWalletPayBillsPage.objSavedBiller, getTextVal(MLWalletPayBillsPage.objSavedBiller, "Button"))) {
             click(MLWalletPayBillsPage.objSavedBiller, getTextVal(MLWalletPayBillsPage.objSavedBiller, "Button"));
-            waitTime(5000);
+            waitTime(1000);
             click(MLWalletPayBillsPage.objAddBiller, getTextVal(MLWalletPayBillsPage.objAddBiller, "Button"));
             addSelectedBiller();
             if (verifyElementPresent(MLWalletPayBillsPage.objAddBillers, getTextVal(MLWalletPayBillsPage.objAddBillers, "Page"))) {
@@ -637,13 +638,13 @@ public class BaseClass {
     }
 
     public void addSelectedBiller() throws Exception {
-        waitTime(3000);
+        waitTime(1000);
         if (verifyElementPresent(MLWalletPayBillsPage.objAddSeectedBiller, "Edit Biller")) {
             click(MLWalletPayBillsPage.objAddSeectedBiller, "Edit Biller");
-            waitTime(5000);
+            waitTime(1000);
             click(MLWalletPayBillsPage.objBillerListSearchBiller, "Biller List Search Biller");
             type(MLWalletPayBillsPage.objBillerListSearchBiller, prop.getproperty("Biller_Name"), "Biller List Search Biller");
-            waitTime(4000);
+            waitTime(1000);
             click(MLWalletPayBillsPage.objMisBillsPayBiller, getTextVal(MLWalletPayBillsPage.objMisBillsPayBiller, "Biller"));
             click(MLWalletPayBillsPage.objMisBillsPayBiller, getTextVal(MLWalletPayBillsPage.objMisBillsPayBiller, "Biller"));
         }
@@ -651,7 +652,7 @@ public class BaseClass {
 
     public void selectAddedBiler() throws Exception {
         verifyElementPresentAndClick(MLWalletPayBillsPage.objSavedBiller, getTextVal(MLWalletPayBillsPage.objSavedBiller, "Button"));
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(MLWalletPayBillsPage.objSavedBillers, getTextVal(MLWalletPayBillsPage.objSavedBillers, "Page"))) {
             type(MLWalletPayBillsPage.objSearchBillerInSavedBillers, prop.getproperty("Last_Name"), "Search Recipient Text Field");
             verifyElementPresent(MLWalletPayBillsPage.objSelectLastName(prop.getproperty("Last_Name"), prop.getproperty("First_Name")), getTextVal(SendTransferPage.objSelectLastName(prop.getproperty("Last_Name"), prop.getproperty("First_Name")), "Recipient"));
@@ -661,7 +662,7 @@ public class BaseClass {
 
     public void registrationPageNavigation() throws Exception {
         verifyElementPresentAndClick(MLWalletRegistration.objCreateOne, getTextVal(MLWalletRegistration.objCreateOne, "Button"));
-        waitTime(6000);
+        waitTime(1000);
         type(MLWalletRegistration.objMobileNumberField, prop.getproperty("Registration_MobileNumber"), "Mobile Number Text Field");
         click(MLWalletRegistration.objConfirm, getTextVal(MLWalletRegistration.objConfirm, "Button"));
         enterOTP(prop.getproperty("Valid_OTP"));
@@ -701,7 +702,7 @@ public class BaseClass {
 
     public void selectNationality() throws Exception {
         verifyElementPresentAndClick(MLWalletRegistration.objNationality, "Nationality Field");
-        waitTime(5000);
+        waitTime(1000);
         type(MLWalletRegistration.objNationalitySearchField, "filipino", "Nationality search field");
         verifyElementPresentAndClick(MLWalletRegistration.objFilipino, getTextVal(MLWalletRegistration.objFilipino, "Nationality"));
     }
@@ -715,7 +716,7 @@ public class BaseClass {
 
     public void registrationAddressPageNavigation() throws Exception {
         registrationPageNavigation();
-        waitTime(5000);
+        waitTime(1000);
         registrationInputName();
         selectDate();
         emailAndPlaceOfBirth();
@@ -728,26 +729,26 @@ public class BaseClass {
     public void accountDetailsPageNavigation(String sTier) throws Exception {
         mlWalletLogin(sTier);
         verifyElementPresentAndClick(MLWalletHomePage.objIIcon, "i Icon");
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(MLWalletHomePage.objVerificationTierPerks, getTextVal(MLWalletHomePage.objVerificationTierPerks, "Page"));
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresentAndClick(MLWalletTierUpgrade.objFullyVerifiedTab,getTextVal(MLWalletTierUpgrade.objFullyVerifiedTab,"Tab"));
-        waitTime(3000);
+        waitTime(1000);
         Swipe("UP",2);
         verifyElementPresentAndClick(MLWalletTierUpgrade.objUpgradeTierLevel,getTextVal(MLWalletTierUpgrade.objUpgradeTierLevel, "Button"));
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(MLWalletTierUpgrade.objAccountDetails,getTextVal(MLWalletTierUpgrade.objAccountDetails, "Page"));
     }
 
     public void openKPXInChrome(String url) {
         switchPlatformToWeb(url);
-        waitTime(5000);
+        waitTime(1000);
     }
 
     public void selectProductServiceOffered(String service)throws Exception{
         try{
             verifyElementPresentAndClick(MLWalletTierUpgrade.objProductServiceOffered, getTextVal(MLWalletTierUpgrade.objSourceOfIncome , "DropDown"));
-            waitTime(3000);
+            waitTime(1000);
             verifyElementPresent(MLWalletTierUpgrade.objProductServicePage, getTextVal(MLWalletTierUpgrade.objProductServicePage, "Header"));
             type(MLWalletTierUpgrade.objSearchField, service, "Search Field");
             verifyElementPresentAndClick(MLWalletTierUpgrade.getObjProductServiceOffered(service),
@@ -760,7 +761,7 @@ public class BaseClass {
     public void selectSourceOfIncome(String source)throws Exception{
         try{
             verifyElementPresentAndClick(MLWalletTierUpgrade.objSourceOfIncome, getTextVal(MLWalletTierUpgrade.objSourceOfIncome , "DropDown"));
-            waitTime(3000);
+            waitTime(1000);
             verifyElementPresent(MLWalletTierUpgrade.objSourceOfIncomePage, getTextVal(MLWalletTierUpgrade.objSourceOfIncomePage, "Header"));
             type(MLWalletTierUpgrade.objSearchField, source, "Search Field");
             verifyElementPresentAndClick(MLWalletTierUpgrade.getObjSourceOfIncome(source),
@@ -773,7 +774,7 @@ public class BaseClass {
     public void selectPositionAtWork(String position)throws Exception{
         try{
             verifyElementPresentAndClick(MLWalletTierUpgrade.objPositionAtWork, getTextVal(MLWalletTierUpgrade.objPositionAtWork , "DropDown"));
-            waitTime(3000);
+            waitTime(1000);
             verifyElementPresent(MLWalletTierUpgrade.objPositionAtWorkPage, getTextVal(MLWalletTierUpgrade.objPositionAtWorkPage, "Header"));
             type(MLWalletTierUpgrade.objSearchField, position, "Search Field");
             verifyElementPresentAndClick(MLWalletTierUpgrade.getObjPositionAtWork(position),
@@ -786,7 +787,7 @@ public class BaseClass {
     public void selectNatureOfWork(String nature)throws Exception{
         try{
             verifyElementPresentAndClick(MLWalletTierUpgrade.ObjNatureOfWork, getTextVal(MLWalletTierUpgrade.ObjNatureOfWork , "DropDown"));
-            waitTime(5000);
+            waitTime(1000);
             verifyElementPresent(MLWalletTierUpgrade.ObjNatureOfWorkPage, getTextVal(MLWalletTierUpgrade.ObjNatureOfWorkPage, "Header"));
             type(MLWalletTierUpgrade.objSearchField, nature, "Search Field");
             verifyElementPresentAndClick(MLWalletTierUpgrade.getObjNatureOfWork(nature),
@@ -804,7 +805,7 @@ public class BaseClass {
 
     public void selectGameAndLoadType() throws Exception {
         verifyElementPresentAndClick(MLWalletTopUpGames.objValorant, getTextVal(MLWalletTopUpGames.objValorant, "Game"));
-        waitTime(4000);
+        waitTime(1000);
         verifyElementPresentAndClick(MLWalletTopUpGames.objBuyPHP149, getTextVal(MLWalletTopUpGames.objBuyPHP149, "Load Type"));
     }
 
@@ -836,7 +837,7 @@ public class BaseClass {
         String balanceText = "";
         if (verifyElementPresent(MLWalletHomePage.objHiddenAvailableBalance, "Hidden Balance")) {
             click(MLWalletHomePage.objEyeIcon, "Eye Icon");
-            waitTime(5000);
+            waitTime(1000);
             balanceText = getText(MLWalletHomePage.objAvailableBalance);
             logger.info("Balance is = " + balanceText);
         } else {

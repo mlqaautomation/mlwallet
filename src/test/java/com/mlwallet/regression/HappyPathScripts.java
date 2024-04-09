@@ -22,48 +22,55 @@ public class HappyPathScripts extends BaseTest{
         // shopItemsClass = new shopItemsClass("MLWallet",deviceName,portno);
         shopItemsClass = new ShopItemsClass("MLWallet",deviceName,portno);
     }
+//    --------------CashInViaBank
+//    @Test(priority = 2)
+//    public void cashInViaBankFullyVerifiedTierStatusTransaction_CIBA_TC_26() throws Exception {
+//        mlWalletCashInViaBank.cashInViaBankFullyVerifiedTierStatusTransaction_CIBA_TC_26();
+//    }
 
-    //--------------ELoad
+//--------------Defect OTP
+//    //--------------CashInViaBranch
+//    @Test(priority = 1)
+//    public void cashInViaBranchBuyerTierUser_CIBR_TC_16() throws Exception {
+//        mlWalletCashInViaBranch.cashInViaBranchBuyerTierUser_CIBR_TC_16();
+//    }
+
+    //--------------SendMoneyBranch
+//    @Test(priority = 7)
+//    public void sendMoneyToSavedRecipient_STB_TC_02() throws Exception {
+//        mlWalletSendMoneyViaBranch.sendMoneyToSavedRecipient_STB_TC_02();
+//    }
+
+//    --------------SendMoneyWalletUser
+//    @Test(priority = 8)
+//    public void sendMoneyMLWalletToExistingReceiver_STW_TC_02() throws Exception{
+//        mlWalletSendMoneyViaWallet.sendMoneyMLWalletToExistingReceiver_STW_TC_02();
+//    }
+
+//      --------------ELoad
 //    @Test(priority = 1)
 //    public void buyELoadSuccessfulTransactionUIValidation_BE_TC_26() throws Exception {
 //        mlWalletBuyELoad.buyELoadSuccessfulTransactionUIValidation_BE_TC_26(prop.getproperty("Fully_Verified"),2);
 //    }
-//    //--------------CashViaBank
-//    @Test(priority = 2)
-//    public void cashInViaBankSemiVerifiedTierStatusTransaction_CIBA_TC_25() throws Exception {
-//        mlWalletCashInViaBank.cashInViaBankSemiVerifiedTierStatusTransaction_CIBA_TC_25();
-//    }
-//    //---------------CashViaBank
-//    @Test(priority = 3)
-//    public void cashInViaBranchTransactionWithValidMLPin_CIBR_TC_43() throws Exception {
-//        mlWalletCashInViaBranch.cashInViaBranchTransactionWithValidMLPin_CIBR_TC_43();
-//    }
+
     //--------------GCash
 //    @Test(priority = 4)
 //    public void GC_SM_TC_76_Validate_Back_Home_Btn_In_GCash_View_Recent_Transaction_Dashboard_Page() throws Exception {
 //        mlWalletGCashScripts.GC_SM_TC_76_Validate_Back_Home_Btn_In_GCash_View_Recent_Transaction_Dashboard_Page();
 //    }
-//    //--------------CashOutWithdraw
-//    @Test(priority = 5)
-//    public void cashOutBankTransactionOTPContinueBtnFunctionality_WM_TC_123() throws Exception {
-//        mlWalletCashOutViaBank.cashOutBankTransactionOTPContinueBtnFunctionality_WM_TC_123("100");
-//    }
+
+    //--------------CashOutWithdraw
+    @Test(priority = 5)
+    public void cashOutBankTransactionOTPContinueBtnFunctionality_WM_TC_123() throws Exception {
+        mlWalletCashOutViaBank.cashOutBankTransactionOTPContinueBtnFunctionality_WM_TC_123("100");
+    }
 //    //--------------PayBills
 //    @Test(priority = 6)
 //    public void paybillsRecentTransaction_PB_TC_19() throws Exception {
-//        mlWalletBillsPay.paybillsRecentTransaction_PB_TC_19();
+//        mlWalletBillsPay.paybillsRecentTransaction_PB_TC_19();r
 //    }
-//    //--------------SendMoneyBranch
-//    @Test(priority = 7)
-//    public void sendMoneyToSavedRecipient_STB_TC_02() throws Exception {
-//        mlWalletSendMoneyViaBranch.sendMoneyToSavedRecipient_STB_TC_02();
-//    }
-//    //--------------SendMoneyWalletUser
-//    @Test(priority = 8)
-//    public void sendMoneyMLWalletToExistingReceiver_STW_TC_02() throws Exception
-//    {
-//        mlWalletSendMoneyViaWallet.sendMoneyMLWalletToExistingReceiver_STW_TC_02();
-//    }
+
+
 //    //--------------ShopItems
 //    @Test(priority = 9)
 //    public void shopItemsSubTotalAmountValidationBeforeSelectingItems_MLS_TC_59() throws Exception {

@@ -466,17 +466,17 @@ public class BuyEloadClass extends BaseClass{
         eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
         verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
-        waitTime(5000);
+        waitTime(1000);
         click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
-        waitTime(5000);
+        waitTime(1000);
         click(MLWalletEloadPage.obj10SmartRegular, "Promo");
         verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
-        waitTime(5000);
+        waitTime(1000);
         click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
         verifyElementPresent(MLWalletEloadPage.objBuyLoad, getTextVal(MLWalletEloadPage.objBuyLoad, "Page"));
         click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
         enterOTP(prop.getproperty("Valid_OTP"));
-        waitTime(30000);
+        waitTime(1000);
         if (verifyElementPresent(MLWalletEloadPage.objTransactionDetailsPage, getTextVal(MLWalletEloadPage.objTransactionDetailsPage, "Page"))) {
             verifyElementPresent(MLWalletEloadPage.objMobileNumberInTransactionDetails, getTextVal(MLWalletEloadPage.objMobileNumberInTransactionDetails, "Mobile Number"));
             verifyElementPresent(MLWalletEloadPage.objBuyELoadTime, getTextVal(MLWalletEloadPage.objBuyELoadTime, "Date and Time"));

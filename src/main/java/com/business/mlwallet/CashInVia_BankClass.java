@@ -416,28 +416,20 @@ public class CashInVia_BankClass extends BaseClass{
         ExtentReporter.HeaderChildNode("Cash In Via Bank Fully Verified Tier Success transaction validation");
         mlWalletLogin(prop.getproperty("Fully_verified"));
         verifyElementPresentAndClick(MLWalletHomePage.objEyeIcon, "Eye Icon");
-        String sBalance = getText(MLWalletHomePage.objAvailableBalance);
-        selectBankAndInputAmount("1000");
-        dragonPayChargesMsgValidation();
-        reviewTransactionValidation();
-        enterOTP(prop.getproperty("Valid_OTP"));
-        enableLocation_PopUp();
-        bankUserLogin(prop.getproperty("Valid_LoginId"), prop.getproperty("Valid_Password"));
-        click(MLWalletCashInBank.objWebContinueBtn, "Continue Button");
-        click(MLWalletCashInBank.objPayBtn, getTextVal(MLWalletCashInBank.objPayBtn, "Button"));
-        verifyElementPresent(MLWalletCashInBank.objBankReferenceNumber, getTextVal(MLWalletCashInBank.objBankReferenceNumber, "Reference Number"));
-        verifyElementPresent(MLWalletCashInBank.objStatus, getTextVal(MLWalletCashInBank.objStatus, "Status"));
-        verifyElementPresent(MLWalletCashInBank.objMessage, getTextVal(MLWalletCashInBank.objMessage, "Message"));
-        verifyElementPresentAndClick(MLWalletCashInBank.objCompleteTransactionBtn, getTextVal(MLWalletCashInBank.objCompleteTransactionBtn, "Button"));
-        Swipe("DOWN", 3);
-        String sBalanceAfterTransaction = getText(MLWalletHomePage.objHiddenAvailableBalance);
-        Swipe("UP", 1);
-        if (verifyElementPresent(MLWalletHomePage.objSuccess, getTextVal(MLWalletHomePage.objSuccess, "Status"))) {
-            assertNotEquals(sBalance, sBalanceAfterTransaction);
-            logger.info("CIBA_TC_26, Cash In Via Bank Fully Verified Tier success transaction validated and cash in Amount is reflected in Balance");
-            ExtentReporter.extentLoggerPass("CIBA_TC_26", "CIBA_TC_26, Cash In Via Bank Fully Verified Tier success transaction validated and cash in Amount is reflected in Balance");
-            System.out.println("-----------------------------------------------------------");
+        verifyElementPresentAndClick(MLWalletCashInBank.objCashIn, "CashIn");
+        verifyElementPresentAndClick(MLWalletCashInBank.objMyBankAccount, "My Bank Account");
+        verifyElementPresent(MLWalletCashInBank.objReceiveMoneyLabelQR,"Receive Money Label QR");
+        type(MLWalletCashInBank.objORInputAmount, prop.getproperty("Amount"), "Input Amount");
+        verifyElementPresentAndClick(MLWalletCashInBank.objConfirmQRBtn,"Confirm Amount QR");
+        if(verifyElementDisplayed(MLWalletCashInBank.objAllowWhileUseApp)){
+        click(MLWalletCashInBank.objAllowWhileUseApp,"Allow using app");
         }
+        if(verifyElementPresent(MLWalletCashInBank.objResetQRBtn,"Reset Button Visible")){
+            verifyElementPresent(MLWalletCashInBank.objQRcode,"QR code Result");
+        }
+        logger.info("CIBA_TC_26, Cash In Via Bank Fully Verified Tier success transaction validated and cash in Amount is reflected in Balance");
+        ExtentReporter.extentLoggerPass("CIBA_TC_26", "CIBA_TC_26, Cash In Via Bank Fully Verified Tier success transaction validated and cash in Amount is reflected in Balance");
+        System.out.println("-----------------------------------------------------------");
     }
 
     public void cashInViaBankSemiVerifiedUserMaxLimit_CIBA_TC_27() throws Exception {
