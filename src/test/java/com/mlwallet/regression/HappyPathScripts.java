@@ -30,23 +30,23 @@ public class HappyPathScripts extends BaseTest{
 //        mlWalletCashInViaBank.cashInViaBankFullyVerifiedTierStatusTransaction_CIBA_TC_26();
 //    }
 
-//    //--------------CashInViaBranch
-//    @Test(priority = 1)
-//    public void cashInViaBranchBuyerTierUser_CIBR_TC_16() throws Exception {
-//        mlWalletCashInViaBranch.cashInViaBranchBuyerTierUser_CIBR_TC_16();
-//    }
+    //--------------CashInViaBranch
+    @Test(priority = 1)
+    public void cashInViaBranchBuyerTierUser_CIBR_TC_16() throws Exception {
+        mlWalletCashInViaBranch.cashInViaBranchBuyerTierUser_CIBR_TC_16();
+    }
 
-//    --------------SendMoneyBranch
-//    @Test(priority = 7)
-//    public void sendMoneyToSavedRecipient_STB_TC_02() throws Exception {
-//        mlWalletSendMoneyViaBranch.sendMoneyToSavedRecipient_STB_TC_02();
-//    }
+    //--------------SendMoneyBranch
+    @Test(priority = 7)
+    public void sendMoneyToSavedRecipient_STB_TC_02() throws Exception {
+        mlWalletSendMoneyViaBranch.sendMoneyToSavedRecipient_STB_TC_02();
+    }
 
-//    --------------SendMoneyWalletUser
-//    @Test(priority = 8)
-//    public void sendMoneyMLWalletToExistingReceiver_STW_TC_02() throws Exception{
-//        mlWalletSendMoneyViaWallet.sendMoneyMLWalletToExistingReceiver_STW_TC_02();
-//    }
+    //--------------SendMoneyWalletUser
+    @Test(priority = 8)
+    public void sendMoneyMLWalletToExistingReceiver_STW_TC_02() throws Exception{
+        mlWalletSendMoneyViaWallet.sendMoneyMLWalletToExistingReceiver_STW_TC_02();
+    }
 
 //----- Cant Automate Need QR code
     //--------------CashOutWithdrawBank
@@ -56,28 +56,28 @@ public class HappyPathScripts extends BaseTest{
 //    }
 
     //--------------CashOutWithdrawBranch
-//    @Test(priority = 5)
-//    public void cashOutWithdrawBranch_WM_TC_05() throws Exception {
-//        mlWalletCashOutViaBranch.cashOutWithdrawBranch_WM_TC_05();
-//    }
+    @Test(priority = 5)
+    public void cashOutWithdrawBranch_WM_TC_05() throws Exception {
+        mlWalletCashOutViaBranch.cashOutWithdrawBranch_WM_TC_05();
+    }
 
 //      --------------ELoad
-//    @Test(priority = 1)
-//    public void buyELoadSuccessfulTransactionUIValidation_BE_TC_26() throws Exception {
-//        mlWalletBuyELoad.buyELoadSuccessfulTransactionUIValidation_BE_TC_26(prop.getproperty("Fully_Verified"),2);
-//    }
+    @Test(priority = 1)
+    public void buyELoadSuccessfulTransactionUIValidation_BE_TC_26() throws Exception {
+        mlWalletBuyELoad.buyELoadSuccessfulTransactionUIValidation_BE_TC_26(prop.getproperty("Fully_Verified"),2);
+    }
 
     //--------------GCash
-//    @Test(priority = 4)
-//    public void GC_SM_TC_76_Validate_Back_Home_Btn_In_GCash_View_Recent_Transaction_Dashboard_Page() throws Exception {
-//        mlWalletGCashScripts.GC_SM_TC_76_Validate_Back_Home_Btn_In_GCash_View_Recent_Transaction_Dashboard_Page();
-//    }
+    @Test(priority = 4)
+    public void GC_SM_TC_76_Validate_Back_Home_Btn_In_GCash_View_Recent_Transaction_Dashboard_Page() throws Exception {
+        mlWalletGCashScripts.GC_SM_TC_76_Validate_Back_Home_Btn_In_GCash_View_Recent_Transaction_Dashboard_Page();
+    }
 
     //--------------PayBills
-//    @Test(priority = 6)
-//    public void paybillsRecentTransaction_PB_TC_19() throws Exception {
-//        mlWalletBillsPay.paybillsRecentTransaction_PB_TC_19();
-//    }
+    @Test(priority = 6)
+    public void paybillsRecentTransaction_PB_TC_19() throws Exception {
+        mlWalletBillsPay.paybillsRecentTransaction_PB_TC_19();
+    }
 
 //----- Need to Update Test Script
 //    //--------------ShopItems
@@ -87,10 +87,10 @@ public class HappyPathScripts extends BaseTest{
 //    }
 
     //---------------TopUpGames
-//    @Test(priority = 10)
-//    public void topUpGamesSuccessfulLoadTransaction_TUG_TC_06() throws Exception {
-//        mlWalletTopUp.topUpGamesSuccessfulLoadTransaction_TUG_TC_06();
-//    }
+    @Test(priority = 10)
+    public void topUpGamesSuccessfulLoadTransaction_TUG_TC_06() throws Exception {
+        mlWalletTopUp.topUpGamesSuccessfulLoadTransaction_TUG_TC_06();
+    }
 
     @AfterMethod
     public void afterMethod(){
