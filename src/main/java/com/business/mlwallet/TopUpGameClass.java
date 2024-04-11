@@ -55,7 +55,6 @@ public class TopUpGameClass extends BaseClass {
         selectGameAndLoadType();
         inputRequiredDataAndContinue();
         verifyElementPresentAndClick(MLWalletTopUpGames.objConfirm, getTextVal(MLWalletTopUpGames.objConfirm, "button"));
-        waitTime(5000);
         enableLocation_PopUp();
         enterOTP(prop.getproperty("Valid_OTP"));
         verifyElementPresent(MLWalletTopUpGames.objTransactionDetails, getTextVal(MLWalletTopUpGames.objTransactionDetails, "Page"));
@@ -65,6 +64,7 @@ public class TopUpGameClass extends BaseClass {
         swipeDownUntilElementVisible("Back To Home");
         verifyElementPresentAndClick(MLWalletTopUpGames.objBackToHome, getTextVal(MLWalletTopUpGames.objBackToHome, "Button"));
         Swipe("DOWN", 2);
+        verifyElementPresentAndClick(MLWalletHomePage.objEyeIcon, "Eye Icon");
         String sAvailableBalanceAfterTopUp = getText(MLWalletTopUpGames.objAvailableBalance);
         assertNotEquals(sAvailableBalance, sAvailableBalanceAfterTopUp);
         logger.info("TUG_TC_06, TopUp Games successful Load Transaction validated");

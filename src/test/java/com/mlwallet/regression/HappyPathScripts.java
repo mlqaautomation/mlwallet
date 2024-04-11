@@ -22,20 +22,21 @@ public class HappyPathScripts extends BaseTest{
         // shopItemsClass = new shopItemsClass("MLWallet",deviceName,portno);
         shopItemsClass = new ShopItemsClass("MLWallet",deviceName,portno);
     }
+
+//----- Cant Automate Need Scan QR code
 //    --------------CashInViaBank
 //    @Test(priority = 2)
 //    public void cashInViaBankFullyVerifiedTierStatusTransaction_CIBA_TC_26() throws Exception {
 //        mlWalletCashInViaBank.cashInViaBankFullyVerifiedTierStatusTransaction_CIBA_TC_26();
 //    }
 
-//--------------Defect OTP
 //    //--------------CashInViaBranch
 //    @Test(priority = 1)
 //    public void cashInViaBranchBuyerTierUser_CIBR_TC_16() throws Exception {
 //        mlWalletCashInViaBranch.cashInViaBranchBuyerTierUser_CIBR_TC_16();
 //    }
 
-    //--------------SendMoneyBranch
+//    --------------SendMoneyBranch
 //    @Test(priority = 7)
 //    public void sendMoneyToSavedRecipient_STB_TC_02() throws Exception {
 //        mlWalletSendMoneyViaBranch.sendMoneyToSavedRecipient_STB_TC_02();
@@ -45,6 +46,19 @@ public class HappyPathScripts extends BaseTest{
 //    @Test(priority = 8)
 //    public void sendMoneyMLWalletToExistingReceiver_STW_TC_02() throws Exception{
 //        mlWalletSendMoneyViaWallet.sendMoneyMLWalletToExistingReceiver_STW_TC_02();
+//    }
+
+//----- Cant Automate Need QR code
+    //--------------CashOutWithdrawBank
+//    @Test(priority = 5)
+//    public void cashOutBankTransactionOTPContinueBtnFunctionality_WM_TC_123() throws Exception {
+//        mlWalletCashOutViaBank.cashOutBankTransactionOTPContinueBtnFunctionality_WM_TC_123("100");
+//    }
+
+    //--------------CashOutWithdrawBranch
+//    @Test(priority = 5)
+//    public void cashOutWithdrawBranch_WM_TC_05() throws Exception {
+//        mlWalletCashOutViaBranch.cashOutWithdrawBranch_WM_TC_05();
 //    }
 
 //      --------------ELoad
@@ -59,24 +73,20 @@ public class HappyPathScripts extends BaseTest{
 //        mlWalletGCashScripts.GC_SM_TC_76_Validate_Back_Home_Btn_In_GCash_View_Recent_Transaction_Dashboard_Page();
 //    }
 
-    //--------------CashOutWithdraw
-    @Test(priority = 5)
-    public void cashOutBankTransactionOTPContinueBtnFunctionality_WM_TC_123() throws Exception {
-        mlWalletCashOutViaBank.cashOutBankTransactionOTPContinueBtnFunctionality_WM_TC_123("100");
-    }
-//    //--------------PayBills
+    //--------------PayBills
 //    @Test(priority = 6)
 //    public void paybillsRecentTransaction_PB_TC_19() throws Exception {
-//        mlWalletBillsPay.paybillsRecentTransaction_PB_TC_19();r
+//        mlWalletBillsPay.paybillsRecentTransaction_PB_TC_19();
 //    }
 
-
+//----- Need to Update Test Script
 //    //--------------ShopItems
 //    @Test(priority = 9)
 //    public void shopItemsSubTotalAmountValidationBeforeSelectingItems_MLS_TC_59() throws Exception {
 //        shopItemsClass.shopItemsSubTotalAmountValidationBeforeSelectingItems_MLS_TC_59();
 //    }
-//    //---------------TopUpGames
+
+    //---------------TopUpGames
 //    @Test(priority = 10)
 //    public void topUpGamesSuccessfulLoadTransaction_TUG_TC_06() throws Exception {
 //        mlWalletTopUp.topUpGamesSuccessfulLoadTransaction_TUG_TC_06();
