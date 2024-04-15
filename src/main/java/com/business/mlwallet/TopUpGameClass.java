@@ -45,7 +45,7 @@ public class TopUpGameClass extends BaseClass {
     }
 
 
-    public void topUpGamesSuccessfulLoadTransaction_TUG_TC_06() throws Exception {
+    public void topUpGamesSuccessfulTransaction_TUG_TC_06() throws Exception {
         ExtentReporter.HeaderChildNode("TopUp Games successful Load Transaction");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
         verifyElementPresentAndClick(MLWalletHomePage.objEyeIcon, "Eye Icon");

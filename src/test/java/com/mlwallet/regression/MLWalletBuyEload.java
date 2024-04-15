@@ -121,8 +121,8 @@ public class MLWalletBuyEload extends BaseTest{
     }
 
     @Test(priority = 23)
-    public void buyELoadSuccessfulTransactionUIValidation_BE_TC_26() throws Exception {
-        mlWalletBuyELoad.buyELoadSuccessfulTransactionUIValidation_BE_TC_26(prop.getproperty("Fully_Verified"),2);
+    public void buyELoadSuccessfulTransaction_BE_TC_26() throws Exception {
+        mlWalletBuyELoad.buyELoadSuccessfulTransaction_BE_TC_26(prop.getproperty("Fully_Verified"),2);
     }
 
     @Test(priority = 24)

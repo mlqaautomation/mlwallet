@@ -84,8 +84,8 @@ public class MLWalletGCashScripts extends BaseTest{
 
 //    ------------Failed TC_76
     @Test(priority = 18)
-    public void GC_SM_TC_76_Validate_Back_Home_Btn_In_GCash_View_Recent_Transaction_Dashboard_Page() throws Exception {
-        mlWalletGCashScripts.GC_SM_TC_76_Validate_Back_Home_Btn_In_GCash_View_Recent_Transaction_Dashboard_Page();
+    public void GCashSuccessfulTransaction_GC_SM_TC_76() throws Exception {
+        mlWalletGCashScripts.GCashSuccessfulTransaction_GC_SM_TC_76();
     }
 
     @Test(priority = 19)

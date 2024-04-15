@@ -32,20 +32,20 @@ public class HappyPathScripts extends BaseTest{
 
     //--------------CashInViaBranch
     @Test(priority = 1)
-    public void cashInViaBranchBuyerTierUser_CIBR_TC_16() throws Exception {
-        mlWalletCashInViaBranch.cashInViaBranchBuyerTierUser_CIBR_TC_16();
+    public void cashInViaBranchSuccessfulTransaction_CIBR_TC_16() throws Exception {
+        mlWalletCashInViaBranch.cashInViaBranchSuccessfulTransaction_CIBR_TC_16();
     }
 
-    //--------------SendMoneyBranch
+    //--------------KwartaPadalaViaBranch
     @Test(priority = 2)
-    public void sendMoneyToSavedRecipient_STB_TC_02() throws Exception {
-        mlWalletSendMoneyViaBranch.sendMoneyToSavedRecipient_STB_TC_02();
+    public void kwartaPadalaViaBranchSuccessfulTransaction_STB_TC_02() throws Exception {
+        mlWalletSendMoneyViaBranch.kwartaPadalaViaBranchSuccessfulTransaction_STB_TC_02();
     }
 
-    //--------------SendMoneyWalletUser
+    //--------------KwartaPadalaViaWalletUser
     @Test(priority = 3)
-    public void sendMoneyMLWalletToExistingReceiver_STW_TC_02() throws Exception{
-        mlWalletSendMoneyViaWallet.sendMoneyMLWalletToExistingReceiver_STW_TC_02();
+    public void kwartaPadalaViaMLWalletSuccessfulTransaction_STW_TC_02() throws Exception{
+        mlWalletSendMoneyViaWallet.kwartaPadalaViaMLWalletSuccessfulTransaction_STW_TC_02();
     }
 
 //----- Cant Automate Need QR code
@@ -57,26 +57,26 @@ public class HappyPathScripts extends BaseTest{
 
     //--------------CashOutWithdrawBranch
     @Test(priority = 4)
-    public void cashOutWithdrawBranch_WM_TC_05() throws Exception {
-        mlWalletCashOutViaBranch.cashOutWithdrawBranch_WM_TC_05();
+    public void cashOutViaBranchSuccessfulTransaction_WM_TC_05() throws Exception {
+        mlWalletCashOutViaBranch.cashOutViaBranchSuccessfulTransaction_WM_TC_05();
     }
 
 //      --------------ELoad
     @Test(priority = 5)
-    public void buyELoadSuccessfulTransactionUIValidation_BE_TC_26() throws Exception {
-        mlWalletBuyELoad.buyELoadSuccessfulTransactionUIValidation_BE_TC_26(prop.getproperty("Fully_Verified"),2);
+    public void buyELoadSuccessfulTransaction_BE_TC_26() throws Exception {
+        mlWalletBuyELoad.buyELoadSuccessfulTransaction_BE_TC_26(prop.getproperty("Fully_Verified"),2);
     }
 
     //--------------GCash
     @Test(priority = 6)
-    public void GC_SM_TC_76_Validate_Back_Home_Btn_In_GCash_View_Recent_Transaction_Dashboard_Page() throws Exception {
-        mlWalletGCashScripts.GC_SM_TC_76_Validate_Back_Home_Btn_In_GCash_View_Recent_Transaction_Dashboard_Page();
+    public void GCashSuccessfulTransaction_GC_SM_TC_76() throws Exception {
+        mlWalletGCashScripts.GCashSuccessfulTransaction_GC_SM_TC_76();
     }
 
     //--------------PayBills
     @Test(priority = 7)
-    public void paybillsRecentTransaction_PB_TC_19() throws Exception {
-        mlWalletBillsPay.paybillsRecentTransaction_PB_TC_19();
+    public void paybillsSuccessfulTransaction_PB_TC_19() throws Exception {
+        mlWalletBillsPay.paybillsSuccessfulTransaction_PB_TC_19();
     }
 
 //----- Need to Update Test Script
@@ -88,9 +88,10 @@ public class HappyPathScripts extends BaseTest{
 
     //---------------TopUpGames
     @Test(priority = 8)
-    public void topUpGamesSuccessfulLoadTransaction_TUG_TC_06() throws Exception {
-        mlWalletTopUp.topUpGamesSuccessfulLoadTransaction_TUG_TC_06();
+    public void topUpGamesSuccessfulTransaction_TUG_TC_06() throws Exception {
+        mlWalletTopUp.topUpGamesSuccessfulTransaction_TUG_TC_06();
     }
+
 
     @AfterMethod
     public void afterMethod(){

@@ -410,7 +410,7 @@ public class BillsPayClass extends BaseClass{
         }
     }
 
-    public void paybillsRecentTransaction_PB_TC_19() throws Exception {
+    public void paybillsSuccessfulTransaction_PB_TC_19() throws Exception {
         ExtentReporter.HeaderChildNode("Pay Bills Recent Transaction validation");
         mlWalletLogin(prop.getproperty("Fully_verified"));
         payBillsNavigation();

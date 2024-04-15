@@ -17,8 +17,8 @@ public class MLWalletTopUpGames extends BaseTest{
     }
 
     @Test(priority = 3)
-    public void topUpGamesSuccessfulLoadTransaction_TUG_TC_06() throws Exception {
-        mlWalletTopUp.topUpGamesSuccessfulLoadTransaction_TUG_TC_06();
+    public void topUpGamesSuccessfulTransaction_TUG_TC_06() throws Exception {
+        mlWalletTopUp.topUpGamesSuccessfulTransaction_TUG_TC_06();
     }
 
     @Test(priority = 4)

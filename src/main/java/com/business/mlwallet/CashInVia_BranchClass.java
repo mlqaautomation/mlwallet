@@ -268,7 +268,7 @@ public class CashInVia_BranchClass extends BaseClass{
     }
 
 
-    public void cashInViaBranchBuyerTierUser_CIBR_TC_16() throws Exception {
+    public void cashInViaBranchSuccessfulTransaction_CIBR_TC_16() throws Exception {
         ExtentReporter.HeaderChildNode("Cash In Via Branch Buyer Tier User");
         cashInViaBranchNavigation(prop.getproperty("Fully_Verified"));
         cancelPreviousTransactionAndContinue();

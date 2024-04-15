@@ -461,7 +461,7 @@ public class BuyEloadClass extends BaseClass{
         }
     }
 
-    public void buyELoadSuccessfulTransactionUIValidation_BE_TC_26(String sTier, int promotab) throws Exception {
+    public void buyELoadSuccessfulTransaction_BE_TC_26(String sTier, int promotab) throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad Successful Transaction UI Validation");
         eLoad_generic(sTier, prop.getproperty("Smart"), "true", promotab);
         enableLocation_PopUp();
@@ -492,7 +492,7 @@ public class BuyEloadClass extends BaseClass{
 
     public void buyELoadRecentTransactionUIValidation_BE_TC_27() throws Exception {
         ExtentReporter.HeaderChildNode("Buy ELoad Recent Transaction UI Validation");
-        buyELoadSuccessfulTransactionUIValidation_BE_TC_26(prop.getproperty("Fully_Verified"), 2);
+        buyELoadSuccessfulTransaction_BE_TC_26(prop.getproperty("Fully_Verified"), 2);
         verifyElementPresentAndClick(MLWalletEloadPage.objBackToHomeBtn, getTextVal(MLWalletEloadPage.objBackToHomeBtn, "Button"));
         Swipe("DOWN", 2);
         if (verifyElementPresent(MLWalletHomePage.objRecentTransactions, getTextVal(MLWalletHomePage.objRecentTransactions, "Header"))) {

@@ -8,9 +8,9 @@ import org.testng.annotations.Test;
 public class MLWalletCashOutViaBranch extends BaseTest{
 
     @Test(priority = 1)
-    public void cashOutWithdrawBranch_WM_TC_05() throws Exception
+    public void cashOutViaBranchSuccessfulTransaction_WM_TC_05() throws Exception
     {
-        mlWalletCashOutViaBranch.cashOutWithdrawBranch_WM_TC_05();
+        mlWalletCashOutViaBranch.cashOutViaBranchSuccessfulTransaction_WM_TC_05();
     }
 
     @Test(priority = 2)

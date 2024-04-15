@@ -89,8 +89,8 @@ public class MLWalletCashInViaBranch extends BaseTest{
     }
 
     @Test(priority = 16)
-     public void cashInViaBranchBuyerTierUser_CIBR_TC_16() throws Exception {
-     mlWalletCashInViaBranch.cashInViaBranchBuyerTierUser_CIBR_TC_16();
+     public void cashInViaBranchSuccessfulTransaction_CIBR_TC_16() throws Exception {
+     mlWalletCashInViaBranch.cashInViaBranchSuccessfulTransaction_CIBR_TC_16();
 }
 
 

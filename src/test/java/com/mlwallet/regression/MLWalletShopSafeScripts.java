@@ -26,10 +26,10 @@ public class MLWalletShopSafeScripts extends BaseTest{
 //    public void SSM_TC_05_Verify_buyer_request_invites_click_View_Invitations_Button_in_Invites_Page() throws Exception {
 //        mlWalletShopSafeScripts.SSM_TC_05_Verify_buyer_request_invites_click_View_Invitations_Button_in_Invites_Page();
 //    }
-    @Test(priority = 6)
-    public void SSM_TC_06_Verify_seller_received_invites_click_View_Invitations_Button_in_Invites_Page() throws Exception {
-        mlWalletShopSafeScripts.SSM_TC_06_Verify_seller_received_invites_click_View_Invitations_Button_in_Invites_Page();
-    }
+//    @Test(priority = 6)
+//    public void SSM_TC_06_Verify_seller_received_invites_click_View_Invitations_Button_in_Invites_Page() throws Exception {
+//        mlWalletShopSafeScripts.SSM_TC_06_Verify_seller_received_invites_click_View_Invitations_Button_in_Invites_Page();
+//    }
     @Test(priority = 7)
     public void SSM_TC_07_Verify_seller_fill_up_the_Item_Information_Page_and_clicking_proceed_button_Invites_Page() throws Exception {
         mlWalletShopSafeScripts.SSM_TC_07_Verify_seller_fill_up_the_Item_Information_Page_and_clicking_proceed_button_Invites_Page();

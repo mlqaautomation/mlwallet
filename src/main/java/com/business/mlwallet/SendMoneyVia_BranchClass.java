@@ -169,7 +169,7 @@ public SendMoneyVia_BranchClass(){
         }
     }
 
-    public void sendMoneyToSavedRecipient_STB_TC_02() throws Exception {
+    public void kwartaPadalaViaBranchSuccessfulTransaction_STB_TC_02() throws Exception {
         ExtentReporter.HeaderChildNode("Send Money to any ML Branch");
         sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
         selectSavedRecipient();

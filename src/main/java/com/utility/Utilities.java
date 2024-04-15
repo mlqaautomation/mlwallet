@@ -1604,6 +1604,29 @@ public class Utilities extends ExtentReporter {
             // Handle any exceptions
         }
     }
+
+    public static void zoomOut() {
+        TouchAction touchAction = new TouchAction(getDriver());
+
+        try {
+            // Get the size of the mobile device screen
+            Dimension size = getDriver().manage().window().getSize();
+            int startX1 = size.width / 2;
+            int startY1 = size.height / 2;
+            int endX1 = startX1 - 200; // Adjust the value to control the zoom level
+            int endY1 = startY1 - 200; // Adjust the value to control the zoom level
+
+            // Perform the zoom-out gesture
+            touchAction.press(PointOption.point(startX1, startY1))
+                    .moveTo(PointOption.point(endX1, endY1))
+                    .release()
+                    .perform();
+
+            System.out.println("Performed zoom-out gesture");
+        } catch (Exception e) {
+            // Handle any exceptions
+        }
+    }
 //====================================================================================================================================
     /** ::::::::::::::::Web Utilities:::::::::::: */
 

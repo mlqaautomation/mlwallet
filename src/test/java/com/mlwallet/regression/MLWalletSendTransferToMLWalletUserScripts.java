@@ -17,9 +17,9 @@ public class MLWalletSendTransferToMLWalletUserScripts extends BaseTest{
     }
 
     @Test(priority = 3)
-    public void sendMoneyMLWalletToExistingReceiver_STW_TC_02() throws Exception
+    public void kwartaPadalaViaMLWalletSuccessfulTransaction_STW_TC_02() throws Exception
     {
-        mlWalletSendMoneyViaWallet.sendMoneyMLWalletToExistingReceiver_STW_TC_02();
+        mlWalletSendMoneyViaWallet.kwartaPadalaViaMLWalletSuccessfulTransaction_STW_TC_02();
 
     }
 

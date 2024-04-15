@@ -97,7 +97,8 @@ public class ShopSafeClass extends BaseClass {
         waitTime(1000);
         click(MLWalletShopSafePage.objShopSafeIconBtn, "Shop Safe Icon Button");
         click(MLWalletShopSafePage.objInvitesTransactTxtBtn,"View all Invites Text Button");
-        if(verifyElementPresentAndClick(MLWalletShopSafePage.objFirstInTab,"New Invitation in Invites list")){
+        if(verifyElementPresent(MLWalletShopSafePage.objFirstInTab,"New Invitation in Invites list")){
+            click(MLWalletShopSafePage.objFirstInTab,"New Invitation in Invites list");
             Swipe("UP", 1);
             verifyElementPresent(MLWalletShopSafePage.objPicOfItemBtn,"Picture Of Item Button");
             verifyElementPresent(MLWalletShopSafePage.objItemNameTxtBx,"Item Name textbox");
@@ -108,6 +109,7 @@ public class ShopSafeClass extends BaseClass {
             verifyElementPresent(MLWalletShopSafePage.objItemQuantityTxtbx,"Item Quantity Textbx");
             verifyElementPresent(MLWalletShopSafePage.objCategoryDropDownlist,"Category DropDownlist");
             verifyElementPresent(MLWalletShopSafePage.objItemPriceTxtbx,"Item Price Textbox");
+            Swipe("UP", 1);
             verifyElementPresent(MLWalletShopSafePage.objWeightRangeDropDownList,"Weight Range DropDownList");
             verifyElementPresent(MLWalletShopSafePage.objNearestDropOffGMap,"Nearest Drop Off GMap");
             Swipe("UP", 1);
@@ -119,6 +121,7 @@ public class ShopSafeClass extends BaseClass {
     }
 
     public void Camera()throws Exception{
+        Swipe("UP", 1);
         click(MLWalletShopSafePage.objPicOfItemBtn,"Picture Of Item Button");
         click(MLWalletShopSafePage.objCameraBtn,"Camera Button");
         if(verifyElementDisplayed(MLWalletShopSafePage.objAllowCameraWhileUsingAppBtn)){
@@ -131,8 +134,9 @@ public class ShopSafeClass extends BaseClass {
     public void DropOff() throws Exception{
         click(MLWalletShopSafePage.objNearestDropOffGMap,"Nearest Drop Off GMap");
         click(MLWalletShopSafePage.objAllowWhileUsingAppBtn,"Allow G Map");
-        PartialZoomOutInConsumptionScreen(1);
-        click(MLWalletShopSafePage.objSelectNearest,"Select Near");
+        if(verifyElementPresentAndClick(MLWalletShopSafePage.objSelectNearest,"Select Near")){
+            click(MLWalletShopSafePage.objSelectNearest, "Select Near");
+        }
         click(MLWalletShopSafePage.objConfirmBranchBtn,"Confirm Branch Button");
     }
     public void VerifyConfirmationPage() throws Exception{
@@ -158,7 +162,9 @@ public class ShopSafeClass extends BaseClass {
         verifyElementPresent(MLWalletShopSafePage.objBacksBtn,"Back Button");
     }
     public void FillItemInformation() throws Exception{
+        Swipe("UP", 1);
         type(MLWalletShopSafePage.objItemNameTxtBx, shopsafeprop.getproperty("ValidItemName"), "Type Item Name");
+        Swipe("UP", 1);
         type(MLWalletShopSafePage.objItemDescriptTxtBx, shopsafeprop.getproperty("ValidItemDescript"), "Type Item Description");
         type(MLWalletShopSafePage.objBrandTxtBx, shopsafeprop.getproperty("ValidBrand"), "Type Brand");
         type(MLWalletShopSafePage.objModelNoTxtbox, shopsafeprop.getproperty("ValidModelNo"), "Type Model No");
@@ -166,23 +172,27 @@ public class ShopSafeClass extends BaseClass {
         click(MLWalletShopSafePage.objCategoryDropDownlist,"Category DropDownlist");
         click(MLWalletShopSafePage.objClothesTxtBtn,"Select Clothes");
         type(MLWalletShopSafePage.objItemPriceTxtbx, shopsafeprop.getproperty("ValidItemPrice"), "Type Item Price");
+        Swipe("UP", 1);
         click(MLWalletShopSafePage.objWeightRangeDropDownList,"Weight Range DropDownList");
         click(MLWalletShopSafePage.obj0kgTxtBtn, "Select 0 to 3 kg");
     }
     public void SSM_TC_07_Verify_seller_fill_up_the_Item_Information_Page_and_clicking_proceed_button_Invites_Page () throws Exception {
         ExtentReporter.HeaderChildNode("To verify seller received invites click View Invitations Button in Invites Page");
-        mlWalletLogin(prop.getproperty("Branch_Verified"));
+        mlWalletLogin(prop.getproperty("Fully_Verified"));
         waitTime(1000);
         click(MLWalletShopSafePage.objShopSafeIconBtn, "Shop Safe Icon Button");
         click(MLWalletShopSafePage.objInvitesTransactTxtBtn,"View all Invites Text Button");
-        click(MLWalletShopSafePage.objFirstInTab,"New Invitation in Invites list");
-        Camera();
-        Camera();
-        FillItemInformation();
-        DropOff();
-        click(MLWalletShopSafePage.objProceedsBtn,"Proceeds Button");
-        VerifyConfirmationPage();
-
+        waitTime(1000);
+        if(verifyElementPresent(MLWalletShopSafePage.objFirstInTab,"New Invitation in Invites list")) {
+            click(MLWalletShopSafePage.objFirstInTab, "New Invitation in Invites list");
+            Camera();
+            Swipe("UP", 1);
+            Camera();
+            FillItemInformation();
+            DropOff();
+            click(MLWalletShopSafePage.objProceedsBtn, "Proceeds Button");
+            VerifyConfirmationPage();
+        }
         logger.info("View new invitations in Invites Page Success");
         ExtentReporter.extentLoggerPass("SSM_TC_05", "To verify seller received invites click View Invitations Button in Invites Page");
     }
@@ -214,6 +224,26 @@ public class ShopSafeClass extends BaseClass {
         click(MLWalletShopSafePage.objInvitesTransactTxtBtn,"View all Invites Text Button");
         click(MLWalletShopSafePage.objFirstInTab,"New Invitation in Invites list");
         Camera();
+        Swipe("UP", 1);
+        Camera();
+        FillItemInformation();
+        DropOff();
+        click(MLWalletShopSafePage.objProceedsBtn,"Proceeds Button");
+        click(MLWalletShopSafePage.objConfirmInvitationBtn,"Confirm Invitation");
+        VerifyTransactionPage();
+
+        logger.info("View new invitations in Invites Page Success");
+        ExtentReporter.extentLoggerPass("SSM_TC_05", "To verify seller received invites click View Invitations Button in Invites Page");
+    }
+    public void SSM_TC_09_Verify_seller_fill_up_the_Item_Information_Page_and_clicking_proceed_button_Invites_Page () throws Exception {
+        ExtentReporter.HeaderChildNode("To verify seller received invites click View Invitations Button in Invites Page");
+        mlWalletLogin(prop.getproperty("Branch_Verified"));
+        waitTime(1000);
+        click(MLWalletShopSafePage.objShopSafeIconBtn, "Shop Safe Icon Button");
+        click(MLWalletShopSafePage.objInvitesTransactTxtBtn,"View all Invites Text Button");
+        click(MLWalletShopSafePage.objFirstInTab,"New Invitation in Invites list");
+        Camera();
+        Swipe("UP", 1);
         Camera();
         FillItemInformation();
         DropOff();
@@ -225,6 +255,25 @@ public class ShopSafeClass extends BaseClass {
         ExtentReporter.extentLoggerPass("SSM_TC_05", "To verify seller received invites click View Invitations Button in Invites Page");
     }
 
+    public void SSM_TC_10_Verify_seller_fill_up_the_Item_Information_Page_and_clicking_proceed_button_Invites_Page () throws Exception {
+        ExtentReporter.HeaderChildNode("To verify seller received invites click View Invitations Button in Invites Page");
+        mlWalletLogin(prop.getproperty("Branch_Verified"));
+        waitTime(1000);
+        click(MLWalletShopSafePage.objShopSafeIconBtn, "Shop Safe Icon Button");
+        click(MLWalletShopSafePage.objInvitesTransactTxtBtn,"View all Invites Text Button");
+        click(MLWalletShopSafePage.objFirstInTab,"New Invitation in Invites list");
+        Camera();
+        Swipe("UP", 1);
+        Camera();
+        FillItemInformation();
+        DropOff();
+        click(MLWalletShopSafePage.objProceedsBtn,"Proceeds Button");
+        click(MLWalletShopSafePage.objConfirmInvitationBtn,"Confirm Invitation");
+        VerifyTransactionPage();
+
+        logger.info("View new invitations in Invites Page Success");
+        ExtentReporter.extentLoggerPass("SSM_TC_05", "To verify seller received invites click View Invitations Button in Invites Page");
+    }
 
 
 

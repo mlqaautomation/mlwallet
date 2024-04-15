@@ -75,7 +75,7 @@ public class SendMoneyVia_WalletClass extends BaseClass{
     }
 
 
-    public void sendMoneyMLWalletToExistingReceiver_STW_TC_02() throws Exception {
+    public void kwartaPadalaViaMLWalletSuccessfulTransaction_STW_TC_02() throws Exception {
         ExtentReporter.HeaderChildNode("Send Money ML Wallet To Existing Receiver");
         sendMoneyMLWallet(prop.getproperty("Fully_verified"));
         verifyElementPresent(SendTransferPage.objSelectFavorite, getTextVal(SendTransferPage.objSelectFavorite, "Text"));

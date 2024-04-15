@@ -17,7 +17,7 @@ public class CashOutVia_BranchClass extends BaseClass {
     public CashOutVia_BranchClass(){
         super();
     }
-    public void cashOutWithdrawBranch_WM_TC_05() throws Exception {
+    public void cashOutViaBranchSuccessfulTransaction_WM_TC_05() throws Exception {
         ExtentReporter.HeaderChildNode("Cash Out Withdraw Branch");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
         click(MLWalletCashOutPage.objCashOut, "CashOut / Withdraw Button");

@@ -86,8 +86,8 @@ public class MLWalletRegressionPayBillsScripts extends BaseTest{
     }
 
     @Test(priority = 16)
-    public void paybillsRecentTransaction_PB_TC_19() throws Exception {
-        mlWalletBillsPay.paybillsRecentTransaction_PB_TC_19();
+    public void paybillsSuccessfulTransaction_PB_TC_19() throws Exception {
+        mlWalletBillsPay.paybillsSuccessfulTransaction_PB_TC_19();
     }
 
     @Test(priority = 17)
