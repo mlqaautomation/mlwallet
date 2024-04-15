@@ -21,8 +21,8 @@ public class MLWalletSendTransferToAnyMLBranchScripts extends BaseTest{
     }
 
     @Test(priority = 4)
-    public void sendMoneyToSavedRecipient_STB_TC_02() throws Exception {
-        mlWalletSendMoneyViaBranch.sendMoneyToSavedRecipient_STB_TC_02();
+    public void kwartaPadalaViaBranchSuccessfulTransaction_STB_TC_02() throws Exception {
+        mlWalletSendMoneyViaBranch.kwartaPadalaViaBranchSuccessfulTransaction_STB_TC_02();
     }
 
     @Test(priority = 5)
