@@ -6,8 +6,8 @@
     </listeners>
     <test name="HappyPath">
         <parameter name="portno" value="4723"></parameter>
-        <parameter name="deviceName" value="127.0.0.1:5555"></parameter>
-<!--        <parameter name="deviceName" value="RRCW901MQLF"></parameter>-->
+<!--        <parameter name="deviceName" value="127.0.0.1:5555"></parameter>-->
+        <parameter name="deviceName" value="RRCW901MQLF"></parameter>
         <parameter name="browserType" value="Chrome"></parameter>
         <parameter name="url" value="https://prnt.sc/4vyopNIICFNa"></parameter>
         <parameter name="url1" value="https://prnt.sc/WlO6H7WpxvNY"></parameter>

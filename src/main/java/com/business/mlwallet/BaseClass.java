@@ -97,7 +97,7 @@ public class BaseClass {
         if (verifyElementDisplayed(MLWalletLoginPage.objContinueBtn)) {
             click(MLWalletLoginPage.objContinueBtn, "OTP Continue Button");
         } else if (verifyElementDisplayed(MLWalletLoginPage.objOneTimePin)) {
-            waitTime(3000);
+            waitTime(1000);
             verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
             for (int i = 1; i <= 6; i++) {
                 type(MLWalletLoginPage.objOtpTextField(i), OTP, "OTP Text Field");
