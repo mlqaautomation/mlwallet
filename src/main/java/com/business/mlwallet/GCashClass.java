@@ -357,7 +357,6 @@ public class GCashClass extends BaseClass {
         verifyElementPresentAndClick(MLWalletGcashPage.objBack_to_Home_Page, "Back to Home Page");
         if (verifyElementDisplayed(MLWalletLoginPage.objAvailableBalance)) {
             Swipe("DOWN", 1);
-            verifyElementPresentAndClick(MLWalletHomePage.objEyeIcon,"Eye Icon");
             double newBalance = getWalletBalance();
             double expectedBalance = prevBalance - totalValue;
             assertionValidation(newBalance, expectedBalance);
