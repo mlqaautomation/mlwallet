@@ -97,7 +97,7 @@ public class BaseClass {
         if (verifyElementDisplayed(MLWalletLoginPage.objContinueBtn)) {
             click(MLWalletLoginPage.objContinueBtn, "OTP Continue Button");
         } else if (verifyElementDisplayed(MLWalletLoginPage.objOneTimePin)) {
-            waitTime(1000);
+            waitTime(3000);
             verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
             for (int i = 1; i <= 6; i++) {
                 type(MLWalletLoginPage.objOtpTextField(i), OTP, "OTP Text Field");
@@ -835,7 +835,7 @@ public class BaseClass {
     }
     public double getWalletBalance() throws Exception {
         String balanceText = "";
-        if (verifyElementPresent(MLWalletHomePage.objHiddenAvailableBalance, "Hidden Balance")) {
+        if (verifyElementPresent(MLWalletHomePage.objEyeIcon, "Eye Icon Visible")) {
             click(MLWalletHomePage.objEyeIcon, "Eye Icon");
             waitTime(1000);
             balanceText = getText(MLWalletHomePage.objAvailableBalance);

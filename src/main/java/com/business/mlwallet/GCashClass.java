@@ -355,7 +355,7 @@ public class GCashClass extends BaseClass {
         String numericTotal = total.replaceAll("[^\\d.]", ""); // Remove non-numeric characters    
         double totalValue = parseDouble(numericTotal);
         verifyElementPresentAndClick(MLWalletGcashPage.objBack_to_Home_Page, "Back to Home Page");
-//        if (verifyElementDisplayed(MLWalletLoginPage.objAvailableBalance)) {
+        if (verifyElementDisplayed(MLWalletLoginPage.objAvailableBalance)) {
             Swipe("DOWN", 1);
             verifyElementPresentAndClick(MLWalletHomePage.objEyeIcon,"Eye Icon");
             double newBalance = getWalletBalance();
@@ -374,7 +374,7 @@ public class GCashClass extends BaseClass {
             double amountHistoryValue = parseDouble(historyTotal);
             assertionValidation(totalValue, amountHistoryValue);            
             logger.info("GC_SM_TC_76, Back Home Button In GCash View Recent Transaction Dashboard Page Validated");
-//        }
+        }
         ExtentReporter.extentLoggerPass("GC_SM_TC_76", "To Validate Back Home Button In GCash View Recent Transaction Dashboard Page"); 
     }
 

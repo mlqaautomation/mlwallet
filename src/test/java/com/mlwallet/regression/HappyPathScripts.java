@@ -8,20 +8,20 @@ import com.business.mlwallet.ShopItemsClass;
 import static com.business.mlwallet.MLWalletBusinessLogic.prop;
 
 public class HappyPathScripts extends BaseTest{
-    public static String deviceName;
-    public static String portno;
-    public static ShopItemsClass shopItemsClass;
+//    public static String deviceName;
+//    public static String portno;
+//    public static ShopItemsClass shopItemsClass;
 
     //@BeforeSuite(groups = { "All" })
-    @Parameters({"deviceName","portno"})
-    @BeforeMethod
-    public void before(String deviceName,String portno) throws Exception {
-        AppiumServer.startServer();
-        MLWalletShopItemScripts.deviceName=deviceName;
-        MLWalletShopItemScripts.portno= portno;
-        // shopItemsClass = new shopItemsClass("MLWallet",deviceName,portno);
-        shopItemsClass = new ShopItemsClass("MLWallet",deviceName,portno);
-    }
+//    @Parameters({"deviceName","portno"})
+//    @BeforeMethod
+//    public void before(String deviceName,String portno) throws Exception {
+//        AppiumServer.startServer();
+//        MLWalletShopItemScripts.deviceName=deviceName;
+//        MLWalletShopItemScripts.portno= portno;
+//        // shopItemsClass = new shopItemsClass("MLWallet",deviceName,portno);
+//        shopItemsClass = new ShopItemsClass("MLWallet",deviceName,portno);
+//    }
 
 //----- Cant Automate Need Scan QR code
 //    --------------CashInViaBank
@@ -60,38 +60,37 @@ public class HappyPathScripts extends BaseTest{
     public void cashOutViaBranchSuccessfulTransaction_WM_TC_05() throws Exception {
         mlWalletCashOutViaBranch.cashOutViaBranchSuccessfulTransaction_WM_TC_05();
     }
-
-//      --------------ELoad
+//
+////      --------------ELoad
     @Test(priority = 5)
     public void buyELoadSuccessfulTransaction_BE_TC_26() throws Exception {
         mlWalletBuyELoad.buyELoadSuccessfulTransaction_BE_TC_26(prop.getproperty("Fully_Verified"),2);
     }
-
-    //--------------GCash
+//
+//    //--------------GCash
     @Test(priority = 6)
     public void GCashSuccessfulTransaction_GC_SM_TC_76() throws Exception {
         mlWalletGCashScripts.GCashSuccessfulTransaction_GC_SM_TC_76();
     }
-
-    //--------------PayBills
+//
+//    //--------------PayBills
     @Test(priority = 7)
     public void paybillsSuccessfulTransaction_PB_TC_19() throws Exception {
         mlWalletBillsPay.paybillsSuccessfulTransaction_PB_TC_19();
     }
-
-//----- Need to Update Test Script
-//    //--------------ShopItems
-//    @Test(priority = 9)
-//    public void shopItemsSubTotalAmountValidationBeforeSelectingItems_MLS_TC_59() throws Exception {
-//        shopItemsClass.shopItemsSubTotalAmountValidationBeforeSelectingItems_MLS_TC_59();
-//    }
-
-    //---------------TopUpGames
+//
+////----- Need to Update Test Script
+////    //--------------ShopItems
+////    @Test(priority = 9)
+////    public void shopItemsSubTotalAmountValidationBeforeSelectingItems_MLS_TC_59() throws Exception {
+////        shopItemsClass.shopItemsSubTotalAmountValidationBeforeSelectingItems_MLS_TC_59();
+////    }
+//
+//    //---------------TopUpGames
     @Test(priority = 8)
     public void topUpGamesSuccessfulTransaction_TUG_TC_06() throws Exception {
         mlWalletTopUp.topUpGamesSuccessfulTransaction_TUG_TC_06();
     }
-
 
     @AfterMethod
     public void afterMethod(){
