@@ -36,7 +36,7 @@ public class MLWalletShopSafeScripts extends BaseTest{
     }
     @Test(priority = 8)
     public void SSM_TC_08_Verify_seller_fill_up_the_Item_Information_Page_and_clicking_proceed_button_Invites_Page() throws Exception {
-        mlWalletShopSafeScripts.SSM_TC_08_Verify_seller_fill_up_the_Item_Information_Page_and_clicking_proceed_button_Invites_Page();
+        mlWalletShopSafeScripts.SSM_TC_08_Verify_seller_fill_up_the_Item_Information_Page_and_clicking_proceed_button_Invites_Page ();
     }
 
     @AfterMethod
