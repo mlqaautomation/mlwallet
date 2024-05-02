@@ -1,5 +1,7 @@
 package com.mlwallet.pages;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
 public class MLWalletShopSafePage {
     //--------Home Dashboard
     public static By objShopSafeIconBtn = By.xpath("//*[@text='ShopSafe']");
@@ -210,3 +212,4 @@ public class MLWalletShopSafePage {
     public static By objCancelledOriginBranchVal = By.xpath("(//*[@resource-id='Origin Branch'])[2]");
     public static By objCancelledPicture = By.xpath("(//*[@resource-id='LWPG92']/child::*/child::*/child::*)[1]");
 }
+

@@ -115,7 +115,7 @@ public class SendMoneyVia_WalletClass extends BaseClass{
         ExtentReporter.HeaderChildNode("Send To ML Wallet to Invalid Mobile Number");
         sendMoneyMLWallet(prop.getproperty("Fully_verified"));
         enterMobileNumberMLWallet(prop.getproperty("Invalid_MobileNumber"));
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(SendTransferPage.objMobileNumberErrorMsg, getTextVal(SendTransferPage.objMobileNumberErrorMsg, "Error Message"))) {
             String sFirstNameErrorMsg = getText(SendTransferPage.objMobileNumberErrorMsg);
             String sExpectedMsg = "Mobile number is invalid";
@@ -131,7 +131,7 @@ public class SendMoneyVia_WalletClass extends BaseClass{
         ExtentReporter.HeaderChildNode("Send To ML Wallet to Invalid Mobile Number");
         sendMoneyMLWallet(prop.getproperty("Fully_verified"));
         enterMobileNumberMLWallet(prop.getproperty("Unregistered_MobileNumber"));
-        waitTime(10000);
+        waitTime(1000);
         if (verifyElementPresent(SendTransferPage.objUnRegisteredMobNumber, getTextVal(SendTransferPage.objUnRegisteredMobNumber, "Error Message"))) {
             String sFirstNameErrorMsg = getText(SendTransferPage.objUnRegisteredMobNumber);
             String sExpectedMsg = "Receiver not Found!";
@@ -147,7 +147,7 @@ public class SendMoneyVia_WalletClass extends BaseClass{
         ExtentReporter.HeaderChildNode("Send Money to any ML Branch");
         sendMoneyMLWallet(prop.getproperty("Fully_verified"));
         enterMobileNumberMLWallet(prop.getproperty("Branch_Verified"));
-        waitTime(5000);
+        waitTime(1000);
         type(SendTransferPage.objAmountTxtField, Amount, "Amount Text Field");
         click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
         if (verifyElementPresent(SendTransferPage.objInvalidAmountMsg, getTextVal(SendTransferPage.objInvalidAmountMsg, "Error Message"))) {
@@ -166,7 +166,7 @@ public class SendMoneyVia_WalletClass extends BaseClass{
         sendMoneyMLWallet("9999999997");
         enterMobileNumberMLWallet(prop.getproperty("Branch_Verified"));
         enterAmountAndSendToMLWallet("35000");
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(SendTransferPage.objInsufficientAmountMsg, getTextVal(SendTransferPage.objInsufficientAmountMsg, "Error Message"))) {
             String sInsufficientBalanceErrorMsg = getText(SendTransferPage.objInsufficientAmountMsg);
             String sExpectedErrorMsg = "There is insufficient balance to proceed with this transaction. Please try again.";
@@ -196,7 +196,7 @@ public class SendMoneyVia_WalletClass extends BaseClass{
     public void sendMoneyDeleteFromFavorites_STW_TC_09() throws Exception {
         ExtentReporter.HeaderChildNode("Send Money Delete From Favorites");
         sendMoneyMLWallet(prop.getproperty("Fully_verified"));
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(SendTransferPage.objSendMoney, getTextVal(SendTransferPage.objSendMoney, "Page"));
         click(SendTransferPage.objViewAllBtn, getTextVal(SendTransferPage.objViewAllBtn, "Text"));
         click(SendTransferPage.objEllipsisBtn, "Ellipsis Button");
@@ -216,7 +216,7 @@ public class SendMoneyVia_WalletClass extends BaseClass{
     public void sendMoneyMLWalletUIValidation_STW_TC_10() throws Exception {
         ExtentReporter.HeaderChildNode("Send Money ML Wallet Page UI Validation");
         sendMoneyMLWallet(prop.getproperty("Fully_verified"));
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(SendTransferPage.objSendMoney, getTextVal(SendTransferPage.objSendMoney, "Page"))) {
             verifyElementPresent(SendTransferPage.objViewAllBtn, getTextVal(SendTransferPage.objViewAllBtn, "Button"));
             verifyElementPresent(SendTransferPage.objRecentFavorites, getTextVal(SendTransferPage.objRecentFavorites, "Header"));
@@ -232,7 +232,7 @@ public class SendMoneyVia_WalletClass extends BaseClass{
     public void sendMoneyFavoritesUIValidation_STW_TC_11() throws Exception {
         ExtentReporter.HeaderChildNode("Send Money Saved Favorites UI Validation");
         sendMoneyMLWallet(prop.getproperty("Fully_verified"));
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresentAndClick(SendTransferPage.objViewAllBtn, getTextVal(SendTransferPage.objViewAllBtn, "Button"));
         if (verifyElementPresent(SendTransferPage.ObjFavorites, getTextVal(SendTransferPage.ObjFavorites, "Page"))) {
             verifyElementPresent(SendTransferPage.objSearchFavoriteField, "Search Favorites Field");
@@ -246,7 +246,7 @@ public class SendMoneyVia_WalletClass extends BaseClass{
         ExtentReporter.HeaderChildNode("Send Money ML Wallet Cancel Transaction");
         sendMoneyMLWallet(prop.getproperty("Fully_verified"));
         enterMobileNumberMLWallet(prop.getproperty("Branch_Verified"));
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(SendTransferPage.objToMLWalletUser, getTextVal(SendTransferPage.objToMLWalletUser, "Page"))) {
             type(SendTransferPage.objAmountTxtField, nAmount, "Amount Text Field");
             click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
@@ -254,7 +254,7 @@ public class SendMoneyVia_WalletClass extends BaseClass{
             verifyElementPresent(SendTransferPage.objConfirmDetails, getTextVal(SendTransferPage.objConfirmDetails, "Page"));
             Swipe("UP", 1);
             verifyElementPresentAndClick(SendTransferPage.objCancelTransaction, getTextVal(SendTransferPage.objCancelTransaction, "Button"));
-            waitTime(5000);
+            waitTime(1000);
             if (verifyElementPresent(SendTransferPage.objSendMoney, getTextVal(SendTransferPage.objSendMoney, "Page"))) {
                 logger.info("STW_TC_13, Cancelled the current Transaction");
                 ExtentReporter.extentLoggerPass("STW_TC_13", "STW_TC_13, Cancelled the current Transaction");
@@ -267,7 +267,7 @@ public class SendMoneyVia_WalletClass extends BaseClass{
     public void sendMoneyMLWalletSearchUnFavoriteUser_STW_TC_14() throws Exception {
         ExtentReporter.HeaderChildNode("Send Money ML Wallet Search UnFavorite User");
         sendMoneyMLWallet(prop.getproperty("Fully_verified"));
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresentAndClick(SendTransferPage.objViewAllBtn, getTextVal(SendTransferPage.objViewAllBtn, "Button"));
         verifyElementPresent(SendTransferPage.ObjFavorites, getTextVal(SendTransferPage.ObjFavorites, "Page"));
         type(SendTransferPage.objSearchFavoriteField, "ABCD", "Search Favorite Field");
@@ -282,7 +282,7 @@ public class SendMoneyVia_WalletClass extends BaseClass{
         ExtentReporter.HeaderChildNode("Send Money ML Wallet Search Favorite User");
         sendMoneyAddToFavorites_STW_TC_12();
         sendMoneyMLWallet(prop.getproperty("Fully_verified"));
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresentAndClick(SendTransferPage.objViewAllBtn, getTextVal(SendTransferPage.objViewAllBtn, "Button"));
         verifyElementPresent(SendTransferPage.ObjFavorites, getTextVal(SendTransferPage.ObjFavorites, "Page"));
         type(SendTransferPage.objSearchFavoriteField, prop.getproperty("Last_Name"), "Search Favorite Field");
@@ -326,7 +326,7 @@ public class SendMoneyVia_WalletClass extends BaseClass{
         enterMobileNumberMLWallet(prop.getproperty("Branch_Verified"));
         enterAmountAndSendToMLWallet("10");
         enableLocation_PopUp();
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"))) {
 //			verifyElementPresent(MLWalletLoginPage.objOtpTextField, "OTP text Field");
 //			verifyElementPresent(MLWalletCashOutPage.objResendCode, getTextVal(MLWalletCashOutPage.objResendCode, "Seconds"));
@@ -340,7 +340,7 @@ public class SendMoneyVia_WalletClass extends BaseClass{
         ExtentReporter.HeaderChildNode("Send Money ML Wallet Confirm Details Page UI Validation");
         sendMoneyMLWallet(prop.getproperty("Fully_verified"));
         enterMobileNumberMLWallet(prop.getproperty("Branch_Verified"));
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(SendTransferPage.objToMLWalletUser, getTextVal(SendTransferPage.objToMLWalletUser, "Page"));
         type(SendTransferPage.objAmountTxtField, nAmount, "Amount Text Field");
         click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
@@ -365,7 +365,7 @@ public class SendMoneyVia_WalletClass extends BaseClass{
         ExtentReporter.HeaderChildNode("Send Money To Ml Wallet Enter Amount Page UI Validation");
         sendMoneyMLWallet(prop.getproperty("Fully_verified"));
         enterMobileNumberMLWallet(prop.getproperty("Branch_Verified"));
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(SendTransferPage.objToMLWalletUser, getTextVal(SendTransferPage.objToMLWalletUser, "Page"))) {
             verifyElementPresent(SendTransferPage.objAmountToSend, getTextVal(SendTransferPage.objAmountToSend, "Header"));
             verifyElementPresent(SendTransferPage.objAmountTxtField, "Amount Text Field");
@@ -379,7 +379,7 @@ public class SendMoneyVia_WalletClass extends BaseClass{
     public void sendMoneyToMLWalletPageUIValidation_STW_TC_20() throws Exception {
         ExtentReporter.HeaderChildNode("Send Money To ML Wallet Page UI Validation");
         sendMoneyMLWallet(prop.getproperty("Fully_verified"));
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(SendTransferPage.objSendMoney, getTextVal(SendTransferPage.objSendMoney, "Page"))) {
             verifyElementPresent(SendTransferPage.objRecentFavorites, getTextVal(SendTransferPage.objRecentFavorites, "Header"));
             verifyElementPresent(SendTransferPage.objViewAllBtn, getTextVal(SendTransferPage.objViewAllBtn, "Button"));
@@ -773,7 +773,7 @@ public class SendMoneyVia_WalletClass extends BaseClass{
         enterMobileNumberMLWallet(prop.getproperty("Branch_Verified"));
         enterAmountAndSendToMLWallet("10");
         enableLocation_PopUp();
-        waitTime(15000);
+        waitTime(1000);
         setWifiConnectionToONOFF("OFF");
         enterOTP(prop.getproperty("Valid_OTP"));
         if (verifyElementPresent(MLWalletHomePage.objInternetConnectionPopUp, getTextVal(MLWalletHomePage.objInternetConnectionPopUp, "PopUp"))) {
@@ -858,7 +858,7 @@ public class SendMoneyVia_WalletClass extends BaseClass{
         enterMobileNumberMLWallet(prop.getproperty("Branch_Verified"));
         enterAmountAndSendToMLWallet("10");
         enableLocation_PopUp();
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"))) {
             verifyElementPresent(MLWalletLoginPage.objOTP, getTextVal(MLWalletLoginPage.objOTP, "One Time Pin"));
             logger.info("STW_TC_63, Send Money To ML Wallet, InApp OTP popup validated");
@@ -873,7 +873,7 @@ public class SendMoneyVia_WalletClass extends BaseClass{
         enterMobileNumberMLWallet(prop.getproperty("Branch_Verified"));
         enterAmountAndSendToMLWallet("10");
         enableLocation_PopUp();
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"))) {
             verifyElementPresent(MLWalletLoginPage.objOTP, getTextVal(MLWalletLoginPage.objOTP, "One Time Pin"));
             verifyElementPresent(MLWalletLoginPage.objSeconds, getTextVal(MLWalletLoginPage.objSeconds, "Seconds"));
@@ -892,7 +892,7 @@ public class SendMoneyVia_WalletClass extends BaseClass{
         enterMobileNumberMLWallet(prop.getproperty("Branch_Verified"));
         enterAmountAndSendToMLWallet("10");
         enableLocation_PopUp();
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
         if (verifyElementPresent(MLWalletLoginPage.objOTP, getTextVal(MLWalletLoginPage.objOTP, "One Time Pin"))) {
             String sGeneratedOTP = getText(MLWalletLoginPage.objOTP);
@@ -911,7 +911,7 @@ public class SendMoneyVia_WalletClass extends BaseClass{
         enterMobileNumberMLWallet(prop.getproperty("Branch_Verified"));
         enterAmountAndSendToMLWallet("10");
         enableLocation_PopUp();
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
         verifyElementPresentAndClick(MLWalletLoginPage.objCancelBtn, getTextVal(MLWalletLoginPage.objCancelBtn, "Button"));
         if (verifyElementPresent(SendTransferPage.objConfirmDetails, getTextVal(SendTransferPage.objConfirmDetails, "Page"))) {
@@ -928,7 +928,7 @@ public class SendMoneyVia_WalletClass extends BaseClass{
         enterMobileNumberMLWallet(prop.getproperty("Branch_Verified"));
         enterAmountAndSendToMLWallet("10");
         enableLocation_PopUp();
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
         verifyElementPresentAndClick(MLWalletLoginPage.objContinueBtn, getTextVal(MLWalletLoginPage.objContinueBtn, "Button"));
         if (verifyElementPresent(SendTransferPage.objSendMoneyMLWallet, getTextVal(SendTransferPage.objSendMoneyMLWallet, "Message"))) {

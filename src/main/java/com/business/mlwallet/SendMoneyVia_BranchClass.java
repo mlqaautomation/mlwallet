@@ -56,7 +56,7 @@ public SendMoneyVia_BranchClass(){
     public void sendMoneyRequiredDetails_STB_TC_08() throws Exception {
         ExtentReporter.HeaderChildNode("Send Money Invalid Bank Details");
         sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "Page"));
         click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
         if (verifyElementPresent(SendTransferPage.objFirstNameRequiredMsg, getTextVal(SendTransferPage.objFirstNameRequiredMsg, "Error Message"))) {
@@ -73,7 +73,7 @@ public SendMoneyVia_BranchClass(){
             String sExpectedMsg = "Middle name is required";
             assertionValidation(sMiddleNameRequiredMsg, sExpectedMsg);
         }
-        waitTime(3000);
+        waitTime(1000);
         type(SendTransferPage.objMiddleName, prop.getproperty("Middle_Name"), "Middle Name Text Field");
         click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
         if (verifyElementPresent(SendTransferPage.objLastNameRequiredMsg, getTextVal(SendTransferPage.objLastNameRequiredMsg, "Error Message"))) {
@@ -81,7 +81,7 @@ public SendMoneyVia_BranchClass(){
             String sExpectedMsg = "Last name is required";
             assertionValidation(sLastNameRequiredMsg, sExpectedMsg);
         }
-        waitTime(3000);
+        waitTime(1000);
         type(SendTransferPage.objLastName, prop.getproperty("Last_Name"), "Last Name Text Field");
         type(SendTransferPage.objLastName, prop.getproperty("Last_Name"), "Last Name Text Field");
         click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
@@ -92,7 +92,7 @@ public SendMoneyVia_BranchClass(){
         }
         type(SendTransferPage.objMobileNumber, prop.getproperty("Branch_Verified"), "Last Name Text Field");
         click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "page"))) {
             logger.info("STB_TC_08, Prompt msg for Receiver's Details required is validated");
             ExtentReporter.extentLoggerPass("STB_TC_08", "STB_TC_08, Prompt msg for Receiver's Details required is validated");
@@ -103,7 +103,7 @@ public SendMoneyVia_BranchClass(){
     public void sendMoneyInvalidDetails_STB_TC_07() throws Exception {
         ExtentReporter.HeaderChildNode("Send Money Invalid Bank Details");
         sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "Page"));
         type(SendTransferPage.objFirstname, prop.getproperty("Invalid_First_Name"), "First Name Text Field");
         click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
@@ -145,7 +145,7 @@ public SendMoneyVia_BranchClass(){
         clearField(SendTransferPage.objMobileNumber, "Mobile Number Text Field");
         type(SendTransferPage.objMobileNumber, prop.getproperty("Branch_Verified"), "Mobile Number Text Field");
         click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "page"))) {
             logger.info("STB_TC_07, Prompt msg for Receiver's Details Invalid is validated");
             ExtentReporter.extentLoggerPass("STB_TC_07", "STB_TC_07, Prompt msg for Receiver's Details Invalid is validated");
@@ -157,10 +157,10 @@ public SendMoneyVia_BranchClass(){
     public void sendMoneyAddRecipient_STB_TC_03() throws Exception {
         ExtentReporter.HeaderChildNode("Send Money to any ML Branch");
         sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "Page"));
         addRecipient();
-        waitTime(4000);
+        waitTime(1000);
         type(SendTransferPage.objSearchRecipient, prop.getproperty("Last_Name"), "Search Recipient Text Field");
         if (verifyElementPresent(SendTransferPage.objSelectLastName(prop.getproperty("Last_Name"), prop.getproperty("First_Name")), getTextVal(SendTransferPage.objSelectLastName(prop.getproperty("Last_Name"), prop.getproperty("First_Name")), "Recipient"))) {
             logger.info("STB_TC_03, The Added Recipient is displayed in Saved Recipient Page");
@@ -210,7 +210,7 @@ public SendMoneyVia_BranchClass(){
     public void sendMoneyContactDuplicate_STB_TC_04() throws Exception {
         ExtentReporter.HeaderChildNode("Send Money Contact Duplicate");
         sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "Page"));
         addRecipient();
         if (verifyElementPresent(SendTransferPage.objContactAlreadyExistMsg, getTextVal(SendTransferPage.objContactAlreadyExistMsg, "Error Message"))) {
@@ -230,7 +230,7 @@ public SendMoneyVia_BranchClass(){
         sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
         selectSavedRecipient();
         click(SendTransferPage.objEditRecipient, getTextVal(SendTransferPage.objEditRecipient, "Button"));
-        waitTime(4000);
+        waitTime(1000);
         type(SendTransferPage.objEditRecipientLastName, prop.getproperty("Edited_Last_name"), "Last Name Text Field");
         click(SendTransferPage.ObjSaveRecipient, getTextVal(SendTransferPage.ObjSaveRecipient, "Button"));
         type(SendTransferPage.objSearchRecipient, prop.getproperty("Edited_Last_name"), "Search Recipient Text Field");
@@ -267,7 +267,7 @@ public SendMoneyVia_BranchClass(){
         ExtentReporter.HeaderChildNode("Send Money to any ML Branch");
         sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
         enterMLBranchDetails();
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "Page"));
         type(SendTransferPage.objAmountTxtField, Amount, "Amount text Field");
         click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
@@ -332,7 +332,7 @@ public SendMoneyVia_BranchClass(){
     public void sendMoneyToBranchUIValidation_STB_TC_14() throws Exception {
         ExtentReporter.HeaderChildNode("Send Money to ML Branch page UI Validation");
         sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "Page"))) {
             verifyElementPresent(SendTransferPage.objSavedRecipients, getTextVal(SendTransferPage.objSavedRecipients, "Button"));
             verifyElementPresent(SendTransferPage.objFirstname, "First Name Input Field");
@@ -350,9 +350,9 @@ public SendMoneyVia_BranchClass(){
     public void sendMoneyToBranchSaveRecipientPageUIValidation_STB_TC_15() throws Exception {
         ExtentReporter.HeaderChildNode("Send Money To Branch Save Recipient Page UI Validation");
         sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresentAndClick(SendTransferPage.objSavedRecipients, getTextVal(SendTransferPage.objSavedRecipients, "Button"));
-        waitTime(3000);
+        waitTime(1000);
         if (verifyElementPresent(SendTransferPage.objSavedRecipients, getTextVal(SendTransferPage.objSavedRecipients, "Page"))) {
             verifyElementPresent(SendTransferPage.objAddRecipient, getTextVal(SendTransferPage.objAddRecipient, "Button"));
             verifyElementPresent(SendTransferPage.objSelectRecipient, getTextVal(SendTransferPage.objSelectRecipient, "Header"));
@@ -405,7 +405,7 @@ public SendMoneyVia_BranchClass(){
         ExtentReporter.HeaderChildNode("Send Money To Branch Confirm Details Page UI Validation");
         sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
         enterMLBranchDetails();
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "Page"));
         type(SendTransferPage.objAmountTxtField, nAmount, "Amount text Field");
         click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
@@ -431,11 +431,11 @@ public SendMoneyVia_BranchClass(){
         ExtentReporter.HeaderChildNode("Send Money To Branch Select Payment Method Page UI Validation");
         sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
         enterMLBranchDetails();
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "Page"));
         type(SendTransferPage.objAmountTxtField, nAmount, "Amount text Field");
         click(SendTransferPage.objNextBtn, getTextVal(SendTransferPage.objNextBtn, "Button"));
-        waitTime(3000);
+        waitTime(1000);
         if (verifyElementPresent(SendTransferPage.objSelectPaymentMethod, getTextVal(SendTransferPage.objSelectPaymentMethod, "Page"))) {
             verifyElementPresent(SendTransferPage.objMLWalletBalance, getTextVal(SendTransferPage.objMLWalletBalance, "Button"));
             verifyElementPresent(SendTransferPage.objAvailableBalance, getTextVal(SendTransferPage.objAvailableBalance, "Available PHP"));
@@ -449,7 +449,7 @@ public SendMoneyVia_BranchClass(){
         ExtentReporter.HeaderChildNode("Send Money To Branch Enter Amount Page UI Validation");
         sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
         enterMLBranchDetails();
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(SendTransferPage.objKwartaPadala, getTextVal(SendTransferPage.objKwartaPadala, "Page"))) {
             verifyElementPresent(SendTransferPage.objAmountToSend, getTextVal(SendTransferPage.objAmountToSend, "Header"));
             verifyElementPresent(SendTransferPage.objAmountTxtField, "Amount Input Field");
@@ -484,7 +484,7 @@ public SendMoneyVia_BranchClass(){
         if (verifyElementPresent(SendTransferPage.objSavedRecipients, getTextVal(SendTransferPage.objSavedRecipients, "Button"))) {
             click(SendTransferPage.objSavedRecipients, getTextVal(SendTransferPage.objSavedRecipients, "Button"));
             click(SendTransferPage.objAddRecipient, getTextVal(SendTransferPage.objAddRecipient, "Button"));
-            waitTime(5000);
+            waitTime(1000);
             if (verifyElementPresent(SendTransferPage.objAddRecipient, getTextVal(SendTransferPage.objAddRecipient, "Page"))) {
                 verifyElementPresent(SendTransferPage.objFirstname, "First Name Text Field");
                 verifyElementPresent(SendTransferPage.objMiddleName, "Middle Name Text Field");
@@ -897,7 +897,7 @@ public SendMoneyVia_BranchClass(){
         enterMLBranchDetails();
         enterAmountToKwartaPadala("100");
         enableLocation_PopUp();
-        waitTime(15000);
+        waitTime(1000);
         setWifiConnectionToONOFF("OFF");
         enterOTP(prop.getproperty("Valid_OTP"));
         if (verifyElementPresent(MLWalletHomePage.objInternetConnectionPopUp, getTextVal(MLWalletHomePage.objInternetConnectionPopUp, "PopUp"))) {
@@ -963,7 +963,7 @@ public SendMoneyVia_BranchClass(){
         sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
         enterMLBranchDetails();
         enterAmountToKwartaPadala("100");
-        waitTime(3000);
+        waitTime(1000);
         enableLocation_PopUp();
         handleMpin("1234");
         if (verifyElementPresent(SendTransferPage.objInvalidPINMsg, getTextVal(SendTransferPage.objInvalidPINMsg, "Message"))) {
@@ -983,7 +983,7 @@ public SendMoneyVia_BranchClass(){
         enterMLBranchDetails();
         enterAmountToKwartaPadala("100");
         enableLocation_PopUp();
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"))) {
             verifyElementPresent(MLWalletLoginPage.objOTP, getTextVal(MLWalletLoginPage.objOTP, "One Time Pin"));
             logger.info("STB_TC_71, Send Money To ML Branch, InApp OTP popup validated");
@@ -998,7 +998,7 @@ public SendMoneyVia_BranchClass(){
         enterMLBranchDetails();
         enterAmountToKwartaPadala("100");
         enableLocation_PopUp();
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"))) {
             verifyElementPresent(MLWalletLoginPage.objOTP, getTextVal(MLWalletLoginPage.objOTP, "One Time Pin"));
             verifyElementPresent(MLWalletLoginPage.objSeconds, getTextVal(MLWalletLoginPage.objSeconds, "Seconds"));
@@ -1016,7 +1016,7 @@ public SendMoneyVia_BranchClass(){
         enterMLBranchDetails();
         enterAmountToKwartaPadala("100");
         enableLocation_PopUp();
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
         if (verifyElementPresent(MLWalletLoginPage.objOTP, getTextVal(MLWalletLoginPage.objOTP, "One Time Pin"))) {
             String sGeneratedOTP = getText(MLWalletLoginPage.objOTP);
@@ -1035,7 +1035,7 @@ public SendMoneyVia_BranchClass(){
         enterMLBranchDetails();
         enterAmountToKwartaPadala("100");
         enableLocation_PopUp();
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
         verifyElementPresentAndClick(MLWalletLoginPage.objCancelBtn, getTextVal(MLWalletLoginPage.objCancelBtn, "Button"));
         if (verifyElementPresent(SendTransferPage.objConfirmDetails, getTextVal(SendTransferPage.objConfirmDetails, "Page"))) {
@@ -1052,7 +1052,7 @@ public SendMoneyVia_BranchClass(){
         enterMLBranchDetails();
         enterAmountToKwartaPadala("100");
         enableLocation_PopUp();
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
         verifyElementPresentAndClick(MLWalletLoginPage.objContinueBtn, getTextVal(MLWalletLoginPage.objContinueBtn, "Button"));
         if (verifyElementPresent(SendTransferPage.objSendMoneySuccessful, getTextVal(SendTransferPage.objSendMoneySuccessful, "Message"))) {

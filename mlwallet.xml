@@ -7,20 +7,23 @@
 <!---->
 	  <test name="MLWallet">
 	        <parameter name="portno" value="4725"></parameter>
-	        <parameter name="deviceName" value="RRCW901MQLF"></parameter>
+<!--	        <parameter name="deviceName" value="RRCW901MQLF"></parameter>-->
+		  <parameter name="deviceName" value="127.0.0.1:5555"></parameter>
 	        <parameter name="browserType" value="Chrome"></parameter>
 	        <parameter name="url" value="https://prnt.sc/4vyopNIICFNa"></parameter>
 	        <parameter name="url1" value="https://prnt.sc/WlO6H7WpxvNY"></parameter>
 	        <parameter name="kpxurl" value="https://ml-kpx-qa.df.r.appspot.com/"></parameter>
 	        <classes>
-	            <class name="com.mlwallet.regression.MLWalletCashInViaBankScripts" />
-	            <class name="com.mlwallet.regression.MLWalletCashInViaBranch" />
-	            <class name="com.mlwallet.regression.MLWalletCashOutViaBranch" />
-	            <class name="com.mlwallet.regression.MLWalletCashOutViaBank" />
-	            <class name="com.mlwallet.regression.MLWalletSendTransferToAnyMLBranchScripts" />
-	            <class name="com.mlwallet.regression.MLWalletSendTransferToMLWalletUserScripts" />
-	            <class name="com.mlwallet.regression.MLWalletRegressionPayBillsScripts" />
-	            <class name="com.mlwallet.regression.MLWalletBuyEload"/>
+
+				<class name="com.mlwallet.regression.MLWalletCashInViaBranch" />
+				<class name="com.mlwallet.regression.MLWalletCashOutViaBranch" />
+				<class name="com.mlwallet.regression.MLWalletSendTransferToAnyMLBranchScripts" />
+				<class name="com.mlwallet.regression.MLWalletSendTransferToMLWalletUserScripts" />
+				<class name="com.mlwallet.regression.MLWalletRegressionPayBillsScripts" />
+				<class name="com.mlwallet.regression.MLWalletBuyEload"/>
+				<class name="com.mlwallet.regression.MLWalletGCashScripts"/>
+				<class name="com.mlwallet.regression.MLWalletTopUpGames"/>
+
 	        </classes>
    	 </test>
 </suite>

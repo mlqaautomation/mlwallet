@@ -13,7 +13,7 @@ public class TopUpGameClass extends BaseClass {
     public void topUpGamesHomePageValidation_TUG_TC_01() throws Exception {
         ExtentReporter.HeaderChildNode("TopUp Games Home Page Validation");
         topUpGamesHomePageNavigation(prop.getproperty("Branch_Verified"));
-        waitTime(5000);
+        waitTime(1000);
         for (int i = 2; i < 8; i++) {
             verifyElementPresent(MLWalletTopUpGames.objGames(i), getTextVal(MLWalletTopUpGames.objGames(i), "Games"));
         }
@@ -30,7 +30,7 @@ public class TopUpGameClass extends BaseClass {
         ExtentReporter.HeaderChildNode("TopUp Games Load Selection Screen Navigation");
         topUpGamesHomePageNavigation(prop.getproperty("Branch_Verified"));
         verifyElementPresentAndClick(MLWalletTopUpGames.objValorant, getTextVal(MLWalletTopUpGames.objValorant, "Game"));
-        waitTime(4000);
+        waitTime(1000);
         for (int i = 1; i <= 6; i++) {
             if (i % 2 != 0) {
                 verifyElementPresent(MLWalletTopUpGames.objLoadTypeAndPoints(i), getTextVal(MLWalletTopUpGames.objLoadTypeAndPoints(i), "Load Type"));
@@ -76,7 +76,7 @@ public class TopUpGameClass extends BaseClass {
         ExtentReporter.HeaderChildNode("TopUp Games Load Selection Page Load Types Validation");
         topUpGamesHomePageNavigation(prop.getproperty("Branch_Verified"));
         verifyElementPresentAndClick(MLWalletTopUpGames.objValorant, getTextVal(MLWalletTopUpGames.objValorant, "Game"));
-        waitTime(4000);
+        waitTime(1000);
         for (int i = 1; i <= 6; i++) {
             if (i % 2 != 0) {
                 verifyElementPresent(MLWalletTopUpGames.objLoadTypeAndPoints(i), getTextVal(MLWalletTopUpGames.objLoadTypeAndPoints(i), "Load Type"));
@@ -206,7 +206,7 @@ public class TopUpGameClass extends BaseClass {
         selectGameAndLoadType();
         inputRequiredDataAndContinue();
         verifyElementPresentAndClick(MLWalletTopUpGames.objConfirm, getTextVal(MLWalletTopUpGames.objConfirm, "button"));
-        waitTime(5000);
+        waitTime(1000);
         enableLocation_PopUp();
         enterOTP(prop.getproperty("Valid_OTP"));
         verifyElementPresent(MLWalletTopUpGames.objTransactionDetails, getTextVal(MLWalletTopUpGames.objTransactionDetails, "Page"));
@@ -227,7 +227,7 @@ public class TopUpGameClass extends BaseClass {
         selectGameAndLoadType();
         inputRequiredDataAndContinue();
         verifyElementPresentAndClick(MLWalletTopUpGames.objConfirm, getTextVal(MLWalletTopUpGames.objConfirm, "button"));
-        waitTime(5000);
+        waitTime(1000);
         enableLocation_PopUp();
         enterOTP(prop.getproperty("Valid_OTP"));
         verifyElementPresent(MLWalletTopUpGames.objTransactionDetails, getTextVal(MLWalletTopUpGames.objTransactionDetails, "Page"));
@@ -285,16 +285,16 @@ public class TopUpGameClass extends BaseClass {
         selectGameAndLoadType();
         inputRequiredDataAndContinue();
         verifyElementPresentAndClick(MLWalletTopUpGames.objConfirm, getTextVal(MLWalletTopUpGames.objConfirm, "button"));
-        waitTime(5000);
+        waitTime(1000);
         enableLocation_PopUp();
         enterOTP(prop.getproperty("Valid_OTP"));
         swipeDownUntilElementVisible("Top Up Again");
         verifyElementPresentAndClick(MLWalletTopUpGames.objTopUpAgainBtn, getTextVal(MLWalletTopUpGames.objTopUpAgainBtn, "Button"));
-        waitTime(6000);
+        waitTime(1000);
         selectGameAndLoadType();
         inputRequiredDataAndContinue();
         verifyElementPresentAndClick(MLWalletTopUpGames.objConfirm, getTextVal(MLWalletTopUpGames.objConfirm, "button"));
-        waitTime(5000);
+        waitTime(1000);
         enterOTP(prop.getproperty("Valid_OTP"));
         if (verifyElementPresent(MLWalletTopUpGames.objTransactionDetails, getTextVal(MLWalletTopUpGames.objTransactionDetails, "Page"))) {
             verifyElementPresent(MLWalletTopUpGames.objTransactionCode, getTextVal(MLWalletTopUpGames.objTransactionCode, "Transaction Code"));
@@ -312,7 +312,7 @@ public class TopUpGameClass extends BaseClass {
         selectGameAndLoadType();
         inputRequiredDataAndContinue();
         verifyElementPresentAndClick(MLWalletTopUpGames.objConfirm, getTextVal(MLWalletTopUpGames.objConfirm, "button"));
-        waitTime(5000);
+        waitTime(1000);
         enableLocation_PopUp();
         enterOTP(prop.getproperty("Valid_OTP"));
         swipeDownUntilElementVisible("Back To Home");
@@ -346,7 +346,7 @@ public class TopUpGameClass extends BaseClass {
         selectGameAndLoadType();
         inputRequiredDataAndContinue();
         verifyElementPresentAndClick(MLWalletTopUpGames.objConfirm, getTextVal(MLWalletTopUpGames.objConfirm, "button"));
-        waitTime(5000);
+        waitTime(1000);
         enableLocation_PopUp();
         handleMpin(prop.getproperty("MLPin"));
         if (verifyElementPresent(MLWalletTopUpGames.objTransactionDetails, getTextVal(MLWalletTopUpGames.objTransactionDetails, "Page"))) {
@@ -366,7 +366,7 @@ public class TopUpGameClass extends BaseClass {
         selectGameAndLoadType();
         inputRequiredDataAndContinue();
         verifyElementPresentAndClick(MLWalletTopUpGames.objConfirm, getTextVal(MLWalletTopUpGames.objConfirm, "button"));
-        waitTime(5000);
+        waitTime(1000);
         enableLocation_PopUp();
         handleMpin(prop.getproperty("wrongMpin"));
         if (verifyElementPresent(MLWalletCashInViaBranch.objInvalidPINMsg, getTextVal(MLWalletCashInViaBranch.objInvalidPINMsg, "Message"))) {
@@ -385,7 +385,7 @@ public class TopUpGameClass extends BaseClass {
         selectGameAndLoadType();
         inputRequiredDataAndContinue();
         verifyElementPresentAndClick(MLWalletTopUpGames.objConfirm, getTextVal(MLWalletTopUpGames.objConfirm, "button"));
-        waitTime(5000);
+        waitTime(1000);
         enableLocation_PopUp();
         if (verifyElementPresent(MLWalletTopUpGames.objMLPinEditField, "ML Pin Edit Field")) {
             logger.info("TUG_TC_23, TopUp Games ML Pin Page navigation validated");
@@ -400,7 +400,7 @@ public class TopUpGameClass extends BaseClass {
         selectGameAndLoadType();
         inputRequiredDataAndContinue();
         verifyElementPresentAndClick(MLWalletTopUpGames.objConfirm, getTextVal(MLWalletTopUpGames.objConfirm, "button"));
-        waitTime(5000);
+        waitTime(1000);
         enableLocation_PopUp();
         if (verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Popup"))) {
             verifyElementPresent(MLWalletLoginPage.objOTP, getTextVal(MLWalletLoginPage.objOTP, "OTP Generated"));

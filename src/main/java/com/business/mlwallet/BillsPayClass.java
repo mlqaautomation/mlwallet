@@ -152,7 +152,7 @@ public class BillsPayClass extends BaseClass{
             verifyElementPresent(MLWalletPayBillsPage.objServiceFee, getTextVal(MLWalletPayBillsPage.objServiceFee, "Service Fee"));
             verifyElementPresent(MLWalletPayBillsPage.objTotalAmount, getTextVal(MLWalletPayBillsPage.objTotalAmount, "Total Amount"));
             click(MLWalletPayBillsPage.objBackToHomeBtn, getTextVal(MLWalletPayBillsPage.objBackToHomeBtn, "Button"));
-            waitTime(3000);
+            waitTime(1000);
             Swipe("DOWN", 2);
             Swipe("UP", 1);
             verifyElementPresent(MLWalletHomePage.objRecentTransactions, getTextVal(MLWalletHomePage.objRecentTransactions, "Text"));
@@ -196,7 +196,7 @@ public class BillsPayClass extends BaseClass{
         searchBiller();
         billerDetails(prop.getproperty("First_Name"), prop.getproperty("Middle_Name"), prop.getproperty("Last_Name"), "24000");
         confirmDetailsAndPay();
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(SendTransferPage.objInsufficientAmountMsg, getTextVal(SendTransferPage.objInsufficientAmountMsg, "Error Message"))) {
             String sInsufficientBalanceErrorMsg = getText(SendTransferPage.objInsufficientAmountMsg);
             String sExpectedErrorMsg = "There is insufficient balance to proceed with this transaction. Please try again.";
@@ -529,7 +529,7 @@ public class BillsPayClass extends BaseClass{
         ExtentReporter.HeaderChildNode("PayBills Recent Transactions");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
         payBillsNavigation();
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(MLWalletPayBillsPage.objRecentTransactions, getTextVal(MLWalletPayBillsPage.objRecentTransactions, "Header"));
         horizontalSwipeByPercentages(0.8, 0.2, 0.25);
         horizontalSwipeByPercentages(0.8, 0.2, 0.25);
@@ -636,7 +636,7 @@ public class BillsPayClass extends BaseClass{
         billerDetails(prop.getproperty("First_Name"), prop.getproperty("Middle_Name"), prop.getproperty("Last_Name"), "10");
         confirmDetailsAndPay();
         enableLocation_PopUp();
-        waitTime(15000);
+        waitTime(1000);
         setWifiConnectionToONOFF("OFF");
         enterOTP(prop.getproperty("Valid_OTP"));
         if (verifyElementPresent(MLWalletHomePage.objInternetConnectionPopUp, getTextVal(MLWalletHomePage.objInternetConnectionPopUp, "PopUp"))) {
@@ -689,7 +689,7 @@ public class BillsPayClass extends BaseClass{
             verifyElementPresent(MLWalletPayBillsPage.objServiceFee, getTextVal(MLWalletPayBillsPage.objServiceFee, "Service Fee"));
             verifyElementPresent(MLWalletPayBillsPage.objTotalAmount, getTextVal(MLWalletPayBillsPage.objTotalAmount, "Total Amount"));
             verifyElementPresentAndClick(MLWalletPayBillsPage.objBackToHomeBtn, getTextVal(MLWalletPayBillsPage.objBackToHomeBtn, "Button"));
-            waitTime(3000);
+            waitTime(1000);
             Swipe("DOWN", 2);
             Swipe("UP", 1);
             verifyElementPresent(MLWalletHomePage.objRecentTransactions, getTextVal(MLWalletHomePage.objRecentTransactions, "Text"));
@@ -733,7 +733,7 @@ public class BillsPayClass extends BaseClass{
         billerDetails(prop.getproperty("First_Name"), prop.getproperty("Middle_Name"), prop.getproperty("Last_Name"), "10");
         confirmDetailsAndPay();
         enableLocation_PopUp();
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"))) {
             verifyElementPresent(MLWalletLoginPage.objOTP, getTextVal(MLWalletLoginPage.objOTP, "One Time Pin"));
             logger.info("PB_TC_55, PayBills, InApp OTP popup validated");
@@ -750,7 +750,7 @@ public class BillsPayClass extends BaseClass{
         billerDetails(prop.getproperty("First_Name"), prop.getproperty("Middle_Name"), prop.getproperty("Last_Name"), "10");
         confirmDetailsAndPay();
         enableLocation_PopUp();
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"))) {
             verifyElementPresent(MLWalletLoginPage.objOTP, getTextVal(MLWalletLoginPage.objOTP, "One Time Pin"));
             verifyElementPresent(MLWalletLoginPage.objSeconds, getTextVal(MLWalletLoginPage.objSeconds, "Seconds"));
@@ -770,7 +770,7 @@ public class BillsPayClass extends BaseClass{
         billerDetails(prop.getproperty("First_Name"), prop.getproperty("Middle_Name"), prop.getproperty("Last_Name"), "10");
         confirmDetailsAndPay();
         enableLocation_PopUp();
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
         if (verifyElementPresent(MLWalletLoginPage.objOTP, getTextVal(MLWalletLoginPage.objOTP, "One Time Pin"))) {
             String sGeneratedOTP = getText(MLWalletLoginPage.objOTP);
@@ -791,7 +791,7 @@ public class BillsPayClass extends BaseClass{
         billerDetails(prop.getproperty("First_Name"), prop.getproperty("Middle_Name"), prop.getproperty("Last_Name"), "10");
         confirmDetailsAndPay();
         enableLocation_PopUp();
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
         verifyElementPresentAndClick(MLWalletLoginPage.objCancelBtn, getTextVal(MLWalletLoginPage.objCancelBtn, "Button"));
         if (verifyElementPresent(MLWalletPayBillsPage.objConfirmDetails, getTextVal(MLWalletPayBillsPage.objConfirmDetails, "Page"))) {
@@ -809,7 +809,7 @@ public class BillsPayClass extends BaseClass{
         billerDetails(prop.getproperty("First_Name"), prop.getproperty("Middle_Name"), prop.getproperty("Last_Name"), "10");
         confirmDetailsAndPay();
         enableLocation_PopUp();
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
         verifyElementPresentAndClick(MLWalletLoginPage.objContinueBtn, getTextVal(MLWalletLoginPage.objContinueBtn, "Button"));
         if (verifyElementPresent(MLWalletPayBillsPage.objSuccessPillPaymentMsg, getTextVal(MLWalletPayBillsPage.objSuccessPillPaymentMsg, "Message"))) {

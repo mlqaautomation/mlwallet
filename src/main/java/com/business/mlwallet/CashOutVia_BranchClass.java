@@ -127,7 +127,7 @@ public void cashOutUIValidation_WM_TC_16() throws Exception {
         ExtentReporter.HeaderChildNode("Cash Out Page back arrow Button Validation");
         cashOutUIValidation_WM_TC_16();
         click(MLWalletCashOutPage.cashOutBackArrowBtn, "Cash Out Page Back Arrow Button");
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(MLWalletLoginPage.objAvailableBalance, getTextVal(MLWalletLoginPage.objAvailableBalance, "Text"))) {
             logger.info("WM_TC_17, Cash Out Page back arrow Button Validation");
             ExtentReporter.extentLoggerPass("WM_TC_17", "WM_TC_17, Cash Out Page back arrow Button Validation");
@@ -327,7 +327,7 @@ public void cashOutUIValidation_WM_TC_16() throws Exception {
         click(MLWalletCashOutPage.objCashOut, "CashOut / Withdraw Button");
         enterAmountMLBranch("10");
         enableLocation_PopUp();
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"))) {
 //			verifyElementPresent(MLWalletLoginPage.objOtpTextField, "OTP text Field");
             verifyElementPresent(MLWalletCashOutPage.objResendCode, getTextVal(MLWalletCashOutPage.objResendCode, "Seconds"));
@@ -565,7 +565,7 @@ public void cashOutUIValidation_WM_TC_16() throws Exception {
         click(MLWalletCashOutPage.objCashOut, "CashOut / Withdraw Button");
         enterAmountMLBranch("10");
         enableLocation_PopUp();
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"))) {
             verifyElementPresent(MLWalletLoginPage.objOTP, getTextVal(MLWalletLoginPage.objOTP, "One Time Pin"));
             logger.info("WM_TC_113, CashOut Branch InApp OTP Popup validated");
@@ -580,7 +580,7 @@ public void cashOutUIValidation_WM_TC_16() throws Exception {
         click(MLWalletCashOutPage.objCashOut, "CashOut / Withdraw Button");
         enterAmountMLBranch("10");
         enableLocation_PopUp();
-        waitTime(5000);
+        waitTime(1000);
         if (verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"))) {
             verifyElementPresent(MLWalletLoginPage.objOTP, getTextVal(MLWalletLoginPage.objOTP, "One Time Pin"));
             verifyElementPresent(MLWalletLoginPage.objSeconds, getTextVal(MLWalletLoginPage.objSeconds, "Seconds"));
@@ -598,7 +598,7 @@ public void cashOutUIValidation_WM_TC_16() throws Exception {
         click(MLWalletCashOutPage.objCashOut, "CashOut / Withdraw Button");
         enterAmountMLBranch("10");
         enableLocation_PopUp();
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
         if (verifyElementPresent(MLWalletLoginPage.objOTP, getTextVal(MLWalletLoginPage.objOTP, "One Time Pin"))) {
             String sGeneratedOTP = getText(MLWalletLoginPage.objOTP);
@@ -617,7 +617,7 @@ public void cashOutUIValidation_WM_TC_16() throws Exception {
         click(MLWalletCashOutPage.objCashOut, "CashOut / Withdraw Button");
         enterAmountMLBranch("10");
         enableLocation_PopUp();
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
         verifyElementPresentAndClick(MLWalletLoginPage.objCancelBtn, getTextVal(MLWalletLoginPage.objCancelBtn, "Button"));
         if (verifyElementPresent(MLWalletCashOutPage.objCashOutToBranch, getTextVal(MLWalletCashOutPage.objCashOutToBranch, "Page"))) {
@@ -633,7 +633,7 @@ public void cashOutUIValidation_WM_TC_16() throws Exception {
         click(MLWalletCashOutPage.objCashOut, "CashOut / Withdraw Button");
         enterAmountMLBranch("10");
         enableLocation_PopUp();
-        waitTime(5000);
+        waitTime(1000);
         verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
         verifyElementPresentAndClick(MLWalletLoginPage.objContinueBtn, getTextVal(MLWalletLoginPage.objContinueBtn, "Button"));
         if (verifyElementPresent(MLWalletCashOutPage.objCashOutToBranch, getTextVal(MLWalletCashOutPage.objCashOutToBranch, "Page"))) {
