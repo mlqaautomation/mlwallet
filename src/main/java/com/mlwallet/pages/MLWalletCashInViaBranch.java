@@ -6,7 +6,8 @@ public class MLWalletCashInViaBranch {
 	
 	public static By objCashInMenu=By.xpath("//*[@text='Cash In']");
 	public static By objCashInOptionPage=By.xpath("//*[@text='Cash In options']");
-	
+	public static By objTapPage=By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout");
+
 	public static By objBranchName=By.xpath("//*[@text='ML Branch']");
 	public static By objBranchCashIn = By.xpath("//*[@text='Branch Cash In']");
 	public static By objUserName = By.xpath("(//*[@text='Branch Cash In']/following-sibling::android.widget.TextView)[1]");
@@ -25,7 +26,7 @@ public class MLWalletCashInViaBranch {
 
 	public static By objInvalidAmountMsg = By.xpath("//*[@text='PHP']/parent::android.view.ViewGroup/following-sibling::android.widget.TextView");
 
-	public static By objBankMaxLimitTxt = By.xpath("//*[@text='Ok']/parent::android.view.ViewGroup/parent::android.view.ViewGroup/preceding-sibling::android.widget.TextView");
+	public static By objBankMaxLimitTxt = By.xpath("//*[@text='The maximum Branch Cash-in per transaction set for your verification level is P50,000.00. Please try again.']");
 
 	//Device Location
 	public static By objLocationPopup=By.xpath("//*[@text='Allow ML Wallet to access this device’s location?']");

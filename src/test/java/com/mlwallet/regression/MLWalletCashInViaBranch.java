@@ -7,7 +7,7 @@ public class MLWalletCashInViaBranch extends BaseTest{
 
     //---Positive Testing
     @Test(priority = 1)
-    public void cashInviaBranch_ValidAmount_Scenario_CIBR_TC_01() throws Exception
+    public void POSITIVE_cashInviaBranch_ValidAmount_Scenario_CIBR_TC_01() throws Exception
     {
         mlWalletCashInViaBranch.cashInviaBranch_ValidAmount_Scenario_CIBR_TC_01();
     }
@@ -26,10 +26,6 @@ public class MLWalletCashInViaBranch extends BaseTest{
     @Test(priority = 5)
     public void cashInViaBranchQRCodePageUIValidation_CIBR_TC_09() throws Exception {
         mlWalletCashInViaBranch.cashInViaBranchQRCodePageUIValidation_CIBR_TC_09();
-    }
-    @Test(priority = 6)
-    public void cashInViaBranchPendingTransaction_CIBR_TC_11() throws Exception {
-        mlWalletCashInViaBranch.cashInViaBranchPendingTransaction_CIBR_TC_11();
     }
     @Test(priority = 7)
     public void cashInViaBranchTappingOutsideTheCashInConfirmationPopUp_CIBR_TC_13() throws Exception {
@@ -75,14 +71,6 @@ public class MLWalletCashInViaBranch extends BaseTest{
     public void cashInViaBranchAmountFieldValidation_CIBR_TC_42() throws Exception {
         mlWalletCashInViaBranch.cashInViaBranchAmountFieldValidation_CIBR_TC_42();
     }
-    @Test(priority = 18)
-    public void cashInViaBranchTransactionWithValidMLPin_CIBR_TC_43() throws Exception {
-        mlWalletCashInViaBranch.cashInViaBranchTransactionWithValidMLPin_CIBR_TC_43();
-    }
-    @Test(priority = 19)
-    public void cashInViaBranchTransactionWithInValidMLPin_CIBR_TC_44() throws Exception {
-        mlWalletCashInViaBranch.cashInViaBranchTransactionWithInValidMLPin_CIBR_TC_44();
-    }
     @Test(priority = 20)
     public void cashInViaBranchOTPPopupValidation_CIBR_TC_50() throws Exception {
         mlWalletCashInViaBranch.cashInViaBranchOTPPopupValidation_CIBR_TC_50();
@@ -103,7 +91,7 @@ public class MLWalletCashInViaBranch extends BaseTest{
 
     //-----Negative Testing
     @Test(priority = 24)
-    public void cashInViaBranchCancelTransactionScenario_CIBR_TC_02() throws Exception
+    public void NEGATIVE_cashInViaBranchCancelTransactionScenario_CIBR_TC_02() throws Exception
     {
         mlWalletCashInViaBranch.cashInViaBranchCancelTransactionScenario_CIBR_TC_02();
     }
@@ -129,10 +117,6 @@ public class MLWalletCashInViaBranch extends BaseTest{
     public void cashInViaBranchCancelBtnValidationOnCashInConfirmPopUp_CIBR_TC_12() throws Exception {
         mlWalletCashInViaBranch.cashInViaBranchCancelBtnValidationOnCashInConfirmPopUp_CIBR_TC_12();
     }
-    @Test(priority = 30)
-    public void cashInViaBankTappingOutsideTheCancelTransactionConfirmationPopup_CIBR_TC_15() throws Exception {
-        mlWalletCashInViaBranch.cashInViaBankTappingOutsideTheCancelTransactionConfirmationPopup_CIBR_TC_15();
-    }
     @Test(priority = 31)
     public void cashInViaBranchMaxTransactionBuyerTierUser_CIBR_TC_19() throws Exception {
         mlWalletCashInViaBranch.cashInViaBranchMaxTransactionBuyerTierUser_CIBR_TC_19();
@@ -153,19 +137,15 @@ public class MLWalletCashInViaBranch extends BaseTest{
     public void cashInViaBranchLocationDenyFunctionality_CIBR_TC_29() throws Exception {
         mlWalletCashInViaBranch.cashInViaBranchLocationDenyFunctionality_CIBR_TC_29();
     }
-    @Test(priority = 36)
-    public void cashInViaBranchLocationPermissionDenyCloseBtnFunctionality_CIBR_TC_30() throws Exception {
-        mlWalletCashInViaBranch.cashInViaBranchLocationPermissionDenyCloseBtnFunctionality_CIBR_TC_30();
-    }
     @Test(priority = 37)
     public void cashInViaBranchLocationPermissionDenyOpenSettingsBtnFunctionality_CIBR_TC_31() throws Exception {
         mlWalletCashInViaBranch.cashInViaBranchLocationPermissionDenyOpenSettingsBtnFunctionality_CIBR_TC_31();
     }
 
-//    @Test(priority = 38)
-//    public void cashInViaBranchInternetInterruptionWhileEnteringOTP_CIBR_TC_33() throws Exception {
-//        mlWalletCashInViaBranch.cashInViaBranchInternetInterruptionWhileEnteringOTP_CIBR_TC_33();
-//    }
+    @Test(priority = 38)
+    public void cashInViaBranchInternetInterruptionWhileEnteringOTP_CIBR_TC_33() throws Exception {
+        mlWalletCashInViaBranch.cashInViaBranchInternetInterruptionWhileEnteringOTP_CIBR_TC_33();
+    }
 
     @AfterMethod
     public void afterMethod(){

@@ -204,13 +204,16 @@ public class BaseClass {
         hideKeyboard();
         Swipe("up", 1);
         click(MLWalletCashInViaBranch.objNextButton, "Next Button");
+        if(verifyElementDisplayed(MLWalletCashInViaBranch.objContinueButton)){
+            click(MLWalletCashInViaBranch.objContinueButton,"Continue Button");
+        }
     }
 
     public void maxTransactionLimitValidation(String sTier) throws Exception {
         cashInViaBranchNavigation(sTier);
         cancelPreviousTransactionAndContinue();
-        cashInViaBranchEnterAmount("10001");
-        click(MLWalletCashInViaBranch.objContinueButton, getTextVal(MLWalletCashInViaBranch.objContinueButton, "Button"));
+        cashInViaBranchEnterAmount("500000");
+        waitTime(1000);
     }
 
     public void cancelPreviousTransactionAndContinue() throws Exception {
@@ -243,7 +246,7 @@ public class BaseClass {
 
     public void permissionDenyCloseBtnFunctionality() throws Exception {
         permissionDenyPopUp();
-        click(MLWalletHomePage.objCloseBtn, getTextVal(MLWalletHomePage.objCloseBtn, "Button"));
+        click(MLWalletHomePage.objCloseBtn, "Button");
     }
 
     public void permissionDenyOpenSettingsBtnFunctionality() throws Exception {
