@@ -23,6 +23,7 @@ public class MLWalletShopSafePage {
     public static By objSuccessfInviteLabel = By.xpath("//*[@text='Successfully Invited']");
     public static By objOkayBtn = By.xpath("//*[@text='Ok']");
     //-------Invites Transaction Page
+    public static By objViewAllInvitation = By.xpath("//*[@text='View All Invitation']");
     public static By objFirstInTab = By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]");
 
     //--------Buyer Invite Seller Page
@@ -82,14 +83,14 @@ public class MLWalletShopSafePage {
         return By.xpath("//*[@text='"+msg+"']");
     }
     public static By objAllowWhileUsingAppBtn = By.xpath("//*[@text='While using the app']");
-    public static By objSelectNearest = By.xpath("//android.view.View[@content-desc=\"Google Map\"]/android.view.View[2]");
+    public static By objSelectNearest = By.xpath("//android.view.View[@content-desc=\"Google Map\"]/android.view.View[1]");
     public static By objBranchNameGMapVal = By.xpath("(//*[@resource-id='DJCC83']/child::*/child::*)[1]");
     public static By objBranchAddressGMapVal = By.xpath("(//*[@resource-id='DJCC83']/child::*/child::*)[2]");
     public static By objConfirmBranchBtn = By.xpath("//*[@text='Confirm Branch']");
     //-----------Confirmation Page
     public static By objConfirmDetailsPage = By.xpath("//*[@text='Confirm Details']");
     public static By objPicture = By.xpath("(//*[@resource-id='X63NQ1']/child::*/child::*/child::*)[1]");
-    public static By objRFTN = By.xpath("(//*[@resource-id='XHZ48R']/child::*/child::*)[1]");
+    public static By objRFTN = By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/child::android.view.ViewGroup[2]/child::android.widget.TextView\n");
     public static By objSellersDetailLabel = By.xpath("//*[@text='Seller Details']");
     public static By objSellersNameVal = By.xpath("(//*[@resource-id='Seller Name'])[2]");
     public static By objSellersNoVal = By.xpath("(//*[@resource-id='Seller Mobile Number'])[2]");
@@ -130,8 +131,9 @@ public class MLWalletShopSafePage {
 
     //----------- Ongoing Transaction
     public static By objOngoingDetailPageLabel = By.xpath("");
-    public static By objOngoingRFTN = By.xpath("(//*[@resource-id='MQ33UF']/child::*/child::*)[2]");
+    public static By objOngoingRFTN = By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/child::android.view.ViewGroup[2]/child::android.widget.TextView");
     public static By objOngoingDropOffStatus = By.xpath("//*[@text='For Drop Off']");
+    public static By objOngoingWaitPaymentStatus = By.xpath("//*[@text='Waiting For Payment']");
     public static By objOngoingellersDetailLabel = By.xpath("//*[@text='Seller Details']");
     public static By objOngoingSellersNameVal = By.xpath("(//*[@resource-id='Seller Name'])[2]");
     public static By objOngoingSellersNoVal = By.xpath("(//*[@resource-id='Seller Mobile Number'])[2]");
@@ -151,7 +153,7 @@ public class MLWalletShopSafePage {
     public static By objOngoingBuyerPicture = By.xpath("(//*[@resource-id='ZN2H1C']/child::*/child::*/child::*)[1]");
     public static By objOngoingChooseNearestBranchBtn = By.xpath("//*[@text='Please choose nearest pickup branch *']");
     public static By objOngoingGmapWhileUSingAppBtn =By.xpath("//*[@text='While using the app']");
-    public static By objOngoingSelectNearestBtn =By.xpath("//android.view.View[@content-desc=\"Google Map\"]/android.view.View[2]\n");
+    public static By objOngoingSelectNearestBtn =By.xpath("//android.view.View[@content-desc=\"Google Map\"]/android.view.View[1]\n");
     public static By objOngoingBranchNameGMapVal = By.xpath("(//*[@resource-id='DJCC83']/child::*/child::*)[1]");
     public static By objOngoingBranchAddressGMapVal = By.xpath("(//*[@resource-id='DJCC83']/child::*/child::*)[2]");
     public static By objOngoingPlsChooseBranchBtn = By.xpath("//*[@text='Please Choose Branch']");
