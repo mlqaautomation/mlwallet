@@ -11,6 +11,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.asserts.SoftAssert;
+import KPX_WEB.Login_Steps;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -31,6 +32,8 @@ public class BaseClass {
     public static PropertyFileReader shopProp;
     public static PropertyFileReader gcashProp;
     public static PropertyFileReader shopsafeprop;
+    Login_Steps loginSteps = new Login_Steps();
+
     public void propertyFileReader(){
         if(osName.contains("linux")){
              prop = new PropertyFileReader("./properties/testdata.properties");
@@ -161,6 +164,16 @@ public class BaseClass {
             logger.info("Application not get Logged Out Successfully");
         }
     }
+    public void shopSafeLogout() throws Exception {
+        if (verifyElementPresent(MLWalletLogOutPage.objHamburgerMenu, "Hamburger Menu")) {
+            click(MLWalletLogOutPage.objHamburgerMenu, "Hamburger Menu");
+            click(MLWalletLogOutPage.objLogoutBtn, getTextVal(MLWalletLogOutPage.objLogoutBtn, "Log Out Button"));
+            Thread.sleep(1000);
+            click(MLWalletLogOutPage.objLogoutBtn, getTextVal(MLWalletLogOutPage.objLogoutBtn, "Log Out Button"));
+            click(MLWalletLogOutPage.objChangeNumber, getTextVal(MLWalletLogOutPage.objChangeNumber, "Change Number Button"));
+        }
+    }
+
     public void enableLocation_PopUp() throws Exception {
         String loc = getText(MLWalletLoginPage.objLocationPopup);
         if (loc.contains("Allow")) {

@@ -7,15 +7,16 @@ import com.utility.ExtentReporter;
 import static com.utility.Utilities.*;
 import static com.utility.Utilities.getText;
 
+
 public class ShopSafeClass extends BaseClass {
     public ShopSafeClass() {
         super();
 
     }
     //--------------------Positive Test--------------------
+
     public void SSM_TC_01_Verify_if_the_Shop_Safe_button_Icon_Visible() throws Exception {
         ExtentReporter.HeaderChildNode("To verify if the Shop Safe button Icon Visible");
-
         mlWalletLogin(prop.getproperty("Branch_Verified"));
         waitTime(1000);
         verifyElementPresent(MLWalletShopSafePage.objShopSafeIconBtn, "Shop Safe Icon Button");
@@ -139,6 +140,7 @@ public class ShopSafeClass extends BaseClass {
         click(MLWalletShopSafePage.objAllowWhileUsingAppBtn,"Allow G Map");
         waitTime(3000);
         if(verifyElementDisplayed(MLWalletShopSafePage.objSelectNearest)){
+            waitTime(3000);
             click(MLWalletShopSafePage.objSelectNearest, "Select Near");
         }
         verifyElementPresent(MLWalletShopSafePage.objBranchNameGMapVal,"");
@@ -198,9 +200,10 @@ public class ShopSafeClass extends BaseClass {
             Swipe("UP", 1);
             Camera();
             FillItemInformation();
-            DropOff();
-            waitTime(1000);
             Swipe("UP", 1);
+            DropOff();
+            waitTime(3000);
+            Swipe("UP", 2);
             click(MLWalletShopSafePage.objProceedsBtn, "Proceeds Button");
             VerifyConfirmationPage();
         }
@@ -209,7 +212,7 @@ public class ShopSafeClass extends BaseClass {
     }
 
     public void VerifyTransactionPage() throws Exception{
-        verifyElementPresent(MLWalletShopSafePage.objRFTN,"RFTN");
+        verifyElementPresent(MLWalletShopSafePage.objSRFTN,"RFTN");
         verifyElementPresent(MLWalletShopSafePage.objSellersDetailTransactLabel,"Sellers Detail");
         verifyElementPresent(MLWalletShopSafePage.objSellersNameTransactVal,"Sellers Name");
         verifyElementPresent(MLWalletShopSafePage.objSellersNoTransactVal,"Sellers Number");
@@ -243,6 +246,7 @@ public class ShopSafeClass extends BaseClass {
         Swipe("UP", 1);
         Camera();
         FillItemInformation();
+        Swipe("UP", 1);
         DropOff();
         Swipe("UP", 1);
         waitTime(1000);
@@ -271,6 +275,7 @@ public class ShopSafeClass extends BaseClass {
         verifyElementPresent(MLWalletShopSafePage.objOngoingItemDescriptVal,"Item Description");
         verifyElementPresent(MLWalletShopSafePage.objOngoingBrandVal,"Brand");
         verifyElementPresent(MLWalletShopSafePage.objOngoingModelNoVal,"Model No");
+        Swipe("UP", 1);
         verifyElementPresent(MLWalletShopSafePage.objOngoingCategoryVal,"Category");
         verifyElementPresent(MLWalletShopSafePage.objOngoingItemPriceVal,"Item Price");
         Swipe("UP", 1);
@@ -303,12 +308,13 @@ public class ShopSafeClass extends BaseClass {
         verifyElementPresent(MLWalletShopSafePage.objOngoingSellerPicture,"Buyer Picture");
     }
 
-    public void SSM_TC_09_Validate_Buyer_Ongoing_Transaction_Page () throws Exception {
+    public void SSM_TC_09_Validate_Buyer_Ongoing_Transaction_Page() throws Exception {
         ExtentReporter.HeaderChildNode("To verify seller received invites click View Invitations Button in Invites Page");
         mlWalletLogin(prop.getproperty("Branch_Verified"));
         waitTime(1000);
         click(MLWalletShopSafePage.objShopSafeIconBtn, "Shop Safe Icon Button");
-        Swipe("UP", 2);
+        waitTime(3000);
+        Swipe("UP", 1);
         click(MLWalletShopSafePage.objOngoingTransactTxtBtn,"View all Invites Text Button");
         click(MLWalletShopSafePage.objFirstInTab,"New Invitation in Invites list");
         validateBuyerOngoing();
@@ -321,7 +327,8 @@ public class ShopSafeClass extends BaseClass {
         mlWalletLogin(prop.getproperty("SS_Fully_Verified"));
         waitTime(1000);
         click(MLWalletShopSafePage.objShopSafeIconBtn, "Shop Safe Icon Button");
-        Swipe("UP", 2);
+        waitTime(3000);
+        Swipe("UP", 1);
         click(MLWalletShopSafePage.objOngoingTransactTxtBtn,"View all Invites Text Button");
         waitTime(3000);
         click(MLWalletShopSafePage.objFirstInTab,"New Invitation in Invites list");
@@ -335,6 +342,7 @@ public class ShopSafeClass extends BaseClass {
         click(MLWalletShopSafePage.objOngoingGmapWhileUSingAppBtn,"Allow G Map");
         waitTime(3000);
         if(verifyElementPresentAndClick(MLWalletShopSafePage.objOngoingSelectNearestBtn,"Select Near")){
+            waitTime(3000);
             click(MLWalletShopSafePage.objOngoingSelectNearestBtn, "Select Near");
         }
         verifyElementPresent(MLWalletShopSafePage.objOngoingBranchNameGMapVal,"");
@@ -362,7 +370,7 @@ public class ShopSafeClass extends BaseClass {
         verifyElementPresent(MLWalletShopSafePage.objInsuranceFeeVal,"Insurance Fee");
         verifyElementPresent(MLWalletShopSafePage.objServiceFeeVal,"Service Fee");
         verifyElementPresent(MLWalletShopSafePage.objTotalAmountVal,"Total Amount");
-        Swipe("UP", 1);
+        Swipe("UP", 2);
         verifyElementPresent(MLWalletShopSafePage.objShippingDetailsLabel,"Shipping Details Label");
         verifyElementPresent(MLWalletShopSafePage.objPaymentOriginBranchVal,"Origin Branch");
         verifyElementPresent(MLWalletShopSafePage.objPaymentTotalAmountVal,"Total Amount");
@@ -377,16 +385,14 @@ public class ShopSafeClass extends BaseClass {
         click(MLWalletShopSafePage.objShopSafeIconBtn, "Shop Safe Icon Button");
         Swipe("UP", 2);
         click(MLWalletShopSafePage.objOngoingTransactTxtBtn,"View all Invites Text Button");
+        waitTime(3000);
         click(MLWalletShopSafePage.objFirstInTab,"New Invitation in Invites list");
         Swipe("UP", 4);
         DropOffBuyer();
         click(MLWalletShopSafePage.objOngoingProceedToReviewBtn,"Proceed To Review Btn");
         verifyElementPresent(MLWalletShopSafePage.objTermsAndConditionsLabel,"Terms And Conditions Label");
-        verifyElementPresentAndClick(MLWalletShopSafePage.objAcceptTermsAndConditionsBtn,"Accept Btn");
         verifyElementPresent(MLWalletShopSafePage.objTermsAndConditionsBackBtn,"Back Btn");
-        Swipe("UP", 3);
-        verifyElementPresent(MLWalletShopSafePage.objOngoingOriginBranchVal,"Origin Branch");
-        verifyElementPresent(MLWalletShopSafePage.objTermsAndConditionsLabel,"Terms And Conditions Label");
+        verifyElementPresentAndClick(MLWalletShopSafePage.objAcceptTermsAndConditionsBtn,"Accept Btn");
         ValidatePayment();
         verifyElementPresent(MLWalletShopSafePage.objSuccessfullyPaidLabel,"Successfully Paid Label");
         verifyElementPresentAndClick(MLWalletShopSafePage.objPaymentOkayBtn,"Okay Btn");
@@ -394,6 +400,174 @@ public class ShopSafeClass extends BaseClass {
         logger.info("View new invitations in Invites Page Success");
         ExtentReporter.extentLoggerPass("SSM_TC_05", "To verify seller received invites click View Invitations Button in Invites Page");
     }
+    public void validateSellerDropOffOngoing() throws Exception{
+
+        verifyElementPresent(MLWalletShopSafePage.objOngoingDropOffStatus,"Drop Off Status");
+        verifyElementPresent(MLWalletShopSafePage.objDropOffRFTN,"Reference Number");
+        verifyElementPresent(MLWalletShopSafePage.objOngoingellersDetailLabel,"Seller Detail Label");
+        verifyElementPresent(MLWalletShopSafePage.objOngoingSellersNameVal,"Sellers Name");
+        verifyElementPresent(MLWalletShopSafePage.objOngoingSellersNoVal,"Sellers No");
+        verifyElementPresent(MLWalletShopSafePage.objOngoingBuyersDetailLabel,"Buyers Detail Label");
+        verifyElementPresent(MLWalletShopSafePage.objOngoingBuyersNameVal,"Buyers Name");
+        verifyElementPresent(MLWalletShopSafePage.objOngoingBuyersNoVal,"Buyers No");
+        verifyElementPresent(MLWalletShopSafePage.objOngoingItemDetailsLabel,"Item Details");
+        verifyElementPresent(MLWalletShopSafePage.objOngoingItemNameVal,"Item Name");
+        verifyElementPresent(MLWalletShopSafePage.objOngoingItemDescriptVal,"Item Description");
+        verifyElementPresent(MLWalletShopSafePage.objOngoingBrandVal,"Brand");
+        Swipe("UP", 1);
+        verifyElementPresent(MLWalletShopSafePage.objOngoingModelNoVal,"Model No");
+        verifyElementPresent(MLWalletShopSafePage.objOngoingCategoryVal,"Category");
+        verifyElementPresent(MLWalletShopSafePage.objOngoingItemPriceVal,"Item Price");
+        verifyElementPresent(MLWalletShopSafePage.objFeesLabel,"Fees Label");
+        verifyElementPresent(MLWalletShopSafePage.objShippingFeeVal,"Shipping Fee");
+        verifyElementPresent(MLWalletShopSafePage.objReturnShippingDepositDropOffVal,"Drop Off Fee");
+        verifyElementPresent(MLWalletShopSafePage.objServiceFeeVal,"Service Fee");
+        Swipe("UP", 2);
+        verifyElementPresent(MLWalletShopSafePage.objInsuranceFeeVal,"Insurance Fee");
+        verifyElementPresent(MLWalletShopSafePage.objOngoingShipDetailLabel,"Ship Detail Label");
+        verifyElementPresent(MLWalletShopSafePage.objOngoingOriginBranchVal,"Origin Branch");
+        verifyElementPresent(MLWalletShopSafePage.objOngoingDestinationBranchVal,"Destination Branch");
+        verifyElementPresent(MLWalletShopSafePage.objOngoingSellerPicture,"Buyer Picture");
+        verifyElementPresent(MLWalletShopSafePage.objOngoingCancelBtn,"Cancel Transaction");
+    }
+    public void SSM_TC_12_Verify_seller_Paid_Item_Transaction_Drop_off_Status_Invites_Page () throws Exception {
+        ExtentReporter.HeaderChildNode("To verify seller received invites click View Invitations Button in Invites Page");
+        mlWalletLogin(prop.getproperty("Branch_Verified"));
+        waitTime(1000);
+        click(MLWalletShopSafePage.objShopSafeIconBtn, "Shop Safe Icon Button");
+        waitTime(3000);
+        Swipe("UP", 1);
+        click(MLWalletShopSafePage.objOngoingTransactTxtBtn,"View all Invites Text Button");
+        waitTime(3000);
+        click(MLWalletShopSafePage.objFirstInTab,"New Invitation in Invites list");
+        validateSellerDropOffOngoing();
+        openKPXInChrome("https://wanwan.mlhuillier.com/");
+        waitTime(8000);
+        switchPlatformToAndroid();
+        loginSteps.signInGoogle("admin");
+        logger.info("View new invitations in Invites Page Success");
+        ExtentReporter.extentLoggerPass("SSM_TC_05", "To verify seller received invites click View Invitations Button in Invites Page");
+    }
+
+    public void validateCancelledTransactions() throws Exception{
+
+        verifyElementPresent(MLWalletShopSafePage.objCancelledStatusLabel,"Cancelled Status");
+        verifyElementPresent(MLWalletShopSafePage.objCancelledRFTN,"Reference Number");
+        verifyElementPresent(MLWalletShopSafePage.objCancelledellersDetailLabel,"Seller Detail Label");
+        verifyElementPresent(MLWalletShopSafePage.objCancelledSellersNameVal,"Sellers Name");
+        verifyElementPresent(MLWalletShopSafePage.objCancelledSellersNoVal,"Sellers No");
+        verifyElementPresent(MLWalletShopSafePage.objCancelledBuyersDetailLabel,"Buyers Detail Label");
+        verifyElementPresent(MLWalletShopSafePage.objCancelledBuyersNameVal,"Buyers Name");
+        verifyElementPresent(MLWalletShopSafePage.objCancelledBuyersNoVal,"Buyers No");
+        verifyElementPresent(MLWalletShopSafePage.objCancelledItemDetailsLabel,"Item Details");
+        verifyElementPresent(MLWalletShopSafePage.objCancelledItemNameVal,"Item Name");
+        verifyElementPresent(MLWalletShopSafePage.objCancelledItemDescriptVal,"Item Description");
+        verifyElementPresent(MLWalletShopSafePage.objCancelledBrandVal,"Brand");
+        Swipe("UP", 1);
+        verifyElementPresent(MLWalletShopSafePage.objCancelledModelNoVal,"Model No");
+        verifyElementPresent(MLWalletShopSafePage.objCancelledCategoryVal,"Category");
+        verifyElementPresent(MLWalletShopSafePage.objCancelledItemPriceVal,"Item Price");
+        verifyElementPresent(MLWalletShopSafePage.objFeesLabel,"Fees Label");
+        verifyElementPresent(MLWalletShopSafePage.objShippingFeeVal,"Shipping Fee");
+        verifyElementPresent(MLWalletShopSafePage.objReturnShippingDepositDropOffVal,"Drop Off Fee");
+        verifyElementPresent(MLWalletShopSafePage.objServiceFeeVal,"Service Fee");
+        Swipe("UP", 2);
+        verifyElementPresent(MLWalletShopSafePage.objInsuranceFeeVal,"Insurance Fee");
+        verifyElementPresent(MLWalletShopSafePage.objCancelledShipDetailLabel,"Ship Detail Label");
+        verifyElementPresent(MLWalletShopSafePage.objCancelledOriginBranchVal,"Origin Branch");
+        verifyElementPresent(MLWalletShopSafePage.objCancelledDestinationBranchVal,"Destination Branch");
+        verifyElementPresent(MLWalletShopSafePage.objCancelledSellerPicture,"Buyer Picture");
+    }
+
+    public void SSM_TC_13_Cancelled_Transactions () throws Exception {
+        ExtentReporter.HeaderChildNode("To verify seller received invites click View Invitations Button in Invites Page");
+        mlWalletLogin(prop.getproperty("Branch_Verified"));
+        waitTime(1000);
+        click(MLWalletShopSafePage.objShopSafeIconBtn, "Shop Safe Icon Button");
+        Swipe("UP", 4);
+        click(MLWalletShopSafePage.objCancelTransactTxtBtn,"See More Text Button");
+        waitTime(3000);
+        click(MLWalletShopSafePage.objFirstInTab,"New Invitation in Invites list");
+        validateCancelledTransactions();
+
+        logger.info("View new invitations in Invites Page Success");
+        ExtentReporter.extentLoggerPass("SSM_TC_05", "To verify seller received invites click View Invitations Button in Invites Page");
+    }
+
+//    public void Shop_Safe_Successful_Transaction_SSM_TC_00() throws Exception {
+//        ExtentReporter.HeaderChildNode("To verify enter valid seller number in Create Transaction Page");
+//        mlWalletLogin(prop.getproperty("Branch_Verified"));
+//        waitTime(1000);
+//        click(MLWalletShopSafePage.objShopSafeIconBtn, "Shop Safe Icon Button");
+//        click(MLWalletShopSafePage.objStartTransactBtn, "Start Transaction Button");
+//        type(MLWalletShopSafePage.objSellerNoTxtbx, shopsafeprop.getproperty("VaildShopSafeNumber"), "Type Valid Number");
+//        click(MLWalletShopSafePage.objInviteSellerBtn, "Invite Seller Button");
+//        if (verifyElementPresent(MLWalletShopSafePage.objSuccessfInviteLabel, "Successful Invite")) {
+//            click(MLWalletShopSafePage.objOkayBtn, "Okay Button");
+//            click(MLWalletShopSafePage.objBackBtn, "Back Button");
+//        }
+//        shopSafeLogout();
+//        mlWalletLogin(prop.getproperty("SS_Fully_Verified"));
+//        waitTime(1000);
+//        click(MLWalletShopSafePage.objShopSafeIconBtn, "Shop Safe Icon Button");
+//        click(MLWalletShopSafePage.objInvitesTransactTxtBtn, "View all Invites Text Button");
+//        waitTime(3000);
+//        verifyElementPresent(MLWalletShopSafePage.objFirstInTab, "New Invitation in Invites list");
+//        click(MLWalletShopSafePage.objFirstInTab, "New Invitation in Invites list");
+//        Camera();
+//        Swipe("UP", 1);
+//        Camera();
+//        FillItemInformation();
+//        waitTime(1000);
+//        Swipe("UP", 1);
+//        DropOff();
+//        Swipe("UP", 1);
+//        waitTime(1000);
+//        click(MLWalletShopSafePage.objProceedsBtn, "Proceeds Button");
+//        Swipe("UP", 4);
+//        waitTime(1000);
+//        click(MLWalletShopSafePage.objConfirmInvitationBtn, "Confirm Invitation");
+//        Swipe("UP", 4);
+//        click(MLWalletShopSafePage.objBackBtn, "Okay Button");
+//        click(MLWalletShopSafePage.objBackBtn, "Back Button");
+//        waitTime(3000);
+//        if(verifyElementDisplayed(MLWalletShopSafePage.objBackBtn)) {
+//             click(MLWalletShopSafePage.objBackBtn, "Back Button");
+//        }
+//        shopSafeLogout();
+//        mlWalletLogin(prop.getproperty("Branch_Verified"));
+//        waitTime(1000);
+//        click(MLWalletShopSafePage.objShopSafeIconBtn, "Shop Safe Icon Button");
+//        waitTime(1000);
+//        Swipe("UP", 1);
+//        click(MLWalletShopSafePage.objOngoingTransactTxtBtn,"View all Invites Text Button");
+//        waitTime(3000);
+//        click(MLWalletShopSafePage.objFirstInTab,"New Invitation in Invites list");
+//        Swipe("UP", 4);
+//        DropOffBuyer();
+//        click(MLWalletShopSafePage.objOngoingProceedToReviewBtn,"Proceed To Review Btn");
+//        click(MLWalletShopSafePage.objAcceptTermsAndConditionsBtn,"Accept Btn");
+//        Swipe("UP", 4);
+//        click(MLWalletShopSafePage.objPaymentAmountBtn,"Amount Btn");
+//        verifyElementPresent(MLWalletShopSafePage.objSuccessfullyPaidLabel,"Successfully Paid Label");
+//        click(MLWalletShopSafePage.objPaymentOkayBtn,"Okay Btn");
+//        waitTime(3000);
+//        click(MLWalletShopSafePage.objFirstInTab,"New Invitation in Invites list");
+//        verifyElementPresent(MLWalletShopSafePage.objOngoingDropOffStatus,"Drop Off Status");
+//        verifyElementPresent(MLWalletShopSafePage.objDropOffRFTN,"Reference Number");
+//
+//        logger.info("Redirect to Shop Safe Page Navigation Success");
+//        ExtentReporter.extentLoggerPass("SSM_TC_02", "To verify click Shop Safe button Redirect to Shop Safe Page");
+//    }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -463,6 +637,44 @@ public class ShopSafeClass extends BaseClass {
         logger.info("Redirect back to Dashboard Page Navigation Success");
         ExtentReporter.extentLoggerPass("SSM_TC_03", "Validate back button to Ongoing Transaction Page back to Shop Safe Page");
     }
+    //----------New
+    public void SSM_TC_105_Verify_seller_Cancelled_Invites_Page () throws Exception {
+        ExtentReporter.HeaderChildNode("To verify seller received invites click View Invitations Button in Invites Page");
+        mlWalletLogin(prop.getproperty("Branch_Verified"));
+        waitTime(1000);
+        click(MLWalletShopSafePage.objShopSafeIconBtn, "Shop Safe Icon Button");
+        Swipe("UP", 2);
+        click(MLWalletShopSafePage.objOngoingTransactTxtBtn,"View all Invites Text Button");
+        waitTime(3000);
+        click(MLWalletShopSafePage.objFirstInTab,"New Invitation in Invites list");
+        Swipe("UP", 4);
+        click(MLWalletShopSafePage.objOngoingCancelBtn,"Click Cancel Transaction");
+        verifyElementPresent(MLWalletShopSafePage.objCancelModalLabel, "Cancelled Modal Label");
+        click(MLWalletShopSafePage.objPaymentOkayBtn,"Click Okay Button");
+        verifyElementPresent(MLWalletShopSafePage.objSuccessfCancelledLabel, "Cancelled Label");
+        click(MLWalletShopSafePage.objPaymentOkayBtn,"Click Okay Button");
+
+        logger.info("View new invitations in Invites Page Success");
+        ExtentReporter.extentLoggerPass("SSM_TC_05", "To verify seller received invites click View Invitations Button in Invites Page");
+    }
+        //----------New
+    public void SSM_TC_106_Verify_seller_Cancelled_DropOff_Invites_Page () throws Exception {
+        ExtentReporter.HeaderChildNode("To verify seller received invites click View Invitations Button in Invites Page");
+        mlWalletLogin(prop.getproperty("Branch_Verified"));
+        waitTime(1000);
+        click(MLWalletShopSafePage.objShopSafeIconBtn, "Shop Safe Icon Button");
+        Swipe("UP", 2);
+        click(MLWalletShopSafePage.objOngoingTransactTxtBtn,"View all Invites Text Button");
+        waitTime(3000);
+        click(MLWalletShopSafePage.objFirstInTab,"New Invitation in Invites list");
+        Swipe("UP", 4);
+        verifyElementPresent(MLWalletShopSafePage.objSuccessfCancelledLabel, "Cancelled Label");
+        click(MLWalletShopSafePage.objPaymentOkayBtn,"Click Okay Button");
+
+        logger.info("View new invitations in Invites Page Success");
+        ExtentReporter.extentLoggerPass("SSM_TC_05", "To verify seller received invites click View Invitations Button in Invites Page");
+    }
+
     //--------------------Invalid Input textbox
     public void SSM_TC_150_Validate_enter_characters_seller_number_in_Create_Transaction_Page() throws Exception {
         ExtentReporter.HeaderChildNode("Validate enter characters seller number in Create Transaction Page");

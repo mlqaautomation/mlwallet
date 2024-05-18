@@ -1,0 +1,23 @@
+Roles:
+  - {role: admin, gmail_email: francis.mercado@mlhuillier.com, gmail_password: 321Andrie!,
+     kpx_username: TEST20240418, kpx_password: Mlinc1234!
+  }
+  - {role: teller, gmail_email: francis.mercado@mlhuillier.com, gmail_password: 321Andrie!,
+     kpx_username: TEST20240418, kpx_password: Mlinc1234!
+  }
+AccessKey: st7u amhj gqlp 3p3d 6kuj f46p j3yc a3ah
+Senders:
+  - kyc: {firstName: Enrique, lastName: Siarot}
+  - kyc: {firstName: Albert, lastName: Monceda}
+  - kyc: {firstName: Jovanie, lastName: Dasian}
+Receivers:
+  - kyc: {firstName: Roselyn, lastName: Amoc}
+  - kyc: {firstName: Albert, lastName: Monceda}
+KPTN: [KPNTTKSPATP, KPNFPYBXPQX, KPNAQOXJAIT, KPNDYGUUOMY, KPNKHLIXFVG, KPNNJERXOWG,
+       KPNDBMQQKZW, KPNUHCRVCVC, KPNHDSKDHOQ, KPNSSQUKLBZ, KPNGCBTSALY, KPNDRWDYLQU, KPNGFABIZTF,
+       KPNQNMSOOAL, KPNKAZBCJHS, KPNVDUJLTGM, KPNEGNBJGNZ, KPNCXOOFKRH, KPNAGAXCYHE, KPNJWUSHIOF,
+       KPNEZLNCQNG, KPNLESULFXM, KPNJKDRNARA]
+totalAmount: []
+tenderAmount: []
+TotalAmount: []
+TenderAmount: []

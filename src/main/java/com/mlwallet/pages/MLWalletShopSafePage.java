@@ -15,12 +15,17 @@ public class MLWalletShopSafePage {
     public static By objReturnedTransactLabel = By.xpath("//*[@text='Returned Transactions']");
     public static By objInvitesTransactTxtBtn = By.xpath("(//android.view.ViewGroup[@content-desc=\"View All Invites\"])[1]/android.widget.TextView");
     public static By objOngoingTransactTxtBtn = By.xpath("(//android.view.ViewGroup[@content-desc=\"View All Invites\"])[2]/android.widget.TextView");
+    public static By objCompleteTransactTxtBtn = By.xpath("(//android.view.ViewGroup[@content-desc=\"See More\"])[1]");
+    public static By objCancelTransactTxtBtn = By.xpath("(//android.view.ViewGroup[@content-desc=\"See More\"])[2]");
+
     //------- Create Transaction Page
     public static By objCreateTransactLabel = By.xpath("//*[@text='Create Transaction']");
     public static By objBackBtn = By.xpath("//android.view.ViewGroup[@content-desc=\"\uE5CB\"]/android.widget.TextView");
     public static By objSellerNoTxtbx = By.xpath("//*[@text='Seller Mobile Number *']");
     public static By objInviteSellerBtn = By.xpath("//*[@text='Invite Seller']");
     public static By objSuccessfInviteLabel = By.xpath("//*[@text='Successfully Invited']");
+    public static By objCancelModalLabel = By.xpath("//*[@text='Do You Want to Cancel This Transaction?']");
+    public static By objSuccessfCancelledLabel = By.xpath("//*[@text='Successfully Cancelled']");
     public static By objOkayBtn = By.xpath("//*[@text='Ok']");
     //-------Invites Transaction Page
     public static By objViewAllInvitation = By.xpath("//*[@text='View All Invitation']");
@@ -90,7 +95,8 @@ public class MLWalletShopSafePage {
     //-----------Confirmation Page
     public static By objConfirmDetailsPage = By.xpath("//*[@text='Confirm Details']");
     public static By objPicture = By.xpath("(//*[@resource-id='X63NQ1']/child::*/child::*/child::*)[1]");
-    public static By objRFTN = By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/child::android.view.ViewGroup[2]/child::android.widget.TextView\n");
+    public static By objRFTN = By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/child::android.view.ViewGroup[1]/child::android.widget.TextView\n");
+    public static By objSRFTN = By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/child::android.view.ViewGroup[2]/child::android.widget.TextView\n");
     public static By objSellersDetailLabel = By.xpath("//*[@text='Seller Details']");
     public static By objSellersNameVal = By.xpath("(//*[@resource-id='Seller Name'])[2]");
     public static By objSellersNoVal = By.xpath("(//*[@resource-id='Seller Mobile Number'])[2]");
@@ -132,6 +138,7 @@ public class MLWalletShopSafePage {
     //----------- Ongoing Transaction
     public static By objOngoingDetailPageLabel = By.xpath("");
     public static By objOngoingRFTN = By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/child::android.view.ViewGroup[2]/child::android.widget.TextView");
+    public static By objDropOffRFTN = By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/child::android.view.ViewGroup[3]/child::android.widget.TextView");
     public static By objOngoingDropOffStatus = By.xpath("//*[@text='For Drop Off']");
     public static By objOngoingWaitPaymentStatus = By.xpath("//*[@text='Waiting For Payment']");
     public static By objOngoingellersDetailLabel = By.xpath("//*[@text='Seller Details']");
@@ -149,6 +156,7 @@ public class MLWalletShopSafePage {
     public static By objOngoingItemPriceVal = By.xpath("(//*[@resource-id='Item price'])[2]");
     public static By objOngoingShipDetailLabel = By.xpath("//*[@text='Shipping Details']");
     public static By objOngoingOriginBranchVal = By.xpath("(//*[@resource-id='Origin Branch'])[2]");
+    public static By objOngoingDestinationBranchVal = By.xpath("(//*[@resource-id='Destination branch'])[2]");
     public static By objOngoingSellerPicture = By.xpath("(//*[@resource-id='LWPG92']/child::*/child::*/child::*)[1]");
     public static By objOngoingBuyerPicture = By.xpath("(//*[@resource-id='ZN2H1C']/child::*/child::*/child::*)[1]");
     public static By objOngoingChooseNearestBranchBtn = By.xpath("//*[@text='Please choose nearest pickup branch *']");
@@ -167,7 +175,7 @@ public class MLWalletShopSafePage {
     public static By objTermsAndConditionsBackBtn = By.xpath("//*[@text='Back']");
     //----------- Shop Safe Payment
     public static By objPaymentPicture = By.xpath("(//*[@resource-id='XYK4G1']/child::*/child::*/child::*)");
-    public static By objPaymentRFTN = By.xpath("(//*[@resource-id='XHZ48R']/child::*/child::*)[2]");
+    public static By objPaymentRFTN = By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/child::android.view.ViewGroup[2]/child::android.widget.TextView");
     public static By objPaymentSellersNameVal = By.xpath("(//*[@resource-id='Seller Name'])[2]");
     public static By objPaymentSellersNoVal = By.xpath("(//*[@resource-id='Seller Mobile Number'])[2]");
     public static By objPaymentBuyersDetailLabel = By.xpath("//*[@text='Buyer Details']");
@@ -183,6 +191,7 @@ public class MLWalletShopSafePage {
     public static By objShippingFeeVal = By.xpath("//*[@text='Shipping Fee']/parent::android.view.ViewGroup/following-sibling::android.view.ViewGroup/child::android.widget.TextView");
     public static By objReturnShippingDepositDropOffVal = By.xpath("//*[@text='Return Shipping Deposit']/parent::android.view.ViewGroup/following-sibling::android.view.ViewGroup/child::android.widget.TextView");
     public static By objReturnShippingDepositVal = By.xpath("(//*[@resource-id='Return Shipping Deposit'])[2]");
+    public static By objFeesLabel = By.xpath("//*[@text='Fees']");
     public static By objInsuranceFeeVal = By.xpath("(//*[@resource-id='Insurance Fee'])[2]");
     public static By objServiceFeeVal = By.xpath("(//*[@resource-id='Service Fee'])[2]");
     public static By objTotalAmountVal = By.xpath("(//*[@resource-id='Total Amount'])[2]");
@@ -196,22 +205,23 @@ public class MLWalletShopSafePage {
     //----------- Cancelled Transaction
     public static By objCancelledDetailPageLabel = By.xpath("");
     public static By objCancelledStatusLabel = By.xpath("//*[@text='Buyer Details']");
-    public static By objCancelledRFTN = By.xpath("(//*[@resource-id='MQ33UF']/child::*/child::*)[2]");
+    public static By objCancelledRFTN = By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/child::android.view.ViewGroup[2]/child::android.widget.TextView");
     public static By objCancelledellersDetailLabel = By.xpath("//*[@text='Seller Details']");
-    public static By objCancelledSellersNameVal = By.xpath("(//*[@resource-id='PT340E']/child::*)[2]");
-    public static By objCancelledSellersNoVal = By.xpath("(//*[@resource-id='6CMA15']/child::*)[2]");
+    public static By objCancelledSellersNameVal = By.xpath("(//*[@resource-id='Seller Name'])[2]");
+    public static By objCancelledSellersNoVal = By.xpath("(//*[@resource-id='Seller Mobile Number'])[2]");
     public static By objCancelledBuyersDetailLabel = By.xpath("//*[@text='Buyer Details']");
-    public static By objCancelledBuyersNameVal = By.xpath("(//*[@resource-id='2KIF77']/child::*)[2]");
-    public static By objCancelledBuyersNoVal = By.xpath("(//*[@resource-id='P92RHD']/child::*)[2]");
+    public static By objCancelledBuyersNameVal = By.xpath("(//*[@resource-id='Buyer Name'])[2]");
+    public static By objCancelledBuyersNoVal = By.xpath("(//*[@resource-id='Buyer Mobile Number'])[2]");
     public static By objCancelledItemDetailsLabel = By.xpath("//*[@text='Item details']");
-    public static By objCancelledItemNameVal = By.xpath("(//*[@resource-id='GXE94G']/child::*)[2]");
-    public static By objCancelledItemDescriptVal = By.xpath("(//*[@resource-id='8A2AWU']/child::*)[2]");
+    public static By objCancelledItemNameVal = By.xpath("(//*[@resource-id='Item name'])[2]");
+    public static By objCancelledItemDescriptVal = By.xpath("(//*[@resource-id='Item description/condition'])[2]");
     public static By objCancelledBrandVal = By.xpath("(//*[@resource-id='Brand'])[2]");
     public static By objCancelledModelNoVal = By.xpath("(//*[@resource-id='Model No'])[2]");
     public static By objCancelledCategoryVal = By.xpath("(//*[@resource-id='Category'])[2]");
     public static By objCancelledItemPriceVal = By.xpath("(//*[@resource-id='Item price'])[2]");
     public static By objCancelledShipDetailLabel = By.xpath("//*[@text='Shipping Details']");
     public static By objCancelledOriginBranchVal = By.xpath("(//*[@resource-id='Origin Branch'])[2]");
-    public static By objCancelledPicture = By.xpath("(//*[@resource-id='LWPG92']/child::*/child::*/child::*)[1]");
+    public static By objCancelledDestinationBranchVal = By.xpath("(//*[@resource-id='Destination branch'])[2]");
+    public static By objCancelledSellerPicture = By.xpath("(//*[@resource-id='LWPG92']/child::*/child::*/child::*)[1]");
 }
 

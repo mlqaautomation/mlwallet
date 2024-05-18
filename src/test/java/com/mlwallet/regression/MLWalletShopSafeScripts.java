@@ -39,17 +39,32 @@ public class MLWalletShopSafeScripts extends BaseTest{
 //        mlWalletShopSafeScripts.SSM_TC_08_Verify_seller_fill_up_the_Item_Information_Page_and_clicking_proceed_button_Invites_Page ();
 //    }
 //    @Test(priority = 9)
-//    public void SSM_TC_09_Validate_Seller_Ongoing_Transaction_Page() throws Exception {
-//        mlWalletShopSafeScripts.SSM_TC_09_Validate_Seller_Ongoing_Transaction_Page ();
+//    public void SSM_TC_09_Validate_Buyer_Ongoing_Transaction_Page() throws Exception {
+//        mlWalletShopSafeScripts.SSM_TC_09_Validate_Buyer_Ongoing_Transaction_Page ();
 //    }
 //    @Test(priority = 10)
 //    public void SSM_TC_10_Validate_Seller_Ongoing_Transaction_Page() throws Exception {
 //        mlWalletShopSafeScripts.SSM_TC_10_Validate_Seller_Ongoing_Transaction_Page ();
 //    }
-    @Test(priority = 11)
-    public void SSM_TC_11_Verify_seller_fill_up_the_Item_Information_Page_and_clicking_proceed_button_Invites_Page() throws Exception {
-        mlWalletShopSafeScripts.SSM_TC_11_Verify_seller_fill_up_the_Item_Information_Page_and_clicking_proceed_button_Invites_Page();
+//    @Test(priority = 11)
+//    public void SSM_TC_11_Verify_seller_fill_up_the_Item_Information_Page_and_clicking_proceed_button_Invites_Page() throws Exception {
+//        mlWalletShopSafeScripts.SSM_TC_11_Verify_seller_fill_up_the_Item_Information_Page_and_clicking_proceed_button_Invites_Page();
+//    }
+    @Test(priority = 1)
+    public void SSM_TC_12_Verify_seller_Paid_Item_Transaction_Drop_off_Status_Invites_Page() throws Exception {
+        mlWalletShopSafeScripts.SSM_TC_12_Verify_seller_Paid_Item_Transaction_Drop_off_Status_Invites_Page();
     }
+//    @Test(priority = 13)
+//    public void SSM_TC_13_Cancelled_Transactions() throws Exception {
+//        mlWalletShopSafeScripts.SSM_TC_13_Cancelled_Transactions();
+//    }
+
+    //----------------------------------------------------------------------------------------------------------------------
+
+//    @Test(priority = 14)
+//    public void Shop_Safe_Successful_Transaction_SSM_TC_00() throws Exception {
+//        mlWalletShopSafeScripts.Shop_Safe_Successful_Transaction_SSM_TC_00();
+//    }
 
 
     //=================Negative
