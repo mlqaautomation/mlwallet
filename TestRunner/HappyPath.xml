@@ -13,8 +13,8 @@
         <parameter name="url1" value="https://prnt.sc/WlO6H7WpxvNY"></parameter>
         <parameter name="kpxurl" value="https://ml-kpx-qa.df.r.appspot.com/"></parameter>
         <classes>
-<!--            <class name="com.mlwallet.regression.HappyPathScripts"/>-->
-            <class name="com.mlwallet.regression.MLWalletShopSafeScripts"/>
+            <class name="com.mlwallet.regression.HappyPathScripts"/>
+<!--            <class name="com.mlwallet.regression.MLWalletShopSafeScripts"/>-->
         </classes>
     </test>
 </suite>
